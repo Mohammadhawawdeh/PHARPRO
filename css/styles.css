@@ -10824,3 +10824,29 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* Style the dropdown button */
+.services-dropdown .dropdown-trigger {
+    background-color: darkorange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style the list items */
+.services-dropdown .services-list {
+    list-style: none;
+    padding: 0;
+    display: none; /* Hide the list by default */
+}
+
+.services-dropdown .services-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Show the list when the dropdown button is hovered or clicked */
+.services-dropdown:hover .services-list,
+.services-dropdown:focus-within .services-list {
+    display: block;
+}
