@@ -246,15 +246,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <script>
+<script>
     // Get the dropdown button and service list
     const dropdownButton = document.querySelector('.dropdown-trigger');
     const servicesList = document.querySelector('.services-list');
 
+    // Function to toggle the visibility of the service list
+    function toggleServicesList() {
+        if (servicesList.style.display === 'block') {
+            servicesList.style.display = 'none';
+        } else {
+            servicesList.style.display = 'block';
+        }
+    }
+
     // Toggle the service list when the button is clicked
-    dropdownButton.addEventListener('click', () => {
-        servicesList.classList.toggle('show');
-    });
+    dropdownButton.addEventListener('click', toggleServicesList);
 </script>
 </body>
 </html>
