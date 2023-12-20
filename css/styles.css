@@ -10867,5 +10867,13 @@ textarea.form-control-lg {
     background: #fff; /* Snowflake color */
     border-radius: 50%;
     pointer-events: none;
+    animation: fall linear infinite;
 }
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
 
