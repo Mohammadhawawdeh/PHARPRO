@@ -1,22 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Generate and append snowflakes to the container
-  function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.className = 'snowflake';
-    snowflake.style.left = `${Math.random() * 100}vw`;
-    document.getElementById('snowfall-container').appendChild(snowflake);
-  }
+    const snowflakes = document.querySelectorAll('.snowflake');
 
-  // Generate a specified number of snowflakes
-  function createSnowfall(numberOfSnowflakes) {
-    for (let i = 0; i < numberOfSnowflakes; i++) {
-      createSnowflake();
+    function animateSnowflakes() {
+        snowflakes.forEach(function (snowflake) {
+            const fallSpeed = parseFloat(snowflake.getAttribute('data-fallspeed')) || 2.0; // Adjust the fall speed as needed
+            const rotateSpeed = parseFloat(snowflake.getAttribute('data-rotatespeed')) || 0.5; // Adjust the rotation speed as needed
+
+            // Move the snowflake vertically
+            const translateY = snowflake.offsetTop + fallSpeed;
+            snowflake.style.transform = `translateY(${translateY}px) rotate(${rotateSpeed}deg)`;
+
+            // Reset the snowflake position when it goes below the viewport
+            if (translateY > window.innerHeight) {
+                snowflake.style.transform = `translateY(-20px) rotate(${rotateSpeed}deg)`;
+            }
+        });
+
+        // Repeat the animation
+        requestAnimationFrame(animateSnowflakes);
     }
-  }
 
-  // Set the number of snowflakes you want
-  const numberOfSnowflakes = 50;
-
-  // Create the snowfall effect
-  createSnowfall(numberOfSnowflakes);
+    // Start the animation
+    animateSnowflakes();
 });

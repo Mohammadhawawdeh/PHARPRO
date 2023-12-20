@@ -8,8 +8,3 @@
 <script>
   window.location.href = "http://www.pharpro.co/new-page.html";
 </script>
-// Function to generate a random number between min and max
-function getRandom(min, max) {
-    return Math.random() * (max - min) + min;
-}
-
