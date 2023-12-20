@@ -1,0 +1,15 @@
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  to {
+    transform: translateY(100vh);
+  }
+}

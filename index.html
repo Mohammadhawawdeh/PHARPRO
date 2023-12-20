@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="snowfall.css" />
-    <script src="snowfall.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRCV7XCWKT"></script>
     <script>
@@ -65,6 +63,8 @@
             background-color: rgba(0, 0, 0, 0.4); /* Adjust the alpha (0.5) for the desired darkness */
         }
     </style>
+    <link rel="stylesheet" href="snowfall.css" />
+    <script src="snowfall.js"></script>
 </head>
 <body style="background-color: #DFDFDF;">
     <!-- Responsive navbar-->
@@ -279,5 +279,29 @@
         // Toggle the service list when the button is clicked
         dropdownButton.addEventListener('click', toggleServicesList);
     </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Generate and append snowflakes to the container
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            document.getElementById('snowfall-container').appendChild(snowflake);
+        }
+
+        // Generate a specified number of snowflakes
+        function createSnowfall(numberOfSnowflakes) {
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                createSnowflake();
+            }
+        }
+
+        // Set the number of snowflakes you want
+        const numberOfSnowflakes = 50;
+
+        // Create the snowfall effect
+        createSnowfall(numberOfSnowflakes);
+    });
+</script>
 </body>
 </html>
