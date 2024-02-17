@@ -10914,3 +10914,8 @@ body{
     transform: translateY(650px);
   }
 }
+/* Remove bullets from dropdown list */
+.services-list {
+    list-style-type: none;
+    padding-left: 0; /* Optional: Remove left padding */
+}
