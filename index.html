@@ -23,57 +23,114 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0-beta3/css/all.min.css">
-    <style>
-        .background-container {
-            background-image: url('./images/PHARPRO.jpg');
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        <!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#OurSerivces:">Our Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#AboutUs:">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<style>
+    /* Background Container */
+    .background-container {
+        background-image: url('./images/PHARPRO.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh; /* Reduced height for better focus */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Allows positioning of overlay */
+        overflow: hidden;
+    }
+
+    /* Background Overlay */
+    .background-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        z-index: 1;
+    }
+
+    /* Content Style */
+    .content {
+        position: relative;
+        z-index: 2; /* Ensure content appears above overlay */
+        text-align: center;
+        color: #E5B299; /* Rose gold color */
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .content h1 {
+        font-size: 2.5em; /* Headline size */
+        margin-bottom: 10px;
+        font-weight: bold;
+        animation: fadeIn 2s ease-in-out;
+        color: #E5B299; /* Rose gold color for H1 */
+    }
+
+    .content h2 {
+        font-size: 1.5em; /* Subheading size */
+        margin-top: 10px;
+        animation: fadeIn 3s ease-in-out;
+        color: #E5B299; /* Rose gold color for H2 */
+    }
+
+    .content p {
+        color: #E5B299; /* Rose gold color for paragraph text */
+    }
+
+    /* Fade-In Animation */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
         }
-        .background-overlay::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0); /* Adjust the alpha (0.5) for the desired darkness */
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Design Adjustments */
+    @media (max-width: 768px) {
+        .content h1 {
+            font-size: 2em;
         }
 
-        .content {
-            text-align: center;
-            padding: 20px;
-            color: white;
+        .content h2 {
+            font-size: 1.2em;
         }
+    }
+</style>
 
-/* Center align and move text up for h1 and h2 */
-.content h1,
-.content h2 {
-  text-align: center;
-  margin-top: 25px; /* Adjust the value to move the text up or down */
-}
-
-/* Darken the background color for better readability */
-.content {
-  background-color: rgba(0, 0, 0, 0); /* Adjust the alpha (0.3) for the desired darkness */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align content at the top */
-  align-items: center; /* Center content horizontally */
-  height: 100vh; /* Assuming you want the container to take the full height of the viewport */
-}
-
-/* Additional styling for better readability */
-.content p {
-  text-align: center; /* Center-align paragraphs if needed */
-  margin: 10px 0; /* Add some margin to paragraphs for better spacing */
-}
+<!-- HTML Structure -->
+<div class="background-container">
+    <div class="content">
+        <h1>PHARPRO Consultation Services</h1>
+        <h2>Your Partner in Pharmaceutical Excellence</h2>
+        <p>
+            Expert pharmaceutical consultation: Pharma 4.0, Validation, CSV, Quality & Compliance globally.
+        </p>
+        <a href="#OurSerivces:" class="btn btn-primary mt-3">Get Started Today</a>
+    </div>
+</div>
 
     </style>
         <style>
@@ -84,98 +141,243 @@
         }
     </style>
 </head>
-<body style="background-color: #C0C0C0;">
-    <!-- Responsive navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#Our Serivces:">Our Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#About Us:">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-    <!-- Page content-->
-    <div class="background-container">
-        <div class="content">
-            <h1 style="color: darkred; font-size: 48px;"> <b> CSV, QA, Validation and Quality Improvement services provided by PHARPRO</b></h1>
-        </div>
-    </div>
-    <section class="container mt-5" id="Our Serivces:">
+  <section class="container mt-5" id="OurSerivces:">
     <h2 class="title" style="color: darkred;">Our Services:</h2>
-    <div class="row mt-4">
-        <div class="col-md-12">
-   <div class="row">
-    <div class="col-md-3">
-        <div class="text-center">
-            <img src="./images/warehouse.jpg" alt="Thermal Mapping Services" class="img-fluid" style="height: 300px;">
-        </div>
-    </div>
-    <div class="col-md-9">
-        <h3 style="color: darkred;"><b>Thermal Mapping Services:</b></h3>
-        <p style="text-align: justify; margin:auto;">
-            Unlock the Power of Precision Temperature Control with Our Cutting-Edge Thermal Mapping Services!
-        </p>
-        <p style="text-align: justify; margin;auto;"></p>
-        <p style="text-align: justify; margin;auto;">🌡️Precision Insights: Our advanced thermal mapping service provides you with a regulatory compliance report that comply with DHA & GCC requirements. Say goodbye to guesswork and hello to 21 CFR compliance reporting!</p>
-        <p style="text-align: justify; margin;auto;">🚀Enhanced Efficiency: With Thermal Mapping, you'll effortlessly optimize your processes. Identify hotspots and cold spots, reduce energy consumption, and supercharge your productivity.</p>
-        <p  style="text-align: justify; margin;auto;">🛡️Safety First: Safety is non-negotiable, and our services are your shield. Detect potential thermal anomalies before they become disasters, ensuring the well-being of your equipment and products.</p>
-        <p style="text-align: justify; margin;auto;">📜Regulatory Compliance: Don't sweat over compliance. We've got you covered! Ensure you meet DHA&GCC standards and regulations without breaking a sweat.</p>
-        <p  style="text-align: justify; margin;auto;">⏰Prevent Downtime: Say goodbye to unexpected shutdowns. Our proactive maintenance approach keeps your operations running smoothly, minimizing costly downtime and maximizing profits.</p>
-        <p  style="text-align: justify; margin;auto;">💰Cost Savings: Discover areas of energy waste and inefficient insulation, and watch your operational costs plummet. Savings like these go straight to your bottom line!</p>
-        <p style="text-align: justify; margin;auto;">Join the ranks of businesses and organizations that have harnessed the incredible potential of Thermal Mapping Services. Don't miss out on this opportunity to boost efficiency, ensure safety, and save money. Contact us today and let's embark on a journey to thermal excellence together!</p>
-    </div>
-</div>
-
-    <div class="row">
-        <div class="col-md-3">
-            <div class="text-center">
-                <img src="./images/csv.jpg" alt="Computer System Validation" class="img-fluid" style="height: 200px;">
+    <div id="servicesCarousel" class="carousel slide mt-4" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/csv.jpg" alt="Computer System Validation Services - Boost Efficiency" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Boost Efficiency with Our CSV Services!</strong></h2>
+                        <p class="text-justify mb-2">Elevate your operations with seamless confidence through our <strong>Computerized System Validation Services</strong>.</p>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>🚀 Ensure regulatory compliance and optimize performance.</li>
+                            <li>🔧 Minimize disruptions and enjoy ongoing support.</li>
+                            <li>💼 Choose PHARPRO for seamless system validation!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Get Started with CSV Services</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-9">
-            <h3 style="color: darkred;"><b>Computerized System Validation Services:</b></h3>
-            <p style="text-align: justify; margin:auto;">
-                Elevate Your Operations with Seamless Confidence through Our Computerized System Validation Services!
-            </p>
-            <p style="text-align: justify; margin;auto;"></p>
-            <p style="text-align: justify; margin;auto;">🔐 Bulletproof Compliance: Our expert team meticulously validates your computerized systems to meet and exceed industry regulations and standards. Say goodbye to compliance headaches!</p>
-            <p style="text-align: justify; margin;auto;">🚀 Optimized Performance: Unlock the full potential of your systems. Our validation services not only ensure compliance but also fine-tune your systems for maximum efficiency, saving you time and resources.</p>
-            <p  style="text-align: justify; margin;auto;">🔍 Thorough Testing: We leave no stone unturned. Our comprehensive testing protocols ensure that every aspect of your computerized systems is rigorously evaluated, leaving no room for surprises.</p>
-            <p style="text-align: justify; margin;auto;">💼 Customized Solutions: We understand that every business is unique. Our validation services are tailored to your specific needs, providing you with a bespoke solution that perfectly fits your operations.</p>
-            <p  style="text-align: justify; margin;auto;">⏰ Time-Efficient: We know that time is money. Our efficient validation process minimizes disruptions to your workflow, allowing you to focus on what matters most: growing your business.</p>
-            <p  style="text-align: justify; margin;auto;">💡 Continuous Support: Our commitment doesn't end with validation. We offer ongoing support to keep your systems in peak condition, ensuring your operations remain smooth and hassle-free.</p>
-            <p style="text-align: justify; margin;auto;">Experience the confidence that comes with flawless computerized systems. Choose PHARPRO Consultation Company for Computerized System Validation Services and elevate your business to new heights. Contact us today to embark on a journey of reliability, compliance, and unparalleled efficiency!</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="text-center">
-                <img src="./images/qagap.jpg" alt="QA & GAP Assessment Services" class="img-fluid" style="height: 200px;">
-            </div>
-        </div>
-        <div class="col-md-9">
-            <h3 style="color: darkred;"><b>Quality Assurance and Gap Assessment Services:</b></h3>
-            <p  style="text-align: justify; margin;auto;">
-                Elevate Quality and Bridge the Gaps with PHARPRO's Premium Quality Assurance and Gap Assessment Services!
-            </p>
-            <p style="text-align: justify; margin;auto;"></p>
-            <p style="text-align: justify; margin;auto;">🌟 Quality Reinvented: PHARPRO's expert team is your quality compass. We redefine excellence, helping you meet and exceed industry benchmarks while consistently delivering top-notch products and services.</p>
-            <p style="text-align: justify; margin;auto;">📊 Gap Assessment Excellence: Our comprehensive Gap Assessment identifies areas in need of improvement, ensuring no detail is overlooked. We provide a crystal-clear roadmap for bridging those gaps, ensuring a seamless journey to superior quality.</p>
-            <p  style="text-align: justify; margin;auto;">🔍 Data-Driven Precision: Leave nothing to chance. We harness the power of data analytics to provide you with insights that drive decision-making, empower your teams, and enhance your processes.</p>
-            <p style="text-align: justify;margin;auto;">💡 Custom-Tailored Solutions: Your business is unique, and your solutions should be too. PHARPRO's services are meticulously crafted to align with your specific needs, guaranteeing results that match your goals.</p>
-            <p  style="text-align: justify; margin;auto;">🚀 Operational Efficiency: Quality doesn't have to come at the cost of efficiency. We optimize your processes to ensure quality is seamlessly integrated, ultimately boosting productivity and profitability.</p>
-            <p  style="text-align: justify; margin;auto;">📈 Market Leadership: Quality Assurance isn't just a checkbox; it's your ticket to market leadership. Trust PHARPRO to guide you in creating a brand that consistently outshines the competition.</p>
-            <p style="text-align: justify; margin;auto;">Partner with PHARPRO today and embark on a transformative journey towards excellence. With our Quality Assurance and Gap Assessment Services, you'll bridge gaps, elevate quality, and secure a lasting legacy of unparalleled success. Contact us now to make quality a defining pillar of your business's future!</p>
-        </div>
-    </div>
 
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/qagap.jpg" alt="Quality Assurance & GAP Assessment Services" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Enhance Product Quality with Our Expert Assessments!</strong></h2>
+                        <p class="text-justify mb-2">Elevate quality and bridge the gaps with PHARPRO's premium <strong>Quality Assurance and Gap Assessment Services</strong>.</p>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>🔍 Identify improvement areas and boost efficiency.</li>
+                            <li>📊 Leverage data-driven insights for market leadership.</li>
+                            <li>🤝 Partner with us for top-notch quality!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Request a QA Assessment</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/Safety.jpeg" alt="Safety Services - Secure Your Operations" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Secure Your Operations with Our Safety Services!</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>⚠️ Detect risks, ensure compliance, and maintain top safety standards.</li>
+                            <li>🔒 Protect your equipment and products.</li>
+                            <li>👷 Contact us for expert safety solutions!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Learn More About Safety Services</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/warehouse.jpg" alt="Thermal Mapping Services - Optimize Temperature Control" class="img-fluid" style="height: 300px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Optimize with Our Thermal Mapping Services!</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>🌡️ Identify temperature issues, save energy, and enhance productivity.</li>
+                            <li>✅ Ensure compliance and prevent downtime.</li>
+                            <li>🌍 Transform your temperature control—contact us now!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Schedule a Thermal Mapping Consultation</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide: CSV GAP Assessment -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/csv_gap.webp" alt="CSV GAP Assessment Services" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Identify and Bridge Gaps with CSV GAP Assessment!</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>📝 Comprehensive analysis of your CSV processes.</li>
+                            <li>🔍 Identify gaps and ensure full compliance.</li>
+                            <li>📈 Improve performance with targeted actions!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Start Your GAP Assessment</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide: CSV SOPs -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/csv_sops.jpg" alt="CSV SOPs Services" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Optimize with Our Custom CSV SOPs!</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>📜 Tailored Standard Operating Procedures for CSV.</li>
+                            <li>✅ Ensure compliance and consistency in operations.</li>
+                            <li>🚀 Boost efficiency with well-documented processes!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Get Your Custom SOPs</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide: Validation Services -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/validation.jpg" alt="Validation Services" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Ensure Quality with Our Validation Services!</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>✔️ Comprehensive validation of your systems and processes.</li>
+                            <li>🛠️ Tailored solutions for your specific needs.</li>
+                            <li>🔒 Secure compliance and maintain high standards!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Request Validation Services</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide: CSV, Quality, Data Integrity, and Safety Trainings -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/training.png" alt="Training Services" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Empower Your Team with Specialized Trainings!</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>🎓 Comprehensive training in CSV, Quality, Data Integrity, and Safety.</li>
+                            <li>📚 Enhance your team's skills and compliance knowledge.</li>
+                            <li>💡 Stay ahead with the latest industry practices!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Enroll in Training Programs</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide: Excel Sheet Validation -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/excel_validation.jpg" alt="Excel Sheet Validation Services" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Ensure Accuracy with Excel Sheet Validation!</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>📊 Validate complex Excel sheets for error-free performance.</li>
+                            <li>🔍 Detect and rectify potential issues before they arise.</li>
+                            <li>🛡️ Safeguard your data integrity with expert validation!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Validate Your Excel Sheets</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide: CQV Services -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/cqv.jpg" alt="CQV Services" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Commission, Qualification, and Validation (CQV) Services</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>🏗️ Comprehensive CQV services for your projects.</li>
+                            <li>🔬 Ensure all stages of your project meet the highest standards.</li>
+                            <li>🌟 Achieve excellence with PHARPRO’s expert CQV support!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Explore CQV Services</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide: Pharma 4.0 Transformation -->
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="./images/pharma4.jpg" alt="Pharma 4.0 Transformation" class="img-fluid" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="text-darkred"><strong>Lead the Future with Pharma 4.0 Transformation!</strong></h2>
+                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                            <li>🚀 Embrace the future with cutting-edge Pharma 4.0 solutions.</li>
+                            <li>🌐 Digital transformation to enhance efficiency and compliance.</li>
+                            <li>🏆 Stay competitive in a rapidly evolving industry!</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Start Your Pharma 4.0 Journey</a>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+ </div>
+</section>
 </section>
 <style>
     /* Custom styles for the About Us section */
@@ -199,30 +401,37 @@
         }
     </style>
 
-<section class="container mt-5" id="About Us:">
-    <h2 class="title" style="color: darkred;">About Us:</h2>
+<<section class="container mt-5" id="about-us">
+    <h1 class="title text-center" style="color: darkred;">About Us</h1>
     <div class="row mt-4">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 style="color: darkred;">Our Mission:</h3>
-                    <p style="text-align: justify;">At PHARPRO Consultation Company, our mission is to be a trusted partner in advancing healthcare through excellence in pharmaceutical consultation.</p>
-                    <p>We are committed to providing expert guidance, innovative solutions, and exceptional service to pharmaceutical companies, healthcare organizations, warehouses, environmental monitored storage facilities and storage facilities worldwide.</p>
-                    <p style="text-align: justify;"> We are committed to providing expert guidance, innovative solutions, and exceptional service to pharmaceutical companies, healthcare organizations, warehouses, environmental monitored storage facilities and storage facilities worldwide.</p>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <h3 style="color: darkred;">Our Vision:</h3>
-                    <p style="text-align: justify;">Our vision at PHARPRO Consultation Company is to be the foremost leader in pharmaceutical consultation services, specializing in thermal mapping, quality improvement, validation studies, and computerized system validation.</p>
-                    <p style="text-align: justify;"> We envision a future where our pioneering contributions redefine pharmaceutical and healthcare industries' standards for safety, efficiency, and excellence. We are dedicated to guiding pharmaceutical companies in optimizing their processes, ensuring product quality, and achieving compliance with regulatory requirements.</p>
-                    <p style="text-align: justify;">By doing so, we aim to facilitate the development of cutting-edge solutions, enhance healthcare delivery, and elevate global healthcare standards. </p>
-                    <p style="text-align: justify;">At PHARPRO, our vision is to be the driving force behind innovation and transformation in the pharmaceutical and healthcare sectors. </p>
+        <!-- Our Mission and Our Vision beside each other -->
+        <div class="col-md-6" style="text-align: justify;">
+            <h2 style="color: darkred;">Our Mission</h2>
+            <p>
+                At <strong>PHARPRO Consultation Company</strong>, we are a trusted partner in advancing healthcare through excellence in pharmaceutical consultation. We are committed to providing expert guidance, innovative solutions, and exceptional service to pharmaceutical companies, healthcare organizations, warehouses, and storage facilities globally.
+            </p>
+        </div>
+
+        <div class="col-md-6" style="text-align: justify;">
+            <h2 style="color: darkred;">Our Vision</h2>
+            <p>
+                Our vision at <strong>PHARPRO Consultation Company</strong> is to be the leader in pharmaceutical consultation services, specializing in thermal mapping, quality improvement, and validation studies. We aim to redefine industry standards for safety, efficiency, and excellence.
+            </p>
+        </div>
+    </div>
+</section>
+            <!-- Call to Action -->
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <h3>Ready to transform your business?</h3>
+                    <p>Let us help you optimize your pharmaceutical processes and achieve compliance.</p>
+                    <a href="#contact" class="btn btn-danger">Get Started</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 </section>
 <!-- Contact section -->
@@ -313,6 +522,10 @@
         // Toggle the service list when the button is clicked
         dropdownButton.addEventListener('click', toggleServicesList);
     </script>
+    <!-- Include Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 </body>
 </html>
