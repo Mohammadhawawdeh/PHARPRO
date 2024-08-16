@@ -10954,3 +10954,87 @@ body{
     -webkit-transform: translateZ(0); /* Improves rendering on some devices */
     image-rendering: -webkit-optimize-contrast; /* Helps in enhancing the quality */
 }
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #555; /* Change the color as needed */
+}
+/* Background Container */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background Video */
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures video covers entire container */
+    filter: brightness(50%); /* Optional: darken video for better contrast with content */
+}
+
+/* Content Style */
+.content {
+    position: relative;
+    z-index: 2; /* Ensure content appears above video */
+    text-align: center;
+    color: #E5B299; /* Rose gold color */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+    color: #E5B299;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+    color: #E5B299;
+}
+
+.content p {
+    color: #E5B299;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content h2 {
+        font-size: 1.2em;
+    }
+}
+
