@@ -64,7 +64,8 @@
 .background-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: auto; /* Adjust height automatically based on content */
+    min-height: 100vh; /* Minimum height of full viewport */
     overflow: hidden;
 }
 
@@ -90,7 +91,6 @@
     color: #000000; /* Black color */
     padding: 20px;
     max-width: 800px;
-    width: 100%; /* Ensure content spans the width of the container */
 }
 
 /* Headline and Text */
@@ -99,19 +99,16 @@
     margin-bottom: 10px;
     font-weight: bold;
     animation: fadeIn 2s ease-in-out;
-    color: #000000; /* Black color for H1 */
 }
 
 .content h2 {
     font-size: 1.2em; /* Reduced subheading size */
     margin-top: 10px;
     animation: fadeIn 3s ease-in-out;
-    color: #000000; /* Black color for H2 */
 }
 
 .content p {
     font-size: 1em; /* Reduced paragraph size */
-    color: #000000; /* Black color for paragraph text */
 }
 
 /* Fade-In Animation */
@@ -128,6 +125,24 @@
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
+    .background-video {
+        object-fit: contain; /* Ensure video doesn't overflow on smaller screens */
+        height: auto; /* Adjust height automatically */
+        width: 100%; /* Fit video to screen width */
+        top: 0;
+        left: 0;
+        transform: none; /* Remove centering transform */
+    }
+    
+    .content {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        max-width: 100%;
+        text-align: center; /* Center text on small screens */
+    }
+
     .content h1 {
         font-size: 1.2em; /* Further reduced size for smaller screens */
     }
@@ -137,7 +152,6 @@
     }
 }
 </style>
-
 </style>
 
 </head>
