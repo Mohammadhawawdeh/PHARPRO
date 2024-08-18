@@ -64,8 +64,7 @@
 .background-container {
     position: relative;
     width: 100%;
-    height: auto;
-    min-height: 100vh; /* Minimum height of full viewport */
+    height: 100vh; /* Full viewport height */
     overflow: hidden;
 }
 
@@ -74,10 +73,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: auto;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures the video covers the entire container without stretching */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover; /* Cover the container without stretching */
     z-index: 0;
 }
 
@@ -126,12 +125,12 @@
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
     .background-video {
-        object-fit: contain; /* Ensure video doesn't overflow on smaller screens */
-        height: auto; /* Adjust height automatically */
-        width: 100%; /* Fit video to screen width */
-        top: 0;
-        left: 0;
-        transform: none; /* Remove centering transform */
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        object-fit: cover; /* Cover the container */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the video */
     }
     
     .content {
@@ -152,6 +151,7 @@
     }
 }
 </style>
+
 
 
 </head>
