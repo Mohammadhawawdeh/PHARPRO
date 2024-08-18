@@ -11075,4 +11075,14 @@ body{
 .ceo-message a:hover {
     text-decoration: underline;
 }
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: contain; /* Ensures the entire video is visible, with potential letterboxing */
+    z-index: 0;
+}
 

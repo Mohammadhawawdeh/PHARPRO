@@ -44,108 +44,120 @@
         </div>
     </div>
 </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHARPRO Consultation Services</title>
+ <style>
+/* Background Container */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
 <style>
-    /* Background Container */
-    .background-container {
-        background-image: url('./images/PHARPRO.jpg');
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100vh; /* Reduced height for better focus */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative; /* Allows positioning of overlay */
-        overflow: hidden;
-    }
+/* Background Container */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
 
-    /* Background Overlay */
-    .background-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-        z-index: 1;
-    }
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video covers the entire container without stretching */
+    z-index: 0;
+}
 
-    /* Content Style */
-    .content {
-        position: relative;
-        z-index: 2; /* Ensure content appears above overlay */
-        text-align: center;
-        color: #E5B299; /* Rose gold color */
-        padding: 20px;
-        max-width: 800px;
-        margin: 0 auto;
-    }
+/* Content Style */
+.content {
+    position: absolute;
+    bottom: 50px; /* Position the content 50px above the bottom */
+    left: 20px; /* Position the content 20px from the left */
+    z-index: 1; /* Ensure content appears above the video */
+    text-align: left; /* Align text to the left */
+    color: #000000; /* Black color */
+    padding: 20px;
+    max-width: 800px;
+    width: 100%; /* Ensure content spans the width of the container */
+}
 
+/* Headline and Text */
+.content h1 {
+    font-size: 1.5em; /* Reduced headline size */
+    margin-bottom: 10px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+    color: #000000; /* Black color for H1 */
+}
+
+.content h2 {
+    font-size: 1.2em; /* Reduced subheading size */
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+    color: #000000; /* Black color for H2 */
+}
+
+.content p {
+    font-size: 1em; /* Reduced paragraph size */
+    color: #000000; /* Black color for paragraph text */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
     .content h1 {
-        font-size: 2.5em; /* Headline size */
-        margin-bottom: 10px;
-        font-weight: bold;
-        animation: fadeIn 2s ease-in-out;
-        color: #E5B299; /* Rose gold color for H1 */
+        font-size: 1.2em; /* Further reduced size for smaller screens */
     }
 
     .content h2 {
-        font-size: 1.5em; /* Subheading size */
-        margin-top: 10px;
-        animation: fadeIn 3s ease-in-out;
-        color: #E5B299; /* Rose gold color for H2 */
+        font-size: 1em; /* Further reduced size for smaller screens */
     }
-
-    .content p {
-        color: #E5B299; /* Rose gold color for paragraph text */
-    }
-
-    /* Fade-In Animation */
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Responsive Design Adjustments */
-    @media (max-width: 768px) {
-        .content h1 {
-            font-size: 2em;
-        }
-
-        .content h2 {
-            font-size: 1.2em;
-        }
-    }
+}
 </style>
 
-<!-- HTML Structure -->
+</style>
+
+</head>
+<body>
+
 <div class="background-container">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="./videos/PHARPRO.mp4" type="video/mp4">
+     </video>
     <div class="content">
         <h1>PHARPRO Consultation Services</h1>
         <h2>Your Partner in Pharmaceutical Excellence</h2>
-        <p>
-            Expert pharmaceutical consultation: Pharma 4.0, Validation, CSV, Quality & Compliance globally.
-        </p>
         <a href="#OurSerivces:" class="btn btn-primary mt-3">Get Started Today</a>
     </div>
 </div>
 
-    </style>
-        <style>
-        /* Remove bullets from dropdown list */
-        .services-list {
-            list-style-type: none;
-            padding-left: 0; /* Optional: Remove left padding */
-        }
-    </style>
-</head>
+</body>
+</html>
+
+
   <section class="container mt-5" id="OurSerivces:">
     <h2 class="title" style="color: darkred;">Our Services:</h2>
     <div id="servicesCarousel" class="carousel slide mt-4" data-ride="carousel" data-interval="4000">
@@ -582,8 +594,6 @@
         Our team is composed of dedicated professionals with diverse expertise in software development, quality assurance, and customer support. We are committed to delivering innovative solutions and exceptional service to meet your needs. Each member brings unique skills and experiences, working collaboratively to achieve excellence and drive success in our projects.
     </p>
 </section>
-
-
 <section class="container mt-5" id="ceo-letter">
     <h2 class="title" style="color: darkred;">A Message from Our CEO</h2>
     <div class="ceo-section d-flex align-items-center">
