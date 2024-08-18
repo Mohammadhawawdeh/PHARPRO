@@ -50,6 +50,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHARPRO Consultation Services</title>
+ <style>
+/* Background Container */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
 <style>
 /* Background Container */
 .background-container {
@@ -65,8 +74,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%; /* Fit the video to the width of the container */
-    height: auto; /* Adjust height automatically */
+    width: auto;
+    height: 100%;
     transform: translate(-50%, -50%);
     object-fit: cover; /* Ensures the video covers the entire container without stretching */
     z-index: 0;
@@ -117,9 +126,9 @@
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
     .background-video {
-        width: 100%; /* Ensure video fits the full width */
+        object-fit: contain; /* Ensure video doesn't overflow on smaller screens */
         height: auto; /* Adjust height automatically */
-        object-fit: cover; /* Ensure video covers the container without stretching */
+        width: 100%; /* Fit video to screen width */
         top: 0;
         left: 0;
         transform: none; /* Remove centering transform */
@@ -143,7 +152,6 @@
     }
 }
 </style>
-
 
 
 </head>
