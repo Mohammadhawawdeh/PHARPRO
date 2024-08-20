@@ -55,7 +55,7 @@
 .background-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 93vh; /* Full viewport height */
     overflow: hidden;
 }
 
@@ -602,12 +602,119 @@
         </div>
     </div>
 </section>
+<style>
+/* Icon Section */
+.icon-section {
+    padding: 60px 0;
+    background: url('./images/Gauge.gif') no-repeat center center; /* Add your image URL here */
+    background-size: contain; /* Ensure the image fits within the section */
+    height: 45vh; /* Set a specific height for the section */
+    text-align: center;
+}
+
+
+.icon-box {
+    margin-bottom: 30px;
+}
+
+/* Gauge Container */
+.gauge {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+.gauge .gauge-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+    transform-origin: center;
+    animation: fillGauge 4s linear infinite;
+}
+
+.gauge .gauge-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.icon-box h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.icon-box p {
+    font-size: 1.2em;
+}
+
+/* Continuous Fill Animation */
+@keyframes fillGauge {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+</style>
+
+<section class="icon-section">
+    <div class="container">
+        <div class="row">
+            <!-- Experience -->
+            <div class="col-md-4 icon-box">
+                <div class="gauge">
+                    <div class="gauge-fill"></div>
+                    <div class="gauge-cover"></div>
+                </div>
+                <h3>7+</h3>
+                <p>Years of Experience</p>
+            </div>
+            <!-- Happy Clients -->
+            <div class="col-md-4 icon-box">
+                <div class="gauge">
+                    <div class="gauge-fill"></div>
+                    <div class="gauge-cover"></div>
+                </div>
+                <h3>3+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <!-- Projects -->
+            <div class="col-md-4 icon-box">
+                <div class="gauge">
+                    <div class="gauge-fill"></div>
+                    <div class="gauge-cover"></div>
+                </div>
+                <h3>16+</</h3>
+                <p>Projects Completed</p>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="container mt-5" id="our-team">
     <h1 class="title" style="color: darkred;">Our Team</h1>
     <p class="text-paragraph mt-4" style="text-align: justify;">
-        Our team is composed of dedicated professionals with diverse expertise in software development, quality assurance, and customer support. We are committed to delivering innovative solutions and exceptional service to meet your needs. Each member brings unique skills and experiences, working collaboratively to achieve excellence and drive success in our projects.
+        Our team comprises dedicated professionals with diverse expertise in software development, quality assurance, and customer support. We are committed to delivering innovative solutions and exceptional service tailored to meet your needs. Each member contributes unique skills and experiences, collaborating effectively to achieve excellence and drive success in our projects.
     </p>
 </section>
+
 <section class="container mt-5" id="ceo-letter">
     <h2 class="title" style="color: darkred;">A Message from Our CEO</h2>
     <div class="ceo-section d-flex align-items-center">
@@ -756,6 +863,20 @@
         // Toggle the service list when the button is clicked
         dropdownButton.addEventListener('click', toggleServicesList);
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const gauges = document.querySelectorAll('.gauge-fill');
+
+    gauges.forEach(gauge => {
+        const percentage = gauge.getAttribute('data-percentage');
+        const degree = (percentage / 100) * 180; // Convert percentage to degrees (0-180)
+        setTimeout(() => {
+            gauge.style.transform = `rotate(${degree}deg)`;
+        }, 100); // Small delay to allow for the transition to be visible
+    });
+});
+</script>
+
     <!-- Include Bootstrap JS and dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
