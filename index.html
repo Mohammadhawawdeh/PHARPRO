@@ -151,9 +151,6 @@
     }
 }
 </style>
-
-
-
 </head>
 <body>
 
@@ -295,7 +292,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Slide: CQV Services -->
             <div class="carousel-item">
                 <div class="row mb-4">
@@ -878,6 +874,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 100); // Small delay to allow for the transition to be visible
     });
 });
+</script>
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '66e6caf192f43d1a8236f021' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
 </script>
 
     <!-- Include Bootstrap JS and dependencies -->
