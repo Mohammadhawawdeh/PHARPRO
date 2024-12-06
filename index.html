@@ -24,26 +24,7 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0-beta3/css/all.min.css">
         <!-- Responsive navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#OurSerivces:">Our Services</a></li>
-                <<li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#partners">Our Partners</a></li>
-                <li class="nav-item"><a class="nav-link" href="#software-solutions">Software Solutions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#our-team">Our Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#ceo-letter">CEO Letter</a></li>
-                <li class="nav-item"><a class="nav-link" href="#AboutUs:">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +40,6 @@
     overflow: hidden;
 }
 
-<style>
 /* Background Container */
 .background-container {
     position: relative;
@@ -153,52 +133,86 @@
 </style>
 </head>
 <body>
-
-<div class="background-container">
-    <video class="background-video" autoplay muted loop playsinline>
-        <source src="https://github.com/Mohammadhawawdeh/PHARPRO/raw/main/Videos/PHARPRO.mp4" type="video/mp4">
-             </video>
-    <div class="content">
-        <h1>PHARPRO Consultation Services</h1>
-        <h2>Your Partner in Pharmaceutical Excellence</h2>
-        <a href="#OurSerivces:" class="btn btn-primary mt-3">Get Started Today</a>
+    <!-- Navigation Tabs -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <!-- Navbar Toggler Button (For mobile view) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home"role="tab" aria-controls="home" aria-selected="true">Home</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="OurServices-tab" data-bs-toggle="tab" href="#OurServices" role="tab" aria-controls="OurServices" aria-selected="false">Our Services</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="testimonials-tab" data-bs-toggle="tab" href="#testimonials" role="tab" aria-controls="testimonials" aria-selected="false">Testimonials</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="partners-tab" data-bs-toggle="tab" href="#partners" role="tab" aria-controls="partners" aria-selected="false">Our Partners</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="software-tab" data-bs-toggle="tab" href="#software" role="tab" aria-controls="software" aria-selected="false">Software Solutions</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="team-tab" data-bs-toggle="tab" href="#team" role="tab" aria-controls="team" aria-selected="false">Our Team</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="CEO-tab" data-bs-toggle="tab" href="#CEO" role="tab" aria-controls="CEO" aria-selected="false">CEO Letter</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about-tab" data-bs-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">About Us</a></li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="sop-tab" data-bs-toggle="tab" href="#sop" role="tab" aria-controls="sop" aria-selected="false">SOP Purchasing</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="training-tab" data-bs-toggle="tab" href="#training" role="tab" aria-controls="training" aria-selected="false">Training Requests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact Us</a></li>
+            </ul>
+        </div>
     </div>
-</div>
-
-</body>
-</html>
-
-
-  <section class="container mt-5" id="OurSerivces:">
+</nav>
+<!-- Tab Content -->
+  <div class="tab-content">
+     <!-- Home Tab -->
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="background-container">
+                <video class="background-video" autoplay muted loop playsinline>
+                    <source src="https://github.com/Mohammadhawawdeh/PHARPRO/raw/main/Videos/PHARPRO.mp4" type="video/mp4">
+                </video>
+                <div class="content">
+                    <h1>PHARPRO Consultation Services</h1>
+                    <h2>Your Partner in Pharmaceutical Excellence</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Our Services Tab -->
+ <div class="tab-pane fade" id="OurServices" role="tabpanel" aria-labelledby="OurServices-tab">
     <h2 class="title" style="color: darkred;">Our Services:</h2>
-    <div id="servicesCarousel" class="carousel slide mt-4" data-ride="carousel" data-interval="4000">
+    <div id="servicesCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="4000">
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/csv.jpg" alt="Computer System Validation Services - Boost Efficiency" class="img-fluid" style="height: 200px;">
-                        </div>
+                    <div class="col-md-3 text-center">
+                        <img src="./images/csv.jpg" alt="CSV Services" class="img-fluid" style="height: auto;">
                     </div>
                     <div class="col-md-9">
                         <h2 class="text-darkred"><strong>Boost Efficiency with Our CSV Services!</strong></h2>
-                        <p class="text-justify mb-2">Elevate your operations with seamless confidence through our <strong>Computerized System Validation Services</strong>.</p>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
+                        <p class="mb-2">Elevate your operations with seamless confidence through our <strong>Computerized System Validation Services</strong>.</p>
+                        <ul style="list-style-type: none; padding-left: 0;">
                             <li>🚀 Ensure regulatory compliance and optimize performance.</li>
                             <li>🔧 Minimize disruptions and enjoy ongoing support.</li>
                             <li>💼 Choose PHARPRO for seamless system validation!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Get Started with CSV Services</a>
                     </div>
                 </div>
             </div>
-                        <!-- Slide: CSV GAP Assessment -->
+            <!-- Slide 2 -->
             <div class="carousel-item">
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/csv_gap.webp" alt="CSV GAP Assessment Services" class="img-fluid" style="height: 200px;">
+                            <img src="./images/csv_gap.webp" alt="CSV GAP Assessment" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -208,7 +222,6 @@
                             <li>🔍 Identify gaps and ensure full compliance.</li>
                             <li>📈 Improve performance with targeted actions!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Start Your GAP Assessment</a>
                     </div>
                 </div>
             </div>
@@ -218,7 +231,7 @@
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/csv_sops.jpg" alt="CSV SOPs Services" class="img-fluid" style="height: 200px;">
+                            <img src="./images/csv_sops.jpg" alt="CSV SOPs Services" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -228,7 +241,6 @@
                             <li>✅ Ensure compliance and consistency in operations.</li>
                             <li>🚀 Boost efficiency with well-documented processes!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Get Your Custom SOPs</a>
                     </div>
                 </div>
             </div>
@@ -238,7 +250,7 @@
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/validation.jpg" alt="Validation Services" class="img-fluid" style="height: 200px;">
+                            <img src="./images/validation.jpg" alt="Validation Services" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -248,7 +260,6 @@
                             <li>🛠️ Tailored solutions for your specific needs.</li>
                             <li>🔒 Secure compliance and maintain high standards!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Request Validation Services</a>
                     </div>
                 </div>
             </div>
@@ -258,7 +269,7 @@
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/training.png" alt="Training Services" class="img-fluid" style="height: 200px;">
+                            <img src="./images/training.png" alt="Training Services" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -268,7 +279,6 @@
                             <li>📚 Enhance your team's skills and compliance knowledge.</li>
                             <li>💡 Stay ahead with the latest industry practices!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Enroll in Training Programs</a>
                     </div>
                 </div>
             </div>
@@ -278,7 +288,7 @@
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/excel_validation.jpg" alt="Excel Sheet Validation Services" class="img-fluid" style="height: 200px;">
+                            <img src="./images/excel_validation.jpg" alt="Excel Sheet Validation Services" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -288,7 +298,6 @@
                             <li>🔍 Detect and rectify potential issues before they arise.</li>
                             <li>🛡️ Safeguard your data integrity with expert validation!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Validate Your Excel Sheets</a>
                     </div>
                 </div>
             </div>
@@ -297,7 +306,7 @@
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/cqv.jpg" alt="CQV Services" class="img-fluid" style="height: 200px;">
+                            <img src="./images/cqv.jpg" alt="CQV Services" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -307,7 +316,6 @@
                             <li>🔬 Ensure all stages of your project meet the highest standards.</li>
                             <li>🌟 Achieve excellence with PHARPRO’s expert CQV support!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Explore CQV Services</a>
                     </div>
                 </div>
             </div>
@@ -317,7 +325,7 @@
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/pharma4.jpg" alt="Pharma 4.0 Transformation" class="img-fluid" style="height: 200px;">
+                            <img src="./images/pharma4.jpg" alt="Pharma 4.0 Transformation" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -327,16 +335,15 @@
                             <li>🌐 Digital transformation to enhance efficiency and compliance.</li>
                             <li>🏆 Stay competitive in a rapidly evolving industry!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Start Your Pharma 4.0 Journey</a>
                     </div>
                         </div>
             </div>
-            <!-- Slide 2 -->
+            <!-- Slide: Quality Assurance & Gap Assessment -->
             <div class="carousel-item">
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/qagap.jpg" alt="Quality Assurance & GAP Assessment Services" class="img-fluid" style="height: 200px;">
+                            <img src="./images/qagap.jpg" alt="Quality Assurance & GAP Assessment Services" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -347,17 +354,16 @@
                             <li>📊 Leverage data-driven insights for market leadership.</li>
                             <li>🤝 Partner with us for top-notch quality!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Request a QA Assessment</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 3 -->
+            <!-- Slide: Safety Services -->
             <div class="carousel-item">
                 <div class="row mb-4">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/Safety.jpeg" alt="Safety Services - Secure Your Operations" class="img-fluid" style="height: 200px;">
+                            <img src="./images/Safety.jpeg" alt="Safety Services - Secure Your Operations" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -367,17 +373,16 @@
                             <li>🔒 Protect your equipment and products.</li>
                             <li>👷 Contact us for expert safety solutions!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Learn More About Safety Services</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 4 -->
+            <!-- Slide: Thermal Mapping -->
             <div class="carousel-item">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="./images/warehouse.jpg" alt="Thermal Mapping Services - Optimize Temperature Control" class="img-fluid" style="height: 300px;">
+                            <img src="./images/warehouse.jpg" alt="Thermal Mapping Services - Optimize Temperature Control" class="img-fluid" style="height: auto;">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -387,14 +392,14 @@
                             <li>✅ Ensure compliance and prevent downtime.</li>
                             <li>🌍 Transform your temperature control—contact us now!</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Schedule a Thermal Mapping Consultation</a>
                     </div>
                 </div>
             </div>
+        </div>
 
         
         <!-- Controls -->
-        <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
@@ -403,89 +408,65 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
- </div>
-</section>
-</section>
-<style>
-    /* Custom styles for the About Us section */
-    #about h2.title {
-        text-align: left;
-    }
-
-    #about .col-md-6 {
-        text-align: left;
-    }
-</style>
-
- <style>
-        /* Custom styles for the About Us section */
-        #about h2.title {
-            text-align: left;
-        }
-
-        #about .col-md-6 {
-            text-align: left;
-        }
-    </style>
-<section class="container mt-5" id="testimonials">
-    <h2 class="title" style="color: darkred;">Testimonials:</h2>
-    <div id="testimonialsCarousel" class="carousel slide mt-4" data-ride="carousel" data-interval="4000">
-        <div class="carousel-inner">
-            <!-- Slide 1: Axantia Group -->
-            <div class="carousel-item active">
-                <div class="row mb-4">
-                    <div class="col-md-3 text-center">
-                        <img src="./images/pharma_international_logo.jpeg" alt="Axantia Group" class="img-fluid" style="height: 150px;">
+</div>
+<!-- Testimonials Tab -->
+<div class="tab-content">
+    <div class="tab-pane fade" id="testimonials" role="tabpanel" aria-labelledby="testimonials-tab">
+        <h2 class="title" style="color: darkred;">Testimonials:</h2>
+        <div id="testimonialsCarousel" class="carousel slide mt-4" data-ride="carousel" data-interval="4000">
+            <ol class="carousel-indicators">
+                <li data-target="#testimonialsCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#testimonialsCarousel" data-slide-to="1"></li>
+                <li data-target="#testimonialsCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row mb-4">
+                        <div class="col-md-3 text-center">
+                            <img src="./images/pharma_international_logo.jpeg" alt="Axantia Group" class="img-fluid" style="height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <p class="testimonial-text">"PHARPRO's CSV services helped us optimize our systems with seamless efficiency and ensured our compliance with international standards. We are thrilled with the results!"</p>
+                            <p><strong>- Axantia Group</strong></p>
+                        </div>
                     </div>
-                    <div class="col-md-9">
-                        <p class="testimonial-text">
-                            "PHARPRO's CSV services helped us optimize our systems with seamless efficiency and ensured our compliance with international standards. We are thrilled with the results!"
-                        </p>
-                        <p><strong>- Axantia Group</strong></p>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mb-4">
+                        <div class="col-md-3 text-center">
+                            <img src="./images/DAD.png" alt="Dar Al Dawa" class="img-fluid" style="height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <p class="testimonial-text">"Thanks to PHARPRO, we were able to successfully validate our pharmaceutical systems, ensuring quality and efficiency at every step."</p>
+                            <p><strong>- Dar Al Dawa</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mb-4">
+                        <div class="col-md-3 text-center">
+                            <img src="./images/Hayat.png" alt="Al Hayat Pharmaceuticals" class="img-fluid" style="height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <p class="testimonial-text">"PHARPRO's expert consultation has been a game-changer for us. Their CSV services ensured we stayed ahead of regulatory requirements while improving overall performance."</p>
+                            <p><strong>- Al Hayat Pharmaceuticals</strong></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Slide 2: Dar Al Dawa -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3 text-center">
-                        <img src="./images/DAD.png" alt="Dar Al Dawa" class="img-fluid" style="height: 150px;">
-                    </div>
-                    <div class="col-md-9">
-                        <p class="testimonial-text">
-                            "Thanks to PHARPRO, we were able to successfully validate our pharmaceutical systems, ensuring quality and efficiency at every step."
-                        </p>
-                        <p><strong>- Dar Al Dawa</strong></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 3: Al Hayat Pharmaceuticals -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3 text-center">
-                        <img src="./images/Hayat.png" alt="Al Hayat Pharmaceuticals" class="img-fluid" style="height: 150px;">
-                    </div>
-                    <div class="col-md-9">
-                        <p class="testimonial-text">
-                            "PHARPRO's expert consultation has been a game-changer for us. Their CSV services ensured we stayed ahead of regulatory requirements while improving overall performance."
-                        </p>
-                        <p><strong>- Al Hayat Pharmaceuticals</strong></p>
-                    </div>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <!-- Controls -->
-        <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
-</section>
-<section class="container mt-5" id="partners">
+</div>
+ <!-- Partners Tab -->
+  <div class="tab-pane fade" id="partners" role="tabpanel" aria-labelledby="partners-tab">
     <h2 class="title" style="color: darkred;">Our Partners:</h2>
     <div class="scrolling-wrapper-partners">
         <!-- Partner 1: Arizona -->
@@ -498,15 +479,10 @@
             <img src="./images/cogtive_logo.png" alt="COGTIVE">
             <p>COGTIVE</p>
         </div>
-        <!-- Partner 3: AAPC -->
+        <!-- Partner 3: VIAN -->
         <div class="partner-item text-center">
-            <img src="./images/aapc_logo.jpeg" alt="AAPC">
-            <p>Adwwaa Alwatania</p>
-        </div>
-        <!-- Partner 4: Euphry -->
-        <div class="partner-item text-center">
-            <img src="./images/eupry_logo.jpg" alt="Eupry">
-            <p>Eupry</p>
+        <img src="./images/VIAN.jpg" alt="VIAN Turnkey Projects">
+        <p>VIAN Turnkey Projects</p>
         </div>
         <!-- Repeat partners to create continuous scrolling -->
         <div class="partner-item text-center">
@@ -518,16 +494,13 @@
             <p>COGTIVE</p>
         </div>
         <div class="partner-item text-center">
-            <img src="./images/aapc_logo.jpeg" alt="AAPC">
-            <p>Adwwaa Alwatania</p>
-        </div>
-        <div class="partner-item text-center">
-            <img src="./images/eupry_logo.jpg" alt="Eupry">
-            <p>Eupry</p>
+        <img src="./images/VIAN.jpg" alt="VIAN Turnkey Projects">
+        <p>VIAN Turnkey Projects</p>
         </div>
     </div>
-</section>
-<section class="container mt-5" id="software-solutions">
+</div>
+ <!-- Software Tab -->
+  <div class="tab-pane fade" id="software" role="tabpanel" aria-labelledby="software-tab">
     <h2 class="title" style="color: darkred;">Our Software Solutions:</h2>
     <div class="scrolling-wrapper-solutions">
         <!-- First Row -->
@@ -597,7 +570,141 @@
             </div>
         </div>
     </div>
-</section>
+</div>
+
+ <!-- team Tab -->
+  <div class="tab-pane fade" id="team" role="tabpanel" aria-labelledby="team-tab">
+    <h1 class="title" style="color: darkred;">Our Team</h1>
+    <p class="text-paragraph mt-4" style="text-align: justify;">
+        Our team comprises dedicated professionals with diverse expertise in software development, quality assurance, and customer support. We are committed to delivering innovative solutions and exceptional service tailored to meet your needs. Each member contributes unique skills and experiences, collaborating effectively to achieve excellence and drive success in our projects.
+    </p>
+</div>
+ <!-- CEO Tab -->
+  <div class="tab-pane fade" id="CEO" role="tabpanel" aria-labelledby="CEO-tab">
+    <h2 class="title" style="color: darkred;">A Message from Our CEO</h2>
+    <div class="ceo-section d-flex align-items-center">
+        <div class="ceo-photo">
+            <img src="./images/ceo_photo.jpeg" alt="Mohammad Awawdeh" class="img-fluid rounded-circle">
+        </div>
+        <div class="ceo-message ml-4">
+            <h3>Dear Valued Partners and Clients,</h3>
+            <p>
+                I am thrilled to welcome you to PHARPRO Consultation, where we are dedicated to pioneering excellence and innovation in our field. At PHARPRO, our mission is to empower businesses with cutting-edge solutions and unparalleled support, ensuring you achieve your goals with confidence and success.
+            </p>
+            <p>
+                Our team is driven by a passion for excellence and a commitment to providing tailored solutions that meet your unique needs. We are proud of our comprehensive suite of services, which includes advanced software solutions designed to streamline your operations and enhance efficiency.
+            </p>
+            <p>
+                As we continue to grow and evolve, our focus remains on delivering the highest standards of service and fostering strong, long-lasting relationships with our partners and clients. Your success is our success, and we are here to support you every step of the way.
+            </p>
+            <p>
+                Thank you for your trust and partnership. Together, we will navigate the future with innovation and excellence.
+            </p>
+            <p>
+                Warm regards,<br>
+                <strong>Mohammad Awawdeh</strong><br>
+                CEO, PHARPRO Consultation<br>
+                <a href="http://www.pharpro.co">www.pharpro.co</a>
+            </p>
+        </div>
+    </div>
+</div>
+ <!-- ABOUT Tab -->
+  <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+    <h1 class="title text-center" style="color: darkred;">About Us</h1>
+    <div class="row mt-4">
+        <!-- Our Mission and Our Vision beside each other -->
+        <div class="col-md-6" style="text-align: justify;">
+            <h2 style="color: darkred;">Our Mission</h2>
+            <p>
+                At <strong>PHARPRO Consultation Company</strong>, we are a trusted partner in advancing healthcare through excellence in pharmaceutical consultation. We are committed to providing expert guidance, innovative solutions, and exceptional service to pharmaceutical companies, healthcare organizations, warehouses, and storage facilities globally.
+            </p>
+        </div>
+
+        <div class="col-md-6" style="text-align: justify;">
+            <h2 style="color: darkred;">Our Vision</h2>
+            <p>
+                Our vision at <strong>PHARPRO Consultation Company</strong> is to be the leader in pharmaceutical consultation services, specializing in thermal mapping, quality improvement, and validation studies. We aim to redefine industry standards for safety, efficiency, and excellence.
+            </p>
+        </div>
+    </div>
+    <style>
+    /* Custom styles for the About Us section */
+    #about h2.title {
+        text-align: left;
+    }
+
+    #about .col-md-6 {
+        text-align: left;
+    }
+</style>
+
+ <style>
+        /* Custom styles for the About Us section */
+        #about h2.title {
+            text-align: left;
+        }
+
+        #about .col-md-6 {
+            text-align: left;
+        }
+    </style>
+</div>
+<!-- SOP Tab -->
+<div class="tab-pane fade" id="sop" role="tabpanel" aria-labelledby="sop-tab">
+    <h2 class="title" style="color: darkred;">Purchase SOPs:</h2>
+    <div class="row mt-4">
+        <!-- Google Form -->
+        <div class="col-md-6">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4LPIwEpYF865gYKlHrED4QlR1sj7427noB9cxfiOLaX-FvQ/viewform?embedded=true" 
+                    width="100%" height="1404" frameborder="0" marginheight="0" marginwidth="0">
+                Loading…
+            </iframe>
+        </div>
+        
+        <!-- Side Image (Logo on the right) -->
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid" style="max-width: auto; height: auto;">
+        </div>
+    </div>
+</div>
+<!-- Training Tab -->
+<div class="tab-pane fade" id="training" role="tabpanel" aria-labelledby="training-tab">
+    <h2 class="title" style="color: darkred;">Requested Training:</h2>
+    <div class="row mt-4">
+        <!-- Google Form -->
+        <div class="col-md-6">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfM9sDa_gJrcazLAF9LUFhMdtNTtXD62dOnQOEIndoKj41q6Q/viewform?embedded=true" width="640" height="1565" frameborder="0" marginheight="0" marginwidth="0">
+            Loading…
+        </iframe>
+        </div>
+        
+        <!-- Side Image (Logo on the right) -->
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid" style="max-width: auto; height: auto;">
+        </div>
+    </div>
+</div>
+<!-- Contact Tab -->
+<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <h2 class="title" style="color: darkred;">Contact Us:</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <!-- Embedded Google Form -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeB5d7GUqViPShugRvqR3_py7-QocfE8E3qp8dSjGiR-jM1hw/viewform?embedded=true"
+                        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
+                        sandbox="allow-forms allow-same-origin allow-scripts allow-popups">
+                    Loading…
+                </iframe>
+                <p>If the form does not submit, please click <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB5d7GUqViPShugRvqR3_py7-QocfE8E3qp8dSjGiR-jM1hw/viewform" target="_blank">here</a> to submit your details.</p>
+            </div>
+            <div class="col-md-6">
+                <!-- Side Image -->
+                <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
 <style>
 /* Icon Section */
 .icon-section {
@@ -683,9 +790,7 @@
         font-size: 1em; /* Adjust paragraph size */
     }
 }
-
 </style>
-
 <section class="icon-section">
     <div class="container">
         <div class="row">
@@ -719,94 +824,25 @@
         </div>
     </div>
 </section>
-
-<section class="container mt-5" id="our-team">
-    <h1 class="title" style="color: darkred;">Our Team</h1>
-    <p class="text-paragraph mt-4" style="text-align: justify;">
-        Our team comprises dedicated professionals with diverse expertise in software development, quality assurance, and customer support. We are committed to delivering innovative solutions and exceptional service tailored to meet your needs. Each member contributes unique skills and experiences, collaborating effectively to achieve excellence and drive success in our projects.
-    </p>
-</section>
-
-<section class="container mt-5" id="ceo-letter">
-    <h2 class="title" style="color: darkred;">A Message from Our CEO</h2>
-    <div class="ceo-section d-flex align-items-center">
-        <div class="ceo-photo">
-            <img src="./images/ceo_photo.jpeg" alt="Mohammad Awawdeh" class="img-fluid rounded-circle">
-        </div>
-        <div class="ceo-message ml-4">
-            <h3>Dear Valued Partners and Clients,</h3>
-            <p>
-                I am thrilled to welcome you to PHARPRO Consultation, where we are dedicated to pioneering excellence and innovation in our field. At PHARPRO, our mission is to empower businesses with cutting-edge solutions and unparalleled support, ensuring you achieve your goals with confidence and success.
-            </p>
-            <p>
-                Our team is driven by a passion for excellence and a commitment to providing tailored solutions that meet your unique needs. We are proud of our comprehensive suite of services, which includes advanced software solutions designed to streamline your operations and enhance efficiency.
-            </p>
-            <p>
-                As we continue to grow and evolve, our focus remains on delivering the highest standards of service and fostering strong, long-lasting relationships with our partners and clients. Your success is our success, and we are here to support you every step of the way.
-            </p>
-            <p>
-                Thank you for your trust and partnership. Together, we will navigate the future with innovation and excellence.
-            </p>
-            <p>
-                Warm regards,<br>
-                <strong>Mohammad Awawdeh</strong><br>
-                CEO, PHARPRO Consultation<br>
-                <a href="http://www.pharpro.co">www.pharpro.co</a>
-            </p>
-        </div>
+<!-- Call to Action -->
+<div class="row mt-5">
+    <div class="col-md-12 text-center">
+        <h3>Ready to transform your business?</h3>
+        <p>Let us help you optimize your pharmaceutical processes and achieve compliance.</p>
+        <a href="#contact" class="btn btn-danger" onclick="activateContactTab()">Get Started</a>
     </div>
-</section>
+</div>
 
-<section class="container mt-5" id="AboutUs:">
-    <h1 class="title text-center" style="color: darkred;">About Us</h1>
-    <div class="row mt-4">
-        <!-- Our Mission and Our Vision beside each other -->
-        <div class="col-md-6" style="text-align: justify;">
-            <h2 style="color: darkred;">Our Mission</h2>
-            <p>
-                At <strong>PHARPRO Consultation Company</strong>, we are a trusted partner in advancing healthcare through excellence in pharmaceutical consultation. We are committed to providing expert guidance, innovative solutions, and exceptional service to pharmaceutical companies, healthcare organizations, warehouses, and storage facilities globally.
-            </p>
-        </div>
-
-        <div class="col-md-6" style="text-align: justify;">
-            <h2 style="color: darkred;">Our Vision</h2>
-            <p>
-                Our vision at <strong>PHARPRO Consultation Company</strong> is to be the leader in pharmaceutical consultation services, specializing in thermal mapping, quality improvement, and validation studies. We aim to redefine industry standards for safety, efficiency, and excellence.
-            </p>
-        </div>
-    </div>
-</section>
-            <!-- Call to Action -->
-            <div class="row mt-5">
-                <div class="col-md-12 text-center">
-                    <h3>Ready to transform your business?</h3>
-                    <p>Let us help you optimize your pharmaceutical processes and achieve compliance.</p>
-                    <a href="#contact" class="btn btn-danger">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-</section>
-<!-- Contact section -->
-<section class="container mt-5" id="contact">
-    <h2 class="title" style="color: darkred;">Contact Us:</h2>
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <!-- Embedded Google Form -->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeB5d7GUqViPShugRvqR3_py7-QocfE8E3qp8dSjGiR-jM1hw/viewform?embedded=true"
-                    width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
-                    sandbox="allow-forms allow-same-origin allow-scripts allow-popups">
-                Loading…
-            </iframe>
-            <!-- Fallback link -->
-            <p>If the form does not submit, please click <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB5d7GUqViPShugRvqR3_py7-QocfE8E3qp8dSjGiR-jM1hw/viewform" target="_blank">here</a> to submit your details.</p>
-        </div>
-        <div class="col-md-6">
-            <!-- Side image -->
-            <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid">
-        </div>
-    </div>
+<!-- JavaScript to Activate Contact Tab -->
+<script>
+    function activateContactTab() {
+        // Activate the Contact tab
+        const contactTab = document.querySelector('a[href="#contact"]');
+        if (contactTab) {
+            contactTab.click();
+        }
+    }
+</script>
 </section>
     <footer class="bg-dark text-white p-4">
     <div class="container">
@@ -895,4 +931,29 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 </body>
+document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll('a[data-toggle="tab"]');
+
+    // Check URL hash and activate the corresponding tab
+    const hash = window.location.hash;
+    if (hash) {
+        const targetTab = document.querySelector(`a[href="${hash}"]`);
+        if (targetTab) {
+            targetTab.click(); // Simulate a click to activate
+        }
+    }
+
+    // Add click event listener to update the active tab dynamically
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+            const targetPane = document.querySelector(this.getAttribute("href"));
+
+            // Remove active class from all panes
+            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('show', 'active'));
+
+            // Add active class to the selected pane
+            targetPane.classList.add('show', 'active');
+        });
+    });
+});
 </html>

@@ -11085,4 +11085,26 @@ body{
     object-fit: contain; /* Ensures the entire video is visible, with potential letterboxing */
     z-index: 0;
 }
+#servicesCarousel {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-inner .row {
+    margin: 0; /* Remove default row margins */
+}
+
+.carousel-inner img {
+    width: 100%; /* Ensure images stretch full width */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+.tab-pane {
+    transition: opacity 0.3s ease-in-out;
+    display: none; /* Hidden by default */
+}
+
+.tab-pane.show.active {
+    display: block; /* Only visible when active */
+    opacity: 1; /* Smooth transition */
+}
 
