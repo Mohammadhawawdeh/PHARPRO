@@ -11108,3 +11108,50 @@ body{
     opacity: 1; /* Smooth transition */
 }
 
+/* Outer circle - the gauge background */
+.gauge {
+    background-color: transparent;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures no parts stick out */
+}
+
+/* Transparent inner circle */
+.gauge-cover {
+    background-color: transparent; /* Ensure transparency */
+    border-radius: 50%;
+    width: 80%; /* Slightly smaller than the gauge container */
+    height: 80%; 
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border: 5px solid transparent; /* Remove any visible border */
+    z-index: 2; /* Ensure it appears above the moving line */
+}
+
+/* Thin line fill for the gauge percentage */
+.gauge-fill {
+    background-color: transparent; /* Make the fill area transparent */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #007bff; /* Thin blue line */
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 50% 100%, 50% 50%); /* Arc effect */
+    transform-origin: 50% 50%; /* Rotate from the center */
+    animation: rotateGauge 2s linear infinite; /* Continuous rotation */
+}
+
+/* Animation for continuous rotation */
+@keyframes rotateGauge {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
