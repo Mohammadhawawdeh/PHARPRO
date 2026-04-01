@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="420" viewBox="0 0 1900 420" fill="none">
+      
+    <g transform="translate(42,64) scale(0.72)">
+      <defs>
+        <clipPath id="pharpro-consultation-twolineclip">
+          <rect x="96" y="34" width="88" height="212" rx="44"/>
+        </clipPath>
+      </defs>
+      <g transform="rotate(28 140 140)">
+        <rect x="96" y="34" width="88" height="106" fill="#B12C4B" clip-path="url(#pharpro-consultation-twolineclip)"/>
+        <rect x="96" y="140" width="88" height="106" fill="#233A5E" clip-path="url(#pharpro-consultation-twolineclip)"/>
+        <rect x="98" y="133.5" width="84" height="13" rx="6.5" fill="#FFFFFF" clip-path="url(#pharpro-consultation-twolineclip)"/>
+        <rect x="96" y="34" width="88" height="212" rx="44" stroke="#B12C4B" stroke-width="10" fill="none"/>
+        <path d="M120 56 C132 48, 148 48, 158 60" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.95"/>
+      </g>
+    </g>
+    
+      <text x="230" y="208" font-family="Helvetica, Arial, sans-serif" font-size="160" font-weight="800" letter-spacing="1.1" fill="#B12C4B">PHARPRO</text>
+      <text x="234" y="308" font-family="Helvetica, Arial, sans-serif" font-size="74" font-weight="700" letter-spacing="2" fill="#233A5E">Consultation</text>
+    </svg>

@@ -1,1086 +1,1484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRCV7XCWKT"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XRCV7XCWKT');
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Excel your CSV, QA, Validation and Quality Improvement with PHARPRO" />
-    <meta name="author" content="Mohammad Awawdeh" />
-    <title>CSV, QA, Validation, Quality Improvement - Pharmaceutical Service Provider</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0-beta3/css/all.min.css">
- <style>
-/* Background Video */
-        .background-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHARPRO | CSV, Validation & Quality Assurance for Pharma</title>
+  <meta
+    name="description"
+    content="PHARPRO supports pharmaceutical companies with structured consulting across CSV, quality assurance, compliance, and digital transformation initiatives."
+  />
 
-        .background-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100vw;
-            height: 100vh;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            z-index: 0;
-        }
+  <link rel="icon" type="image/x-icon" href="./images/Favikon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
-        /* Snowfall Canvas */
-        #snowCanvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1; /* Above the video, below the content */
-            pointer-events: none; /* Ensures the canvas doesn't interfere with clicks */
-        }
-
-/* Content Style */
-.content {
-    position: absolute;
-    bottom: 50px; /* Position the content 50px above the bottom */
-    left: 20px; /* Position the content 20px from the left */
-    z-index: 1; /* Ensure content appears above the video */
-    text-align: left; /* Align text to the left */
-    color: #000000; /* Black color */
-    padding: 20px;
-    max-width: 800px;
-}
-
-/* Headline and Text */
-.content h1 {
-    font-size: 1.5em; /* Reduced headline size */
-    margin-bottom: 10px;
-    font-weight: bold;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.content h2 {
-    font-size: 1.2em; /* Reduced subheading size */
-    margin-top: 10px;
-    animation: fadeIn 3s ease-in-out;
-}
-
-.content p {
-    font-size: 1em; /* Reduced paragraph size */
-}
-
-/* Fade-In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Design Adjustments */
-@media (max-width: 768px) {
-    .background-video {
-        width: 100vw; /* Full viewport width */
-        height: 100vh; /* Full viewport height */
-        object-fit: cover; /* Cover the container */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Center the video */
-    }
-    
-    .content {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        padding: 10px;
-        max-width: 100%;
-        text-align: center; /* Center text on small screens */
+  <style>
+    :root {
+      --burgundy: #B12C4B;
+      --burgundy-dark: #8E1E3C;
+      --navy: #233A5E;
+      --ivory: #F5EEE8;
+      --rose: #C98E84;
+      --text: #1E2430;
+      --muted: #667085;
+      --white: #ffffff;
+      --border: #E8DED7;
+      --soft: #FCF8F5;
+      --success: #0F766E;
+      --shadow: 0 10px 30px rgba(35, 58, 94, 0.07);
+      --radius: 22px;
+      --container: 1200px;
     }
 
-    .content h1 {
-        font-size: 1.2em; /* Further reduced size for smaller screens */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .content h2 {
-        font-size: 1em; /* Further reduced size for smaller screens */
+    html {
+      scroll-behavior: smooth;
     }
-}
-/* Snowflakes Overlay */
-.snowflakes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-    overflow: hidden; /* Ensure snowflakes remain within the viewport */
-}
 
-/* Snowflake Style */
-.snowflake {
-    position: absolute;
-    color: white;
-    font-size: 1em;
-    opacity: 0.8;
-    animation: fall 10s linear infinite, sway 3s ease-in-out infinite;
-}
-
-/* Falling Animation */
-@keyframes fall {
-    0% {
-        transform: translateY(-100px); /* Start above the screen */
-    }
-    100% {
-        transform: translateY(100vh); /* End at the bottom of the screen */
-    }
-}
-
-/* Sway Animation */
-@keyframes sway {
-    50% {
-        transform: translateX(20px);
-    }
-    100% {
-        transform: translateX(-20px);
-    }
-}
-
-/* Create multiple snowflakes */
-.snowflake:nth-child(1) {
-    animation-duration: 12s;
-    animation-delay: 0s;
-    left: 5%;
-    font-size: 2em;
-}
-.snowflake:nth-child(2) {
-    animation-duration: 15s;
-    animation-delay: 2s;
-    left: 10%;
-    font-size: 1.5em;
-}
-.snowflake:nth-child(3) {
-    animation-duration: 18s;
-    animation-delay: 4s;
-    left: 20%;
-    font-size: 1.8em;
-}
-/* Add more snowflakes as needed */
     body {
-    background-color: #e1a7b1; /* Lighter Rose Gold background */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+      font-family: "Inter", sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 46px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 780px;
+      font-size: 1.05rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow-section {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--burgundy);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--burgundy);
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(177, 44, 75, 0.18);
+    }
+
+    .btn-primary:hover {
+      background: var(--burgundy-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid rgba(35, 58, 94, 0.14);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(35, 58, 94, 0.04);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(245, 238, 232, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(35, 58, 94, 0.08);
+    }
+
+    .nav-wrap {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .brand-text {
+      line-height: 1.05;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: nowrap;
+    }
+
+    .nav-links a {
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--burgundy);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 88px 0 58px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(177, 44, 75, 0.08);
+      color: var(--burgundy);
+      border: 1px solid rgba(177, 44, 75, 0.12);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.9rem, 6vw, 5rem);
+      line-height: 0.98;
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+      max-width: 700px;
+    }
+
+    .hero .hero-subtitle {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-points span {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fdf8f4 100%);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      width: fit-content;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.1);
+      color: var(--success);
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero-card h3 {
+      color: var(--navy);
+      font-size: 1.22rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .check-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 15px 16px;
+      font-size: 0.96rem;
+      color: var(--text);
+    }
+
+    .trust-strip {
+      margin-top: 36px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .trust-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      text-align: center;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+    }
+
+    .stats {
+      background: var(--navy);
+      border-radius: 28px;
+      padding: 34px;
+      margin-top: 32px;
+      color: var(--white);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat h3 {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .stat p {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.95rem;
+    }
+
+.section-tight {
+  padding-top: 16px;
 }
-</style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1250433473212589');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1250433473212589&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<meta name="facebook-domain-verification" content="1i4bh36j3ux7636jpevaqeleic2dqb" />
+
+.eyebrow-section {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--burgundy);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  margin-bottom: 14px;
+  color: var(--navy);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  max-width: 900px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  max-width: 820px;
+  font-size: 1.04rem;
+}
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.logo-chip {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+  flex: 1 1 230px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.logo-chip:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(35, 58, 94, 0.10);
+}
+
+.logo-chip img {
+  max-height: 46px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo-row {
+    flex-direction: column;
+  }
+
+  .logo-chip {
+    min-height: 88px;
+  }
+
+  .logo-chip img {
+    max-height: 40px;
+  }
+}
+
+    /* RELIABILITY */
+    .reliability-wrap {
+      background: rgba(255,255,255,0.6);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .reliability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .reliability-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .reliability-card h3 {
+      color: var(--navy);
+      font-size: 1.02rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .reliability-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* CARDS */
+    .cards-2,
+    .cards-3 {
+      display: grid;
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .cards-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      transition: 0.25s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(177, 44, 75, 0.08);
+      color: var(--burgundy);
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 1.18rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 14px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      color: var(--muted);
+      display: grid;
+      gap: 8px;
+    }
+
+    /* TESTIMONIALS */
+    .quote-card {
+      position: relative;
+      padding-top: 22px;
+    }
+
+    .quote-card::before {
+      content: "“";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      color: rgba(177, 44, 75, 0.14);
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .quote-card strong {
+      display: block;
+      margin-top: 14px;
+      color: var(--navy);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .faq-question {
+      width: 100%;
+      border: none;
+      background: transparent;
+      padding: 18px 20px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: linear-gradient(135deg, var(--burgundy) 0%, #8f2640 100%);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 16px 40px rgba(177, 44, 75, 0.18);
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .cta-band p {
+      color: rgba(255,255,255,0.88);
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta-band .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.32);
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 18px;
+    }
+
+    .info-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-box h3 {
+      color: var(--navy);
+      font-size: 1.04rem;
+      margin-bottom: 8px;
+    }
+
+    .info-box p,
+    .info-box a {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    form {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 0.92rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fffdfb;
+      font: inherit;
+      color: var(--text);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--burgundy);
+      box-shadow: 0 0 0 4px rgba(177, 44, 75, 0.08);
+    }
+
+    .form-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      margin-top: 80px;
+      padding: 60px 0 26px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col h4 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col p,
+    .footer-col a,
+    .footer-brand p {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.95rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1180px) {
+      .nav-links {
+        gap: 18px;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        padding: 13px 20px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .mobile-menu.active {
+        display: grid;
+        gap: 14px;
+        padding: 14px 0 20px;
+        border-top: 1px solid rgba(35, 58, 94, 0.08);
+      }
+
+      .mobile-menu a {
+        color: var(--navy);
+        font-weight: 700;
+      }
+
+      .hero-grid,
+      .cards-2,
+      .cards-3,
+      .stats-grid,
+      .trust-grid,
+      .reliability-grid,
+      .contact-grid,
+      .footer-grid,
+      .form-grid,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding: 72px 0 56px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand-text span {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.65rem;
+      }
+
+      .hero-card,
+      .card,
+      .reliability-wrap,
+      form,
+      .info-box,
+      .stats,
+      .cta-band {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
 <body>
- <canvas id="snowCanvas"></canvas>
-    <script>
-        const canvas = document.getElementById('snowCanvas');
-        const ctx = canvas.getContext('2d');
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        let particles = [];
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.radius = Math.random() * 3 + 1;
-                this.speed = Math.random() * 1 + 0.5;
-            }
-
-            update() {
-                this.y += this.speed;
-                if (this.y > canvas.height) {
-                    this.y = 0;
-                    this.x = Math.random() * canvas.width;
-                }
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'white';
-                ctx.fill();
-                ctx.closePath();
-            }
-        }
-
-        function init() {
-            particles = [];
-            for (let i = 0; i < 200; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(particle => {
-                particle.update();
-                particle.draw();
-            });
-            requestAnimationFrame(animate);
-        }
-
-        init();
-        animate();
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            init();
-        });
-</script>
-    <!-- Navigation Tabs -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <header class="navbar">
     <div class="container">
-        <!-- Navbar Toggler Button (For mobile view) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home"role="tab" aria-controls="home" aria-selected="true">Home</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="OurServices-tab" data-bs-toggle="tab" href="#OurServices" role="tab" aria-controls="OurServices" aria-selected="false">Our Services</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="testimonials-tab" data-bs-toggle="tab" href="#testimonials" role="tab" aria-controls="testimonials" aria-selected="false">Testimonials</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="partners-tab" data-bs-toggle="tab" href="#partners" role="tab" aria-controls="partners" aria-selected="false">Our Partners</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="software-tab" data-bs-toggle="tab" href="#software" role="tab" aria-controls="software" aria-selected="false">Software Solutions</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="team-tab" data-bs-toggle="tab" href="#team" role="tab" aria-controls="team" aria-selected="false">Our Team</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="CEO-tab" data-bs-toggle="tab" href="#CEO" role="tab" aria-controls="CEO" aria-selected="false">CEO Letter</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="about-tab" data-bs-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">About Us</a></li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="sop-tab" data-bs-toggle="tab" href="#sop" role="tab" aria-controls="sop" aria-selected="false">SOP</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="training-tab" data-bs-toggle="tab" href="#training" role="tab" aria-controls="training" aria-selected="false">Training </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="protocols-tab" data-bs-toggle="tab" href="#protocols" role="tab" aria-controls="protocols" aria-selected="false">Protocols </a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="services-tab" data-bs-toggle="tab" href="#services" role="tab" aria-controls="services" aria-selected="false">Services </a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- Tab Content -->
-  <div class="tab-content">
-     <!-- Home Tab -->
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="background-container">
-                <video class="background-video" autoplay muted loop playsinline>
-                    <source src="https://github.com/Mohammadhawawdeh/PHARPRO/raw/main/Videos/PHARPRO.mp4" type="video/mp4">
-                </video>
-                <div class="content">
-                    <h1>PHARPRO Consultation Services</h1>
-                    <h2>Your Partner in Pharmaceutical Excellence</h2>
-                </div>
-            </div>
-        </div>
-        <!-- Our Services Tab -->
- <div class="tab-pane fade" id="OurServices" role="tabpanel" aria-labelledby="OurServices-tab">
-    <h2 class="title" style="color: darkred;">Our Services:</h2>
-    <div id="servicesCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="4000">
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="row mb-4">
-                    <div class="col-md-3 text-center">
-                        <img src="./images/csv.jpg" alt="CSV Services" class="img-fluid" style="height: auto;">
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Boost Efficiency with Our CSV Services!</strong></h2>
-                        <p class="mb-2">Elevate your operations with seamless confidence through our <strong>Computerized System Validation Services</strong>.</p>
-                        <ul style="list-style-type: none; padding-left: 0;">
-                            <li>🚀 Ensure regulatory compliance and optimize performance.</li>
-                            <li>🔧 Minimize disruptions and enjoy ongoing support.</li>
-                            <li>💼 Choose PHARPRO for seamless system validation!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/csv_gap.webp" alt="CSV GAP Assessment" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Identify and Bridge Gaps with CSV GAP Assessment!</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>📝 Comprehensive analysis of your CSV processes.</li>
-                            <li>🔍 Identify gaps and ensure full compliance.</li>
-                            <li>📈 Improve performance with targeted actions!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide: CSV SOPs -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/csv_sops.jpg" alt="CSV SOPs Services" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Optimize with Our Custom CSV SOPs!</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>📜 Tailored Standard Operating Procedures for CSV.</li>
-                            <li>✅ Ensure compliance and consistency in operations.</li>
-                            <li>🚀 Boost efficiency with well-documented processes!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide: Validation Services -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/validation.jpg" alt="Validation Services" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Ensure Quality with Our Validation Services!</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>✔️ Comprehensive validation of your systems and processes.</li>
-                            <li>🛠️ Tailored solutions for your specific needs.</li>
-                            <li>🔒 Secure compliance and maintain high standards!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide: CSV, Quality, Data Integrity, and Safety Trainings -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/training.png" alt="Training Services" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Empower Your Team with Specialized Trainings!</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>🎓 Comprehensive training in CSV, Quality, Data Integrity, and Safety.</li>
-                            <li>📚 Enhance your team's skills and compliance knowledge.</li>
-                            <li>💡 Stay ahead with the latest industry practices!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide: Excel Sheet Validation -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/excel_validation.jpg" alt="Excel Sheet Validation Services" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Ensure Accuracy with Excel Sheet Validation!</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>📊 Validate complex Excel sheets for error-free performance.</li>
-                            <li>🔍 Detect and rectify potential issues before they arise.</li>
-                            <li>🛡️ Safeguard your data integrity with expert validation!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide: CQV Services -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/cqv.jpg" alt="CQV Services" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Commission, Qualification, and Validation (CQV) Services</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>🏗️ Comprehensive CQV services for your projects.</li>
-                            <li>🔬 Ensure all stages of your project meet the highest standards.</li>
-                            <li>🌟 Achieve excellence with PHARPRO’s expert CQV support!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide: Pharma 4.0 Transformation -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/pharma4.jpg" alt="Pharma 4.0 Transformation" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Lead the Future with Pharma 4.0 Transformation!</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>🚀 Embrace the future with cutting-edge Pharma 4.0 solutions.</li>
-                            <li>🌐 Digital transformation to enhance efficiency and compliance.</li>
-                            <li>🏆 Stay competitive in a rapidly evolving industry!</li>
-                        </ul>
-                    </div>
-                        </div>
-            </div>
-            <!-- Slide: Quality Assurance & Gap Assessment -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/qagap.jpg" alt="Quality Assurance & GAP Assessment Services" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Enhance Product Quality with Our Expert Assessments!</strong></h2>
-                        <p class="text-justify mb-2">Elevate quality and bridge the gaps with PHARPRO's premium <strong>Quality Assurance and Gap Assessment Services</strong>.</p>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>🔍 Identify improvement areas and boost efficiency.</li>
-                            <li>📊 Leverage data-driven insights for market leadership.</li>
-                            <li>🤝 Partner with us for top-notch quality!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide: Safety Services -->
-            <div class="carousel-item">
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/Safety.jpeg" alt="Safety Services - Secure Your Operations" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Secure Your Operations with Our Safety Services!</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>⚠️ Detect risks, ensure compliance, and maintain top safety standards.</li>
-                            <li>🔒 Protect your equipment and products.</li>
-                            <li>👷 Contact us for expert safety solutions!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide: Thermal Mapping -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <img src="./images/warehouse.jpg" alt="Thermal Mapping Services - Optimize Temperature Control" class="img-fluid" style="height: auto;">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="text-darkred"><strong>Optimize with Our Thermal Mapping Services!</strong></h2>
-                        <ul class="text-justify mb-4" style="list-style-type: none; padding-left: 0;">
-                            <li>🌡️ Identify temperature issues, save energy, and enhance productivity.</li>
-                            <li>✅ Ensure compliance and prevent downtime.</li>
-                            <li>🌍 Transform your temperature control—contact us now!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
-        <!-- Controls -->
-          <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+      <div class="nav-wrap">
+        <a href="#home" class="brand">
+          <img src="./images/pharpro_master_official_transparent.png" alt="PHARPRO logo" />
+          <div class="brand-text">
+            <strong>PHARPRO</strong>
+            <span>Pharmaceutical Consultation</span>
+          </div>
         </a>
-        <a class="carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
-<!-- Testimonials Tab -->
-<div class="tab-content">
-    <div class="tab-pane fade" id="testimonials" role="tabpanel" aria-labelledby="testimonials-tab">
-        <h2 class="title" style="color: darkred;">Testimonials:</h2>
-        <div id="testimonialsCarousel" class="carousel slide mt-4" data-ride="carousel" data-interval="4000">
-            <ol class="carousel-indicators">
-                <li data-target="#testimonialsCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#testimonialsCarousel" data-slide-to="1"></li>
-                <li data-target="#testimonialsCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row mb-4">
-                        <div class="col-md-3 text-center">
-                            <img src="./images/pharma_international_logo.png" alt="Axantia Group" class="img-fluid" style="height: auto;">
-                        </div>
-                        <div class="col-md-9">
-                            <p class="testimonial-text">"PHARPRO's CSV services helped us optimize our systems with seamless efficiency and ensured our compliance with international standards. We are thrilled with the results!"</p>
-                            <p><strong>- Axantia Group</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row mb-4">
-                        <div class="col-md-3 text-center">
-                            <img src="./images/DAD.png" alt="Dar Al Dawa" class="img-fluid" style="height: auto;">
-                        </div>
-                        <div class="col-md-9">
-                            <p class="testimonial-text">"Thanks to PHARPRO, we were able to successfully validate our pharmaceutical systems, ensuring quality and efficiency at every step."</p>
-                            <p><strong>- Dar Al Dawa</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row mb-4">
-                        <div class="col-md-3 text-center">
-                            <img src="./images/Hayat.png" alt="Al Hayat Pharmaceuticals" class="img-fluid" style="height: auto;">
-                        </div>
-                        <div class="col-md-9">
-                            <p class="testimonial-text">"PHARPRO's expert consultation has been a game-changer for us. Their CSV services ensured we stayed ahead of regulatory requirements while improving overall performance."</p>
-                            <p><strong>- Al Hayat Pharmaceuticals</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-</div>
- <!-- Partners Tab -->
-  <div class="tab-pane fade" id="partners" role="tabpanel" aria-labelledby="partners-tab">
-    <h2 class="title" style="color: darkred;">Our Partners:</h2>
-    <div class="scrolling-wrapper-partners">
-        <!-- Partner 1: Arizona -->
-        <div class="partner-item text-center">
-            <img src="./images/arizona_logo.png" alt="Arizona">
-            <p>Arizona Automation</p>
-        </div>
-        <!-- Partner 2: COGTIVE -->
-        <div class="partner-item text-center">
-            <img src="./images/cogtive_logo.png" alt="COGTIVE">
-            <p>COGTIVE</p>
-        </div>
-        <!-- Repeat partners to create continuous scrolling -->
-        <div class="partner-item text-center">
-            <img src="./images/arizona_logo.png" alt="Arizona">
-            <p>Arizona Automation</p>
-        </div>
-        <div class="partner-item text-center">
-            <img src="./images/cogtive_logo.png" alt="COGTIVE">
-            <p>COGTIVE</p>
-        </div>
-    </div>
-</div>
- <!-- Software Tab -->
-  <div class="tab-pane fade" id="software" role="tabpanel" aria-labelledby="software-tab">
-    <h2 class="title" style="color: darkred;">Our Software Solutions:</h2>
-    <div class="scrolling-wrapper-solutions">
-        <!-- First Row -->
-        <div class="scroll-row">
-            <!-- Solution 1: LIMS -->
-            <div class="solution-item text-center">
-                <img src="./images/lims_logo.png" alt="LIMS" class="img-fluid">
-                <p>Laboratory Information Management System (LIMS)</p>
-            </div>
-            <!-- Solution 2: QMS -->
-            <div class="solution-item text-center">
-                <img src="./images/qms_logo.png" alt="QMS" class="img-fluid">
-                <p>Quality Management System (QMS)</p>
-            </div>
-            <!-- Solution 3: DMS -->
-            <div class="solution-item text-center">
-                <img src="./images/dms_logo.jpeg" alt="DMS" class="img-fluid">
-                <p>Documents Management System (DMS)</p>
-            </div>
-            <!-- Solution 4: User Management Records -->
-            <div class="solution-item text-center">
-                <img src="./images/user_management_logo.png" alt="User Management Records" class="img-fluid">
-                <p>User Management Records</p>
-            </div>
-            <!-- Solution 5: Spreadsheet Management -->
-            <div class="solution-item text-center">
-                <img src="./images/spreadsheet_logo.png" alt="Spreadsheet Management" class="img-fluid">
-                <p>Spreadsheet/Excel Sheet Management</p>
-            </div>
-            <!-- Solution 6: Calibration/Preventive Maintenance -->
-            <div class="solution-item text-center">
-                <img src="./images/calibration_logo.png" alt="Calibration Management" class="img-fluid">
-                <p>Calibration/Preventive Maintenance Management</p>
-            </div>
-        </div>
-        <!-- Second Row (duplicate items for continuous scrolling) -->
-        <div class="scroll-row">
-            <!-- Solution 7: Stability Samples Management -->
-            <div class="solution-item text-center">
-                <img src="./images/stability_logo.png" alt="Stability Samples Management" class="img-fluid">
-                <p>Stability Samples Management</p>
-            </div>
-            <!-- Solution 8: Confidential Documents Sharing -->
-            <div class="solution-item text-center">
-                <img src="./images/confidential_sharing_logo.png" alt="Confidential Documents Sharing" class="img-fluid">
-                <p>Confidential Documents Sharing</p>
-            </div>
-            <!-- Solution 9: LMS -->
-            <div class="solution-item text-center">
-                <img src="./images/lms_logo.png" alt="LMS" class="img-fluid">
-                <p>Learning/Training Management System (LMS)</p>
-            </div>
-            <!-- Solution 10: EBR -->
-            <div class="solution-item text-center">
-                <img src="./images/ebr_logo.png" alt="EBR" class="img-fluid">
-                <p>Electronic Batch Records (EBR)</p>
-            </div>
-            <!-- Solution 11: AI Operation Excellence -->
-            <div class="solution-item text-center">
-                <img src="./images/ai_logo.png" alt="AI Operation Excellence" class="img-fluid">
-                <p>Artificial Intelligence (AI) Operation Excellence</p>
-            </div>
-            <!-- Solution 12: EMS -->
-            <div class="solution-item text-center">
-                <img src="./images/Eupry.png" alt="EMS" class="img-fluid">
-                <p>Environmental Monitoring System</p>
-            </div>
-        </div>
-    </div>
-</div>
 
- <!-- team Tab -->
-  <div class="tab-pane fade" id="team" role="tabpanel" aria-labelledby="team-tab">
-    <h1 class="title" style="color: darkred;">Our Team</h1>
-    <p class="text-paragraph mt-4" style="text-align: justify;">
-        Our team comprises dedicated professionals with diverse expertise in software development, quality assurance, and customer support. We are committed to delivering innovative solutions and exceptional service tailored to meet your needs. Each member contributes unique skills and experiences, collaborating effectively to achieve excellence and drive success in our projects.
+        <nav class="nav-links">
+          <a href="#software">Software</a>
+          <a href="#services">Services</a>
+          <a href="#reliability">Reliability</a>
+          <a href="#why-pharpro">Why PHARPRO</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-secondary">Request Proposal</a>
+          <a href="#contact" class="btn btn-primary">Get Free Assessment</a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#software">Software</a>
+        <a href="#services">Services</a>
+        <a href="#reliability">Reliability</a>
+        <a href="#why-pharpro">Why PHARPRO</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Pharma Compliance • CSV • QA • Digital Solutions</div>
+            <h1>Stay Audit-Ready with PHARPRO</h1>
+            <p class="hero-subtitle">
+              PHARPRO supports pharmaceutical companies with structured consulting across CSV,
+              quality assurance, compliance, and digital transformation initiatives.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Get Free Assessment</a>
+              <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+
+            <div class="hero-points">
+              <span>CSV & Validation Expertise</span>
+              <span>Quality & Gap Assessment</span>
+              <span>Structured Project Support</span>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <span class="hero-badge">Inspection-Conscious Approach</span>
+            <h3>Built for regulated pharmaceutical operations</h3>
+            <p>
+              We support pharmaceutical manufacturers with practical solutions across validation,
+              compliance, quality systems, and software-related processes.
+            </p>
+
+            <div class="check-list">
+              <div class="check-item">✓ Computerized System Validation (CSV)</div>
+              <div class="check-item">✓ QA, Gap Assessment & Compliance Support</div>
+              <div class="check-item">✓ CQV, Thermal Mapping & Training</div>
+              <div class="check-item">✓ Software Solutions for Pharma Operations</div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary" style="width:100%;">Request Proposal</a>
+          </div>
+        </div>
+
+        <div class="trust-strip">
+          <div class="trust-grid">
+            <div class="trust-box">EU GMP Annex 11</div>
+            <div class="trust-box">FDA 21 CFR Part 11</div>
+            <div class="trust-box">ISPE GAMP 5</div>
+            <div class="trust-box">WHO / GMP Practices</div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stats-grid">
+            <div class="stat">
+              <h3>10+</h3>
+              <p>Years of Experience</p>
+            </div>
+            <div class="stat">
+              <h3>22+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat">
+              <h3>15+</h3>
+              <p>Active Clients</p>
+            </div>
+            <div class="stat">
+              <h3>8+</h3>
+              <p>Trainings Completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section section-tight" id="subbrands">
+  <div class="container">
+    <span class="eyebrow-section">Brand Architecture</span>
+    <h2 class="section-title">A focused PHARPRO brand system</h2>
+    <p class="section-subtitle">
+      PHARPRO Consultation is the corporate brand, while PHARPRO CSV, PHARPRO DVS,
+      and PHARPRO Training operate as focused sub-brands for specific offers and pages.
     </p>
-</div>
- <!-- CEO Tab -->
-  <div class="tab-pane fade" id="CEO" role="tabpanel" aria-labelledby="CEO-tab">
-    <h2 class="title" style="color: darkred;">A Message from Our CEO</h2>
-    <div class="ceo-section d-flex align-items-center">
-        <div class="ceo-photo">
-            <img src="./images/ceo_photo.jpeg" alt="Mohammad Awawdeh" class="img-fluid rounded-circle">
-        </div>
-        <div class="ceo-message ml-4">
-            <h3>Dear Valued Partners and Clients,</h3>
-            <p>
-                I am thrilled to welcome you to PHARPRO Consultation, where we are dedicated to pioneering excellence and innovation in our field. At PHARPRO, our mission is to empower businesses with cutting-edge solutions and unparalleled support, ensuring you achieve your goals with confidence and success.
-            </p>
-            <p>
-                Our team is driven by a passion for excellence and a commitment to providing tailored solutions that meet your unique needs. We are proud of our comprehensive suite of services, which includes advanced software solutions designed to streamline your operations and enhance efficiency.
-            </p>
-            <p>
-                As we continue to grow and evolve, our focus remains on delivering the highest standards of service and fostering strong, long-lasting relationships with our partners and clients. Your success is our success, and we are here to support you every step of the way.
-            </p>
-            <p>
-                Thank you for your trust and partnership. Together, we will navigate the future with innovation and excellence.
-            </p>
-            <p>
-                Warm regards,<br>
-                <strong>Mohammad Awawdeh</strong><br>
-                CEO, PHARPRO Consultation<br>
-                <a href="http://www.pharpro.co">www.pharpro.co</a>
-            </p>
-        </div>
-    </div>
-</div>
- <!-- ABOUT Tab -->
-  <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
-    <h1 class="title text-center" style="color: darkred;">About Us</h1>
-    <div class="row mt-4">
-        <!-- Our Mission and Our Vision beside each other -->
-        <div class="col-md-6" style="text-align: justify;">
-            <h2 style="color: darkred;">Our Mission</h2>
-            <p>
-                At <strong>PHARPRO Consultation Company</strong>, we are a trusted partner in advancing healthcare through excellence in pharmaceutical consultation. We are committed to providing expert guidance, innovative solutions, and exceptional service to pharmaceutical companies, healthcare organizations, warehouses, and storage facilities globally.
-            </p>
-        </div>
 
-        <div class="col-md-6" style="text-align: justify;">
-            <h2 style="color: darkred;">Our Vision</h2>
-            <p>
-                Our vision at <strong>PHARPRO Consultation Company</strong> is to be the leader in pharmaceutical consultation services, specializing in thermal mapping, quality improvement, and validation studies. We aim to redefine industry standards for safety, efficiency, and excellence.
-            </p>
-        </div>
-    </div>
-    <style>
-    /* Custom styles for the About Us section */
-    #about h2.title {
-        text-align: left;
-    }
+    <div class="logo-row">
+      <div class="logo-chip">
+        <img src="./images/pharpro-consultation-twoline.png" alt="PHARPRO Consultation logo">
+      </div>
 
-    #about .col-md-6 {
-        text-align: left;
-    }
-</style>
+      <div class="logo-chip">
+        <img src="./images/pharpro-csv-twoline.png" alt="PHARPRO CSV logo">
+      </div>
 
- <style>
-        /* Custom styles for the About Us section */
-        #about h2.title {
-            text-align: left;
-        }
+      <div class="logo-chip">
+        <img src="./images/pharpro-dvs-twoline.png" alt="PHARPRO DVS logo">
+      </div>
 
-        #about .col-md-6 {
-            text-align: left;
-        }
-    </style>
-</div>
-<!-- SOP Tab -->
-<div class="tab-pane fade" id="sop" role="tabpanel" aria-labelledby="sop-tab">
-    <h2 class="title" style="color: darkred;">Purchase SOPs:</h2>
-    <div class="row mt-4">
-        <!-- Google Form -->
-        <div class="col-md-6">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4LPIwEpYF865gYKlHrED4QlR1sj7427noB9cxfiOLaX-FvQ/viewform?embedded=true" 
-                    width="100%" height="1404" frameborder="0" marginheight="0" marginwidth="0">
-                Loading…
-            </iframe>
-        </div>
-        
-        <!-- Side Image (Logo on the right) -->
-        <div class="col-md-6 d-flex justify-content-end align-items-center">
-            <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid" style="max-width: auto; height: auto;">
-        </div>
+      <div class="logo-chip">
+        <img src="./images/pharpro-training-twoline.png" alt="PHARPRO Training logo">
+      </div>
     </div>
-</div>
-<!-- Training Tab -->
-<div class="tab-pane fade" id="training" role="tabpanel" aria-labelledby="training-tab">
-    <h2 class="title" style="color: darkred;">Requested Training:</h2>
-    <div class="row mt-4">
-        <!-- Google Form -->
-        <div class="col-md-6">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfM9sDa_gJrcazLAF9LUFhMdtNTtXD62dOnQOEIndoKj41q6Q/viewform?embedded=true" width="640" height="1565" frameborder="0" marginheight="0" marginwidth="0">
-            Loading…
-        </iframe>
-        </div>
-        
-        <!-- Side Image (Logo on the right) -->
-        <div class="col-md-6 d-flex justify-content-end align-items-center">
-            <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid" style="max-width: auto; height: auto;">
-        </div>
-    </div>
-</div>
-<!-- Protocols Tab -->
-<div class="tab-pane fade" id="protocols" role="tabpanel" aria-labelledby="protocols-tab">
-    <h2 class="title" style="color: darkred;">Protocols Purchasing Request</h2>
-    <div class="row mt-4">
-        <!-- Google Form -->
-        <div class="col-md-6">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScoQh4-jEPtAwAoA3maTrJ6j-jFqq-Fnceof5O0ypElVVP59w/viewform?embedded=true" width="640" height="1565" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-        
-        <!-- Side Image (Logo on the right) -->
-        <div class="col-md-6 d-flex justify-content-end align-items-center">
-            <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid" style="max-width: auto; height: auto;">
-        </div>
-    </div>
-</div>
-<!-- Services Tab -->
-<div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
-    <h2 class="title" style="color: darkred;">Services Purchasing Request</h2>
-    <div class="row mt-4">
-        <!-- Google Form -->
-        <div class="col-md-6">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdO1kiE8EfMbYvTCfGfgWSaVtOqxd1j40WyW8Z2KIwzLrtG9g/viewform?embedded=true" width="640" height="1538" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-        
-        <!-- Side Image (Logo on the right) -->
-        <div class="col-md-6 d-flex justify-content-end align-items-center">
-            <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid" style="max-width: auto; height: auto;">
-        </div>
-    </div>
-</div>
-<!-- Contact Tab -->
-<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-        <h2 class="title" style="color: darkred;">Contact Us:</h2>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <!-- Embedded Google Form -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeB5d7GUqViPShugRvqR3_py7-QocfE8E3qp8dSjGiR-jM1hw/viewform?embedded=true"
-                        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
-                        sandbox="allow-forms allow-same-origin allow-scripts allow-popups">
-                    Loading…
-                </iframe>
-                <p>If the form does not submit, please click <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB5d7GUqViPShugRvqR3_py7-QocfE8E3qp8dSjGiR-jM1hw/viewform" target="_blank">here</a> to submit your details.</p>
+  </div>
+</section>
+
+    <section class="section" id="reliability">
+      <div class="container">
+        <span class="eyebrow-section">Reliability Principles</span>
+        <h2 class="section-title">Built on structure, clarity, and accountability</h2>
+        <p class="section-subtitle">
+          PHARPRO is positioned to reflect reliability first: clear deliverables, practical
+          documentation support, disciplined communication, and an inspection-conscious mindset.
+        </p>
+
+        <div class="reliability-wrap">
+          <div class="reliability-grid">
+            <div class="reliability-card">
+              <h3>Clear scope & deliverables</h3>
+              <p>Every engagement should begin with a clear understanding of scope, outputs, and expectations.</p>
             </div>
-            <div class="col-md-6">
-                <!-- Side Image -->
-                <img src="./images/contactus.png" alt="PHARPRO Consultation Company" class="img-fluid">
+
+            <div class="reliability-card">
+              <h3>Structured documentation support</h3>
+              <p>We prioritize practical, organized, and compliance-oriented documentation practices.</p>
             </div>
+
+            <div class="reliability-card">
+              <h3>Transparent communication</h3>
+              <p>Clients should always understand the status of work, dependencies, and next actions.</p>
+            </div>
+
+            <div class="reliability-card">
+              <h3>Regulatory-focused execution</h3>
+              <p>Work should support real inspection readiness, not just presentation or theory.</p>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-<style>
-/* Icon Section */
-.icon-section {
-    padding: 60px 0;
-    background: url('./images/Gauge.gif') no-repeat center center; /* Add your image URL here */
-    background-size: contain; /* Ensure the image fits within the section */
-    height: auto; /* Set height to auto for flexibility */
-    text-align: center;
-}
+      </div>
+    </section>
 
-.icon-box {
-    margin-bottom: 30px;
-}
+    <section class="section" id="software">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow-section">Software Solutions</span>
+            <h2 class="section-title">Controlled digital support for pharma operations</h2>
+            <p class="section-subtitle">
+              Practical software solutions designed to support controlled, documented,
+              and inspection-conscious pharmaceutical operations.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-secondary">Request Demo</a>
+        </div>
 
-/* Gauge Container */
-.gauge {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    margin: 0 auto 20px;
-    overflow: hidden;
-}
+        <div class="cards-2">
+          <div class="card">
+            <div class="icon">DVS</div>
+            <h3>Digital Validation Software</h3>
+            <p>
+              A structured platform concept for managing validation workflows,
+              execution records, and controlled documentation.
+            </p>
+            <ul>
+              <li>Protocol workflow support</li>
+              <li>Approval visibility</li>
+              <li>Audit-friendly structure</li>
+            </ul>
+          </div>
 
-.gauge .gauge-fill {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #007bff;
-    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
-    transform-origin: center;
-    animation: fillGauge 4s linear infinite;
-}
+          <div class="card">
+            <div class="icon">AMS</div>
+            <h3>Artwork Management Software</h3>
+            <p>
+              Streamline controlled artwork review and approval activities with stronger
+              visibility and process discipline.
+            </p>
+            <ul>
+              <li>Workflow tracking</li>
+              <li>Version control support</li>
+              <li>Review coordination</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.gauge .gauge-cover {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    background-color: #f8f9fa;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow-section">Core Services</span>
+            <h2 class="section-title">Focused support for compliant execution</h2>
+            <p class="section-subtitle">
+              Focused service lines built to support compliant execution, stronger documentation,
+              and operational reliability.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-secondary">Request Service</a>
+        </div>
 
-.icon-box h3 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+        <div class="cards-3">
+          <div class="card">
+            <div class="icon">CSV</div>
+            <h3>Computerized System Validation</h3>
+            <p>Support for validation lifecycle activities to maintain compliant and reliable computerized systems.</p>
+            <ul>
+              <li>Validation planning</li>
+              <li>Risk assessment</li>
+              <li>Testing & documentation</li>
+            </ul>
+          </div>
 
-.icon-box p {
-    font-size: 1.2em;
-}
+          <div class="card">
+            <div class="icon">QA</div>
+            <h3>Quality Assurance & Gap Assessment</h3>
+            <p>Identify compliance gaps, strengthen systems, and improve inspection readiness.</p>
+            <ul>
+              <li>SOP review</li>
+              <li>Documentation gap assessment</li>
+              <li>Quality system support</li>
+            </ul>
+          </div>
 
-/* Continuous Fill Animation */
-@keyframes fillGauge {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+          <div class="card">
+            <div class="icon">CQV</div>
+            <h3>CQV Services</h3>
+            <p>Commissioning, qualification, and validation support for equipment, utilities, and systems.</p>
+            <ul>
+              <li>DQ / IQ / OQ / PQ support</li>
+              <li>Protocols & execution guidance</li>
+              <li>Traceability & reporting</li>
+            </ul>
+          </div>
 
-/* Media Queries for Responsiveness */
-@media (max-width: 576px) {
-    .gauge {
-        width: 100px; /* Smaller gauge for mobile */
-        height: 100px; /* Smaller gauge for mobile */
-    }
+          <div class="card">
+            <div class="icon">MAP</div>
+            <h3>Thermal Mapping</h3>
+            <p>Mapping support for storage areas, warehouses, and controlled environments.</p>
+            <ul>
+              <li>Temperature distribution studies</li>
+              <li>Risk identification</li>
+              <li>Compliance-oriented reporting</li>
+            </ul>
+          </div>
 
-    .icon-box h3 {
-        font-size: 1.2em; /* Adjust heading size */
-    }
+          <div class="card">
+            <div class="icon">TRN</div>
+            <h3>Specialized Training</h3>
+            <p>Practical training programs in CSV, data integrity, GMP-related systems, and quality topics.</p>
+            <ul>
+              <li>Onsite or online</li>
+              <li>Custom training scope</li>
+              <li>Industry-focused delivery</li>
+            </ul>
+          </div>
 
-    .icon-box p {
-        font-size: 1em; /* Adjust paragraph size */
-    }
-}
-</style>
-<section class="icon-section">
+          <div class="card">
+            <div class="icon">DX</div>
+            <h3>Pharma Digital Support</h3>
+            <p>Guidance for software-related process improvement and digital transformation initiatives.</p>
+            <ul>
+              <li>Process improvement support</li>
+              <li>Software implementation alignment</li>
+              <li>Compliance-focused digitalization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-pharpro">
+      <div class="container">
+        <span class="eyebrow-section">Why PHARPRO</span>
+        <h2 class="section-title">A more dependable support experience</h2>
+        <p class="section-subtitle">
+          PHARPRO is positioned to feel reliable, practical, and inspection-conscious — not generic,
+          loud, or over-promising.
+        </p>
+
+        <div class="cards-3">
+          <div class="card">
+            <div class="icon">01</div>
+            <h3>Risk-Based Thinking</h3>
+            <p>We focus on what matters most for compliance, quality, and operational reliability.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">02</div>
+            <h3>Pharma-Specific Orientation</h3>
+            <p>Our services are tailored for pharmaceutical environments, not generic consulting.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">03</div>
+            <h3>Practical Output Focus</h3>
+            <p>We support execution with documentation, structured assessments, and actionable next steps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <span class="eyebrow-section">Selected Client Feedback</span>
+        <h2 class="section-title">Trusted in regulated environments</h2>
+        <p class="section-subtitle">
+          Examples of how pharmaceutical clients experienced PHARPRO’s structured and practical support.
+        </p>
+
+        <div class="cards-3">
+          <div class="card quote-card">
+            <p>
+              PHARPRO supported us with strong technical understanding and practical execution.
+              Their work added clarity to our validation and compliance activities.
+            </p>
+            <strong>— Axantia Group</strong>
+          </div>
+
+          <div class="card quote-card">
+            <p>
+              The support was professional, responsive, and aligned with the needs of our
+              regulated pharmaceutical environment.
+            </p>
+            <strong>— Dar Al Dawa</strong>
+          </div>
+
+          <div class="card quote-card">
+            <p>
+              PHARPRO helped us approach system validation and quality support in a more
+              structured and inspection-focused way.
+            </p>
+            <strong>— Al Hayat Pharmaceuticals</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow-section">FAQ</span>
+        <h2 class="section-title">Questions clients usually ask first</h2>
+        <p class="section-subtitle">
+          Common questions before starting a service, project, software discussion, or training engagement.
+        </p>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">Do you support both onsite and remote projects? <span>+</span></button>
+            <div class="faq-answer">
+              Yes. Depending on the project type, scope, and client needs, support can be delivered onsite, remotely, or in a hybrid format.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Can you provide customized training? <span>+</span></button>
+            <div class="faq-answer">
+              Yes. Training can be tailored to your team, systems, current gaps, and desired compliance topics.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Do you support software-related pharmaceutical projects? <span>+</span></button>
+            <div class="faq-answer">
+              Yes. PHARPRO supports validation-related activities, process alignment, documentation, and digital transformation support for software-related environments.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">How do we start? <span>+</span></button>
+            <div class="faq-answer">
+              Usually we begin with an initial discussion, define your need, then share the appropriate proposal, scope, or next-step recommendation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Need a proposal, assessment, or training plan?</h2>
+            <p>
+              Let’s discuss your current requirement and identify the right support path for your
+              pharmaceutical operation, team, or project.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a href="#contact" class="btn btn-primary">Get Free Assessment</a>
+            <a href="#contact" class="btn btn-secondary">Request Proposal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <span class="eyebrow-section">Contact</span>
+        <h2 class="section-title">Start with a structured conversation</h2>
+        <p class="section-subtitle">
+          Use this section for service requests, proposal inquiries, training requests, or software demo interest.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-box">
+              <h3>Email</h3>
+              <p><a href="mailto:info@pharpro.co">info@pharpro.co</a></p>
+              <p><a href="mailto:mohammad.awawdeh@pharpro.co">mohammad.awawdeh@pharpro.co</a></p>
+            </div>
+
+            <div class="info-box">
+              <h3>Phone</h3>
+              <p><a href="tel:+971585998807">+971 58 599 8807</a></p>
+              <p><a href="tel:+962798565807">+962 79 856 5807</a></p>
+            </div>
+
+            <div class="info-box">
+              <h3>Location</h3>
+              <p>Dubai, UAE</p>
+              <p>Serving pharmaceutical clients across the MENA region.</p>
+            </div>
+
+            <div class="info-box">
+              <h3>LinkedIn</h3>
+              <p><a href="https://www.linkedin.com/company/pharprocc" target="_blank">Visit PHARPRO on LinkedIn</a></p>
+            </div>
+          </div>
+
+          <form id="contactForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Company name" />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@company.com" required />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="+971..." />
+              </div>
+
+              <div class="field full">
+                <label for="service">Interested In</label>
+                <select id="service" name="service">
+                  <option value="">Select service</option>
+                  <option>Software Demo</option>
+                  <option>CSV Services</option>
+                  <option>QA & Gap Assessment</option>
+                  <option>CQV Services</option>
+                  <option>Thermal Mapping</option>
+                  <option>Training</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your requirement..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            <p class="form-note">
+              This is the design stage. Later we will connect this form to cloud storage, email notifications, and CRM/payment flow.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container">
-        <div class="row">
-            <!-- Experience -->
-            <div class="col-12 col-md-4 icon-box">
-                <div class="gauge">
-                    <div class="gauge-fill" data-percentage="70"></div> <!-- Example percentage -->
-                    <div class="gauge-cover"></div>
-                </div>
-                <h3>7+</h3>
-                <p>Years of Experience</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand" style="margin-bottom: 14px;">
+            <img src="./images/logo.ico" alt="PHARPRO logo" />
+            <div class="brand-text">
+              <strong style="color: white;">PHARPRO</strong>
+              <span style="color: rgba(255,255,255,0.7);">Pharmaceutical Consultation</span>
             </div>
-            <!-- Happy Clients -->
-            <div class="col-12 col-md-4 icon-box">
-                <div class="gauge">
-                    <div class="gauge-fill" data-percentage="85"></div> <!-- Example percentage -->
-                    <div class="gauge-cover"></div>
-                </div>
-                <h3>3+</h3>
-                <p>Happy Clients</p>
-            </div>
-            <!-- Projects -->
-            <div class="col-12 col-md-4 icon-box">
-                <div class="gauge">
-                    <div class="gauge-fill" data-percentage="60"></div> <!-- Example percentage -->
-                    <div class="gauge-cover"></div>
-                </div>
-                <h3>16+</h3>
-                <p>Projects Completed</p>
-            </div>
+          </div>
+          <p>
+            PHARPRO supports pharmaceutical companies with validation, quality,
+            compliance, and digital transformation-focused services.
+          </p>
         </div>
-    </div>
-</section>
 
-</section>
-<!-- Call to Action -->
-<div class="row mt-5">
-    <div class="col-md-12 text-center">
-        <h3>Ready to transform your business?</h3>
-        <p>Let us help you optimize your pharmaceutical processes and achieve compliance.</p>
-        <a href="#contact" class="btn btn-danger" onclick="activateContactTab()">Get Started</a>
-    </div>
-</div>
-
-<!-- JavaScript to Activate Contact Tab -->
-<script>
-    function activateContactTab() {
-        // Activate the Contact tab
-        const contactTab = document.querySelector('a[href="#contact"]');
-        if (contactTab) {
-            contactTab.click();
-        }
-    }
-</script>
-</section>
-    <footer class="bg-dark text-white p-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h4>Location</h4>
-                <p>The Meydan Hotel, Nad Al Sheba<br>Dubai, UAE P.O. Box 9305</p>
-            </div>
-            <div class="col-md-4">
-                <h4>Contact</h4>
-                <p> info@pharpro.co<br> mohammad.awawdeh@pharpro.co <br> +971 (585) 998-807 <br> +962 (798) 565-807</p>
-            </div>
-        <div class="col-md-4">
-                <h4>LinkedIn</h4>
-                <p>
-                    <a href="https://www.linkedin.com/company/pharprocc" target="_blank">
-                        Visit our LinkedIn page
-                    </a>
-                </p>
-            </div>
+        <div class="footer-col">
+          <h4>Software</h4>
+          <p><a href="#software">Digital Validation Software</a></p>
+          <p><a href="#software">Artwork Management Software</a></p>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <!-- Social Media Links -->
-                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <p><a href="#services">CSV Services</a></p>
+          <p><a href="#services">QA & Gap Assessment</a></p>
+          <p><a href="#services">CQV Services</a></p>
+          <p><a href="#services">Training</a></p>
         </div>
-    </div>
-</footer>
-    </div>
-</section>
-    </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-      <script>
-        // Get the dropdown button and service list
-        const dropdownButton = document.getElementById('services-dropdown-button');
-        const servicesList = document.querySelector('.services-list');
-        // Function to toggle the visibility of the service list
-        function toggleServicesList() {
-            if (servicesList.style.display === 'block') {
-                servicesList.style.display = 'none';
-            } else {
-                servicesList.style.display = 'block';
-            }
-        }
-        // Toggle the service list when the button is clicked
-        dropdownButton.addEventListener('click', toggleServicesList);
-    </script>
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const gauges = document.querySelectorAll('.gauge-fill');
 
-    gauges.forEach(gauge => {
-        const percentage = gauge.getAttribute('data-percentage');
-        const degree = (percentage / 100) * 360; // Convert percentage to degrees (0-360)
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>info@pharpro.co</p>
+          <p>+971 58 599 8807</p>
+          <p>Dubai, UAE</p>
+        </div>
+      </div>
 
-        // Use `rotate` for full circle animation
-        setTimeout(() => {
-            gauge.style.transform = `rotate(${degree}deg)`; // Rotate based on the percentage
-        }, 100);
+      <div class="footer-bottom">
+        <span>© 2026 PHARPRO Consultation Company. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
     });
-});
 
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        button.parentElement.classList.toggle("active");
+      });
+    });
 
-</script>
-<script type="text/javascript">
-  (function(d, t) {
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Form is ready visually. Next step is connecting it to cloud/email backend.");
+    });
+  </script>
+
+  <script type="text/javascript">
+    (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
@@ -1088,40 +1486,12 @@ document.addEventListener('DOMContentLoaded', function () {
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production'
         });
-      }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
+      };
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
 
-    <!-- Include Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
 </body>
-document.addEventListener("DOMContentLoaded", () => {
-    const tabs = document.querySelectorAll('a[data-toggle="tab"]');
-
-    // Check URL hash and activate the corresponding tab
-    const hash = window.location.hash;
-    if (hash) {
-        const targetTab = document.querySelector(`a[href="${hash}"]`);
-        if (targetTab) {
-            targetTab.click(); // Simulate a click to activate
-        }
-    }
-
-    // Add click event listener to update the active tab dynamically
-    tabs.forEach((tab) => {
-        tab.addEventListener("click", function () {
-            const targetPane = document.querySelector(this.getAttribute("href"));
-
-            // Remove active class from all panes
-            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('show', 'active'));
-
-            // Add active class to the selected pane
-            targetPane.classList.add('show', 'active');
-        });
-    });
-});
 </html>
