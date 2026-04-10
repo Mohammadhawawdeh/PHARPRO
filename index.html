@@ -1736,17 +1736,23 @@
     formStatus.className = "form-status";
     formStatus.textContent = "";
 
+    const company = form.company.value.trim();
+    const service = form.service.value;
+
     const payload = {
+      access_key: "83fc2882-83bb-4976-b2e6-81c5405ff00f",
       name,
-      company:  form.company.value.trim(),
       email,
-      service:  form.service.value,
       message,
-      hp:       form.hp ? form.hp.value : ""
+      subject:    `New enquiry from ${name}${company ? ` — ${company}` : ""}`,
+      from_name:  "PHARPRO Website",
+      company:    company || "—",
+      service:    service || "—",
+      botcheck:   form.hp ? form.hp.value : ""
     };
 
     try {
-      const res  = await fetch("https://pharpro-contact-form.mohammadhawawdeh.workers.dev/api/contact", {
+      const res  = await fetch("https://api.web3forms.com/submit", {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify(payload)
@@ -1754,11 +1760,11 @@
 
       const data = await res.json();
 
-      if (data.ok) {
+      if (data.success) {
         showStatus("success", "Message received. We will be in touch within 24 hours.");
         form.reset();
       } else {
-        showStatus("error", data.error || "Something went wrong. Please try again.");
+        showStatus("error", data.message || "Something went wrong. Please try again.");
       }
     } catch {
       showStatus("error", "Network error. Please try emailing us directly at info@pharpro.co");

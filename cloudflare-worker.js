@@ -1,22 +1,15 @@
 /**
- * PHARPRO Contact Form — Cloudflare Worker
+ * PHARPRO Contact Form — Cloudflare Worker (Resend edition)
  *
  * HOW TO DEPLOY:
- * 1. Log in to https://dash.cloudflare.com
- * 2. Go to Workers & Pages → Create → Worker
- * 3. Paste this entire file into the editor
- * 4. Click "Save and Deploy"
- * 5. Set the RECIPIENT_EMAIL environment variable in Settings → Variables
- *    to the email address where you want to receive form submissions.
+ * 1. Sign up free at https://resend.com — takes 30 seconds
+ * 2. Go to API Keys → Create API Key → copy it
+ * 3. In Cloudflare Worker Settings → Variables and Secrets, add:
+ *    - RESEND_API_KEY  → your Resend API key
+ *    - RECIPIENT_EMAIL → info@pharpro.co  (already set)
+ * 4. Paste this entire file into the Worker editor → Deploy
  *
- * WHAT IT DOES:
- * - Handles POST /api/contact from your website form
- * - Sends you an email via MailChannels (free, no extra setup needed)
- * - Returns JSON { ok: true } on success
- * - Serves your static site for all other requests (when used with Cloudflare Pages)
- *
- * CORS NOTE:
- * Set ALLOWED_ORIGIN below to your production domain, e.g. "https://pharpro.co"
+ * Free tier: 3,000 emails/month, 100/day — more than enough.
  */
 
 const ALLOWED_ORIGIN = "https://pharpro.co";
@@ -59,37 +52,55 @@ async function handleContact(request, env) {
   }
 
   const recipientEmail = env.RECIPIENT_EMAIL || "info@pharpro.co";
+  const resendApiKey   = env.RESEND_API_KEY;
 
-  const emailBody = `
-New contact form submission from pharpro.co
+  if (!resendApiKey) {
+    return corsResponse(
+      JSON.stringify({ ok: false, error: "Email service not configured." }),
+      500
+    );
+  }
 
-Name:    ${name}
-Company: ${company || "—"}
-Email:   ${email}
-Service: ${service || "—"}
-
-Message:
-${message}
-
----
-Submitted via pharpro.co contact form
-  `.trim();
+  const emailHtml = `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; color: #1C2330;">
+      <div style="background:#233A5E; padding: 24px 32px; border-radius: 8px 8px 0 0;">
+        <h2 style="color:#fff; margin:0; font-size:18px;">New enquiry — pharpro.co</h2>
+      </div>
+      <div style="background:#F5EEE8; padding: 32px; border-radius: 0 0 8px 8px; border: 1px solid #E4D9D1;">
+        <table style="width:100%; border-collapse:collapse;">
+          <tr><td style="padding:8px 0; color:#6B7A99; width:120px; font-size:14px;">Name</td><td style="padding:8px 0; font-weight:600;">${name}</td></tr>
+          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Company</td><td style="padding:8px 0;">${company || "—"}</td></tr>
+          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}" style="color:#B12C4B;">${email}</a></td></tr>
+          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Service</td><td style="padding:8px 0;">${service || "—"}</td></tr>
+        </table>
+        <hr style="border:none; border-top:1px solid #E4D9D1; margin:24px 0;" />
+        <p style="color:#6B7A99; font-size:14px; margin:0 0 8px;">Message</p>
+        <p style="white-space:pre-wrap; margin:0; line-height:1.7;">${message}</p>
+        <hr style="border:none; border-top:1px solid #E4D9D1; margin:24px 0;" />
+        <p style="color:#6B7A99; font-size:12px; margin:0;">Submitted via the contact form at pharpro.co. Reply directly to this email to respond to ${name}.</p>
+      </div>
+    </div>
+  `;
 
   try {
-    const sendResult = await fetch("https://api.mailchannels.net/tx/v1/send", {
+    const sendResult = await fetch("https://api.resend.com/emails", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${resendApiKey}`
+      },
       body: JSON.stringify({
-        personalizations: [{ to: [{ email: recipientEmail, name: "PHARPRO" }] }],
-        from: { email: "noreply@pharpro.co", name: "PHARPRO Website" },
-        reply_to: { email, name },
-        subject: `New enquiry from ${name}${company ? ` — ${company}` : ""}`,
-        content: [{ type: "text/plain", value: emailBody }]
+        from:     "PHARPRO Website <onboarding@resend.dev>",
+        to:       [recipientEmail],
+        reply_to: email,
+        subject:  `New enquiry from ${name}${company ? ` — ${company}` : ""}`,
+        html:     emailHtml
       })
     });
 
-    if (!sendResult.ok && sendResult.status !== 202) {
-      console.error("MailChannels error:", sendResult.status, await sendResult.text());
+    if (!sendResult.ok) {
+      const errText = await sendResult.text();
+      console.error("Resend error:", sendResult.status, errText);
       return corsResponse(
         JSON.stringify({ ok: false, error: "Email delivery failed. Please contact us directly." }),
         500
