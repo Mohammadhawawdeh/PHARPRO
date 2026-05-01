@@ -1385,8 +1385,9 @@
         <div class="c-form">
           <h3 data-i18n="form_h3">Send us a message</h3>
           <p data-i18n="form_p">We respond within 24 hours on business days.</p>
-          <form id="contactForm" novalidate>
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
             <div class="form-row">
+              <input type="hidden" name="access_key" value="83fc2882-83bb-4976-b2e6-81c5405ff00f">
               <div class="fg"><label for="name" data-i18n="form_name_label">Full Name *</label><input type="text" id="name" name="name" placeholder="Your name" data-i18n-ph="form_name_ph" required autocomplete="name" /></div>
               <div class="fg"><label for="company" data-i18n="form_company_label">Company</label><input type="text" id="company" name="company" placeholder="Your company" data-i18n-ph="form_company_ph" autocomplete="organization" /></div>
             </div>
@@ -1487,14 +1488,6 @@
 </footer>
 
 <script src="js/scripts.js"></script>
-
-<form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="83fc2882-83bb-4976-b2e6-81c5405ff00f">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
-</form>
 
 </body>
 </html>

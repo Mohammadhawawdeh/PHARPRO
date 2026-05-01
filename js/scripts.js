@@ -502,24 +502,23 @@ function initContactForm() {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const btn = document.getElementById("submitBtn");
-    btn.disabled  = true;
+    btn.disabled    = true;
     btn.textContent = currentLang === "ar" ? "جاري الإرسال..." : "Sending…";
 
-    const data = Object.fromEntries(new FormData(form));
+    const formData = new FormData(form);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: formData,
       });
       const json = await res.json();
-      if (json.ok) {
+      if (json.success) {
         status.className = "f-status ok";
         status.textContent = t("form_success");
         form.reset();
       } else {
-        throw new Error(json.error || "error");
+        throw new Error(json.message || "error");
       }
     } catch {
       status.className = "f-status err";
