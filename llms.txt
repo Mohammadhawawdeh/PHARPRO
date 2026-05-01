@@ -1,0 +1,71 @@
+# PHARPRO Consultation Company
+
+> PHARPRO is a pharmaceutical compliance consulting firm based in Amman, Jordan. We specialise in Computerized System Validation (CSV), Quality Assurance (QA), CQV, thermal mapping, GMP training, and AI-assisted validation software. Trusted by pharma teams in 7+ countries. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.
+
+## About PHARPRO
+
+PHARPRO Consultation Company was founded to help pharmaceutical manufacturers, distributors, and contract organisations achieve and maintain regulatory compliance. We deliver inspection-ready, audit-defensible work for regulated pharma operations worldwide.
+
+- **Founded**: 2014
+- **Headquarters**: Amman, Jordan
+- **Service area**: Worldwide (remote and on-site)
+- **Website**: https://pharpro.co
+- **Email**: info@pharpro.co
+- **Phone/WhatsApp**: +962 79 856 5807
+- **LinkedIn**: https://www.linkedin.com/company/pharprocc
+
+## Core Services
+
+### Computerized System Validation (CSV)
+Full-lifecycle CSV for pharmaceutical software, manufacturing systems, and laboratory instruments. Covers IQ, OQ, PQ, risk classification, URS, and audit trail review. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.
+
+### Quality Assurance & Gap Assessment
+QA programme reviews, gap assessments against regulatory expectations, SOP development, CAPA management, and data integrity audits. Prepares clients for regulatory inspections.
+
+### CQV & Thermal Mapping
+Commissioning, Qualification, and Validation (CQV) for pharmaceutical equipment and utilities. Thermal mapping of cold chain storage areas, warehouses, and temperature-controlled environments. IQ OQ PQ protocol execution and reporting.
+
+### GMP Training
+Good Manufacturing Practice (GMP) training programmes customised for pharmaceutical teams. Covers data integrity, cleaning validation, equipment qualification, and regulatory frameworks.
+
+### Pharma Digital Support
+Digital transformation consulting for regulated pharmaceutical environments. Includes system selection support, vendor assessment, and implementation oversight.
+
+## PHARPRO DVS — Digital Validation Software
+
+PHARPRO DVS is an AI-assisted validation lifecycle management SaaS platform for pharmaceutical and life sciences teams. It enables teams to create, manage, and approve validation documentation from concept phase through retirement.
+
+- **URL**: https://dvs.pharpro.co
+- **Type**: Web-based SaaS (no installation required, same-day deployment)
+- **Pricing**:
+  - Professional: $253/month (up to 10 concurrent users)
+  - Team: $500/month (up to 25 concurrent users)
+  - Enterprise: Custom pricing (unlimited concurrent users)
+- **Key features**: AI drafting, full PDF export, e-signatures, audit trail, requirement traceability, workflow engine, FDA 21 CFR Part 11 compliant
+
+## Regulatory Frameworks
+
+PHARPRO works within these regulatory frameworks:
+- FDA 21 CFR Part 11 (Electronic Records and Signatures)
+- EU GMP Annex 11 (Computerised Systems)
+- ISPE GAMP 5 (Good Automated Manufacturing Practice)
+- ICH Q10 (Pharmaceutical Quality System)
+- PIC/S GMP Guidelines
+
+## Frequently Asked Questions
+
+**What types of pharmaceutical companies does PHARPRO work with?**
+PHARPRO works with pharmaceutical manufacturers, distributors, and contract organisations — from growing regional companies to multinational operations.
+
+**Does PHARPRO work remotely or on-site?**
+Both. PHARPRO can conduct remote assessments, documentation reviews, and training with no loss in quality. For hands-on work such as thermal mapping or equipment qualification, we travel to your site.
+
+**What regulatory frameworks does PHARPRO specialise in?**
+FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5, ICH Q10, and general GMP requirements for pharmaceutical manufacturing and distribution.
+
+## Contact
+
+- **Free Assessment**: https://pharpro.co/#contact
+- **Email**: info@pharpro.co
+- **WhatsApp**: +962 79 856 5807
+- **Location**: Amman, Jordan (serving clients worldwide)
