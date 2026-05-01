@@ -43,7 +43,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
   {
@@ -404,7 +404,7 @@
     .nav-links { display: flex; align-items: center; gap: 24px; }
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--navy); opacity: 0.65; transition: opacity var(--t); }
     .nav-links a:hover { opacity: 1; }
-    .nav-cta { display: flex; }
+    .nav-cta { display: flex; align-items: center; gap: 10px; }
     .hamburger { display: none; padding: 6px; color: var(--navy); }
     .mob-nav { display: none; padding: 12px 0 16px; border-top: 1px solid rgba(35,58,94,0.08); }
     .mob-nav.open { display: flex; flex-direction: column; gap: 2px; }
@@ -764,6 +764,63 @@
       .sec { padding: 56px 0; }
       .proc-inner { padding: 28px 20px; }
     }
+
+    /* ── LANGUAGE TOGGLE ──────────────────────────────────── */
+    .lang-toggle {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 60px; padding: 12px 16px;
+      border-radius: 999px; font-size: 0.9rem; font-weight: 700;
+      letter-spacing: 0.04em; background: transparent; color: var(--navy);
+      border: 1.5px solid rgba(35,58,94,0.22); cursor: pointer; font-family: inherit;
+      transition: background var(--t), color var(--t), border-color var(--t);
+      white-space: nowrap;
+    }
+    .lang-toggle:hover { background: rgba(35,58,94,0.07); border-color: rgba(35,58,94,0.4); }
+
+    /* ── RTL OVERRIDES ────────────────────────────────────── */
+    body.rtl {
+      font-family: "Cairo", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    body.rtl .nav-inner   { flex-direction: row-reverse; }
+    body.rtl .nav-links   { flex-direction: row-reverse; }
+    body.rtl .nav-cta     { display: flex; flex-direction: row-reverse; gap: 8px; }
+    body.rtl .logo svg,     body.rtl .foot-logo svg,     body.rtl .dvs-logo svg,
+    body.rtl .logo img,    body.rtl .foot-logo img,    body.rtl .dvs-logo img
+      { direction: ltr; unicode-bidi: bidi-override; }
+    body.rtl .mob-nav     { text-align: right; }
+    body.rtl .hero-inner  { direction: rtl; }
+    body.rtl .hero-pill   { flex-direction: row-reverse; }
+    body.rtl .hero-actions{ flex-direction: row-reverse; }
+    body.rtl .ctag-row    { flex-direction: row-reverse; }
+    body.rtl .check-item  { flex-direction: row-reverse; }
+    body.rtl .hero-badge  { flex-direction: row-reverse; }
+    body.rtl .stats-band  { direction: rtl; }
+    body.rtl .svc-card    { text-align: right; }
+    body.rtl .dvs-inner   { direction: rtl; }
+    body.rtl .dvs-left    { text-align: right; }
+    body.rtl .dvs-logo    { justify-content: flex-end; }
+    body.rtl .dvs-feat    { flex-direction: row-reverse; }
+    body.rtl .dvs-feat-body { text-align: right; }
+    body.rtl .dvs-actions { flex-direction: row-reverse; justify-content: flex-end; }
+    body.rtl .pricing-hdr { text-align: right; }
+    body.rtl .p-card      { text-align: right; }
+    body.rtl .p-eyebrow   { flex-direction: row-reverse; }
+    body.rtl .p-feat      { direction: rtl; }
+    body.rtl .proc-inner  { direction: rtl; text-align: right; }
+    body.rtl .testi-author{ flex-direction: row-reverse; }
+    body.rtl .faq-q       { text-align: right; }
+    body.rtl .c-item      { flex-direction: row-reverse; text-align: right; }
+    body.rtl .c-details   { direction: rtl; }
+    body.rtl .fg          { text-align: right; }
+    body.rtl input,
+    body.rtl select,
+    body.rtl textarea     { text-align: right; direction: rtl; }
+    body.rtl .form-foot   { flex-direction: row-reverse; }
+    body.rtl .form-priv   { flex-direction: row-reverse; }
+    body.rtl .foot-grid   { direction: rtl; text-align: right; }
+    body.rtl .foot-links  { text-align: right; }
+    body.rtl .foot-bottom { flex-direction: row-reverse; }
+    body.rtl .eyebrow     { display: block; }
   </style>
 </head>
 <body>
@@ -797,14 +854,15 @@
       </a>
 
       <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#dvs">DVS Software</a>
-        <a href="#process">How We Work</a>
-        <a href="#faq">FAQ</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#dvs" data-i18n="nav_dvs">DVS Software</a>
+        <a href="#process" data-i18n="nav_process">How We Work</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
       </nav>
 
       <div class="nav-cta">
-        <a href="#contact" class="btn btn-primary">Free Assessment</a>
+        <button class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
+        <a href="#contact" class="btn btn-primary" data-i18n="nav_cta">Free Assessment</a>
       </div>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -812,11 +870,12 @@
       </button>
     </div>
     <nav class="mob-nav" id="mobNav">
-      <a href="#services">Services</a>
-      <a href="#dvs">DVS Software</a>
-      <a href="#process">How We Work</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-primary">Free Assessment</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#dvs" data-i18n="nav_dvs">DVS Software</a>
+      <a href="#process" data-i18n="nav_process">How We Work</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a href="#contact" class="btn btn-primary" data-i18n="nav_cta">Free Assessment</a>
+      <button class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
     </nav>
   </div>
 </header>
@@ -830,13 +889,13 @@
         <div>
           <div class="hero-pill">
             <span class="dot"></span>
-            Trusted by pharma teams in 7+ countries
+            <span data-i18n="hero_pill">Trusted by pharma teams in 7+ countries</span>
           </div>
-          <h1 class="h1">Stay <span class="accent">Audit-Ready</span><br/>with PHARPRO</h1>
-          <p class="hero-sub">Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training — delivered by specialists who understand your regulatory environment.</p>
+          <h1 class="h1" data-i18n="hero_h1">Stay <span class="accent">Audit-Ready</span><br/>with PHARPRO</h1>
+          <p class="hero-sub" data-i18n="hero_sub">Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training — delivered by specialists who understand your regulatory environment.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Get Free Assessment</a>
-            <a href="#services" class="btn btn-outline">Explore Services</a>
+            <a href="#contact" class="btn btn-primary" data-i18n="hero_btn1">Get Free Assessment</a>
+            <a href="#services" class="btn btn-outline" data-i18n="hero_btn2">Explore Services</a>
           </div>
           <div class="ctag-row">
             <span class="ctag">FDA 21 CFR Part 11</span>
@@ -848,37 +907,37 @@
         <div class="hero-card">
           <div class="hero-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Inspection-Ready Approach
+            <span data-i18n="hero_badge">Inspection-Ready Approach</span>
           </div>
-          <h3>Built for regulated operations</h3>
-          <p>Structured to hold up in the audit room — every time.</p>
+          <h3 data-i18n="hero_card_h3">Built for regulated operations</h3>
+          <p data-i18n="hero_card_p">Structured to hold up in the audit room — every time.</p>
           <div class="check-list">
             <div class="check-item">
               <svg class="ci" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Computerized System Validation (CSV)
+              <span data-i18n="hero_check1">Computerized System Validation (CSV)</span>
             </div>
             <div class="check-item">
               <svg class="ci" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              QA, Gap Assessment &amp; Compliance
+              <span data-i18n="hero_check2">QA, Gap Assessment &amp; Compliance</span>
             </div>
             <div class="check-item">
               <svg class="ci" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              CQV, Thermal Mapping &amp; Training
+              <span data-i18n="hero_check3">CQV, Thermal Mapping &amp; Training</span>
             </div>
             <div class="check-item">
               <svg class="ci" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              AI-Assisted Digital Validation (DVS)
+              <span data-i18n="hero_check4">AI-Assisted Digital Validation (DVS)</span>
             </div>
           </div>
-          <a href="#contact" class="btn btn-primary" style="width:100%; justify-content:center;">Request a Proposal</a>
+          <a href="#contact" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="hero_card_cta">Request a Proposal</a>
         </div>
       </div>
 
       <div class="stats-band">
-        <div class="stat-cell"><div class="stat-num">10<span>+</span></div><div class="stat-label">Years Experience</div></div>
-        <div class="stat-cell"><div class="stat-num">22<span>+</span></div><div class="stat-label">Projects Completed</div></div>
-        <div class="stat-cell"><div class="stat-num">15<span>+</span></div><div class="stat-label">Active Clients</div></div>
-        <div class="stat-cell"><div class="stat-num">7<span>+</span></div><div class="stat-label">Countries Served</div></div>
+        <div class="stat-cell"><div class="stat-num">10<span>+</span></div><div class="stat-label" data-i18n="stat1_label">Years Experience</div></div>
+        <div class="stat-cell"><div class="stat-num">22<span>+</span></div><div class="stat-label" data-i18n="stat2_label">Projects Completed</div></div>
+        <div class="stat-cell"><div class="stat-num">15<span>+</span></div><div class="stat-label" data-i18n="stat3_label">Active Clients</div></div>
+        <div class="stat-cell"><div class="stat-num">7<span>+</span></div><div class="stat-label" data-i18n="stat4_label">Countries Served</div></div>
       </div>
     </div>
   </section>
@@ -886,58 +945,58 @@
   <!-- ── SERVICES ──────────────────────────────────────────── -->
   <section class="sec on-white" id="services">
     <div class="wrap">
-      <div class="eyebrow">Services</div>
-      <h2 class="h2" style="margin-bottom:8px;">Everything your compliance programme needs</h2>
-      <p class="body-lg" style="max-width:540px;">Practical, inspection-ready support across the full spectrum of pharmaceutical compliance and validation.</p>
+      <div class="eyebrow" data-i18n="svc_eyebrow">Services</div>
+      <h2 class="h2" style="margin-bottom:8px;" data-i18n="svc_h2">Everything your compliance programme needs</h2>
+      <p class="body-lg" style="max-width:540px;" data-i18n="svc_body">Practical, inspection-ready support across the full spectrum of pharmaceutical compliance and validation.</p>
 
       <div class="svc-grid">
         <div class="svc-card">
           <div class="svc-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3>Computerized System Validation</h3>
-          <p>End-to-end CSV lifecycle support — from planning through closure — aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5.</p>
+          <h3 data-i18n="svc1_h3">Computerized System Validation</h3>
+          <p data-i18n="svc1_p">End-to-end CSV lifecycle support — from planning through closure — aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5.</p>
         </div>
 
         <div class="svc-card">
           <div class="svc-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3>Quality Assurance &amp; Gap Assessment</h3>
-          <p>Find compliance gaps before auditors do. SOP reviews, documentation assessments, and QA support structured to close findings fast.</p>
+          <h3 data-i18n="svc2_h3">Quality Assurance &amp; Gap Assessment</h3>
+          <p data-i18n="svc2_p">Find compliance gaps before auditors do. SOP reviews, documentation assessments, and QA support structured to close findings fast.</p>
         </div>
 
         <div class="svc-card">
           <div class="svc-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
           </div>
-          <h3>CQV &amp; Thermal Mapping</h3>
-          <p>Commissioning, qualification, and validation for equipment and utilities — plus temperature distribution studies for controlled environments.</p>
+          <h3 data-i18n="svc3_h3">CQV &amp; Thermal Mapping</h3>
+          <p data-i18n="svc3_p">Commissioning, qualification, and validation for equipment and utilities — plus temperature distribution studies for controlled environments.</p>
         </div>
 
         <div class="svc-card">
           <div class="svc-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
-          <h3>GMP Training</h3>
-          <p>Practical training in CSV, data integrity, and GMP systems — tailored to your team's actual gaps. Delivered onsite or online.</p>
+          <h3 data-i18n="svc4_h3">GMP Training</h3>
+          <p data-i18n="svc4_p">Practical training in CSV, data integrity, and GMP systems — tailored to your team's actual gaps. Delivered onsite or online.</p>
         </div>
 
         <div class="svc-card">
           <div class="svc-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <h3>Pharma Digital Support</h3>
-          <p>Navigate software implementation and digital transformation with a compliance-first approach — from process alignment to validation strategy.</p>
+          <h3 data-i18n="svc5_h3">Pharma Digital Support</h3>
+          <p data-i18n="svc5_p">Navigate software implementation and digital transformation with a compliance-first approach — from process alignment to validation strategy.</p>
         </div>
 
         <div class="svc-card svc-cta">
           <div class="svc-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-          <h3>Not sure where to start?</h3>
-          <p>Tell us your situation. We'll identify what matters most and give you a clear path forward.</p>
-          <a href="#contact" class="btn btn-primary" style="margin-top:18px; font-size:0.86rem; padding:10px 20px;">Start Free Assessment</a>
+          <h3 data-i18n="svc6_h3">Not sure where to start?</h3>
+          <p data-i18n="svc6_p">Tell us your situation. We'll identify what matters most and give you a clear path forward.</p>
+          <a href="#contact" class="btn btn-primary" style="margin-top:18px; font-size:0.86rem; padding:10px 20px;" data-i18n="svc6_cta">Start Free Assessment</a>
         </div>
       </div>
     </div>
@@ -969,15 +1028,15 @@
             </svg>
           </div>
 
-          <h2 class="h2">30 Document Builders.<br/>One Platform.</h2>
-          <p>AI-assisted validation lifecycle management for pharmaceutical and life sciences teams. From concept through retirement — structured, guided, and audit-ready.</p>
+          <h2 class="h2" data-i18n="dvs_h2">30 Document Builders.<br/>One Platform.</h2>
+          <p data-i18n="dvs_p">AI-assisted validation lifecycle management for pharmaceutical and life sciences teams. From concept through retirement — structured, guided, and audit-ready.</p>
 
           <div class="dvs-actions">
             <a href="https://dvs.pharpro.co" target="_blank" rel="noopener" class="btn btn-primary">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Explore DVS
+              <span data-i18n="dvs_btn1">Explore DVS</span>
             </a>
-            <a href="#contact" class="btn btn-ghost">Book a Demo</a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="dvs_btn2">Book a Demo</a>
           </div>
 
           <div class="dvs-feat-grid">
@@ -986,8 +1045,8 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
               </div>
               <div class="dvs-feat-body">
-                <h4>AI Drafting</h4>
-                <p>Generate protocol content in minutes instead of 2–3 weeks</p>
+                <h4 data-i18n="dvs_feat1_h4">AI Drafting</h4>
+                <p data-i18n="dvs_feat1_p">Generate protocol content in minutes instead of 2–3 weeks</p>
               </div>
             </div>
 
@@ -996,8 +1055,8 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
               <div class="dvs-feat-body">
-                <h4>FDA Compliance</h4>
-                <p>Built-in e-signatures and audit trail — aligned with 21 CFR Part 11</p>
+                <h4 data-i18n="dvs_feat2_h4">FDA Compliance</h4>
+                <p data-i18n="dvs_feat2_p">Built-in alignment with 21 CFR Part 11 and EU GMP Annex 11</p>
               </div>
             </div>
 
@@ -1006,8 +1065,8 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
               </div>
               <div class="dvs-feat-body">
-                <h4>Full Traceability</h4>
-                <p>Requirements auto-linked through every test phase automatically</p>
+                <h4 data-i18n="dvs_feat3_h4">Full Traceability</h4>
+                <p data-i18n="dvs_feat3_p">Requirements auto-linked through every test phase automatically</p>
               </div>
             </div>
 
@@ -1016,8 +1075,8 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
               </div>
               <div class="dvs-feat-body">
-                <h4>Workflow Engine</h4>
-                <p>Configurable approval workflows replacing manual handwritten cycles</p>
+                <h4 data-i18n="dvs_feat4_h4">Workflow Engine</h4>
+                <p data-i18n="dvs_feat4_p">Configurable approval workflows replacing manual handwritten cycles</p>
               </div>
             </div>
 
@@ -1026,8 +1085,8 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
               </div>
               <div class="dvs-feat-body">
-                <h4>Digital Documents</h4>
-                <p>Over 1,500 paper pages saved per validation project</p>
+                <h4 data-i18n="dvs_feat5_h4">Digital Documents</h4>
+                <p data-i18n="dvs_feat5_p">Over 1,500 paper pages saved per validation project</p>
               </div>
             </div>
 
@@ -1036,8 +1095,8 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/><path d="M8 13h8M8 17h8"/></svg>
               </div>
               <div class="dvs-feat-body">
-                <h4>Same-Day Deployment</h4>
-                <p>No implementation partner needed. Deploy today, validate tomorrow.</p>
+                <h4 data-i18n="dvs_feat6_h4">Same-Day Deployment</h4>
+                <p data-i18n="dvs_feat6_p">No implementation partner needed. Deploy today, validate tomorrow.</p>
               </div>
             </div>
           </div>
@@ -1046,8 +1105,8 @@
         <!-- Right: Lifecycle Illustration -->
         <div class="dvs-illus">
           <div class="dvs-illus-header">
-            <div class="tag">V-Model Lifecycle</div>
-            <div class="title">Full Validation Coverage</div>
+            <div class="tag" data-i18n="dvs_illus_tag">V-Model Lifecycle</div>
+            <div class="title" data-i18n="dvs_illus_title">Full Validation Coverage</div>
           </div>
 
           <div class="phase-grid">
@@ -1055,46 +1114,46 @@
               <div class="phase-ico">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
               </div>
-              <h4>Concept Phase</h4>
-              <p>URS, risk classification, CSV planning documents</p>
-              <div class="save">Save 60 working hours</div>
+              <h4 data-i18n="phase1_h4">Concept Phase</h4>
+              <p data-i18n="phase1_p">URS, risk classification, CSV planning documents</p>
+              <div class="save" data-i18n="phase1_save">Save 60 working hours</div>
             </div>
 
             <div class="phase">
               <div class="phase-ico">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               </div>
-              <h4>Project Phase</h4>
-              <p>IQ OQ PQ protocols, execution &amp; reporting</p>
-              <div class="save">Save 200 working hours</div>
+              <h4 data-i18n="phase2_h4">Project Phase</h4>
+              <p data-i18n="phase2_p">IQ OQ PQ protocols, execution &amp; reporting</p>
+              <div class="save" data-i18n="phase2_save">Save 200 working hours</div>
             </div>
 
             <div class="phase">
               <div class="phase-ico">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
               </div>
-              <h4>Operation Phase</h4>
-              <p>Change control, periodic reviews, CAPAs</p>
-              <div class="save">Save 132 working hours</div>
+              <h4 data-i18n="phase3_h4">Operation Phase</h4>
+              <p data-i18n="phase3_p">Change control, periodic reviews, CAPAs</p>
+              <div class="save" data-i18n="phase3_save">Save 132 working hours</div>
             </div>
 
             <div class="phase">
               <div class="phase-ico">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
-              <h4>Retirement Phase</h4>
-              <p>Archival &amp; decommission documentation</p>
-              <div class="save">Save 136 working hours</div>
+              <h4 data-i18n="phase4_h4">Retirement Phase</h4>
+              <p data-i18n="phase4_p">Archival &amp; decommission documentation</p>
+              <div class="save" data-i18n="phase4_save">Save 136 working hours</div>
             </div>
           </div>
 
           <div class="dvs-total">
-            <div class="num">30 <span>working days</span></div>
-            <div class="lbl">total savings per validation project</div>
+            <div class="num" data-i18n="dvs_total_num">30 <span>working days</span></div>
+            <div class="lbl" data-i18n="dvs_total_lbl">total savings per validation project</div>
           </div>
 
           <div style="margin-top:14px; padding:14px; background:rgba(255,255,255,0.05); border-radius:10px; border:1px solid rgba(255,255,255,0.08);">
-            <p style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.55; font-style:italic;">"One month of DVS Professional costs less than two hours of an external CSV consultant."</p>
+            <p style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.55; font-style:italic;" data-i18n="dvs_quote">"One month of DVS Professional costs less than two hours of an external CSV consultant."</p>
           </div>
         </div>
 
@@ -1106,9 +1165,9 @@
   <section class="pricing-sec" id="pricing">
     <div class="wrap">
       <div class="pricing-hdr">
-        <div class="eyebrow">DVS Pricing</div>
-        <h2 class="h2" style="margin-bottom:8px;">Simple, transparent pricing</h2>
-        <p class="body-lg">Concurrent-user SaaS — create unlimited accounts, pay only for simultaneous logins.</p>
+        <div class="eyebrow" data-i18n="pricing_eyebrow">DVS Pricing</div>
+        <h2 class="h2" style="margin-bottom:8px;" data-i18n="pricing_h2">Simple, transparent pricing</h2>
+        <p class="body-lg" data-i18n="pricing_body">Concurrent-user SaaS — create unlimited accounts, pay only for simultaneous logins.</p>
       </div>
 
       <div class="pricing-grid">
@@ -1117,21 +1176,21 @@
         <div class="p-card feat">
           <div class="p-eyebrow">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            Most Popular
+            <span data-i18n="plan1_eyebrow">Most Popular</span>
           </div>
-          <div class="p-tier">Professional</div>
-          <div class="p-conc">Up to 10 concurrent users</div>
+          <div class="p-tier" data-i18n="plan1_tier">Professional</div>
+          <div class="p-conc" data-i18n="plan1_conc">Up to 10 concurrent users</div>
           <div class="p-amount">
             <div class="p-amt">$253</div>
-            <div class="p-per">per month</div>
+            <div class="p-per" data-i18n="plan1_per">per month</div>
           </div>
-          <a href="https://dvs.pharpro.co" target="_blank" rel="noopener" class="p-cta p-cta-feat">Get Started</a>
+          <a href="https://dvs.pharpro.co" target="_blank" rel="noopener" class="p-cta p-cta-feat" data-i18n="plan1_cta">Get Started</a>
           <hr class="p-div"/>
           <div class="p-feats">
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited projects</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full PDF export</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>E-signatures &amp; audit trail</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Email support</div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan1_f1">Unlimited projects</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan1_f2">Full PDF export</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan1_f3">E-signatures &amp; audit trail</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan1_f4">Email support</span></div>
           </div>
         </div>
 
@@ -1139,19 +1198,19 @@
         <div class="p-card">
           <div class="p-eyebrow">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Team
+            <span data-i18n="plan2_eyebrow">Team</span>
           </div>
-          <div class="p-tier">Team</div>
-          <div class="p-conc">Up to 25 concurrent users</div>
+          <div class="p-tier" data-i18n="plan2_tier">Team</div>
+          <div class="p-conc" data-i18n="plan2_conc">Up to 25 concurrent users</div>
           <div class="p-amount">
             <div class="p-amt">$500</div>
-            <div class="p-per">per month</div>
+            <div class="p-per" data-i18n="plan2_per">per month</div>
           </div>
-          <a href="https://dvs.pharpro.co" target="_blank" rel="noopener" class="p-cta p-cta-default">Get Started</a>
+          <a href="https://dvs.pharpro.co" target="_blank" rel="noopener" class="p-cta p-cta-default" data-i18n="plan2_cta">Get Started</a>
           <hr class="p-div"/>
           <div class="p-feats">
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Everything in Professional</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Priority support</div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan2_f1">Everything in Professional</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan2_f2">Priority support</span></div>
           </div>
         </div>
 
@@ -1159,23 +1218,23 @@
         <div class="p-card">
           <div class="p-eyebrow">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            Enterprise
+            <span data-i18n="plan3_eyebrow">Enterprise</span>
           </div>
-          <div class="p-tier">Enterprise</div>
-          <div class="p-conc">Unlimited concurrent users</div>
+          <div class="p-tier" data-i18n="plan3_tier">Enterprise</div>
+          <div class="p-conc" data-i18n="plan3_conc">Unlimited concurrent users</div>
           <div class="p-amount">
-            <div class="p-amt">Custom</div>
-            <div class="p-per">tailored to your organisation</div>
+            <div class="p-amt" data-i18n="plan3_amt">Custom</div>
+            <div class="p-per" data-i18n="plan3_per">tailored to your organisation</div>
           </div>
-          <a href="#contact" class="p-cta p-cta-default">Contact Sales</a>
+          <a href="#contact" class="p-cta p-cta-default" data-i18n="plan3_cta">Contact Sales</a>
           <hr class="p-div"/>
           <div class="p-feats">
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>SSO &amp; API access</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dedicated instance</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Custom SLA &amp; onboarding</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>SOC 2 compliance report</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Private cloud option</div>
-            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>CSV Master Plan Registry</div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f1">SSO &amp; API access</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f2">Dedicated instance</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f3">Custom SLA &amp; onboarding</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f4">SOC 2 compliance report</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f5">Private cloud option</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f6">CSV Master Plan Registry</span></div>
           </div>
         </div>
 
@@ -1187,29 +1246,29 @@
   <section class="proc-sec" id="process">
     <div class="wrap">
       <div class="proc-inner">
-        <div class="eyebrow">How We Work</div>
-        <h2 class="h2" style="margin-bottom:8px;">From first contact to audit-ready</h2>
-        <p class="body-lg" style="max-width:520px;">A structured four-step engagement delivering real compliance outcomes — not just paperwork.</p>
+        <div class="eyebrow" data-i18n="proc_eyebrow">How We Work</div>
+        <h2 class="h2" style="margin-bottom:8px;" data-i18n="proc_h2">From first contact to audit-ready</h2>
+        <p class="body-lg" style="max-width:520px;" data-i18n="proc_body">A structured four-step engagement delivering real compliance outcomes — not just paperwork.</p>
         <div class="proc-grid">
           <div class="proc-step">
             <div class="proc-num">1</div>
-            <h4>Discovery Call</h4>
-            <p>We understand your current state, gaps, systems, and timeline before proposing anything.</p>
+            <h4 data-i18n="step1_h4">Discovery Call</h4>
+            <p data-i18n="step1_p">We understand your current state, gaps, systems, and timeline before proposing anything.</p>
           </div>
           <div class="proc-step">
             <div class="proc-num">2</div>
-            <h4>Scoped Proposal</h4>
-            <p>Clear scope, timeline, and deliverables — no vague retainers or open-ended engagements.</p>
+            <h4 data-i18n="step2_h4">Scoped Proposal</h4>
+            <p data-i18n="step2_p">Clear scope, timeline, and deliverables — no vague retainers or open-ended engagements.</p>
           </div>
           <div class="proc-step">
             <div class="proc-num">3</div>
-            <h4>Structured Execution</h4>
-            <p>Protocols, reviews, approvals, and documentation — done correctly and on time.</p>
+            <h4 data-i18n="step3_h4">Structured Execution</h4>
+            <p data-i18n="step3_p">Protocols, reviews, approvals, and documentation — done correctly and on time.</p>
           </div>
           <div class="proc-step">
             <div class="proc-num">4</div>
-            <h4>Inspection-Ready Output</h4>
-            <p>Deliverables that are audit-defensible, complete, and immediately usable in your quality system.</p>
+            <h4 data-i18n="step4_h4">Inspection-Ready Output</h4>
+            <p data-i18n="step4_p">Deliverables that are audit-defensible, complete, and immediately usable in your quality system.</p>
           </div>
         </div>
       </div>
@@ -1219,18 +1278,18 @@
   <!-- ── TESTIMONIALS ───────────────────────────────────────── -->
   <section class="sec on-white" id="clients">
     <div class="wrap">
-      <div class="eyebrow">Client Feedback</div>
-      <h2 class="h2" style="margin-bottom:8px;">Trusted by regulated operations</h2>
-      <p class="body-lg">How pharmaceutical manufacturers describe working with PHARPRO.</p>
+      <div class="eyebrow" data-i18n="testi_eyebrow">Client Feedback</div>
+      <h2 class="h2" style="margin-bottom:8px;" data-i18n="testi_h2">Trusted by regulated operations</h2>
+      <p class="body-lg" data-i18n="testi_body">How pharmaceutical manufacturers describe working with PHARPRO.</p>
       <div class="testi-grid">
         <div class="testi">
           <div class="testi-q">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
           </div>
-          <p>"PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities."</p>
+          <p data-i18n="testi1_p">"PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities."</p>
           <div class="testi-author">
             <div class="avatar">AG</div>
-            <div><div class="author-name">Axantia Group</div><div class="author-role">Quality &amp; Validation · Jordan</div></div>
+            <div><div class="author-name" data-i18n="testi1_name">Axantia Group</div><div class="author-role" data-i18n="testi1_role">Quality &amp; Validation · Jordan</div></div>
           </div>
         </div>
 
@@ -1238,10 +1297,10 @@
           <div class="testi-q">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
           </div>
-          <p>"Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity."</p>
+          <p data-i18n="testi2_p">"Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity."</p>
           <div class="testi-author">
             <div class="avatar">DD</div>
-            <div><div class="author-name">Dar Al Dawa</div><div class="author-role">Quality Assurance · Jordan</div></div>
+            <div><div class="author-name" data-i18n="testi2_name">Dar Al Dawa</div><div class="author-role" data-i18n="testi2_role">Quality Assurance · Jordan</div></div>
           </div>
         </div>
 
@@ -1249,10 +1308,10 @@
           <div class="testi-q">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
           </div>
-          <p>"PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right."</p>
+          <p data-i18n="testi3_p">"PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right."</p>
           <div class="testi-author">
             <div class="avatar">AH</div>
-            <div><div class="author-name">Al Hayat Pharmaceuticals</div><div class="author-role">CSV &amp; Compliance · Jordan</div></div>
+            <div><div class="author-name" data-i18n="testi3_name">Al Hayat Pharmaceuticals</div><div class="author-role" data-i18n="testi3_role">CSV &amp; Compliance · Jordan</div></div>
           </div>
         </div>
       </div>
@@ -1262,34 +1321,34 @@
   <!-- ── FAQ ───────────────────────────────────────────────── -->
   <section class="sec on-ivory" id="faq">
     <div class="wrap" style="max-width:720px;">
-      <div class="eyebrow">FAQ</div>
-      <h2 class="h2" style="margin-bottom:8px;">Common questions</h2>
-      <p class="body-lg">Questions clients ask before starting an engagement.</p>
+      <div class="eyebrow" data-i18n="faq_eyebrow">FAQ</div>
+      <h2 class="h2" style="margin-bottom:8px;" data-i18n="faq_h2">Common questions</h2>
+      <p class="body-lg" data-i18n="faq_body">Questions clients ask before starting an engagement.</p>
       <div class="faq-list">
 
         <div class="faq-item">
-          <button class="faq-q">What types of pharmaceutical companies do you work with?<svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a">Manufacturers, distributors, and contract organizations — from growing regional companies to multinational operations. Particularly suited to companies preparing for regulatory inspections or implementing new systems.</div>
+          <button class="faq-q"><span data-i18n="faq1_q">What types of pharmaceutical companies do you work with?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" data-i18n="faq1_a">Manufacturers, distributors, and contract organizations — from growing regional companies to multinational operations. Particularly suited to companies preparing for regulatory inspections or implementing new systems.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">Do you work remotely or on-site?<svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a">Both. Remote assessments, documentation reviews, and training with no loss in quality. For hands-on work — thermal mapping, equipment qualification, on-floor audits — we travel to your site. Most engagements combine both.</div>
+          <button class="faq-q"><span data-i18n="faq2_q">Do you work remotely or on-site?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" data-i18n="faq2_a">Both. Remote assessments, documentation reviews, and training with no loss in quality. For hands-on work — thermal mapping, equipment qualification, on-floor audits — we travel to your site. Most engagements combine both.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">How long does a typical engagement take?<svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a">A focused gap assessment: 2–3 weeks. A full CSV project: typically 6–12 weeks. We define the timeline clearly in our proposal before any commitment is made.</div>
+          <button class="faq-q"><span data-i18n="faq3_q">How long does a typical engagement take?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" data-i18n="faq3_a">A focused gap assessment: 2–3 weeks. A full CSV project: typically 6–12 weeks. We define the timeline clearly in our proposal before any commitment is made.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">What is included in the Free Assessment?<svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a">A discovery call to understand your current compliance situation — systems, processes, timelines, and regulatory priorities. We identify the most important areas and suggest a practical starting point. No obligation, no cost.</div>
+          <button class="faq-q"><span data-i18n="faq4_q">What is included in the Free Assessment?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" data-i18n="faq4_a">A discovery call to understand your current compliance situation — systems, processes, timelines, and regulatory priorities. We identify the most important areas and suggest a practical starting point. No obligation, no cost.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">What regulatory frameworks does PHARPRO specialise in?<svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a">FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5, ICH Q10, and general GMP requirements for pharmaceutical manufacturing and distribution.</div>
+          <button class="faq-q"><span data-i18n="faq5_q">What regulatory frameworks does PHARPRO specialise in?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" data-i18n="faq5_a">FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5, ICH Q10, and general GMP requirements for pharmaceutical manufacturing and distribution.</div>
         </div>
 
       </div>
@@ -1299,61 +1358,61 @@
   <!-- ── CONTACT ────────────────────────────────────────────── -->
   <section class="sec on-white" id="contact">
     <div class="wrap">
-      <div class="eyebrow">Contact</div>
-      <h2 class="h2" style="margin-bottom:8px;">Let's talk about your compliance needs</h2>
-      <p class="body-lg" style="max-width:500px;">Start with a free discovery call. We'll listen, ask the right questions, and tell you honestly what you need.</p>
+      <div class="eyebrow" data-i18n="contact_eyebrow">Contact</div>
+      <h2 class="h2" style="margin-bottom:8px;" data-i18n="contact_h2">Let's talk about your compliance needs</h2>
+      <p class="body-lg" style="max-width:500px;" data-i18n="contact_body">Start with a free discovery call. We'll listen, ask the right questions, and tell you honestly what you need.</p>
 
       <div class="contact-grid">
         <div class="c-details">
           <div class="c-item">
             <div class="c-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <div><h4>Email</h4><a href="mailto:info@pharpro.co">info@pharpro.co</a></div>
+            <div><h4 data-i18n="contact_email_label">Email</h4><a href="mailto:info@pharpro.co">info@pharpro.co</a></div>
           </div>
           <div class="c-item">
             <div class="c-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
-            <div><h4>Phone / WhatsApp</h4><a href="tel:+962798565807">+962 79 856 5807</a></div>
+            <div><h4 data-i18n="contact_phone_label">Phone / WhatsApp</h4><a href="tel:+962798565807">+962 79 856 5807</a></div>
           </div>
           <div class="c-item">
             <div class="c-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><h4>Location</h4><p>Amman, Jordan — serving clients worldwide</p></div>
+            <div><h4 data-i18n="contact_loc_label">Location</h4><p data-i18n="contact_loc_text">Amman, Jordan — serving clients worldwide</p></div>
           </div>
           <div class="c-item">
             <div class="c-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-            <div><h4>LinkedIn</h4><a href="https://www.linkedin.com/company/pharprocc" target="_blank" rel="noopener">linkedin.com/company/pharprocc</a></div>
+            <div><h4 data-i18n="contact_li_label">LinkedIn</h4><a href="https://www.linkedin.com/company/pharprocc" target="_blank" rel="noopener">linkedin.com/company/pharprocc</a></div>
           </div>
         </div>
 
         <div class="c-form">
-          <h3>Send us a message</h3>
-          <p>We respond within 24 hours on business days.</p>
+          <h3 data-i18n="form_h3">Send us a message</h3>
+          <p data-i18n="form_p">We respond within 24 hours on business days.</p>
           <form id="contactForm" novalidate>
             <div class="form-row">
-              <div class="fg"><label for="name">Full Name *</label><input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" /></div>
-              <div class="fg"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Your company" autocomplete="organization" /></div>
+              <div class="fg"><label for="name" data-i18n="form_name_label">Full Name *</label><input type="text" id="name" name="name" placeholder="Your name" data-i18n-ph="form_name_ph" required autocomplete="name" /></div>
+              <div class="fg"><label for="company" data-i18n="form_company_label">Company</label><input type="text" id="company" name="company" placeholder="Your company" data-i18n-ph="form_company_ph" autocomplete="organization" /></div>
             </div>
             <div class="form-row">
-              <div class="fg"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" /></div>
+              <div class="fg"><label for="email" data-i18n="form_email_label">Email Address *</label><input type="email" id="email" name="email" placeholder="you@company.com" data-i18n-ph="form_email_ph" required autocomplete="email" /></div>
               <div class="fg">
-                <label for="service">Service of Interest</label>
+                <label for="service" data-i18n="form_service_label">Service of Interest</label>
                 <select id="service" name="service">
-                  <option value="">Select a service…</option>
-                  <option value="csv">Computerized System Validation (CSV)</option>
-                  <option value="qa">Quality Assurance &amp; Gap Assessment</option>
-                  <option value="cqv">CQV &amp; Thermal Mapping</option>
-                  <option value="training">GMP Training</option>
-                  <option value="digital">Pharma Digital Support</option>
-                  <option value="dvs">PHARPRO DVS — Digital Validation Software</option>
-                  <option value="unsure">Not sure — need guidance</option>
+                  <option value="" data-i18n="form_service_opt0">Select a service…</option>
+                  <option value="csv" data-i18n="form_service_opt1">Computerized System Validation (CSV)</option>
+                  <option value="qa" data-i18n="form_service_opt2">Quality Assurance &amp; Gap Assessment</option>
+                  <option value="cqv" data-i18n="form_service_opt3">CQV &amp; Thermal Mapping</option>
+                  <option value="training" data-i18n="form_service_opt4">GMP Training</option>
+                  <option value="digital" data-i18n="form_service_opt5">Pharma Digital Support</option>
+                  <option value="dvs" data-i18n="form_service_opt6">PHARPRO DVS — Digital Validation Software</option>
+                  <option value="unsure" data-i18n="form_service_opt7">Not sure — need guidance</option>
                 </select>
               </div>
             </div>
-            <div class="fg"><label for="message">Message *</label><textarea id="message" name="message" placeholder="Describe your situation or challenge…" required></textarea></div>
+            <div class="fg"><label for="message" data-i18n="form_message_label">Message *</label><textarea id="message" name="message" placeholder="Describe your situation or challenge…" data-i18n-ph="form_message_ph" required></textarea></div>
             <div class="hp" aria-hidden="true"><input type="text" name="hp" tabindex="-1" autocomplete="off" /></div>
             <div class="form-foot">
-              <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+              <button type="submit" class="btn btn-primary" id="submitBtn" data-i18n="form_submit">Send Message</button>
               <div class="form-priv">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Your information is kept private
+                <span data-i18n="form_priv">Your information is kept private</span>
               </div>
             </div>
             <div id="formStatus" class="f-status" role="alert"></div>
@@ -1388,27 +1447,27 @@
           <text x="113" y="101" font-family="Inter,Arial Black,sans-serif" font-size="42" font-weight="800" fill="#1C1C1C" letter-spacing="-1">CONSULTATION</text>
         </svg>
         </div>
-        <p>Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training. Serving regulated operations worldwide from Amman, Jordan.</p>
+        <p data-i18n="foot_brand_p">Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training. Serving regulated operations worldwide from Amman, Jordan.</p>
       </div>
       <div class="foot-col">
-        <h5>Services</h5>
+        <h5 data-i18n="foot_col1_h5">Services</h5>
         <ul class="foot-links">
-          <li><a href="#services">CSV Validation</a></li>
-          <li><a href="#services">Quality Assurance</a></li>
-          <li><a href="#services">CQV &amp; Thermal Mapping</a></li>
-          <li><a href="#services">GMP Training</a></li>
-          <li><a href="#dvs">DVS Software</a></li>
+          <li><a href="#services" data-i18n="foot_link_csv">CSV Validation</a></li>
+          <li><a href="#services" data-i18n="foot_link_qa">Quality Assurance</a></li>
+          <li><a href="#services" data-i18n="foot_link_cqv">CQV &amp; Thermal Mapping</a></li>
+          <li><a href="#services" data-i18n="foot_link_train">GMP Training</a></li>
+          <li><a href="#dvs" data-i18n="foot_link_dvs">DVS Software</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h5>Company</h5>
+        <h5 data-i18n="foot_col2_h5">Company</h5>
         <ul class="foot-links">
-          <li><a href="#process">How We Work</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://www.linkedin.com/company/pharprocc" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#process" data-i18n="nav_process">How We Work</a></li>
+          <li><a href="#clients" data-i18n="testi_eyebrow">Clients</a></li>
+          <li><a href="#pricing" data-i18n="pricing_eyebrow">Pricing</a></li>
+          <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="#contact" data-i18n="foot_link_cont">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/pharprocc" target="_blank" rel="noopener" data-i18n="foot_link_li">LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -1421,70 +1480,13 @@
     </address>
 
     <div class="foot-bottom">
-      <span>&copy; 2025 PHARPRO Consultation Company. All rights reserved.</span>
+      <span data-i18n="foot_copy">&copy; 2025 PHARPRO Consultation Company. All rights reserved.</span>
       <span>CSV &middot; QA &middot; CQV &middot; GMP Training &middot; Amman, Jordan</span>
     </div>
   </div>
 </footer>
 
-<script>
-  /* Mobile menu */
-  const ham = document.getElementById('hamburger');
-  const mob = document.getElementById('mobNav');
-  ham.addEventListener('click', () => mob.classList.toggle('open'));
-  mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mob.classList.remove('open')));
-
-  /* FAQ accordion */
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const open = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-      if (!open) item.classList.add('open');
-    });
-  });
-
-  /* Contact form — web3forms */
-  const form       = document.getElementById('contactForm');
-  const submitBtn  = document.getElementById('submitBtn');
-  const formStatus = document.getElementById('formStatus');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const name    = form.name.value.trim();
-    const email   = form.email.value.trim();
-    const message = form.message.value.trim();
-    if (!name || !email || !message) { show('err','Please fill in all required fields.'); return; }
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-    formStatus.className = 'f-status';
-
-    const payload = {
-      access_key: '83fc2882-83bb-4976-b2e6-81c5405ff00f',
-      name, email, message,
-      subject:   `New enquiry from ${name}${form.company.value.trim() ? ` — ${form.company.value.trim()}` : ''}`,
-      from_name: 'PHARPRO Website',
-      company:   form.company.value.trim() || '—',
-      service:   form.service.value || '—',
-      botcheck:  form.hp ? form.hp.value : ''
-    };
-
-    try {
-      const res  = await fetch('https://api.web3forms.com/submit', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
-      const data = await res.json();
-      if (data.success) { show('ok','Message received. We will be in touch within 24 hours.'); form.reset(); }
-      else { show('err', data.message || 'Something went wrong. Please try again.'); }
-    } catch { show('err','Network error. Please email us directly at info@pharpro.co'); }
-    finally { submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; }
-  });
-
-  function show(type, msg) {
-    formStatus.className = 'f-status ' + type;
-    formStatus.textContent = msg;
-    formStatus.scrollIntoView({ behavior:'smooth', block:'nearest' });
-  }
-</script>
+<script src="js/scripts.js"></script>
 
 <form action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="83fc2882-83bb-4976-b2e6-81c5405ff00f">
