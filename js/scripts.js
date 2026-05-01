@@ -532,6 +532,8 @@ function switchLanguage() {
     url.searchParams.delete("lang");
   }
   history.replaceState(null, "", url.toString());
+  const mobNav = document.getElementById("mobNav");
+  if (mobNav) mobNav.classList.remove("open");
   applyTranslations();
   initTrainings();
 }
@@ -546,6 +548,9 @@ function initHamburger() {
     });
     mobNav.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => mobNav.classList.remove("open"));
+    });
+    mobNav.querySelectorAll("button.lang-toggle").forEach(btn => {
+      btn.addEventListener("click", () => mobNav.classList.remove("open"));
     });
   }
 }
