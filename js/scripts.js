@@ -3,11 +3,48 @@
  * Arabic / English i18n + RTL support
  */
 
+/* ── TRAINING DATA — edit here to update the calendar ─────────── */
+const TRAINING_DATA = {
+  upcoming: [
+    {
+      en: "Cleaning Validation",
+      ar: "التحقق من التنظيف",
+      dates: "17–18 May 2026",
+      dayDisplay: "17",
+      monthDisplay: "MAY",
+      format: "both",
+    },
+    {
+      en: "CSV Training",
+      ar: "تدريب CSV",
+      dates: "20–21 May 2026",
+      dayDisplay: "20",
+      monthDisplay: "MAY",
+      format: "both",
+    },
+    {
+      en: "Compressed Air Testing",
+      ar: "اختبار الهواء المضغوط",
+      dates: "10–11 Jun 2026",
+      dayDisplay: "10",
+      monthDisplay: "JUN",
+      format: "both",
+    },
+  ],
+  completed: [
+    { en: "CSV Training",          ar: "تدريب CSV" },
+    { en: "Excel Sheet Validation", ar: "التحقق من جداول Excel" },
+    { en: "EU GMP Annex 1",        ar: "EU GMP الملحق 1" },
+    { en: "ISO 13485",             ar: "ISO 13485" },
+  ],
+};
+
 /* ── TRANSLATIONS ─────────────────────────────────────────────── */
 const translations = {
   en: {
     /* Navbar */
     nav_services:   "Services",
+    nav_training:   "Training",
     nav_dvs:        "DVS Software",
     nav_process:    "How We Work",
     nav_faq:        "FAQ",
@@ -196,6 +233,17 @@ const translations = {
     form_error:            "Something went wrong. Please try again.",
 
     /* Footer */
+    /* Training */
+    tr_eyebrow:     "GMP Training",
+    tr_h2:          "Training Programmes",
+    tr_body:        "Practical training delivered on-site and online for pharmaceutical teams across the region.",
+    tr_upcoming_h3: "Upcoming Trainings",
+    tr_past_h3:     "Completed Programmes",
+    tr_past_note:   "Building expertise across the pharmaceutical sector",
+    tr_online:      "Online",
+    tr_onsite:      "On-site",
+    tr_register:    "Register Interest",
+
     foot_brand_p:    "Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training.",
     foot_col1_h5:    "Services",
     foot_col2_h5:    "Company",
@@ -215,6 +263,7 @@ const translations = {
   ar: {
     /* Navbar */
     nav_services:   "الخدمات",
+    nav_training:   "التدريب",
     nav_dvs:        "برنامج DVS",
     nav_process:    "آلية عملنا",
     nav_faq:        "الأسئلة الشائعة",
@@ -402,6 +451,17 @@ const translations = {
     form_success:        "شكراً! سنتواصل معك خلال 24 ساعة.",
     form_error:          "حدث خطأ. الرجاء المحاولة مرة أخرى.",
 
+    /* Training */
+    tr_eyebrow:     "التدريب على GMP",
+    tr_h2:          "برامج التدريب",
+    tr_body:        "تدريب عملي يُقدَّم حضورياً وعبر الإنترنت لفرق الأدوية في جميع أنحاء المنطقة.",
+    tr_upcoming_h3: "التدريبات القادمة",
+    tr_past_h3:     "البرامج المكتملة",
+    tr_past_note:   "بناء الخبرة عبر القطاع الدوائي",
+    tr_online:      "إلكتروني",
+    tr_onsite:      "حضوري",
+    tr_register:    "سجّل اهتمامك",
+
     /* Footer */
     foot_brand_p:    "استشارات الامتثال الدوائي — التحقق من صحة الأنظمة الحاسوبية وضمان الجودة وCQV ورسم الخرائط الحرارية والتدريب على GMP.",
     foot_col1_h5:    "الخدمات",
@@ -473,6 +533,7 @@ function switchLanguage() {
   }
   history.replaceState(null, "", url.toString());
   applyTranslations();
+  initTrainings();
 }
 
 /* ── HAMBURGER MENU ───────────────────────────────────────────── */
@@ -501,6 +562,48 @@ function initFaq() {
       });
     }
   });
+}
+
+/* ── TRAINING CALENDAR ────────────────────────────────────────── */
+function initTrainings() {
+  const upcomingGrid = document.getElementById("trUpcomingGrid");
+  const tagsGrid     = document.getElementById("trTagsGrid");
+  if (!upcomingGrid || !tagsGrid) return;
+
+  const isAr = currentLang === "ar";
+
+  upcomingGrid.innerHTML = TRAINING_DATA.upcoming.map(tr => {
+    const title = isAr ? tr.ar : tr.en;
+    const formatPills = tr.format === "both"
+      ? `<span class="tr-pill tr-pill-online">${t("tr_online")}</span>
+         <span class="tr-pill tr-pill-onsite">${t("tr_onsite")}</span>`
+      : tr.format === "online"
+        ? `<span class="tr-pill tr-pill-online">${t("tr_online")}</span>`
+        : `<span class="tr-pill tr-pill-onsite">${t("tr_onsite")}</span>`;
+
+    return `
+      <div class="tr-card">
+        <div class="tr-date-badge">
+          <div class="tr-cal">
+            <span class="tr-cal-day">${tr.dayDisplay}</span>
+            <span class="tr-cal-mon">${tr.monthDisplay}</span>
+          </div>
+          <span class="tr-date-text">${tr.dates}</span>
+        </div>
+        <h4>${title}</h4>
+        <div class="tr-format">${formatPills}</div>
+        <a href="#contact" class="tr-register" onclick="document.getElementById('service').value='training'">${t("tr_register")}</a>
+      </div>`;
+  }).join("");
+
+  tagsGrid.innerHTML = TRAINING_DATA.completed.map(tr => {
+    const label = isAr ? tr.ar : tr.en;
+    return `
+      <div class="tr-tag">
+        <span class="tr-tag-check">✓</span>
+        <span>${label}</span>
+      </div>`;
+  }).join("");
 }
 
 /* ── CONTACT FORM ─────────────────────────────────────────────── */
@@ -546,6 +649,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaq();
   initContactForm();
   applyTranslations();
+  initTrainings();
 
   /* Wire lang toggle buttons */
   document.querySelectorAll(".lang-toggle").forEach(btn => {
