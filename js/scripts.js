@@ -421,7 +421,10 @@ const translations = {
 };
 
 /* ── i18n ENGINE ──────────────────────────────────────────────── */
-let currentLang = localStorage.getItem("pharpro_lang") || "en";
+const _urlLang = new URLSearchParams(window.location.search).get("lang");
+let currentLang = (_urlLang === "ar" || _urlLang === "en")
+  ? _urlLang
+  : (localStorage.getItem("pharpro_lang") || "en");
 
 function t(key) {
   return (translations[currentLang] && translations[currentLang][key]) ||
@@ -462,6 +465,13 @@ function applyTranslations() {
 function switchLanguage() {
   currentLang = currentLang === "en" ? "ar" : "en";
   localStorage.setItem("pharpro_lang", currentLang);
+  const url = new URL(window.location.href);
+  if (currentLang === "ar") {
+    url.searchParams.set("lang", "ar");
+  } else {
+    url.searchParams.delete("lang");
+  }
+  history.replaceState(null, "", url.toString());
   applyTranslations();
 }
 
