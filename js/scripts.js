@@ -91,6 +91,7 @@ const translations = {
     svc6_h3: "Not sure where to start?",
     svc6_p:  "Tell us your situation. We'll identify what matters most and give you a clear path forward.",
     svc6_cta: "Start Free Assessment",
+    svc_learn:  "Learn more →",
 
     /* DVS */
     dvs_h2:       "30 Document Builders.<br/>One Platform.",
@@ -315,6 +316,7 @@ const translations = {
     svc6_h3: "لا تعرف من أين تبدأ؟",
     svc6_p:  "أخبرنا بوضعك. سنحدد ما هو الأهم ونعطيك مساراً واضحاً للأمام.",
     svc6_cta: "ابدأ بتقييم مجاني",
+    svc_learn:  "اعرف المزيد →",
 
     /* DVS */
     dvs_h2:       "30 أداة بناء وثائق.<br/>منصة واحدة.",

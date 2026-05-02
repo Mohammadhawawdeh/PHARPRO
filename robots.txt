@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Allow: /services/csv
+Allow: /services/qa
+Allow: /services/cqv
+Allow: /services/training
 Disallow: /cgi-bin/
 Disallow: /api/
 

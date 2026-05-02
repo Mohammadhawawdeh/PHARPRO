@@ -55,7 +55,25 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname)));
+// Cache-Control strategy:
+//   • Versioned assets (CSS/JS/images/fonts) → 1 year immutable
+//   • HTML pages → no-cache so browsers always revalidate
+//   • sitemap.xml / robots.txt → 1 hour
+app.use(
+  express.static(path.join(__dirname), {
+    setHeaders(res, filePath) {
+      const ext = path.extname(filePath).toLowerCase();
+      const IMMUTABLE = [".css", ".js", ".png", ".jpg", ".jpeg", ".svg", ".ico", ".webp", ".woff", ".woff2", ".ttf", ".otf"];
+      if (IMMUTABLE.includes(ext)) {
+        res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+      } else if (ext === ".html") {
+        res.setHeader("Cache-Control", "no-cache, must-revalidate");
+      } else if (ext === ".xml" || ext === ".txt") {
+        res.setHeader("Cache-Control", "public, max-age=3600");
+      }
+    },
+  })
+);
 
 app.post("/api/contact", (req, res) => {
   const origin = req.headers.origin || req.headers.referer || "";
@@ -102,7 +120,17 @@ app.post("/api/contact", (req, res) => {
   });
 });
 
+// Explicit service page routes (clean URLs, no .html extension)
+const SERVICE_PAGES = ["csv", "qa", "cqv", "training"];
+SERVICE_PAGES.forEach((svc) => {
+  app.get(`/services/${svc}`, (req, res) => {
+    res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    res.sendFile(path.join(__dirname, "services", `${svc}.html`));
+  });
+});
+
 app.get("/{*path}", (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
   res.sendFile(path.join(__dirname, "index.html"));
 });
 

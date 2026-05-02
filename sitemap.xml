@@ -5,10 +5,10 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- English (default) -->
+  <!-- ── HOME ──────────────────────────────────────────────────────────── -->
   <url>
     <loc>https://pharpro.co/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/" />
@@ -16,10 +16,9 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/" />
   </url>
 
-  <!-- Arabic -->
   <url>
     <loc>https://pharpro.co/?lang=ar</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar" />
@@ -27,82 +26,85 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/" />
   </url>
 
-  <!-- Services -->
+  <!-- ── SERVICE PAGES ─────────────────────────────────────────────────── -->
   <url>
-    <loc>https://pharpro.co/#services</loc>
-    <lastmod>2026-05-01</lastmod>
+    <loc>https://pharpro.co/services/csv</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/#services" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar#services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/#services" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/csv" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/csv?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/csv" />
   </url>
 
-
-  <!-- Training Programmes -->
   <url>
-    <loc>https://pharpro.co/#training</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/#training" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar#training" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/#training" />
-  </url>
-
-  <!-- DVS Software -->
-  <url>
-    <loc>https://pharpro.co/#dvs</loc>
-    <lastmod>2026-05-01</lastmod>
+    <loc>https://pharpro.co/services/csv?lang=ar</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/#dvs" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar#dvs" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/#dvs" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/csv?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/csv" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/csv" />
   </url>
 
-  <!-- Pricing -->
   <url>
-    <loc>https://pharpro.co/#pricing</loc>
-    <lastmod>2026-05-01</lastmod>
+    <loc>https://pharpro.co/services/qa</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/#pricing" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar#pricing" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/#pricing" />
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/qa" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/qa?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/qa" />
   </url>
 
-  <!-- How We Work -->
   <url>
-    <loc>https://pharpro.co/#process</loc>
-    <lastmod>2026-05-01</lastmod>
+    <loc>https://pharpro.co/services/qa?lang=ar</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/#process" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar#process" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/#process" />
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/qa?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/qa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/qa" />
   </url>
 
-  <!-- FAQ -->
   <url>
-    <loc>https://pharpro.co/#faq</loc>
-    <lastmod>2026-05-01</lastmod>
+    <loc>https://pharpro.co/services/cqv</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/#faq" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar#faq" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/#faq" />
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/cqv" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/cqv?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/cqv" />
   </url>
 
-  <!-- Contact -->
   <url>
-    <loc>https://pharpro.co/#contact</loc>
-    <lastmod>2026-05-01</lastmod>
+    <loc>https://pharpro.co/services/cqv?lang=ar</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/#contact" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar#contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/#contact" />
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/cqv?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/cqv" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/cqv" />
+  </url>
+
+  <url>
+    <loc>https://pharpro.co/services/training</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/training" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/training?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/training" />
+  </url>
+
+  <url>
+    <loc>https://pharpro.co/services/training?lang=ar</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/training?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/training" />
   </url>
 
 </urlset>
