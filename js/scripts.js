@@ -12,6 +12,7 @@ const TRAINING_DATA = {
       dates: "17–18 May 2026",
       dayDisplay: "17",
       monthDisplay: "MAY",
+      startDate: "2026-05-17",
       format: "both",
     },
     {
@@ -20,6 +21,7 @@ const TRAINING_DATA = {
       dates: "20–21 May 2026",
       dayDisplay: "20",
       monthDisplay: "MAY",
+      startDate: "2026-05-20",
       format: "both",
     },
     {
@@ -28,6 +30,7 @@ const TRAINING_DATA = {
       dates: "10–11 Jun 2026",
       dayDisplay: "10",
       monthDisplay: "JUN",
+      startDate: "2026-06-10",
       format: "both",
     },
   ],
@@ -243,6 +246,11 @@ const translations = {
     tr_online:      "Online",
     tr_onsite:      "On-site",
     tr_register:    "Register Interest",
+    tr_share_wa:    "WhatsApp",
+    tr_share_email: "Email",
+    tr_cd_days:     "days left",
+    tr_cd_day:      "day left",
+    tr_cd_today:    "Starts today!",
 
     foot_brand_p:    "Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training.",
     foot_col1_h5:    "Services",
@@ -461,6 +469,11 @@ const translations = {
     tr_online:      "إلكتروني",
     tr_onsite:      "حضوري",
     tr_register:    "سجّل اهتمامك",
+    tr_share_wa:    "واتساب",
+    tr_share_email: "بريد إلكتروني",
+    tr_cd_days:     "أيام متبقية",
+    tr_cd_day:      "يوم متبق",
+    tr_cd_today:    "يبدأ اليوم!",
 
     /* Footer */
     foot_brand_p:    "استشارات الامتثال الدوائي — التحقق من صحة الأنظمة الحاسوبية وضمان الجودة وCQV ورسم الخرائط الحرارية والتدريب على GMP.",
@@ -536,6 +549,7 @@ function switchLanguage() {
   if (mobNav) mobNav.classList.remove("open");
   applyTranslations();
   initTrainings();
+  tickCountdowns();
 }
 
 /* ── HAMBURGER MENU ───────────────────────────────────────────── */
@@ -569,6 +583,29 @@ function initFaq() {
   });
 }
 
+/* ── COUNTDOWN HELPER ─────────────────────────────────────────── */
+function getCountdownHtml(isoStart, isAr) {
+  const now   = new Date();
+  const start = new Date(isoStart + "T00:00:00");
+  const msLeft = start - now;
+  const days  = Math.ceil(msLeft / 86400000);
+
+  if (days < 0)  return "";
+  if (days === 0) {
+    return `<span class="tr-countdown tr-cd-today">
+              <span class="tr-cd-dot" aria-hidden="true"></span>
+              ${t("tr_cd_today")}
+            </span>`;
+  }
+  const cls   = days <= 14 ? "tr-cd-soon" : "tr-cd-normal";
+  const label = days === 1 ? t("tr_cd_day") : t("tr_cd_days");
+  const num   = isAr ? days.toLocaleString("ar-EG") : days;
+  return `<span class="tr-countdown ${cls}">
+            <span class="tr-cd-dot" aria-hidden="true"></span>
+            ${num} ${label}
+          </span>`;
+}
+
 /* ── TRAINING CALENDAR ────────────────────────────────────────── */
 function initTrainings() {
   const upcomingGrid = document.getElementById("trUpcomingGrid");
@@ -586,8 +623,23 @@ function initTrainings() {
         ? `<span class="tr-pill tr-pill-online">${t("tr_online")}</span>`
         : `<span class="tr-pill tr-pill-onsite">${t("tr_onsite")}</span>`;
 
+    const regUrl   = "https://pharpro.co/#contact";
+    const waText   = encodeURIComponent(
+      isAr
+        ? `🎓 ${title}\n📅 ${tr.dates}\n\nسجّل اهتمامك: ${regUrl}`
+        : `🎓 ${title} — ${tr.dates}\n\nRegister your interest: ${regUrl}`
+    );
+    const emailSubject = encodeURIComponent(
+      isAr ? `تدريب PHARPRO: ${title}` : `PHARPRO Training: ${title}`
+    );
+    const emailBody = encodeURIComponent(
+      isAr
+        ? `السلام عليكم،\n\nأودّ الاستفسار عن برنامج التدريب: ${title}\nالتاريخ: ${tr.dates}\n\nرابط التسجيل: ${regUrl}`
+        : `Hello,\n\nI'd like to register my interest in:\n${title}\nDates: ${tr.dates}\n\nRegistration link: ${regUrl}`
+    );
+
     return `
-      <div class="tr-card">
+      <div class="tr-card" data-start="${tr.startDate}">
         <div class="tr-date-badge">
           <div class="tr-cal">
             <span class="tr-cal-day">${tr.dayDisplay}</span>
@@ -595,9 +647,31 @@ function initTrainings() {
           </div>
           <span class="tr-date-text">${tr.dates}</span>
         </div>
+        <span class="tr-countdown-wrap">${getCountdownHtml(tr.startDate, isAr)}</span>
         <h4>${title}</h4>
         <div class="tr-format">${formatPills}</div>
-        <a href="#contact" class="tr-register" onclick="document.getElementById('service').value='training'">${t("tr_register")}</a>
+        <div class="tr-actions">
+          <a href="#contact" class="tr-register" onclick="document.getElementById('service').value='training'">${t("tr_register")}</a>
+          <div class="tr-share">
+            <a href="https://wa.me/?text=${waText}"
+               class="tr-share-btn tr-share-wa" target="_blank" rel="noopener noreferrer"
+               aria-label="Share on WhatsApp">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              ${t("tr_share_wa")}
+            </a>
+            <a href="mailto:?subject=${emailSubject}&body=${emailBody}"
+               class="tr-share-btn tr-share-email"
+               aria-label="Share via Email">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              ${t("tr_share_email")}
+            </a>
+          </div>
+        </div>
       </div>`;
   }).join("");
 
@@ -648,13 +722,24 @@ function initContactForm() {
   });
 }
 
-/* ── BOOT ─────────────────────────────────────────────────────── */
+/* ── COUNTDOWN TICK ───────────────────────────────────────────── */
+function tickCountdowns() {
+  const isAr = currentLang === "ar";
+  document.querySelectorAll(".tr-card[data-start]").forEach(card => {
+    const wrap = card.querySelector(".tr-countdown-wrap");
+    if (wrap) wrap.innerHTML = getCountdownHtml(card.dataset.start, isAr);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initHamburger();
   initFaq();
   initContactForm();
   applyTranslations();
   initTrainings();
+
+  /* Auto-refresh countdowns every 60 seconds */
+  setInterval(tickCountdowns, 60000);
 
   /* Wire lang toggle buttons */
   document.querySelectorAll(".lang-toggle").forEach(btn => {

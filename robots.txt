@@ -55,4 +55,3 @@ User-agent: Slurp
 Allow: /
 
 Sitemap: https://pharpro.co/sitemap.xml
-Sitemap: https://pharpro.co/sitemap-image.xml
