@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>PHARPRO Compliance Insights</title>
+    <link>https://pharpro.co</link>
+    <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 May 2026 09:00:00 +0300</lastBuildDate>
+    <managingEditor>info@pharpro.co (PHARPRO Consulting Team)</managingEditor>
+    <webMaster>info@pharpro.co (PHARPRO)</webMaster>
+    <image>
+      <url>https://pharpro.co/images/apple-touch-icon.png</url>
+      <title>PHARPRO Compliance Insights</title>
+      <link>https://pharpro.co</link>
+      <width>180</width>
+      <height>180</height>
+    </image>
+    <atom:link href="https://pharpro.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <copyright>Copyright 2025 PHARPRO Consultation Company</copyright>
+    <category>Pharmaceutical Compliance</category>
+
+    <item>
+      <title>GAMP 5 Second Edition: Key Changes for Your CSV Programme</title>
+      <link>https://pharpro.co/insights/gamp5-second-edition-csv-changes</link>
+      <guid isPermaLink="true">https://pharpro.co/insights/gamp5-second-edition-csv-changes</guid>
+      <pubDate>Sat, 15 Mar 2025 09:00:00 +0300</pubDate>
+      <dc:creator>PHARPRO Consulting Team</dc:creator>
+      <category>CSV &amp; Validation</category>
+      <description>What ISPE GAMP 5 Second Edition means for your CSV programme — new risk categories, critical thinking principles, and lifecycle documentation changes. Covers the shift from five to three software categories, cloud and SaaS guidance, and what to review in your existing validation master plan.</description>
+      <content:encoded><![CDATA[
+        <p>ISPE released the second edition of the <strong>Good Automated Manufacturing Practice (GAMP 5)</strong> guide in 2022. This article breaks down the most significant changes and tells you exactly what to review in your existing programme.</p>
+        <p><a href="https://pharpro.co/insights/gamp5-second-edition-csv-changes">Read the full article →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>EU GMP Annex 11: A Practical Compliance Checklist for 2025</title>
+      <link>https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist</link>
+      <guid isPermaLink="true">https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist</guid>
+      <pubDate>Mon, 10 Feb 2025 09:00:00 +0300</pubDate>
+      <dc:creator>PHARPRO Consulting Team</dc:creator>
+      <category>Regulatory Compliance</category>
+      <description>A practical checklist covering every major area EU GMP inspectors assess in computerized systems — supplier assessment, validation documentation, data integrity controls, access management, change control, and periodic review.</description>
+      <content:encoded><![CDATA[
+        <p><strong>EU GMP Annex 11</strong> governs computerized systems in pharmaceutical manufacturing. Whether you are preparing for an EMA inspection or reviewing your current compliance state, this checklist covers the areas inspectors assess most closely.</p>
+        <p><a href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist">Read the full article →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>FDA 21 CFR Part 11: Data Integrity Requirements Explained</title>
+      <link>https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity</link>
+      <guid isPermaLink="true">https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity</guid>
+      <pubDate>Mon, 20 Jan 2025 09:00:00 +0300</pubDate>
+      <dc:creator>PHARPRO Consulting Team</dc:creator>
+      <category>Data Integrity</category>
+      <description>Understand FDA 21 CFR Part 11 requirements for electronic records and signatures — covering audit trails, access controls, electronic signature components, and the seven most common compliance gaps that generate FDA warning letters.</description>
+      <content:encoded><![CDATA[
+        <p><strong>21 CFR Part 11</strong> is the FDA regulation that defines when electronic records and signatures are considered equivalent to paper. Audit trail deficiencies remain among the top five observations in FDA drug inspections.</p>
+        <p><a href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity">Read the full article →</a></p>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>

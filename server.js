@@ -59,6 +59,35 @@ app.use((req, res, next) => {
 //   • Versioned assets (CSS/JS/images/fonts) → 1 year immutable
 //   • HTML pages → no-cache so browsers always revalidate
 //   • sitemap.xml / robots.txt → 1 hour
+// Routes served explicitly BEFORE static middleware
+// (static would intercept /insights as a directory redirect and /feed.xml with wrong MIME)
+
+// RSS feed — must come before static so we can set application/rss+xml MIME type
+app.get("/feed.xml", (req, res) => {
+  res.setHeader("Cache-Control", "public, max-age=3600");
+  res.setHeader("Content-Type", "application/rss+xml; charset=utf-8");
+  res.sendFile(path.join(__dirname, "feed.xml"));
+});
+
+// Insights index (static would 301-redirect /insights -> /insights/)
+app.get(["/insights", "/insights/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "insights", "index.html"));
+});
+
+// Insights article pages
+const INSIGHT_SLUGS = [
+  "gamp5-second-edition-csv-changes",
+  "eu-gmp-annex-11-compliance-checklist",
+  "fda-21-cfr-part-11-data-integrity",
+];
+INSIGHT_SLUGS.forEach((slug) => {
+  app.get(`/insights/${slug}`, (req, res) => {
+    res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    res.sendFile(path.join(__dirname, "insights", `${slug}.html`));
+  });
+});
+
 app.use(
   express.static(path.join(__dirname), {
     setHeaders(res, filePath) {
