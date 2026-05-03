@@ -4,6 +4,8 @@ Allow: /services/csv
 Allow: /services/qa
 Allow: /services/cqv
 Allow: /services/training
+Allow: /services/digital
+Allow: /insights
 Disallow: /cgi-bin/
 Disallow: /api/
 

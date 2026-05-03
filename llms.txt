@@ -29,7 +29,13 @@ Commissioning, Qualification, and Validation (CQV) for pharmaceutical equipment 
 Good Manufacturing Practice (GMP) training programmes customised for pharmaceutical teams. Covers data integrity, cleaning validation, equipment qualification, and regulatory frameworks.
 
 ### Pharma Digital Support
-Digital transformation consulting for regulated pharmaceutical environments. Includes system selection support, vendor assessment, and implementation oversight.
+Compliance-first digital transformation for regulated pharmaceutical operations. Services cover:
+- **Pharma 4.0 strategy**: readiness assessments, roadmap development, and stakeholder alignment for digitalisation initiatives.
+- **AI adoption in GxP environments**: guidance on using AI tools (co-pilots, generative AI, analytics) within regulated workflows while maintaining 21 CFR Part 11 and EU GMP Annex 11 compliance.
+- **Software implementation support**: vendor qualification, URS development, and validation oversight for new digital systems.
+- **PHARPRO DVS**: an AI-assisted validation lifecycle management platform (see below).
+
+Service page: https://pharpro.co/services/digital
 
 ## PHARPRO DVS — Digital Validation Software
 
@@ -69,3 +75,15 @@ FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5, ICH Q10, and general GMP requi
 - **Email**: info@pharpro.co
 - **WhatsApp**: +962 79 856 5807
 - **Location**: Amman, Jordan (serving clients worldwide)
+
+## Compliance Insights
+
+PHARPRO publishes practical pharmaceutical compliance articles at https://pharpro.co/insights covering regulatory frameworks, CSV best practices, and GMP guidance.
+
+### Current Articles
+- **GAMP 5 Second Edition: Key Changes for Your CSV Programme** — https://pharpro.co/insights/gamp5-second-edition-csv-changes
+  Risk categories, critical thinking, and lifecycle documentation changes in ISPE GAMP 5 Second Edition.
+- **EU GMP Annex 11: A Practical Compliance Checklist for 2025** — https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist
+  Supplier assessment, validation, data integrity, and audit trail requirements.
+- **FDA 21 CFR Part 11: Data Integrity Requirements Explained** — https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity
+  Electronic records, audit trails, electronic signatures, and common compliance gaps.

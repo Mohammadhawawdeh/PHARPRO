@@ -99,6 +99,27 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/training" />
   </url>
 
+
+  <!-- DIGITAL SUPPORT -->
+  <url>
+    <loc>https://pharpro.co/services/digital</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/digital" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/digital?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/digital" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/services/digital?lang=ar</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/digital?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/digital" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/digital" />
+  </url>
+
   <!-- INSIGHTS HUB -->
   <url>
     <loc>https://pharpro.co/insights</loc>
@@ -106,6 +127,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights?lang=ar" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights" />
   </url>
 
@@ -116,6 +138,16 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gamp5-second-edition-csv-changes" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gamp5-second-edition-csv-changes?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gamp5-second-edition-csv-changes" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/gamp5-second-edition-csv-changes?lang=ar</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gamp5-second-edition-csv-changes?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gamp5-second-edition-csv-changes" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gamp5-second-edition-csv-changes" />
   </url>
   <url>
@@ -124,6 +156,16 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist?lang=ar</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist" />
   </url>
   <url>
@@ -131,6 +173,16 @@
     <lastmod>2026-05-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity?lang=ar</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity?lang=ar" />
     <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity" />
   </url>
