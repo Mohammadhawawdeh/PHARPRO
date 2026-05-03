@@ -171,6 +171,22 @@
     .foot-inner a{color:rgba(255,255,255,.5);font-size:.83rem}
     .foot-inner a:hover{color:#fff}
     .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+  
+    /* RTL / Arabic */
+    .lang-btn{background:none;border:1.5px solid rgba(35,58,94,.22);border-radius:999px;padding:5px 14px;font-size:.82rem;font-weight:600;color:var(--navy);cursor:pointer;transition:background var(--t)}
+    .lang-btn:hover{background:rgba(35,58,94,.06)}
+    body.rtl{font-family:"Cairo",sans-serif;direction:rtl}
+    body.rtl .nav-links{flex-direction:row-reverse}
+    body.rtl .breadcrumb{flex-direction:row-reverse}
+    body.rtl .art-content ul,body.rtl .art-content ol{margin:0 0 20px 0;padding-right:24px;padding-left:0}
+    body.rtl .checklist{padding-right:0}
+    body.rtl .callout{border-left:none;border-right:3px solid var(--navy);border-radius:12px 0 0 12px}
+    body.rtl .callout.warn{border-color:var(--burgundy)}
+    body.rtl .toc-list a{border-left:none;border-right:2px solid transparent;padding-left:0;padding-right:10px}
+    body.rtl .toc-list a:hover{border-right-color:var(--burgundy)}
+    body.rtl .foot-inner{flex-direction:row-reverse}
+    body.rtl .foot-bottom{flex-direction:row-reverse}
+    body.rtl .tag-row{flex-direction:row-reverse}
   </style>
 </head>
 <body>
@@ -191,10 +207,11 @@
       </svg>
     </a>
     <div class="nav-links" aria-label="Site navigation">
-      <a href="/#services">Services</a>
-      <a href="/#training">Training</a>
-      <a href="/insights" class="active">Insights</a>
-      <a href="/#contact">Free Assessment</a>
+      <a href="/#services" data-i18n="nav_services">Services</a>
+      <a href="/#training" data-i18n="nav_training">Training</a>
+      <a href="/insights" class="active" data-i18n="nav_insights">Insights</a>
+      <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
+      <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
     </div>
   </div>
 </nav>
@@ -203,22 +220,22 @@
   <section class="art-hero">
     <div class="wrap">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
+        <a href="/" data-i18n="bc_home">Home</a>
         <span class="dot" aria-hidden="true"></span>
         <span>/</span>
-        <a href="/insights">Insights</a>
+        <a href="/insights" data-i18n="bc_insights">Insights</a>
         <span class="dot" aria-hidden="true"></span>
         <span>/</span>
-        <span aria-current="page">GAMP 5 Second Edition</span>
+        <span aria-current="page" data-i18n="bc_current">GAMP 5 Second Edition</span>
       </nav>
-      <div class="art-cat">CSV &amp; Validation</div>
-      <h1>GAMP 5 Second Edition: Key Changes for Your CSV Programme</h1>
+      <div class="art-cat" data-i18n="art_cat">CSV &amp; Validation</div>
+      <h1 data-i18n="art_h1">GAMP 5 Second Edition: Key Changes for Your CSV Programme</h1>
       <div class="art-meta">
-        <time datetime="2025-03-15">15 March 2025</time>
+        <time datetime="2025-03-15" data-i18n="art_date">15 March 2025</time>
         <span class="dot" aria-hidden="true"></span>
-        <span>8 min read</span>
+        <span data-i18n="art_time">8 min read</span>
         <span class="dot" aria-hidden="true"></span>
-        <span>By PHARPRO Consulting Team</span>
+        <span data-i18n="art_author">By PHARPRO Consulting Team</span>
       </div>
     </div>
   </section>
@@ -315,20 +332,20 @@
 
       <aside class="art-sidebar" aria-label="Article sidebar">
         <div class="sidebar-card">
-          <h3>In this article</h3>
+          <h3 data-i18n="toc_h">In this article</h3>
           <nav class="toc-list" aria-label="Table of contents">
-            <a href="#why-gamp5-changed">Why GAMP 5 Was Updated</a>
-            <a href="#new-risk-categories">Revised Risk Categories</a>
-            <a href="#critical-thinking">Critical Thinking Principle</a>
-            <a href="#cloud-saas">Cloud &amp; SaaS Systems</a>
-            <a href="#lifecycle-docs">Lifecycle Documentation</a>
-            <a href="#what-to-review">What to Review</a>
+            <a href="#why-gamp5-changed" data-i18n="toc1">Why GAMP 5 Was Updated</a>
+            <a href="#new-risk-categories" data-i18n="toc2">Revised Risk Categories</a>
+            <a href="#critical-thinking" data-i18n="toc3">Critical Thinking Principle</a>
+            <a href="#cloud-saas" data-i18n="toc4">Cloud &amp; SaaS Systems</a>
+            <a href="#lifecycle-docs" data-i18n="toc5">Lifecycle Documentation</a>
+            <a href="#what-to-review" data-i18n="toc6">What to Review</a>
           </nav>
         </div>
         <div class="sidebar-cta" role="complementary" aria-label="CSV consulting call to action">
-          <h3>Need help updating your CSV programme?</h3>
-          <p>PHARPRO delivers full GAMP 5 (2nd Edition) aligned validation packages.</p>
-          <a href="/services/csv">View CSV Services</a>
+          <h3 data-i18n="sb_cta_h">Need help updating your CSV programme?</h3>
+          <p data-i18n="sb_cta_p">PHARPRO delivers full GAMP 5 (2nd Edition) aligned validation packages.</p>
+          <a href="/services/csv" data-i18n="sb_cta_btn">View CSV Services</a>
         </div>
       </aside>
     </div>
@@ -336,34 +353,34 @@
 
   <section class="art-cta" aria-labelledby="cta-heading">
     <div class="wrap">
-      <h2 id="cta-heading">Ready to Align Your CSV Programme with GAMP 5 Second Edition?</h2>
-      <p>PHARPRO's consultants have hands-on experience updating CSV documentation to the latest ISPE guidance.</p>
-      <a href="/#contact" class="btn-primary">Get a Free Assessment</a>
-      <a href="/services/csv" class="btn-ghost">View CSV Services</a>
+      <h2 id="cta-heading" data-i18n="cta_h2">Ready to Align Your CSV Programme with GAMP 5 Second Edition?</h2>
+      <p data-i18n="cta_p">PHARPRO's consultants have hands-on experience updating CSV documentation to the latest ISPE guidance.</p>
+      <a href="/#contact" class="btn-primary" data-i18n="cta_btn">Get a Free Assessment</a>
+      <a href="/services/csv" class="btn-ghost" data-i18n="cta_btn2">View CSV Services</a>
     </div>
   </section>
 
   <section class="art-related" aria-labelledby="related-heading">
     <div class="wrap">
-      <h2 id="related-heading">Related Articles</h2>
+      <h2 id="related-heading" data-i18n="rel_h2">Related Articles</h2>
       <div class="related-grid">
         <div class="related-card">
-          <div class="cat">Regulatory Compliance</div>
-          <h3>EU GMP Annex 11: A Practical Compliance Checklist</h3>
-          <p>Everything your team needs to verify before an EU GMP Annex 11 inspection.</p>
-          <a href="/insights/eu-gmp-annex-11-compliance-checklist">Read article &rarr;</a>
+          <div class="cat" data-i18n="rel1_cat">Regulatory Compliance</div>
+          <h3 data-i18n="rel1_h">EU GMP Annex 11: A Practical Compliance Checklist</h3>
+          <p data-i18n="rel1_p">Everything your team needs to verify before an EU GMP Annex 11 inspection.</p>
+          <a href="/insights/eu-gmp-annex-11-compliance-checklist" data-i18n="rel_link">Read article &rarr;</a>
         </div>
         <div class="related-card">
-          <div class="cat">Data Integrity</div>
-          <h3>FDA 21 CFR Part 11: Data Integrity Requirements Explained</h3>
-          <p>Audit trails, electronic signatures, and access controls — what the regulation actually requires.</p>
-          <a href="/insights/fda-21-cfr-part-11-data-integrity">Read article &rarr;</a>
+          <div class="cat" data-i18n="rel2_cat">Data Integrity</div>
+          <h3 data-i18n="rel2_h">FDA 21 CFR Part 11: Data Integrity Requirements Explained</h3>
+          <p data-i18n="rel2_p">Audit trails, electronic signatures, and access controls — what the regulation actually requires.</p>
+          <a href="/insights/fda-21-cfr-part-11-data-integrity" data-i18n="rel_link">Read article &rarr;</a>
         </div>
         <div class="related-card">
-          <div class="cat">CSV Services</div>
-          <h3>Our CSV Consulting Service</h3>
-          <p>End-to-end validation support: URS, IQ/OQ/PQ, Validation Master Plans, and audit-ready reporting.</p>
-          <a href="/services/csv">Learn more &rarr;</a>
+          <div class="cat" data-i18n="rel3_cat">CSV Services</div>
+          <h3 data-i18n="rel3_h">Our CSV Consulting Service</h3>
+          <p data-i18n="rel3_p">End-to-end validation support: URS, IQ/OQ/PQ, Validation Master Plans, and audit-ready reporting.</p>
+          <a href="/services/csv" data-i18n="rel_link2">Learn more &rarr;</a>
         </div>
       </div>
     </div>
@@ -384,10 +401,117 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2025 PHARPRO Consultation Company. All rights reserved.</span>
+      <span data-i18n="foot_copy">&copy; 2025 PHARPRO Consultation Company. All rights reserved.</span>
       <span>Amman, Jordan &mdash; <a href="mailto:info@pharpro.co" style="color:rgba(255,255,255,.4);">info@pharpro.co</a></span>
     </div>
   </div>
 </footer>
+
+<script>
+const T = {
+  "en": {
+    "nav_services": "Services",
+    "nav_training": "Training",
+    "nav_insights": "Insights",
+    "nav_cta": "Free Assessment",
+    "bc_home": "Home",
+    "bc_insights": "Insights",
+    "bc_current": "GAMP 5 Second Edition",
+    "art_cat": "CSV & Validation",
+    "art_h1": "GAMP 5 Second Edition: Key Changes for Your CSV Programme",
+    "art_date": "15 March 2025",
+    "art_time": "8 min read",
+    "art_author": "By PHARPRO Consulting Team",
+    "toc_h": "In this article",
+    "toc1": "Why GAMP 5 Was Updated",
+    "toc2": "Revised Risk Categories",
+    "toc3": "Critical Thinking Principle",
+    "toc4": "Cloud & SaaS Systems",
+    "toc5": "Lifecycle Documentation",
+    "toc6": "What to Review",
+    "sb_cta_h": "Need help updating your CSV programme?",
+    "sb_cta_p": "PHARPRO delivers full GAMP 5 (2nd Edition) aligned validation packages.",
+    "sb_cta_btn": "View CSV Services",
+    "cta_h2": "Ready to Align Your CSV Programme with GAMP 5 Second Edition?",
+    "cta_p": "PHARPRO's consultants have hands-on experience updating CSV documentation to the latest ISPE guidance.",
+    "cta_btn": "Get a Free Assessment",
+    "cta_btn2": "View CSV Services",
+    "rel_h2": "Related Articles",
+    "rel1_cat": "Regulatory Compliance",
+    "rel1_h": "EU GMP Annex 11: A Practical Compliance Checklist",
+    "rel1_p": "Everything your team needs to verify before an EU GMP Annex 11 inspection.",
+    "rel2_cat": "Data Integrity",
+    "rel2_h": "FDA 21 CFR Part 11: Data Integrity Requirements Explained",
+    "rel2_p": "Audit trails, electronic signatures, and access controls — what the regulation actually requires.",
+    "rel3_cat": "CSV Services",
+    "rel3_h": "Our CSV Consulting Service",
+    "rel3_p": "End-to-end validation support: URS, IQ/OQ/PQ, Validation Master Plans, and audit-ready reporting.",
+    "rel_link": "Read article →",
+    "rel_link2": "Learn more →",
+    "foot_copy": "© 2025 PHARPRO Consultation Company. All rights reserved."
+  },
+  "ar": {
+    "nav_services": "الخدمات",
+    "nav_training": "التدريب",
+    "nav_insights": "المقالات",
+    "nav_cta": "تقييم مجاني",
+    "bc_home": "الرئيسية",
+    "bc_insights": "المقالات",
+    "bc_current": "الطبعة الثانية من GAMP 5",
+    "art_cat": "CSV والتحقق",
+    "art_h1": "الطبعة الثانية من GAMP 5: التغييرات الرئيسية لبرنامج CSV لديك",
+    "art_date": "15 مارس 2025",
+    "art_time": "8 دقائق قراءة",
+    "art_author": "بقلم فريق استشاريي PHARPRO",
+    "toc_h": "في هذا المقال",
+    "toc1": "لماذا تم تحديث GAMP 5",
+    "toc2": "فئات المخاطر المعدَّلة",
+    "toc3": "مبدأ التفكير النقدي",
+    "toc4": "أنظمة السحابة وSaaS",
+    "toc5": "وثائق دورة الحياة",
+    "toc6": "ما يجب مراجعته",
+    "sb_cta_h": "هل تحتاج مساعدة في تحديث برنامج CSV لديك؟",
+    "sb_cta_p": "يقدّم PHARPRO حزم تحقق كاملة متوافقة مع GAMP 5 (الطبعة الثانية).",
+    "sb_cta_btn": "عرض خدمات CSV",
+    "cta_h2": "هل أنت مستعد لمواءمة برنامج CSV لديك مع الطبعة الثانية من GAMP 5؟",
+    "cta_p": "لدى مستشاري PHARPRO خبرة عملية في تحديث وثائق CSV وفق أحدث إرشادات ISPE.",
+    "cta_btn": "احصل على تقييم مجاني",
+    "cta_btn2": "عرض خدمات CSV",
+    "rel_h2": "مقالات ذات صلة",
+    "rel1_cat": "الامتثال التنظيمي",
+    "rel1_h": "EU GMP Annex 11: قائمة تدقيق امتثال عملية",
+    "rel1_p": "كل ما يحتاج فريقك للتحقق منه قبل تفتيش EU GMP Annex 11.",
+    "rel2_cat": "سلامة البيانات",
+    "rel2_h": "FDA 21 CFR الجزء 11: متطلبات سلامة البيانات موضّحة",
+    "rel2_p": "مسارات التدقيق والتوقيعات الإلكترونية وضوابط الوصول — ما تتطلبه اللائحة فعلياً.",
+    "rel3_cat": "خدمات CSV",
+    "rel3_h": "خدمة استشارات CSV لدينا",
+    "rel3_p": "دعم تحقق شامل: URS وIQ/OQ/PQ وخطط التحقق الرئيسية وتقارير جاهزة للتدقيق.",
+    "rel_link": "اقرأ المقال ←",
+    "rel_link2": "اعرف المزيد ←",
+    "foot_copy": "© 2025 شركة PHARPRO للاستشارات. جميع الحقوق محفوظة."
+  }
+};
+
+let lang = new URLSearchParams(location.search).get('lang') === 'ar' ? 'ar' : 'en';
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('rtl', lang === 'ar');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (T[lang] && T[lang][k] !== undefined) el.innerHTML = T[lang][k];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.textContent = lang === 'en' ? 'عربي' : 'EN');
+}
+function toggleLang() {
+  lang = lang === 'en' ? 'ar' : 'en';
+  const u = new URL(location.href);
+  lang === 'ar' ? u.searchParams.set('lang','ar') : u.searchParams.delete('lang');
+  history.replaceState(null,'',u.toString());
+  applyLang();
+}
+applyLang();
+</script>
 </body>
 </html>

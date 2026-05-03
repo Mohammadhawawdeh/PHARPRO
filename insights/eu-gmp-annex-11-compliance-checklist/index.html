@@ -148,6 +148,22 @@
     .foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px}
     .foot-inner a{color:rgba(255,255,255,.5);font-size:.83rem}.foot-inner a:hover{color:#fff}
     .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+  
+    /* RTL / Arabic */
+    .lang-btn{background:none;border:1.5px solid rgba(35,58,94,.22);border-radius:999px;padding:5px 14px;font-size:.82rem;font-weight:600;color:var(--navy);cursor:pointer;transition:background var(--t)}
+    .lang-btn:hover{background:rgba(35,58,94,.06)}
+    body.rtl{font-family:"Cairo",sans-serif;direction:rtl}
+    body.rtl .nav-links{flex-direction:row-reverse}
+    body.rtl .breadcrumb{flex-direction:row-reverse}
+    body.rtl .art-content ul,body.rtl .art-content ol{margin:0 0 20px 0;padding-right:24px;padding-left:0}
+    body.rtl .checklist{padding-right:0}
+    body.rtl .callout{border-left:none;border-right:3px solid var(--navy);border-radius:12px 0 0 12px}
+    body.rtl .callout.warn{border-color:var(--burgundy)}
+    body.rtl .toc-list a{border-left:none;border-right:2px solid transparent;padding-left:0;padding-right:10px}
+    body.rtl .toc-list a:hover{border-right-color:var(--burgundy)}
+    body.rtl .foot-inner{flex-direction:row-reverse}
+    body.rtl .foot-bottom{flex-direction:row-reverse}
+    body.rtl .tag-row{flex-direction:row-reverse}
   </style>
 </head>
 <body>
@@ -168,10 +184,11 @@
       </svg>
     </a>
     <div class="nav-links" aria-label="Site navigation">
-      <a href="/#services">Services</a>
-      <a href="/#training">Training</a>
-      <a href="/insights" class="active">Insights</a>
-      <a href="/#contact">Free Assessment</a>
+      <a href="/#services" data-i18n="nav_services">Services</a>
+      <a href="/#training" data-i18n="nav_training">Training</a>
+      <a href="/insights" class="active" data-i18n="nav_insights">Insights</a>
+      <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
+      <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
     </div>
   </div>
 </nav>
@@ -180,18 +197,18 @@
   <section class="art-hero">
     <div class="wrap">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a><span class="dot" aria-hidden="true"></span><span>/</span>
-        <a href="/insights">Insights</a><span class="dot" aria-hidden="true"></span><span>/</span>
-        <span aria-current="page">EU GMP Annex 11 Checklist</span>
+        <a href="/" data-i18n="bc_home">Home</a><span class="dot" aria-hidden="true"></span><span>/</span>
+        <a href="/insights" data-i18n="bc_insights">Insights</a><span class="dot" aria-hidden="true"></span><span>/</span>
+        <span aria-current="page" data-i18n="bc_current">EU GMP Annex 11 Checklist</span>
       </nav>
-      <div class="art-cat">Regulatory Compliance</div>
-      <h1>EU GMP Annex 11: A Practical Compliance Checklist for 2025</h1>
+      <div class="art-cat" data-i18n="art_cat">Regulatory Compliance</div>
+      <h1 data-i18n="art_h1">EU GMP Annex 11: A Practical Compliance Checklist for 2025</h1>
       <div class="art-meta">
-        <time datetime="2025-02-10">10 February 2025</time>
+        <time datetime="2025-02-10" data-i18n="art_date">10 February 2025</time>
         <span class="dot" aria-hidden="true"></span>
-        <span>7 min read</span>
+        <span data-i18n="art_time">7 min read</span>
         <span class="dot" aria-hidden="true"></span>
-        <span>By PHARPRO Consulting Team</span>
+        <span data-i18n="art_author">By PHARPRO Consulting Team</span>
       </div>
     </div>
   </section>
@@ -298,22 +315,22 @@
 
       <aside class="art-sidebar" aria-label="Article sidebar">
         <div class="sidebar-card">
-          <h3>In this article</h3>
+          <h3 data-i18n="toc_h">In this article</h3>
           <nav class="toc-list" aria-label="Table of contents">
-            <a href="#scope">Understanding Scope</a>
-            <a href="#supplier-assessment">Supplier Assessment</a>
-            <a href="#validation">Validation Documentation</a>
-            <a href="#data-integrity">Data Integrity Controls</a>
-            <a href="#access-controls">Access Controls</a>
-            <a href="#change-control">Change Control</a>
-            <a href="#periodic-review">Periodic Review</a>
-            <a href="#printouts">Printouts &amp; Exports</a>
+            <a href="#scope" data-i18n="toc1">Understanding Scope</a>
+            <a href="#supplier-assessment" data-i18n="toc2">Supplier Assessment</a>
+            <a href="#validation" data-i18n="toc3">Validation Documentation</a>
+            <a href="#data-integrity" data-i18n="toc4">Data Integrity Controls</a>
+            <a href="#access-controls" data-i18n="toc5">Access Controls</a>
+            <a href="#change-control" data-i18n="toc6">Change Control</a>
+            <a href="#periodic-review" data-i18n="toc7">Periodic Review</a>
+            <a href="#printouts" data-i18n="toc8">Printouts &amp; Exports</a>
           </nav>
         </div>
         <div class="sidebar-cta" role="complementary" aria-label="QA consulting call to action">
-          <h3>Need an Annex 11 gap assessment?</h3>
-          <p>PHARPRO conducts targeted Annex 11 audits with a written gap report and remediation plan.</p>
-          <a href="/services/qa">View QA Services</a>
+          <h3 data-i18n="sb_cta_h">Need an Annex 11 gap assessment?</h3>
+          <p data-i18n="sb_cta_p">PHARPRO conducts targeted Annex 11 audits with a written gap report and remediation plan.</p>
+          <a href="/services/qa" data-i18n="sb_cta_btn">View QA Services</a>
         </div>
       </aside>
     </div>
@@ -321,16 +338,16 @@
 
   <section class="art-cta" aria-labelledby="cta-heading">
     <div class="wrap">
-      <h2 id="cta-heading">Preparing for an EU GMP Annex 11 Inspection?</h2>
-      <p>PHARPRO performs structured gap assessments and produces an audit-ready remediation plan — usually within two weeks.</p>
-      <a href="/#contact" class="btn-primary">Get a Free Assessment</a>
-      <a href="/services/csv" class="btn-ghost">View CSV Services</a>
+      <h2 id="cta-heading" data-i18n="cta_h2">Preparing for an EU GMP Annex 11 Inspection?</h2>
+      <p data-i18n="cta_p">PHARPRO performs structured gap assessments and produces an audit-ready remediation plan — usually within two weeks.</p>
+      <a href="/#contact" class="btn-primary" data-i18n="cta_btn">Get a Free Assessment</a>
+      <a href="/services/csv" class="btn-ghost" data-i18n="cta_btn2">View CSV Services</a>
     </div>
   </section>
 
   <section class="art-related" aria-labelledby="related-heading">
     <div class="wrap">
-      <h2 id="related-heading">Related Articles</h2>
+      <h2 id="related-heading" data-i18n="rel_h2">Related Articles</h2>
       <div class="related-grid">
         <div class="related-card">
           <div class="cat">CSV &amp; Validation</div>
@@ -366,10 +383,99 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2025 PHARPRO Consultation Company. All rights reserved.</span>
+      <span data-i18n="foot_copy">&copy; 2025 PHARPRO Consultation Company. All rights reserved.</span>
       <span>Amman, Jordan &mdash; <a href="mailto:info@pharpro.co" style="color:rgba(255,255,255,.4);">info@pharpro.co</a></span>
     </div>
   </div>
 </footer>
+
+<script>
+const T = {
+  "en": {
+    "nav_services": "Services",
+    "nav_training": "Training",
+    "nav_insights": "Insights",
+    "nav_cta": "Free Assessment",
+    "bc_home": "Home",
+    "bc_insights": "Insights",
+    "bc_current": "EU GMP Annex 11 Checklist",
+    "art_cat": "Regulatory Compliance",
+    "art_h1": "EU GMP Annex 11: A Practical Compliance Checklist for 2025",
+    "art_date": "10 February 2025",
+    "art_time": "7 min read",
+    "art_author": "By PHARPRO Consulting Team",
+    "toc_h": "In this article",
+    "toc1": "Understanding Scope",
+    "toc2": "Supplier Assessment",
+    "toc3": "Validation Documentation",
+    "toc4": "Data Integrity Controls",
+    "toc5": "Access Controls",
+    "toc6": "Change Control",
+    "toc7": "Periodic Review",
+    "toc8": "Printouts & Exports",
+    "sb_cta_h": "Need an Annex 11 gap assessment?",
+    "sb_cta_p": "PHARPRO conducts targeted Annex 11 audits with a written gap report and remediation plan.",
+    "sb_cta_btn": "View QA Services",
+    "cta_h2": "Preparing for an EU GMP Annex 11 Inspection?",
+    "cta_p": "PHARPRO performs structured gap assessments and produces an audit-ready remediation plan — usually within two weeks.",
+    "cta_btn": "Get a Free Assessment",
+    "cta_btn2": "View CSV Services",
+    "rel_h2": "Related Articles",
+    "foot_copy": "© 2025 PHARPRO Consultation Company. All rights reserved."
+  },
+  "ar": {
+    "nav_services": "الخدمات",
+    "nav_training": "التدريب",
+    "nav_insights": "المقالات",
+    "nav_cta": "تقييم مجاني",
+    "bc_home": "الرئيسية",
+    "bc_insights": "المقالات",
+    "bc_current": "قائمة تدقيق EU GMP Annex 11",
+    "art_cat": "الامتثال التنظيمي",
+    "art_h1": "EU GMP Annex 11: قائمة تدقيق امتثال عملية لعام 2025",
+    "art_date": "10 فبراير 2025",
+    "art_time": "7 دقائق قراءة",
+    "art_author": "بقلم فريق استشاريي PHARPRO",
+    "toc_h": "في هذا المقال",
+    "toc1": "فهم النطاق",
+    "toc2": "تقييم الموردين",
+    "toc3": "وثائق التحقق",
+    "toc4": "ضوابط سلامة البيانات",
+    "toc5": "ضوابط الوصول",
+    "toc6": "التحكم في التغيير",
+    "toc7": "المراجعة الدورية",
+    "toc8": "المطبوعات والتصديرات",
+    "sb_cta_h": "هل تحتاج تقييم ثغرات Annex 11؟",
+    "sb_cta_p": "يجري PHARPRO عمليات تدقيق Annex 11 مستهدفة مع تقرير ثغرات مكتوب وخطة معالجة.",
+    "sb_cta_btn": "عرض خدمات ضمان الجودة",
+    "cta_h2": "هل تستعد لتفتيش EU GMP Annex 11؟",
+    "cta_p": "يجري PHARPRO تقييمات ثغرات منظّمة وينتج خطة معالجة جاهزة للتدقيق — عادةً في غضون أسبوعين.",
+    "cta_btn": "احصل على تقييم مجاني",
+    "cta_btn2": "عرض خدمات CSV",
+    "rel_h2": "مقالات ذات صلة",
+    "foot_copy": "© 2025 شركة PHARPRO للاستشارات. جميع الحقوق محفوظة."
+  }
+};
+
+let lang = new URLSearchParams(location.search).get('lang') === 'ar' ? 'ar' : 'en';
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('rtl', lang === 'ar');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (T[lang] && T[lang][k] !== undefined) el.innerHTML = T[lang][k];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.textContent = lang === 'en' ? 'عربي' : 'EN');
+}
+function toggleLang() {
+  lang = lang === 'en' ? 'ar' : 'en';
+  const u = new URL(location.href);
+  lang === 'ar' ? u.searchParams.set('lang','ar') : u.searchParams.delete('lang');
+  history.replaceState(null,'',u.toString());
+  applyLang();
+}
+applyLang();
+</script>
 </body>
 </html>
