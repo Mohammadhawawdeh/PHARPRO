@@ -497,6 +497,20 @@ const translations = {
   }
 };
 
+
+function preserveLang() {
+  document.querySelectorAll('a[href]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (!href || href.charAt(0) === '#' || /^(https?:|mailto:|\/\/)/.test(href)) return;
+    var parts = href.split('?');
+    var base = parts[0];
+    var params = new URLSearchParams(parts[1] || '');
+    if (currentLang === 'ar') { params.set('lang', 'ar'); } else { params.delete('lang'); }
+    var qs = params.toString();
+    a.setAttribute('href', base + (qs ? '?' + qs : ''));
+  });
+}
+
 /* ── i18n ENGINE ──────────────────────────────────────────────── */
 const _urlLang = new URLSearchParams(window.location.search).get("lang");
 let currentLang = (_urlLang === "ar" || _urlLang === "en")
@@ -537,6 +551,7 @@ function applyTranslations() {
     btn.textContent = isAr ? "EN" : "عربي";
     btn.setAttribute("aria-label", isAr ? "Switch to English" : "التبديل إلى العربية");
   });
+  preserveLang();
 }
 
 function switchLanguage() {

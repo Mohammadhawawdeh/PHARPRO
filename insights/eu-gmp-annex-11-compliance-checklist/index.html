@@ -164,6 +164,13 @@
     body.rtl .foot-inner{flex-direction:row-reverse}
     body.rtl .foot-bottom{flex-direction:row-reverse}
     body.rtl .tag-row{flex-direction:row-reverse}
+
+    .art-ar { font-family: "Cairo", sans-serif; text-align: right; }
+    .art-ar h2, .art-ar h3 { text-align: right; }
+    .art-ar .callout { border-left: none; border-right: 3px solid var(--navy); border-radius: 12px 0 0 12px; }
+    .art-ar .checklist li::before { right: 0; left: auto; }
+    .art-ar .req-grid { direction: rtl; }
+    .art-ar .tag-row { flex-direction: row-reverse; }
   </style>
 </head>
 <body>
@@ -458,6 +465,18 @@ const T = {
 };
 
 let lang = new URLSearchParams(location.search).get('lang') === 'ar' ? 'ar' : 'en';
+function preserveLang() {
+  document.querySelectorAll('a[href]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (!href || href.charAt(0) === '#' || /^(https?:|mailto:|\/\/)/.test(href)) return;
+    var parts = href.split('?');
+    var base = parts[0];
+    var params = new URLSearchParams(parts[1] || '');
+    if (lang === 'ar') { params.set('lang', 'ar'); } else { params.delete('lang'); }
+    var qs = params.toString();
+    a.setAttribute('href', base + (qs ? '?' + qs : ''));
+  });
+}
 function applyLang() {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -466,6 +485,11 @@ function applyLang() {
     const k = el.dataset.i18n;
     if (T[lang] && T[lang][k] !== undefined) el.innerHTML = T[lang][k];
   });
+  // Dual-language article bodies
+  var enArt = document.querySelector('.art-content:not(.art-ar)');
+  var arArt = document.querySelector('.art-content.art-ar');
+  if (enArt) enArt.style.display = lang === 'ar' ? 'none' : '';
+  if (arArt) arArt.style.display = lang === 'ar' ? '' : 'none';
   document.querySelectorAll('.lang-btn').forEach(b => b.textContent = lang === 'en' ? 'عربي' : 'EN');
 }
 function toggleLang() {

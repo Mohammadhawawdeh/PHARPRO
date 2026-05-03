@@ -663,6 +663,18 @@ const T = {
   }
 };
 let lang = new URLSearchParams(location.search).get('lang') === 'ar' ? 'ar' : 'en';
+function preserveLang() {
+  document.querySelectorAll('a[href]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (!href || href.charAt(0) === '#' || /^(https?:|mailto:|\/\/)/.test(href)) return;
+    var parts = href.split('?');
+    var base = parts[0];
+    var params = new URLSearchParams(parts[1] || '');
+    if (lang === 'ar') { params.set('lang', 'ar'); } else { params.delete('lang'); }
+    var qs = params.toString();
+    a.setAttribute('href', base + (qs ? '?' + qs : ''));
+  });
+}
 function applyLang() {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -672,6 +684,7 @@ function applyLang() {
     if (T[lang][k] !== undefined) el.innerHTML = T[lang][k];
   });
   document.querySelectorAll('.lang-btn').forEach(b => b.textContent = lang === 'en' ? 'عربي' : 'EN');
+  preserveLang();
 }
 function toggleLang() {
   lang = lang === 'en' ? 'ar' : 'en';
