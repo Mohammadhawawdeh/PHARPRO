@@ -55,21 +55,28 @@ app.use((req, res, next) => {
   next();
 });
 
-// Cache-Control strategy:
-//   • Versioned assets (CSS/JS/images/fonts) → 1 year immutable
-//   • HTML pages → no-cache so browsers always revalidate
-//   • sitemap.xml / robots.txt → 1 hour
-// Routes served explicitly BEFORE static middleware
-// (static would intercept /insights as a directory redirect and /feed.xml with wrong MIME)
+// ── ALL EXPLICIT PAGE ROUTES — must be declared BEFORE express.static ──────
+// express.static sees directories (services/csv/, insights/, etc.) and issues
+// a 301 redirect to the trailing-slash URL before our route handlers can fire.
+// Declaring these first ensures they always win.
 
-// RSS feed — must come before static so we can set application/rss+xml MIME type
+// RSS feed — needs application/rss+xml MIME (static serves .xml as application/xml)
 app.get("/feed.xml", (req, res) => {
   res.setHeader("Cache-Control", "public, max-age=3600");
   res.setHeader("Content-Type", "application/rss+xml; charset=utf-8");
   res.sendFile(path.join(__dirname, "feed.xml"));
 });
 
-// Insights index (static would 301-redirect /insights -> /insights/)
+// Service pages (directory/index.html structure for GitHub Pages compatibility)
+const SERVICE_PAGES = ["csv", "qa", "cqv", "training"];
+SERVICE_PAGES.forEach((svc) => {
+  app.get([`/services/${svc}`, `/services/${svc}/`], (req, res) => {
+    res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    res.sendFile(path.join(__dirname, "services", svc, "index.html"));
+  });
+});
+
+// Insights hub
 app.get(["/insights", "/insights/"], (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
   res.sendFile(path.join(__dirname, "insights", "index.html"));
@@ -82,12 +89,17 @@ const INSIGHT_SLUGS = [
   "fda-21-cfr-part-11-data-integrity",
 ];
 INSIGHT_SLUGS.forEach((slug) => {
-  app.get(`/insights/${slug}`, (req, res) => {
+  app.get([`/insights/${slug}`, `/insights/${slug}/`], (req, res) => {
     res.setHeader("Cache-Control", "no-cache, must-revalidate");
-    res.sendFile(path.join(__dirname, "insights", `${slug}.html`));
+    res.sendFile(path.join(__dirname, "insights", slug, "index.html"));
   });
 });
 
+// ── STATIC FILE SERVING ───────────────────────────────────────────────────
+// Cache-Control strategy:
+//   • Versioned assets (CSS/JS/images/fonts) → 1 year immutable
+//   • HTML files                             → no-cache
+//   • sitemap.xml / robots.txt               → 1 hour
 app.use(
   express.static(path.join(__dirname), {
     setHeaders(res, filePath) {
@@ -104,6 +116,7 @@ app.use(
   })
 );
 
+// ── CONTACT API ───────────────────────────────────────────────────────────
 app.post("/api/contact", (req, res) => {
   const origin = req.headers.origin || req.headers.referer || "";
   const isAllowed =
@@ -149,15 +162,7 @@ app.post("/api/contact", (req, res) => {
   });
 });
 
-// Explicit service page routes (clean URLs, no .html extension)
-const SERVICE_PAGES = ["csv", "qa", "cqv", "training"];
-SERVICE_PAGES.forEach((svc) => {
-  app.get(`/services/${svc}`, (req, res) => {
-    res.setHeader("Cache-Control", "no-cache, must-revalidate");
-    res.sendFile(path.join(__dirname, "services", `${svc}.html`));
-  });
-});
-
+// ── HOMEPAGE FALLBACK ─────────────────────────────────────────────────────
 app.get("/{*path}", (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
   res.sendFile(path.join(__dirname, "index.html"));
