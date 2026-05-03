@@ -62,9 +62,6 @@
     .art-meta{display:flex;gap:8px;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;margin-bottom:16px}
     .art-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted);opacity:.4}
     .read-link{font-size:.83rem;color:var(--burgundy);font-weight:600;display:inline-flex;align-items:center;gap:4px}.read-link:hover{color:var(--burgundy-dk)}
-    .tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
-    .filter-tag{background:var(--white);border:1px solid var(--border);color:var(--muted);padding:6px 16px;border-radius:999px;font-size:.8rem;font-weight:500;cursor:default}
-    .filter-tag.active{background:var(--navy);border-color:var(--navy);color:#fff}
     .insights-cta{background:var(--navy);padding:56px 0;text-align:center}
     .insights-cta h2{font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:12px}
     .insights-cta p{color:rgba(255,255,255,.7);margin-bottom:28px}
@@ -79,7 +76,6 @@
     body.rtl .breadcrumb{flex-direction:row-reverse}
     body.rtl .foot-inner{flex-direction:row-reverse}
     body.rtl .foot-bottom{flex-direction:row-reverse}
-    body.rtl .tags-row{flex-direction:row-reverse}
   </style>
 </head>
 <body>
@@ -126,13 +122,6 @@
   </section>
   <section class="articles-section" aria-labelledby="articles-heading">
     <div class="wrap">
-      <div class="tags-row" role="list" aria-label="Topic filters">
-        <span class="filter-tag active" role="listitem" data-i18n="tag_all">All topics</span>
-        <span class="filter-tag" role="listitem" data-i18n="tag_csv">CSV &amp; Validation</span>
-        <span class="filter-tag" role="listitem" data-i18n="tag_di">Data Integrity</span>
-        <span class="filter-tag" role="listitem" data-i18n="tag_reg">Regulatory Compliance</span>
-        <span class="filter-tag" role="listitem" data-i18n="tag_gmp">GMP Training</span>
-      </div>
       <h2 id="articles-heading" class="visually-hidden" data-i18n="all_articles">All articles</h2>
       <div class="articles-grid">
         <article class="article-card">
@@ -210,7 +199,6 @@ const T = {
     h1:'Compliance Insights',
     hero_p:'Practical guidance on pharmaceutical CSV, QA, data integrity, and regulatory compliance — written by PHARPRO’s consulting team.',
     rss_btn:'Subscribe via RSS',
-    tag_all:'All topics', tag_csv:'CSV &amp; Validation', tag_di:'Data Integrity', tag_reg:'Regulatory Compliance', tag_gmp:'GMP Training',
     all_articles:'All articles',
     art1_cat:'CSV &amp; Validation',
     art1_h:'GAMP 5 Second Edition: Key Changes for Your CSV Programme',
@@ -237,7 +225,6 @@ const T = {
     h1:'رؤى الامتثال',
     hero_p:'إرشادات عملية حول CSV الدوائية وضمان الجودة وسلامة البيانات والامتثال التنظيمي — يكتبها فريق استشاريي PHARPRO.',
     rss_btn:'اشترك عبر RSS',
-    tag_all:'جميع المواضيع', tag_csv:'CSV والتحقق', tag_di:'سلامة البيانات', tag_reg:'الامتثال التنظيمي', tag_gmp:'تدريب GMP',
     all_articles:'جميع المقالات',
     art1_cat:'CSV والتحقق',
     art1_h:'الطبعة الثانية من GAMP 5: التغييرات الرئيسية لبرنامج CSV لديك',
