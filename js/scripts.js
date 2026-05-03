@@ -51,6 +51,7 @@ const translations = {
     nav_dvs:        "DVS Software",
     nav_process:    "How We Work",
     nav_faq:        "FAQ",
+    nav_insights:   "Insights",
     nav_cta:        "Free Assessment",
 
     /* Hero */
@@ -276,6 +277,7 @@ const translations = {
     nav_dvs:        "برنامج DVS",
     nav_process:    "آلية عملنا",
     nav_faq:        "الأسئلة الشائعة",
+    nav_insights:   "المقالات",
     nav_cta:        "تقييم مجاني",
 
     /* Hero */
