@@ -153,24 +153,39 @@
     .lang-btn{background:none;border:1.5px solid rgba(35,58,94,.22);border-radius:999px;padding:5px 14px;font-size:.82rem;font-weight:600;color:var(--navy);cursor:pointer;transition:background var(--t)}
     .lang-btn:hover{background:rgba(35,58,94,.06)}
     body.rtl{font-family:"Cairo",sans-serif;direction:rtl}
-    body.rtl .nav-inner{direction:ltr}body.rtl .nav-links{flex-direction:row-reverse}
+    body.rtl .nav-inner{direction:ltr}
+    body.rtl .nav-links{flex-direction:row-reverse}
     body.rtl .breadcrumb{flex-direction:row-reverse}
-    body.rtl .art-content ul,body.rtl .art-content ol{margin:0 0 20px 0;padding-right:24px;padding-left:0}
+    body.rtl .art-hero h1{text-align:right}
+    body.rtl .art-cat{display:block;text-align:right}
+    body.rtl .art-meta{flex-direction:row-reverse;justify-content:flex-start}
+    body.rtl .art-content{text-align:right;direction:rtl}
+    body.rtl .art-content h2,body.rtl .art-content h3{text-align:right}
+    body.rtl .art-content p{text-align:right}
+    body.rtl .art-content ul,body.rtl .art-content ol{margin:0 0 20px 0;padding-right:24px;padding-left:0;text-align:right}
+    body.rtl .art-content li{text-align:right}
+    body.rtl .art-content strong{direction:rtl}
     body.rtl .checklist{padding-right:0}
-    body.rtl .callout{border-left:none;border-right:3px solid var(--navy);border-radius:12px 0 0 12px}
+    body.rtl .checklist li{flex-direction:row-reverse;text-align:right}
+    body.rtl .callout{border-left:none;border-right:3px solid var(--navy);border-radius:12px 0 0 12px;text-align:right}
     body.rtl .callout.warn{border-color:var(--burgundy)}
-    body.rtl .toc-list a{border-left:none;border-right:2px solid transparent;padding-left:0;padding-right:10px}
+    body.rtl .tag-row{flex-direction:row-reverse}
+    body.rtl .sidebar-card{text-align:right}
+    body.rtl .toc-list{text-align:right}
+    body.rtl .toc-list a{border-left:none;border-right:2px solid transparent;padding-left:0;padding-right:10px;text-align:right}
     body.rtl .toc-list a:hover{border-right-color:var(--burgundy)}
+    body.rtl .sidebar-cta{text-align:right}
+    body.rtl .sidebar-cta a{text-align:center}
+    body.rtl .art-cta{text-align:center}
+    body.rtl .art-related h2{text-align:right}
+    body.rtl .related-grid{direction:rtl}
+    body.rtl .related-card{text-align:right}
+    body.rtl .related-card a{text-align:right}
+    body.rtl .btn-ghost{margin-left:0;margin-right:12px}
+    body.rtl .req-grid{direction:rtl}
+    body.rtl .req-card{text-align:right}
     body.rtl .foot-inner{flex-direction:row-reverse}
     body.rtl .foot-bottom{flex-direction:row-reverse}
-    body.rtl .tag-row{flex-direction:row-reverse}
-
-    .art-ar { font-family: "Cairo", sans-serif; text-align: right; }
-    .art-ar h2, .art-ar h3 { text-align: right; }
-    .art-ar .callout { border-left: none; border-right: 3px solid var(--navy); border-radius: 12px 0 0 12px; }
-    .art-ar .checklist li::before { right: 0; left: auto; }
-    .art-ar .req-grid { direction: rtl; }
-    .art-ar .tag-row { flex-direction: row-reverse; }
   </style>
 </head>
 <body>
