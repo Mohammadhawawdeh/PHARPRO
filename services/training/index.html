@@ -192,6 +192,19 @@
     .foot-inner a{color:rgba(255,255,255,0.5);transition:color var(--t);}.foot-inner a:hover{color:#fff;}
     .foot-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:0.8rem;}
     @media(max-width:680px){.svc-hero{padding:40px 0 48px;}.cta-banner{padding:40px 24px;}}
+
+    /* ── HAMBURGER / MOBILE NAV ─────────────────── */
+    .hamburger { display: none; background: none; border: none; padding: 6px; color: var(--navy); cursor: pointer; }
+    .mob-nav { display: none; padding: 12px 0 16px; border-top: 1px solid rgba(35,58,94,0.08); flex-direction: column; gap: 2px; }
+    .mob-nav.open { display: flex; }
+    .mob-nav a { display: block; padding: 10px 0; font-size: 0.95rem; font-weight: 500; color: var(--navy); text-decoration: none; opacity: 0.75; }
+    .mob-nav a:hover, .mob-nav a.active { opacity: 1; color: var(--burgundy); }
+    .mob-nav .lang-btn { margin-top: 6px; width: fit-content; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+    body.rtl .mob-nav { text-align: right; }
   </style>
 </head>
 <body>
@@ -217,7 +230,18 @@
       <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
       <button class="lang-btn" onclick="toggleLang()">عربي</button>
     </div>
+    <button type="button" class="hamburger" id="hamburger" aria-label="Open mobile menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
   </div>
+    <nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
+      <a href="/#services" data-i18n="nav_services">Services</a>
+      <a href="/#training" data-i18n="nav_training">Training</a>
+      <a href="/#dvs" data-i18n="nav_dvs">DVS Software</a>
+      <a href="/insights" data-i18n="nav_insights">Insights</a>
+      <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
+      <button class="lang-btn" onclick="toggleLang()">عربي</button>
+    </nav>
 </nav>
 <main>
   <section class="svc-hero">
@@ -447,6 +471,23 @@ function applyLang(){
 function toggleLang(){lang=lang==='en'?'ar':'en';const u=new URL(location.href);lang==='ar'?u.searchParams.set('lang','ar'):u.searchParams.delete('lang');history.replaceState(null,'',u.toString());applyLang();}
 applyLang();
 document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q').addEventListener('click',()=>{const open=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(o=>o.classList.remove('open'));if(!open)item.classList.add('open');});});
+
+// Hamburger menu toggle
+(function() {
+  var ham = document.getElementById('hamburger');
+  var mob = document.getElementById('mobNav');
+  if (ham && mob) {
+    ham.addEventListener('click', function() {
+      mob.classList.toggle('open');
+      ham.setAttribute('aria-expanded', mob.classList.contains('open'));
+    });
+    // Close on link click
+    mob.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { mob.classList.remove('open'); });
+    });
+  }
+})();
+
 </script>
 </body>
 </html>
