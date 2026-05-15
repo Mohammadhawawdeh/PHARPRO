@@ -117,6 +117,15 @@
     .nav-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
     .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--navy); opacity: 0.65; transition: opacity var(--t); }
     .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--burgundy); }
+    .nav-dropdown{position:relative;display:flex;align-items:center}
+    .nav-dropdown>a{display:flex;align-items:center;gap:3px}
+    .nav-dropdown .chev{transition:transform .2s}
+    .nav-dropdown:hover .chev{transform:rotate(180deg)}
+    .nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(35,58,94,0.1);border-radius:10px;padding:6px;min-width:220px;box-shadow:0 4px 24px rgba(0,0,0,0.09);z-index:200}
+    .nav-dropdown:hover .nav-dropdown-menu{display:flex;flex-direction:column}
+    .nav-dropdown-menu a{padding:9px 14px;border-radius:7px;font-size:.84rem;font-weight:500;color:var(--navy);opacity:.75;text-decoration:none;transition:all .15s;white-space:nowrap;display:block}
+    .nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{opacity:1;background:rgba(35,58,94,0.05)}
+    body.rtl .nav-dropdown-menu{left:auto;right:50%;transform:translateX(50%)}
     .lang-btn { background: none; border: 1.5px solid rgba(35,58,94,0.22); border-radius: 999px; padding: 5px 14px; font-size: 0.82rem; font-weight: 600; color: var(--navy); cursor: pointer; transition: background var(--t); }
     .lang-btn:hover { background: rgba(35,58,94,0.06); }
 
@@ -231,9 +240,16 @@
       </svg>
     </a>
     <div class="nav-links">
-      <a href="/#services" data-i18n="nav_services">Services</a>
-      <a href="/#training" data-i18n="nav_training">Training</a>
-      <a href="/#dvs" data-i18n="nav_dvs">DVS Software</a>
+      <div class="nav-dropdown">
+        <a href="/#services" data-i18n="nav_services">Services <svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/services/csv/" class="active" data-i18n="nav_csv">CSV Validation</a>
+          <a href="/services/qa/" data-i18n="nav_qa">QA &amp; Gap Assessment</a>
+          <a href="/services/cqv/" data-i18n="nav_cqv">CQV &amp; Thermal Mapping</a>
+        </div>
+      </div>
+      <a href="/services/training/" data-i18n="nav_training">Training</a>
+      <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
       <a href="/insights" data-i18n="nav_insights">Insights</a>
       <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
       <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
@@ -243,9 +259,11 @@
       </button>
   </div>
     <nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
-      <a href="/#services" data-i18n="nav_services">Services</a>
-      <a href="/#training" data-i18n="nav_training">Training</a>
-      <a href="/#dvs" data-i18n="nav_dvs">DVS Software</a>
+      <a href="/services/csv/" class="active" data-i18n="nav_csv">CSV Validation</a>
+      <a href="/services/qa/" data-i18n="nav_qa">QA &amp; Gap Assessment</a>
+      <a href="/services/cqv/" data-i18n="nav_cqv">CQV &amp; Thermal Mapping</a>
+      <a href="/services/training/" data-i18n="nav_training">Training</a>
+      <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
       <a href="/insights" data-i18n="nav_insights">Insights</a>
       <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
       <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
@@ -445,7 +463,7 @@
 <script>
 const T = {
   en: {
-    nav_services:"Services", nav_training:"Training", nav_dvs:"DVS Software", nav_cta:"Free Assessment",
+    nav_services:"Services", nav_csv:"CSV Validation", nav_qa:"QA & Gap Assessment", nav_cqv:"CQV & Thermal Mapping", nav_training:"Training", nav_dvs:"DVS Software", nav_insights:"Insights", nav_cta:"Free Assessment",
     bc_home:"Home", bc_services:"Services", bc_current:"Computerized System Validation",
     eyebrow:"CSV Consulting",
     h1:"Computerized System Validation (CSV) Consulting",
@@ -479,7 +497,7 @@ const T = {
     rel_learn:"Learn more →", foot_copy:"© 2025 PHARPRO Consultation Company. All rights reserved."
   },
   ar: {
-    nav_services:"الخدمات", nav_training:"التدريب", nav_dvs:"برنامج DVS", nav_cta:"تقييم مجاني",
+    nav_services:"الخدمات", nav_csv:"التحقق من CSV", nav_qa:"ضمان الجودة", nav_cqv:"CQV والخرائط الحرارية", nav_training:"التدريب", nav_dvs:"برنامج DVS", nav_insights:"المقالات", nav_cta:"تقييم مجاني",
     bc_home:"الرئيسية", bc_services:"الخدمات", bc_current:"التحقق من صحة الأنظمة الحاسوبية",
     eyebrow:"استشارات CSV",
     h1:"التحقق من صحة الأنظمة الحاسوبية (CSV)",

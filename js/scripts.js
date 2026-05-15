@@ -47,6 +47,9 @@ const translations = {
   en: {
     /* Navbar */
     nav_services:   "Services",
+    nav_csv:        "CSV Validation",
+    nav_qa:         "QA & Gap Assessment",
+    nav_cqv:        "CQV & Thermal Mapping",
     nav_training:   "Training",
     nav_dvs:        "DVS Software",
     nav_process:    "How We Work",
@@ -273,6 +276,9 @@ const translations = {
   ar: {
     /* Navbar */
     nav_services:   "الخدمات",
+    nav_csv:        "التحقق من CSV",
+    nav_qa:         "ضمان الجودة",
+    nav_cqv:        "CQV والخرائط الحرارية",
     nav_training:   "التدريب",
     nav_dvs:        "برنامج DVS",
     nav_process:    "آلية عملنا",
