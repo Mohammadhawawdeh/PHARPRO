@@ -578,6 +578,60 @@ function switchLanguage() {
 }
 
 /* ── HAMBURGER MENU ───────────────────────────────────────────── */
+/* ── DESKTOP NAV DROPDOWN — keyboard & touch accessible ───────── */
+function initNavDropdown() {
+  document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
+    const trigger = dropdown.querySelector(":scope > a");
+    const menu    = dropdown.querySelector(".nav-dropdown-menu");
+    if (!trigger || !menu) return;
+
+    let closeTimer;
+
+    function openMenu() {
+      clearTimeout(closeTimer);
+      menu.style.display = "flex";
+      menu.style.flexDirection = "column";
+      trigger.setAttribute("aria-expanded", "true");
+    }
+
+    function closeMenu() {
+      closeTimer = setTimeout(() => {
+        menu.style.display = "";
+        trigger.setAttribute("aria-expanded", "false");
+      }, 120);
+    }
+
+    /* Click / touch toggle */
+    trigger.addEventListener("click", e => {
+      const isOpen = menu.style.display === "flex";
+      if (isOpen) { closeMenu(); } else { e.preventDefault(); openMenu(); }
+    });
+
+    /* Keep open while mouse is over the menu */
+    dropdown.addEventListener("mouseenter", openMenu);
+    dropdown.addEventListener("mouseleave", closeMenu);
+    menu.addEventListener("mouseenter", () => clearTimeout(closeTimer));
+    menu.addEventListener("mouseleave", closeMenu);
+
+    /* Keyboard: Escape closes, Tab away closes */
+    trigger.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openMenu(); trigger.focus(); }
+      if (e.key === "Escape") closeMenu();
+    });
+    menu.addEventListener("keydown", e => {
+      if (e.key === "Escape") { closeMenu(); trigger.focus(); }
+    });
+
+    /* Close when focus leaves the dropdown entirely */
+    dropdown.addEventListener("focusout", e => {
+      if (!dropdown.contains(e.relatedTarget)) closeMenu();
+    });
+
+    trigger.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-expanded", "false");
+  });
+}
+
 function initHamburger() {
   const hamburger = document.getElementById("hamburger");
   const mobNav    = document.getElementById("mobNav");
@@ -757,6 +811,7 @@ function tickCountdowns() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initNavDropdown();
   initHamburger();
   initFaq();
   initContactForm();
