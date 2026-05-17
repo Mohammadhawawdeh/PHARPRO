@@ -100,6 +100,17 @@
     body.rtl .insights-cta p{text-align:center}
     body.rtl .foot-inner{flex-direction:row-reverse}
     body.rtl .foot-bottom{flex-direction:row-reverse}
+    .hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--navy)}
+    .mob-nav{display:none;padding:12px 0 16px;border-top:1px solid rgba(35,58,94,0.08);flex-direction:column;gap:2px}
+    .mob-nav.open{display:flex}
+    .mob-nav a{display:block;padding:10px 0;font-size:.95rem;font-weight:500;color:var(--navy);text-decoration:none;opacity:.75}
+    .mob-nav a:hover,.mob-nav a.active{opacity:1;color:var(--burgundy)}
+    .mob-nav .lang-btn{margin-top:6px;width:fit-content}
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .hamburger{display:block}
+    }
+    body.rtl .mob-nav{text-align:right}
   </style>
 
   <script type="application/ld+json">
