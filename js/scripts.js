@@ -598,7 +598,7 @@ function initNavDropdown() {
       closeTimer = setTimeout(() => {
         menu.style.display = "";
         trigger.setAttribute("aria-expanded", "false");
-      }, 120);
+      }, 400);
     }
 
     /* Click / touch toggle */
