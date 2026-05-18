@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture | PHARPRO</title>
+  <meta name="description" content="A detailed guide to 21 CFR Part 11 audit trail requirements — what events must be captured, how to configure compliant audit trails, and the most common inspection findings." />
+  <meta name="keywords" content="21 CFR Part 11 audit trail, electronic records FDA, audit trail pharmaceutical, FDA data integrity, Part 11 compliance, PHARPRO" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="author" content="Ahmad Al-Sharif, PHARPRO Consultation Company" />
+  <meta name="description" lang="ar" content="دليل مفصّل لمتطلبات مسار التدقيق في 21 CFR Part 11 — ما الأحداث التي يجب التقاطها وكيفية تهيئة مسارات تدقيق متوافقة وأكثر نتائج التفتيش شيوعاً." />
+  <link rel="canonical" href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" />
+  <link rel="alternate" hreflang="en" href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" />
+  <link rel="alternate" hreflang="ar" href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" />
+  <meta property="og:title" content="FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture | PHARPRO" />
+  <meta property="og:description" content="A detailed guide to 21 CFR Part 11 audit trail requirements — what events must be captured, how to configure compliant audit trails, and the most common inspection findings." />
+  <meta property="og:image" content="https://pharpro.co/images/og-insights.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="PHARPRO" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_JO" />
+  <meta property="article:published_time" content="2026-05-26T09:00:00+03:00" />
+  <meta property="article:modified_time" content="2026-05-18T09:00:00+03:00" />
+  <meta property="article:author" content="Ahmad Al-Sharif" />
+  <meta property="article:section" content="Data Integrity" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture | PHARPRO" />
+  <meta name="twitter:description" content="A detailed guide to 21 CFR Part 11 audit trail requirements — what events must be captured, how to configure compliant audit trails, and the most common inspection findings." />
+  <meta name="twitter:image" content="https://pharpro.co/images/og-insights.png" />
+  <meta name="twitter:site" content="@pharprocc" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cg%20transform%3D%22translate%2816%2C16%29%20rotate%28-22%29%22%3E%3Crect%20x%3D%22-14%22%20y%3D%22-7%22%20width%3D%2228%22%20height%3D%2214%22%20fill%3D%22%23B12C4B%22/%3E%3Crect%20x%3D%22-14%22%20y%3D%22-7%22%20width%3D%2214%22%20height%3D%2214%22%20fill%3D%22%23233A5E%22/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements#article",
+        "headline": "FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture",
+        "description": "A detailed guide to 21 CFR Part 11 audit trail requirements — what events must be captured, how to configure compliant audit trails, and the most common inspection findings.",
+        "datePublished": "2026-05-18",
+        "dateModified": "2026-05-18",
+        "author": {
+          "@type": "Person",
+          "name": "Ahmad Al-Sharif",
+          "jobTitle": "Senior CSV Consultant",
+          "worksFor": { "@id": "https://pharpro.co/#organization" }
+        },
+        "publisher": {
+          "@id": "https://pharpro.co/#organization",
+          "logo": { "@type": "ImageObject", "url": "https://pharpro.co/images/apple-touch-icon.png", "width": 180, "height": 180 }
+        },
+        "image": "https://pharpro.co/images/og-insights.png",
+        "mainEntityOfPage": { "@id": "https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements#webpage" },
+        "articleSection": "Data Integrity",
+        "keywords": ["21 CFR Part 11", "Audit Trail", "Electronic Records", "FDA", "Data Integrity", "Pharmaceutical Compliance"],
+        "inLanguage": "en",
+        "url": "https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements#webpage",
+        "url": "https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements",
+        "name": "FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture | PHARPRO",
+        "isPartOf": { "@id": "https://pharpro.co/#website" },
+        "inLanguage": "en",
+        "datePublished": "2026-05-18",
+        "dateModified": "2026-05-18"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pharpro.co/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://pharpro.co/insights" },
+          { "@type": "ListItem", "position": 3, "name": "FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture", "item": "https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": 'Does 21 CFR Part 11 apply to all computer systems in a pharma company?', "acceptedAnswer": { "@type": "Answer", "text": "No. Part 11 applies to electronic records that are created, modified, maintained, archived, retrieved, or transmitted under FDA-applicable regulations, and where the FDA requires those records to be maintained. Systems used exclusively for non-GxP business purposes (HR systems, general email, accounting software not used for GxP records) are not subject to Part 11. The determination of Part 11 applicability is made during the system's GxP impact assessment." } },
+          { "@type": "Question", "name": 'Is there a requirement for users to provide a reason when changing data?', "acceptedAnswer": { "@type": "Answer", "text": "21 CFR Part 11.10(e) requires that audit trails record the date and time of entries and actions. The FDA's 2018 Data Integrity guidance adds that for modifications to GxP records, the reason for the change should be documented. Many systems capture this as a mandatory 'reason for change' field that users must complete when modifying a record. This is considered best practice and is expected by inspectors even where the regulation itself does not explicitly mandate it." } },
+          { "@type": "Question", "name": 'How long must audit trail records be retained?', "acceptedAnswer": { "@type": "Answer", "text": 'Audit trail records must be retained for at least as long as the GxP records they are associated with. For batch production records, this is typically at least one year after the expiry date of the batch (FDA 21 CFR Part 211.180(a)) — in practice often 5–15 years depending on the product type. Audit trail data should never be purged on a shorter cycle than the associated records.' } },
+          { "@type": "Question", "name": 'Our HPLC software does not have a compliant audit trail — what should we do?', "acceptedAnswer": { "@type": "Answer", "text": 'This is a common situation with older laboratory instruments. Options include: upgrading the software to a compliant version, implementing a middleware solution that captures audit trail data at the instrument level, replacing the instrument, or implementing compensating controls (enhanced supervision, dual witness procedures, paper-based audit documentation) justified through a formal risk assessment. PHARPRO can assist with the risk assessment and remediation strategy.' } }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>:root{--burgundy:#B12C4B;--burgundy-dk:#8E1E3C;--navy:#233A5E;--navy-dk:#1A2B47;--ivory:#F5EEE8;--ink:#1E1E1E;--muted:#6B7A8D;--white:#FFFFFF;--border:#E8E0D8;--surface:#FAFAF8;--r-md:16px;--r-lg:24px;--shadow-sm:0 1px 4px rgba(35,58,94,.06),0 4px 12px rgba(35,58,94,.04);--shadow-md:0 2px 8px rgba(35,58,94,.06),0 8px 32px rgba(35,58,94,.09);--container:1040px;--t:0.2s ease}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:"Inter",-apple-system,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}
+.wrap{width:min(var(--container),calc(100% - 2.5rem));margin-inline:auto}
+.skip-link{position:absolute;left:-9999px;top:4px;z-index:9999;padding:8px 16px;background:var(--navy);color:#fff;border-radius:4px;font-size:14px}.skip-link:focus{left:4px}
+.nav{position:sticky;top:0;z-index:900;background:rgba(245,238,232,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(35,58,94,.08)}
+.nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1rem;color:var(--navy)}
+.nav-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.nav-links a{font-size:.87rem;font-weight:500;color:var(--navy);opacity:.65;transition:opacity var(--t)}
+.nav-links a:hover,.nav-links a.active{opacity:1;color:var(--burgundy)}
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-dropdown>a{display:flex;align-items:center;gap:3px}
+.nav-dropdown .chev{transition:transform .2s}
+.nav-dropdown:hover .chev{transform:rotate(180deg)}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(35,58,94,0.1);border-radius:10px;padding:6px;min-width:220px;box-shadow:0 4px 24px rgba(0,0,0,0.09);z-index:200}
+.nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
+.nav-dropdown:hover .nav-dropdown-menu{display:flex;flex-direction:column}
+.nav-dropdown-menu a{padding:9px 14px;border-radius:7px;font-size:.84rem;font-weight:500;color:var(--navy);opacity:.75;text-decoration:none;transition:all .15s;white-space:nowrap;display:block}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{opacity:1;background:rgba(35,58,94,0.05)}
+body.rtl .nav-dropdown-menu{left:auto;right:50%;transform:translateX(50%)}
+.lang-btn{background:none;border:1.5px solid rgba(35,58,94,.22);border-radius:999px;padding:5px 14px;font-size:.82rem;font-weight:600;color:var(--navy);cursor:pointer;transition:background var(--t)}.lang-btn:hover{background:rgba(35,58,94,.06)}
+.art-hero{padding:48px 0 40px;border-bottom:1px solid var(--border)}
+.breadcrumb{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:.8rem;color:var(--muted);margin-bottom:24px}
+.breadcrumb a{color:var(--muted)}.breadcrumb a:hover{color:var(--navy)}
+.breadcrumb .dot{width:3px;height:3px;border-radius:50%;background:var(--muted);opacity:.4}
+.art-cat{display:inline-block;background:rgba(177,44,75,.1);color:var(--burgundy);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:4px 12px;border-radius:999px;margin-bottom:16px}
+.art-hero h1{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;color:var(--navy);line-height:1.2;max-width:760px;margin-bottom:20px}
+.art-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+.art-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted);opacity:.4}
+.art-section{padding:56px 0 64px}
+.art-layout{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:start}
+@media(max-width:768px){.art-layout{grid-template-columns:1fr}}
+.art-content h2{font-size:1.35rem;font-weight:700;color:var(--navy);margin:36px 0 14px;line-height:1.3}
+.art-content h3{font-size:1.1rem;font-weight:600;color:var(--navy);margin:24px 0 10px}
+.art-content p{color:#3a3a3a;line-height:1.75;margin-bottom:16px}
+.art-content ul,.art-content ol{margin:0 0 20px 24px;color:#3a3a3a;line-height:1.75}
+.art-content li{margin-bottom:8px}
+.art-content ol{list-style:decimal}.art-content ul{list-style:disc}
+.art-content strong{color:var(--navy);font-weight:600}
+.callout{background:rgba(35,58,94,.05);border-left:3px solid var(--navy);border-radius:0 12px 12px 0;padding:18px 20px;margin:24px 0}
+.callout p{margin:0;font-size:.93rem}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)}
+.tag{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:4px 14px;font-size:.78rem;color:var(--muted)}
+.art-sidebar{position:sticky;top:80px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;margin-bottom:20px;box-shadow:var(--shadow-sm)}
+.sidebar-card h3{font-size:.87rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+.toc-list{display:flex;flex-direction:column;gap:8px}
+.toc-list a{font-size:.83rem;color:var(--muted);padding:2px 0;border-left:2px solid transparent;padding-left:10px;transition:all var(--t)}
+.toc-list a:hover{color:var(--navy);border-color:var(--burgundy)}
+.sidebar-cta{background:var(--navy);border-radius:var(--r-md);padding:24px;color:#fff}
+.sidebar-cta h3{font-size:.95rem;font-weight:700;margin-bottom:10px}
+.sidebar-cta p{font-size:.82rem;opacity:.75;margin-bottom:16px}
+.sidebar-cta a{display:block;background:var(--burgundy);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;font-size:.85rem;font-weight:600}
+.sidebar-cta a:hover{background:var(--burgundy-dk)}
+.author-box{background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:24px 28px;margin-top:40px;display:flex;gap:20px;align-items:flex-start}
+.author-avatar{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;font-weight:800;color:#fff}
+.author-info h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.author-info p{font-size:.83rem;color:var(--muted);line-height:1.6;margin:0}
+.author-info .author-creds{font-size:.78rem;color:var(--burgundy);font-weight:600;margin-top:6px;display:block}
+.lead-magnet{background:linear-gradient(135deg,var(--navy) 0%,#1a2b47 100%);border-radius:var(--r-lg);padding:32px 36px;margin:40px 0;display:flex;align-items:center;gap:28px}
+.lead-magnet-ico{width:52px;height:52px;background:rgba(177,44,75,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.lead-magnet-body h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:6px}
+.lead-magnet-body p{font-size:.88rem;color:rgba(255,255,255,.7);margin-bottom:14px}
+.lead-magnet-body a{display:inline-block;background:var(--burgundy);color:#fff;padding:10px 22px;border-radius:999px;font-size:.85rem;font-weight:700}
+.lead-magnet-body a:hover{background:var(--burgundy-dk)}
+@media(max-width:600px){.lead-magnet{flex-direction:column;padding:24px}.author-box{flex-direction:column}}
+.art-cta{background:var(--navy);padding:56px 0;text-align:center}
+.art-cta h2{font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:12px}
+.art-cta p{color:rgba(255,255,255,.7);margin-bottom:28px;font-size:1rem}
+.btn-primary{display:inline-block;background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:999px;font-weight:700;font-size:.95rem;transition:background var(--t)}
+.btn-primary:hover{background:var(--burgundy-dk)}
+.btn-ghost{display:inline-block;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);padding:13px 28px;border-radius:999px;font-weight:600;font-size:.9rem;margin-left:12px;transition:border-color var(--t)}
+.btn-ghost:hover{border-color:#fff}
+.art-related{padding:56px 0}
+.art-related h2{font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:28px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;box-shadow:var(--shadow-sm);transition:box-shadow var(--t)}
+.related-card:hover{box-shadow:var(--shadow-md)}
+.related-card .cat{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--burgundy);margin-bottom:10px}
+.related-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.35}
+.related-card p{font-size:.85rem;color:var(--muted)}
+.related-card a{display:block;margin-top:14px;font-size:.83rem;color:var(--burgundy);font-weight:600}
+footer{background:var(--navy);color:rgba(255,255,255,.6);font-size:.85rem;padding:28px 0}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.foot-inner a{color:rgba(255,255,255,.5);font-size:.83rem}.foot-inner a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+body.rtl{font-family:"Cairo",sans-serif;direction:rtl}
+body.rtl .nav-inner{direction:ltr}
+body.rtl .nav-links{flex-direction:row-reverse}
+body.rtl .breadcrumb{flex-direction:row-reverse}
+body.rtl .art-hero h1,.art-meta,.art-content h2,.art-content h3,.art-content p{text-align:right}
+body.rtl .art-content ul,.art-content ol{margin:0 0 20px 0;padding-right:24px;padding-left:0}
+body.rtl .callout{border-left:none;border-right:3px solid var(--navy);border-radius:12px 0 0 12px;text-align:right}
+body.rtl .toc-list a{border-left:none;border-right:2px solid transparent;padding-left:0;padding-right:10px}
+body.rtl .toc-list a:hover{border-right-color:var(--burgundy)}
+body.rtl .sidebar-cta,.sidebar-card,.author-box,.author-info{text-align:right}
+body.rtl .author-box{flex-direction:row-reverse}
+body.rtl .lead-magnet{flex-direction:row-reverse}
+body.rtl .foot-inner,.foot-bottom{flex-direction:row-reverse}
+body.rtl .btn-ghost{margin-left:0;margin-right:12px}
+.hamburger{display:none;background:none;border:none;padding:6px;color:var(--navy);cursor:pointer}
+.mob-nav{display:none;padding:12px 0 16px;border-top:1px solid rgba(35,58,94,0.08);flex-direction:column;gap:2px}
+.mob-nav.open{display:flex}
+.mob-nav a{display:block;padding:10px 0;font-size:0.95rem;font-weight:500;color:var(--navy);opacity:0.75}
+.mob-nav a:hover{opacity:1;color:var(--burgundy)}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}}
+body.rtl .mob-nav{text-align:right}
+  .faq-list{display:grid;gap:10px;max-width:760px;margin-top:16px}
+  .faq-item{border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;background:var(--white)}
+  .faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;width:100%;text-align:left;font-size:.95rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;font-family:inherit;transition:background var(--t)}
+  body.rtl .faq-q{text-align:right}
+  .faq-q:hover{background:rgba(35,58,94,.03)}
+  .faq-chev{flex-shrink:0;transition:transform .2s;color:var(--muted)}
+  .faq-item.open .faq-chev{transform:rotate(180deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;font-size:.9rem;color:var(--muted);line-height:1.7;padding:0 20px}
+  .faq-item.open .faq-a{max-height:300px;padding:0 20px 18px}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav class="nav" aria-label="Primary navigation">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo" aria-label="PHARPRO — home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" role="img" aria-label="PHARPRO Consultation" style="height:44px;width:auto;">
+        <defs><clipPath id="pc1"><rect x="-46" y="-21" width="92" height="42" rx="21"/></clipPath></defs>
+        <g transform="translate(55,57) rotate(-22)"><g clip-path="url(#pc1)">
+          <rect x="-52" y="-26" width="104" height="52" fill="#B12C4B"/>
+          <rect x="-52" y="-26" width="52" height="52" fill="#233A5E"/>
+          <rect x="-3" y="-26" width="6" height="52" fill="white"/>
+        </g></g>
+        <text x="113" y="52" font-family="Inter,Arial Black,sans-serif" font-size="50" font-weight="800" fill="#B12C4B" letter-spacing="-1.5">PHARPRO</text>
+        <text x="113" y="101" font-family="Inter,Arial Black,sans-serif" font-size="42" font-weight="800" fill="#1C1C1C" letter-spacing="-1">CONSULTATION</text>
+      </svg>
+    </a>
+    <div class="nav-links" aria-label="Site navigation">
+      <div class="nav-dropdown">
+        <a href="/#services" data-i18n="nav_services">Services <svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/services/csv/" data-i18n="nav_csv">CSV Validation</a>
+          <a href="/services/qa/" data-i18n="nav_qa">QA &amp; Gap Assessment</a>
+          <a href="/services/cqv/" data-i18n="nav_cqv">CQV &amp; Thermal Mapping</a>
+        </div>
+      </div>
+      <a href="/services/training/" data-i18n="nav_training">Training</a>
+      <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
+      <a href="/insights" class="active" data-i18n="nav_insights">Insights</a>
+      <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
+      <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
+    </div>
+    <button type="button" class="hamburger" id="hamburger" aria-label="Open mobile menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
+    <a href="/services/csv/" data-i18n="nav_csv">CSV Validation</a>
+    <a href="/services/qa/" data-i18n="nav_qa">QA &amp; Gap Assessment</a>
+    <a href="/services/cqv/" data-i18n="nav_cqv">CQV &amp; Thermal Mapping</a>
+    <a href="/services/training/" data-i18n="nav_training">Training</a>
+    <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
+    <a href="/insights" class="active" data-i18n="nav_insights">Insights</a>
+    <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
+    <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
+  </nav>
+</nav>
+<main id="main-content">
+  <section class="art-hero">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/" data-i18n="bc_home">Home</a>
+        <span class="dot" aria-hidden="true"></span>
+        <a href="/insights" data-i18n="bc_insights">Insights</a>
+        <span class="dot" aria-hidden="true"></span>
+        <span aria-current="page" data-i18n="bc_current">21 CFR Part 11 Audit Trail</span>
+      </nav>
+      <div class="art-cat" data-i18n="art_cat">Data Integrity</div>
+      <h1 data-i18n="art_h1">FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture</h1>
+      <div class="art-meta">
+        <time datetime="2026-05-18" data-i18n="art_date">18 May 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span data-i18n="art_time">8 min read</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span data-i18n="art_author">By Ahmad Al-Sharif, Senior CSV Consultant</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="art-section">
+    <div class="wrap art-layout">
+      <div>
+        <!-- ENGLISH CONTENT -->
+        <article class="art-content" aria-label="Article content in English">
+          <p>FDA 21 CFR Part 11 is the regulation that establishes the conditions under which the FDA considers electronic records to be equivalent to paper records and electronic signatures to be equivalent to handwritten signatures. Enacted in 1997 and reinterpreted through the FDA's 2003 guidance and 2018 Data Integrity guidance, Part 11 contains specific requirements for audit trails that remain one of the most frequently cited deficiencies in FDA inspections of pharmaceutical facilities.</p>
+          <p>This guide focuses specifically on the audit trail provisions of Part 11, explains what your computerised system must capture, and identifies the most common configuration failures that lead to inspection findings.</p>
+
+          <h2 id="what-is-audit-trail">What Is a Pharmaceutical Audit Trail?</h2>
+          <p>An audit trail is a secure, computer-generated, time-stamped record that allows reconstruction of the course of events relating to the creation, modification, or deletion of an electronic record. The FDA's definition under 21 CFR Part 11.3(b)(4) includes this concept explicitly.</p>
+          <p>In practical terms, an audit trail captures:</p>
+          <ul>
+            <li>Who performed an action (user identity)</li>
+            <li>What action was performed (create, modify, delete, approve, reject)</li>
+            <li>When the action occurred (date and time, typically to the second)</li>
+            <li>What data was changed (before and after values for modifications)</li>
+            <li>Why the change was made (reason for change, when required)</li>
+          </ul>
+
+          <h2 id="21cfr-requirements">What 21 CFR Part 11 Specifically Requires for Audit Trails</h2>
+          <p>Section 11.10(e) of 21 CFR Part 11 states that systems must use computer-generated, time-stamped audit trails to independently record the date and time of operator entries and actions that create, modify, or delete electronic records. The key regulatory provisions are:</p>
+          <ul>
+            <li><strong>Computer-generated</strong> — the audit trail must be automatically generated by the system, not manually created by users</li>
+            <li><strong>Time-stamped</strong> — must include date and time. The system clock must be reliable and protected from manipulation</li>
+            <li><strong>Independent</strong> — the audit trail must record actions independently of the user — users cannot switch it off or edit audit trail entries</li>
+            <li><strong>For all records subject to Part 11</strong> — audit trails are required for all electronic records that replace required paper records under FDA-applicable regulations</li>
+          </ul>
+          <div class="callout"><p><strong>Review requirement:</strong> The FDA's 2018 Data Integrity guidance clarifies that audit trails must be reviewed as part of the routine batch record review process — not only when a discrepancy is suspected. Review of audit trails should be documented.</p></div>
+
+          <h2 id="what-to-capture">What Events Must Be Captured?</h2>
+          <p>All GxP-relevant actions in a system subject to Part 11 must be captured in the audit trail. This includes:</p>
+          <ul>
+            <li><strong>Data entry events</strong> — initial entry of all GxP data values</li>
+            <li><strong>Data modification events</strong> — any change to a previously entered value, including the original value, the new value, the user who made the change, the date/time, and the reason for change</li>
+            <li><strong>Data deletion events</strong> — records of deleted entries (with the deleted values retained, not erased)</li>
+            <li><strong>System access events</strong> — login, logout, failed login attempts</li>
+            <li><strong>Electronic signature events</strong> — identity of the signer, meaning of the signature (review, approval, etc.), and date/time</li>
+            <li><strong>System administration events</strong> — user account creation, modification, or deletion; privilege changes; system configuration changes</li>
+            <li><strong>Sequence interruptions</strong> — for instrument systems (HPLC, GC), any interruption to an analytical sequence must be captured</li>
+          </ul>
+
+          <h2 id="configuration">Audit Trail Configuration Requirements</h2>
+          <p>The technical configuration of an audit trail must ensure that:</p>
+          <ul>
+            <li>The audit trail cannot be disabled by any user, including system administrators and IT staff</li>
+            <li>Audit trail entries cannot be modified or deleted — only new entries may be appended</li>
+            <li>The system clock is synchronised (NTP) and protected from manipulation</li>
+            <li>Audit trail data is backed up and retained for the same retention period as the GxP records it covers</li>
+            <li>Audit trail data can be exported and reviewed in a human-readable format without requiring specialist tools</li>
+          </ul>
+
+          <h2 id="common-findings">Most Common Audit Trail Inspection Findings</h2>
+          <p>Based on published FDA Warning Letters and EMA inspection reports, the most frequent audit trail findings are:</p>
+          <ol>
+            <li><strong>Audit trail not enabled</strong> — the system has audit trail functionality but it was not turned on, or was selectively enabled for some functions but not others</li>
+            <li><strong>Audit trail not reviewed</strong> — audit trail data exists but is not reviewed as part of batch release or data review processes</li>
+            <li><strong>Administrators can delete audit trail entries</strong> — system configuration allows privileged users to edit or clear audit trail records</li>
+            <li><strong>System clock not protected</strong> — users can change the system date/time, creating the opportunity for backdating</li>
+            <li><strong>Audit trail excluded for "test" or "practice" runs</strong> — analytical instruments configured to exclude test injections from the audit trail, creating the possibility for selective exclusion of failing data</li>
+            <li><strong>Retention mismatch</strong> — audit trail data is purged on a shorter cycle than the associated GxP records</li>
+          </ol>
+
+          <!-- Lead magnet CTA -->
+          <div class="lead-magnet">
+            <div class="lead-magnet-ico">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div class="lead-magnet-body">
+              <h3 data-i18n="magnet_title">Free 21 CFR Part 11 Audit Trail Configuration Checklist</h3>
+              <p data-i18n="magnet_desc">Download our 35-point checklist for verifying 21 CFR Part 11 audit trail compliance in pharmaceutical computerised systems — including review, retention, and configuration checks.</p>
+              <a href="/#contact" data-i18n="magnet_btn">Download Free Checklist →</a>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="tag-row"><span class="tag">21 CFR Part 11</span> <span class="tag">Audit Trail</span> <span class="tag">Electronic Records</span> <span class="tag">FDA</span> <span class="tag">Data Integrity</span> <span class="tag">Pharmaceutical Compliance</span></div>
+
+          <!-- Author bio -->
+          <div class="author-box">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <h4 data-i18n="author_name">Ahmad Al-Sharif</h4>
+              <span class="author-creds" data-i18n="author_creds">Senior CSV Consultant · 12 years in pharmaceutical validation</span>
+              <p data-i18n="author_bio">Ahmad leads PHARPRO's CSV and digital validation practice. He has delivered validation projects across Jordan, UAE, Saudi Arabia, and Europe — covering FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5 frameworks.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARABIC CONTENT -->
+        <article class="art-content art-ar" aria-label="محتوى المقال بالعربية" style="display:none">
+          <p>21 CFR Part 11 هو النظام الذي تحدد من خلاله FDA الشروط التي بموجبها تعتبر السجلات الإلكترونية مكافئة للسجلات الورقية. يُعدّ مسار التدقيق من أكثر الإخفاقات شيوعاً في تفتيشات FDA.</p>
+          <h2 id="audit-trail-ar">ما هو مسار التدقيق الدوائي؟</h2>
+          <p>مسار التدقيق هو سجل آمن يولّده الحاسوب بطابع زمني يسمح بإعادة تتبّع مسار الأحداث المتعلقة بإنشاء السجلات الإلكترونية أو تعديلها أو حذفها. يلتقط: من نفّذ الإجراء، وما هو الإجراء، ومتى تم، وما البيانات التي تغيّرت، ولماذا.</p>
+          <h2 id="requirements-ar">ما الذي تتطلبه 21 CFR Part 11؟</h2>
+          <ul>
+            <li>يجب أن يكون مسار التدقيق مولَّداً آلياً بالحاسوب — لا يُنشئه المستخدمون يدوياً</li>
+            <li>يجب أن يتضمن طابعاً زمنياً (تاريخاً ووقتاً) موثوقاً ومحمياً</li>
+            <li>يجب أن يكون مستقلاً — لا يستطيع المستخدمون إيقافه أو تعديل مدخلاته</li>
+          </ul>
+          <h2 id="events-ar">ما الأحداث التي يجب التقاطها؟</h2>
+          <ul>
+            <li>أحداث إدخال البيانات والتعديلات والحذف</li>
+            <li>أحداث الوصول إلى النظام: الدخول والخروج ومحاولات الدخول الفاشلة</li>
+            <li>أحداث التوقيع الإلكتروني: هوية الموقّع ومعنى التوقيع</li>
+            <li>أحداث إدارة النظام: إنشاء الحسابات وتغيير الصلاحيات</li>
+          </ul>
+          <h2 id="findings-ar">أكثر نتائج التفتيش شيوعاً</h2>
+          <ol>
+            <li>مسار التدقيق غير مُفعَّل</li>
+            <li>مسار التدقيق غير مُراجَع كجزء من عملية إطلاق الدفعة</li>
+            <li>قدرة المسؤولين على حذف مدخلات مسار التدقيق</li>
+            <li>ساعة النظام غير محمية من التلاعب</li>
+          </ol>
+
+          <div class="lead-magnet">
+            <div class="lead-magnet-ico">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div class="lead-magnet-body">
+              <h3>قائمة تدقيق مجانية لتهيئة مسار تدقيق 21 CFR Part 11</h3>
+              <p>نزّل قائمة التحقق المؤلفة من 35 نقطة للتحقق من الامتثال لمسار التدقيق في الأنظمة الحاسوبية.</p>
+              <a href="/#contact">تنزيل قائمة التدقيق المجانية ←</a>
+            </div>
+          </div>
+
+          <div class="tag-row"><span class="tag">21 CFR Part 11</span> <span class="tag">Audit Trail</span> <span class="tag">Electronic Records</span> <span class="tag">FDA</span> <span class="tag">Data Integrity</span> <span class="tag">Pharmaceutical Compliance</span></div>
+
+          <div class="author-box">
+            <div class="author-avatar">أ</div>
+            <div class="author-info">
+              <h4>أحمد الشريف</h4>
+              <span class="author-creds">مستشار أول في CSV · 12 عاماً في التحقق الدوائي</span>
+              <p>يقود أحمد ممارسة CSV والتحقق الرقمي في PHARPRO. نفّذ مشاريع تحقق في الأردن والإمارات والسعودية وأوروبا — بما يشمل أطر FDA 21 CFR Part 11 وEU GMP Annex 11 وISPE GAMP 5.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- FAQ -->
+        <section style="margin-top:48px;padding-top:40px;border-top:1px solid var(--border)">
+          <h2 style="font-size:1.35rem;font-weight:700;color:var(--navy);margin-bottom:4px" data-i18n="faq_h2">Frequently asked questions</h2>
+          <div class="faq-list" id="faqEn">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Does 21 CFR Part 11 apply to all computer systems in a pharma company? <svg class="faq-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">No. Part 11 applies to electronic records that are created, modified, maintained, archived, retrieved, or transmitted under FDA-applicable regulations, and where the FDA requires those records to be maintained. Systems used exclusively for non-GxP business purposes (HR systems, general email, accounting software not used for GxP records) are not subject to Part 11. The determination of Part 11 applicability is made during the system's GxP impact assessment.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is there a requirement for users to provide a reason when changing data? <svg class="faq-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">21 CFR Part 11.10(e) requires that audit trails record the date and time of entries and actions. The FDA's 2018 Data Integrity guidance adds that for modifications to GxP records, the reason for the change should be documented. Many systems capture this as a mandatory 'reason for change' field that users must complete when modifying a record. This is considered best practice and is expected by inspectors even where the regulation itself does not explicitly mandate it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How long must audit trail records be retained? <svg class="faq-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">Audit trail records must be retained for at least as long as the GxP records they are associated with. For batch production records, this is typically at least one year after the expiry date of the batch (FDA 21 CFR Part 211.180(a)) — in practice often 5–15 years depending on the product type. Audit trail data should never be purged on a shorter cycle than the associated records.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Our HPLC software does not have a compliant audit trail — what should we do? <svg class="faq-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">This is a common situation with older laboratory instruments. Options include: upgrading the software to a compliant version, implementing a middleware solution that captures audit trail data at the instrument level, replacing the instrument, or implementing compensating controls (enhanced supervision, dual witness procedures, paper-based audit documentation) justified through a formal risk assessment. PHARPRO can assist with the risk assessment and remediation strategy.</div>
+      </div>
+          </div>
+          <div class="faq-list" id="faqAr" style="display:none">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">هل ينطبق 21 CFR Part 11 على جميع أنظمة الحاسوب في الشركة الدوائية؟ <svg class="faq-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">لا. ينطبق الجزء 11 على السجلات الإلكترونية المُنشأة أو المعدَّلة في سياق اللوائح المعمول بها من قِبل FDA. الأنظمة المستخدمة حصراً لأغراض غير GxP غير خاضعة للجزء 11.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">هل هناك متطلب لأن يقدّم المستخدمون سبباً عند تغيير البيانات؟ <svg class="faq-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">تتطلب 21 CFR Part 11 تسجيل التاريخ والوقت. يُضيف توجيه 2018 لسلامة البيانات أنه للتعديلات على سجلات GxP يجب توثيق سبب التغيير.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">كم من الوقت يجب الاحتفاظ بسجلات مسار التدقيق؟ <svg class="faq-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">يجب الاحتفاظ بسجلات مسار التدقيق لمدة لا تقل عن مدة الاحتفاظ بسجلات GxP المرتبطة بها.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">برنامج HPLC لدينا لا يمتلك مسار تدقيق متوافقاً — ماذا يجب أن نفعل؟ <svg class="faq-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">الخيارات تشمل: ترقية البرنامج، أو تطبيق حل وسيط يلتقط البيانات، أو استبدال الجهاز، أو تطبيق ضوابط تعويضية مُبرَّرة بتقييم مخاطر رسمي.</div>
+      </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="art-sidebar">
+        <div class="sidebar-card">
+          <h3 data-i18n="toc_title">In this article</h3>
+          <nav class="toc-list" aria-label="Table of contents">
+        <a href="#what-is-audit-trail">What Is a Pharmaceutical Audit Trail?</a>
+        <a href="#21cfr-requirements">21 CFR Part 11 Requirements</a>
+        <a href="#what-to-capture">What Events Must Be Captured?</a>
+        <a href="#configuration">Configuration Requirements</a>
+        <a href="#common-findings">Most Common Inspection Findings</a>
+          </nav>
+        </div>
+        <div class="sidebar-cta">
+          <h3 data-i18n="cta_sidebar_h">Need expert support?</h3>
+          <p data-i18n="cta_sidebar_p">PHARPRO delivers audit-ready compliance work — CSV, QA, CQV, and GMP training.</p>
+          <a href="/#contact" data-i18n="cta_sidebar_btn">Get Free Assessment</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="art-cta">
+    <div class="wrap">
+      <h2 data-i18n="art_cta_h2">Ready to work with PHARPRO?</h2>
+      <p data-i18n="art_cta_p">Get a free assessment of your compliance programme — no obligation.</p>
+      <a href="/#contact" class="btn-primary" data-i18n="art_cta_btn">Request Free Assessment</a>
+      <a href="/services/csv/" class="btn-ghost" data-i18n="art_cta_btn2">Explore CSV Services</a>
+    </div>
+  </section>
+
+  <!-- RELATED ARTICLES -->
+  <section class="art-related">
+    <div class="wrap">
+      <h2 data-i18n="related_h2">Related articles</h2>
+      <div class="related-grid">
+    <div class="related-card">
+      <div class="cat">Data Integrity</div>
+      <h3>Data Integrity in Pharmaceutical Manufacturing: ALCOA+</h3>
+      <p>ALCOA+ principles and building a data integrity programme.</p>
+      <a href="/insights/data-integrity-pharmaceutical-manufacturing">Read article →</a>
+    </div>
+    <div class="related-card">
+      <div class="cat">Data Integrity</div>
+      <h3>FDA 21 CFR Part 11: Data Integrity Requirements Explained</h3>
+      <p>A full guide to electronic records and signatures.</p>
+      <a href="/insights/fda-21-cfr-part-11-data-integrity">Read article →</a>
+    </div>
+    <div class="related-card">
+      <div class="cat">CSV Services</div>
+      <h3>PHARPRO CSV Consulting Services</h3>
+      <p>End-to-end CSV lifecycle support.</p>
+      <a href="/services/csv/">Read article →</a>
+    </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <a href="/" aria-label="PHARPRO home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" style="height:28px;width:auto;opacity:.6">
+          <text x="0" y="32" font-family="Inter,Arial Black,sans-serif" font-size="32" font-weight="800" fill="#fff" letter-spacing="-1">PHARPRO</text>
+        </svg>
+      </a>
+      <nav aria-label="Footer links" style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="/services/csv/">CSV Validation</a>
+        <a href="/services/qa/">QA &amp; Gap Assessment</a>
+        <a href="/services/cqv/">CQV &amp; Thermal Mapping</a>
+        <a href="/services/training/">Training</a>
+        <a href="/services/digital/">DVS Software</a>
+        <a href="/insights">Insights</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot_copy">© 2026 PHARPRO Consultation Company. All rights reserved.</span>
+      <span><a href="mailto:info@pharpro.co">info@pharpro.co</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const T = {
+  en: {
+    "nav_services": "Services",
+    "nav_csv": "CSV Validation",
+    "nav_qa": "QA &amp; Gap Assessment",
+    "nav_cqv": "CQV &amp; Thermal Mapping",
+    "nav_training": "Training",
+    "nav_dvs": "DVS Software",
+    "nav_insights": "Insights",
+    "nav_cta": "Free Assessment",
+    "bc_home": "Home",
+    "bc_insights": "Insights",
+    "bc_current": "21 CFR Part 11 Audit Trail",
+    "art_cat": "Data Integrity",
+    "art_h1": "FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture",
+    "art_date": "18 May 2026",
+    "art_time": "8 min read",
+    "art_author": "By Ahmad Al-Sharif, Senior CSV Consultant",
+    "toc_title": "In this article",
+    "cta_sidebar_h": "Need expert support?",
+    "cta_sidebar_p": "PHARPRO delivers audit-ready compliance work — CSV, QA, CQV, and GMP training.",
+    "cta_sidebar_btn": "Get Free Assessment",
+    "magnet_title": "Free 21 CFR Part 11 Audit Trail Configuration Checklist",
+    "magnet_desc": "Download our 35-point checklist for verifying 21 CFR Part 11 audit trail compliance in pharmaceutical computerised systems — including review, retention, and configuration checks.",
+    "magnet_btn": "Download Free Checklist →",
+    "faq_h2": "Frequently asked questions",
+    "art_cta_h2": "Ready to work with PHARPRO?",
+    "art_cta_p": "Get a free assessment of your compliance programme — no obligation.",
+    "art_cta_btn": "Request Free Assessment",
+    "art_cta_btn2": "Explore CSV Services",
+    "related_h2": "Related articles",
+    "foot_copy": "© 2026 PHARPRO Consultation Company. All rights reserved.",
+    "author_name": "Ahmad Al-Sharif",
+    "author_creds": "Senior CSV Consultant · 12 years in pharmaceutical validation",
+    "author_bio": "Ahmad leads PHARPRO's CSV and digital validation practice. He has delivered validation projects across Jordan, UAE, Saudi Arabia, and Europe — covering FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5 frameworks."
+},
+  ar: {
+    "nav_services": "الخدمات",
+    "nav_csv": "التحقق من CSV",
+    "nav_qa": "ضمان الجودة",
+    "nav_cqv": "CQV والخرائط الحرارية",
+    "nav_training": "التدريب",
+    "nav_dvs": "برنامج DVS",
+    "nav_insights": "المقالات",
+    "nav_cta": "تقييم مجاني",
+    "bc_home": "الرئيسية",
+    "bc_insights": "المقالات",
+    "bc_current": "مسار التدقيق 21 CFR Part 11",
+    "art_cat": "سلامة البيانات",
+    "art_h1": "متطلبات مسار التدقيق في FDA 21 CFR Part 11: ما يجب أن يلتقطه نظامك",
+    "art_date": "18 May 2026",
+    "art_time": "8 دقائق قراءة",
+    "art_author": "بقلم أحمد الشريف، مستشار أول في CSV",
+    "toc_title": "في هذا المقال",
+    "cta_sidebar_h": "هل تحتاج دعماً متخصصاً؟",
+    "cta_sidebar_p": "تقدم PHARPRO عملاً جاهزاً للتدقيق في CSV وضمان الجودة وCQV والتدريب.",
+    "cta_sidebar_btn": "احصل على تقييم مجاني",
+    "magnet_title": "قائمة تدقيق مجانية لتهيئة مسار تدقيق 21 CFR Part 11",
+    "magnet_desc": "نزّل قائمة التحقق المؤلفة من 35 نقطة للتحقق من الامتثال لمسار التدقيق في الأنظمة الحاسوبية.",
+    "magnet_btn": "تنزيل قائمة التدقيق المجانية ←",
+    "faq_h2": "الأسئلة الشائعة",
+    "art_cta_h2": "هل أنت مستعد للعمل مع PHARPRO؟",
+    "art_cta_p": "احصل على تقييم مجاني لبرنامج الامتثال لديك — بدون أي التزام.",
+    "art_cta_btn": "اطلب تقييماً مجانياً",
+    "art_cta_btn2": "استكشف خدمات CSV",
+    "related_h2": "مقالات ذات صلة",
+    "foot_copy": "© 2026 شركة PHARPRO للاستشارات. جميع الحقوق محفوظة.",
+    "author_name": "أحمد الشريف",
+    "author_creds": "مستشار أول في CSV · 12 عاماً في التحقق الدوائي",
+    "author_bio": "يقود أحمد ممارسة CSV والتحقق الرقمي في PHARPRO. نفّذ مشاريع تحقق في الأردن والإمارات والسعودية وأوروبا."
+}
+};
+let lang = new URLSearchParams(location.search).get('lang') === 'ar' ? 'ar' : 'en';
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('rtl', lang === 'ar');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (T[lang] && T[lang][k] !== undefined) el.innerHTML = T[lang][k];
+  });
+  var enArt = document.querySelector('.art-content:not(.art-ar)');
+  var arArt = document.querySelector('.art-content.art-ar');
+  if (enArt) enArt.style.display = lang === 'ar' ? 'none' : '';
+  if (arArt) arArt.style.display = lang === 'ar' ? '' : 'none';
+  document.querySelectorAll('.lang-btn').forEach(b => b.textContent = lang === 'en' ? 'عربي' : 'EN');
+}
+function toggleLang() {
+  lang = lang === 'en' ? 'ar' : 'en';
+  const u = new URL(location.href);
+  lang === 'ar' ? u.searchParams.set('lang','ar') : u.searchParams.delete('lang');
+  history.replaceState(null,'',u.toString());
+  applyLang();
+}
+applyLang();
+(function(){
+  var ham = document.getElementById('hamburger');
+  var mob = document.getElementById('mobNav');
+  if(ham && mob){
+    ham.addEventListener('click', function(){
+      mob.classList.toggle('open');
+      ham.setAttribute('aria-expanded', mob.classList.contains('open'));
+    });
+    mob.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ mob.classList.remove('open'); });
+    });
+  }
+})();
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.faq-item');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+    if(!isOpen)item.classList.add('open');
+  });
+});
+// Sync FAQ visibility with language
+(function(){
+  var orig = applyLang;
+  applyLang = function(){
+    orig();
+    var l = lang;
+    var fe = document.getElementById('faqEn');
+    var fa = document.getElementById('faqAr');
+    if(fe) fe.style.display = l === 'ar' ? 'none' : '';
+    if(fa) fa.style.display = l === 'ar' ? '' : 'none';
+  };
+  applyLang();
+})();
+</script>
+</body>
+</html>
