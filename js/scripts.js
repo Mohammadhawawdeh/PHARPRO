@@ -7,21 +7,12 @@
 const TRAINING_DATA = {
   upcoming: [
     {
-      en: "Cleaning Validation",
-      ar: "التحقق من التنظيف",
-      dates: "17–18 May 2026",
-      dayDisplay: "17",
-      monthDisplay: "MAY",
-      startDate: "2026-05-17",
-      format: "both",
-    },
-    {
       en: "CSV Training",
       ar: "تدريب CSV",
-      dates: "20–21 May 2026",
-      dayDisplay: "20",
-      monthDisplay: "MAY",
-      startDate: "2026-05-20",
+      dates: "4–5 Jun 2026",
+      dayDisplay: "4",
+      monthDisplay: "JUN",
+      startDate: "2026-06-04",
       format: "both",
     },
     {
@@ -31,6 +22,15 @@ const TRAINING_DATA = {
       dayDisplay: "10",
       monthDisplay: "JUN",
       startDate: "2026-06-10",
+      format: "both",
+    },
+    {
+      en: "Cleaning Validation",
+      ar: "التحقق من التنظيف",
+      dates: "17–18 Jun 2026",
+      dayDisplay: "17",
+      monthDisplay: "JUN",
+      startDate: "2026-06-17",
       format: "both",
     },
   ],
