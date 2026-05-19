@@ -50,53 +50,202 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://pharpro.co/services/qa#service",
-        "name": "Quality Assurance & Gap Assessment Consulting",
-        "description": "Pharmaceutical QA consulting covering gap assessments against regulatory expectations, SOP development, CAPA management, data integrity audits, and inspection readiness support. PHARPRO identifies compliance weaknesses before regulators do.",
-        "url": "https://pharpro.co/services/qa",
-        "provider": { "@id": "https://pharpro.co/#organization" },
-        "serviceType": "Quality Assurance Consulting",
-        "areaServed": "Worldwide",
-        "inLanguage": ["en", "ar"]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://pharpro.co/services/qa/#service",
+      "name": "Quality Assurance & Gap Assessment Consulting",
+      "url": "https://pharpro.co/services/qa/",
+      "provider": {
+        "@id": "https://pharpro.co/#organization"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://pharpro.co/services/qa#webpage",
-        "url": "https://pharpro.co/services/qa",
-        "name": "Quality Assurance & Gap Assessment Consulting | PHARPRO — Amman, Jordan",
-        "isPartOf": { "@id": "https://pharpro.co/#website" },
-        "about": { "@id": "https://pharpro.co/services/qa#service" },
-        "inLanguage": "en",
-        "datePublished": "2025-01-01",
-        "dateModified": "2026-05-02"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://pharpro.co/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://pharpro.co/services/" },
-          { "@type": "ListItem", "position": 3, "name": "Quality Assurance & Gap Assessment", "item": "https://pharpro.co/services/qa" }
-        ]
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Axantia Group"
+          },
+          "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-06-01"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Dar Al Dawa"
+          },
+          "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-09-01"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Al Hayat Pharmaceuticals"
+          },
+          "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-12-01"
+        }
+      ],
+      "serviceType": "Quality Assurance Consulting",
+      "areaServed": "Worldwide",
+      "description": "Pharmaceutical QA consulting covering gap assessments against regulatory expectations, SOP development, CAPA management, data integrity audits, and inspection readiness support. PHARPRO identifies compliance weaknesses before regulators do.",
+      "inLanguage": [
+        "en",
+        "ar"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pharpro.co/services/qa/#webpage",
+      "url": "https://pharpro.co/services/qa/",
+      "name": "Quality Assurance & Gap Assessment Consulting | PHARPRO — Amman, Jordan",
+      "isPartOf": {
+        "@id": "https://pharpro.co/#website"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "What does a pharmaceutical QA gap assessment cover?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A PHARPRO QA gap assessment reviews your current quality systems against applicable regulatory requirements — including FDA, EU GMP, and WHO guidelines. It identifies missing documentation, procedural weaknesses, and compliance gaps, then prioritises findings by inspection risk." }},
-          { "@type": "Question", "name": "How quickly can PHARPRO identify and close compliance gaps?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A focused gap assessment typically takes 2–3 weeks. PHARPRO delivers a prioritised finding report with CAPA recommendations, and can support remediation directly. Critical findings are escalated immediately." }},
-          { "@type": "Question", "name": "What regulatory frameworks does PHARPRO's QA work cover?",
-            "acceptedAnswer": { "@type": "Answer", "text": "All QA engagements are aligned with FDA 21 CFR Parts 210/211, EU GMP Guidelines, ICH Q10 Pharmaceutical Quality System, WHO Good Manufacturing Practices, and applicable data integrity guidance including MHRA and FDA guidelines." }}
-        ]
+      "about": {
+        "@id": "https://pharpro.co/services/qa#service"
+      },
+      "inLanguage": "en",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-05-02"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pharpro.co/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://pharpro.co/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Quality Assurance & Gap Assessment",
+          "item": "https://pharpro.co/services/qa/"
+        }
+      ],
+      "@id": "https://pharpro.co/services/qa/#breadcrumb"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a pharmaceutical QA gap assessment cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A PHARPRO QA gap assessment reviews your current quality systems against applicable regulatory requirements — including FDA, EU GMP, and WHO guidelines. It identifies missing documentation, procedural weaknesses, and compliance gaps, then prioritises findings by inspection risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can PHARPRO identify and close compliance gaps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A focused gap assessment typically takes 2–3 weeks. PHARPRO delivers a prioritised finding report with CAPA recommendations, and can support remediation directly. Critical findings are escalated immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What regulatory frameworks does PHARPRO's QA work cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All QA engagements are aligned with FDA 21 CFR Parts 210/211, EU GMP Guidelines, ICH Q10 Pharmaceutical Quality System, WHO Good Manufacturing Practices, and applicable data integrity guidance including MHRA and FDA guidelines."
+          }
+        }
+      ],
+      "@id": "https://pharpro.co/services/qa/#faqpage"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Axantia Group"
+      },
+      "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-06-01",
+      "@id": "https://pharpro.co/services/qa/#review-1",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/qa/#service"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Dar Al Dawa"
+      },
+      "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-09-01",
+      "@id": "https://pharpro.co/services/qa/#review-2",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/qa/#service"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Al Hayat Pharmaceuticals"
+      },
+      "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-12-01",
+      "@id": "https://pharpro.co/services/qa/#review-3",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/qa/#service"
+      }
+    }
+  ]
+}
+</script>
 
   <style>
     :root { --burgundy:#B12C4B;--burgundy-dk:#8E1E3C;--navy:#233A5E;--navy-dk:#1A2B47;--ivory:#F5EEE8;--ink:#1E1E1E;--muted:#6B7A8D;--white:#FFFFFF;--border:#E8E0D8;--surface:#FAFAF8;--r-md:16px;--r-lg:24px;--shadow-sm:0 1px 4px rgba(35,58,94,0.06),0 4px 12px rgba(35,58,94,0.04);--shadow-md:0 2px 8px rgba(35,58,94,0.06),0 8px 32px rgba(35,58,94,0.09);--container:1040px;--t:0.2s ease; }

@@ -50,55 +50,210 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://pharpro.co/services/digital#service",
-        "name": "Pharma Digital Support",
-        "description": "Compliance-first digital transformation support for pharmaceutical operations — covering Pharma 4.0 strategy, AI tool adoption in GxP environments, software implementation, and validation of digital systems. Includes access to PHARPRO DVS, an AI-assisted validation lifecycle management platform.",
-        "url": "https://pharpro.co/services/digital",
-        "provider": { "@id": "https://pharpro.co/#organization" },
-        "serviceType": "Digital Transformation Consulting",
-        "areaServed": "Worldwide",
-        "inLanguage": ["en", "ar"]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://pharpro.co/services/digital/#service",
+      "name": "Pharma Digital Support",
+      "url": "https://pharpro.co/services/digital/",
+      "provider": {
+        "@id": "https://pharpro.co/#organization"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://pharpro.co/services/digital#webpage",
-        "url": "https://pharpro.co/services/digital",
-        "name": "Pharma Digital Support | PHARPRO — Pharma 4.0, AI & DVS Software",
-        "isPartOf": { "@id": "https://pharpro.co/#website" },
-        "about": { "@id": "https://pharpro.co/services/digital#service" },
-        "inLanguage": "en",
-        "datePublished": "2025-01-01",
-        "dateModified": "2026-05-02"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://pharpro.co/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://pharpro.co/services/" },
-          { "@type": "ListItem", "position": 3, "name": "Pharma Digital Support", "item": "https://pharpro.co/services/digital" }
-        ]
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Axantia Group"
+          },
+          "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-06-01"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Dar Al Dawa"
+          },
+          "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-09-01"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Al Hayat Pharmaceuticals"
+          },
+          "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-12-01"
+        }
+      ],
+      "serviceType": "Digital Transformation Consulting",
+      "areaServed": "Worldwide",
+      "description": "Compliance-first digital transformation support for pharmaceutical operations — covering Pharma 4.0 strategy, AI tool adoption in GxP environments, software implementation, and validation of digital systems. Includes access to PHARPRO DVS, an AI-assisted validation lifecycle management platform.",
+      "inLanguage": [
+        "en",
+        "ar"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pharpro.co/services/digital/#webpage",
+      "url": "https://pharpro.co/services/digital/",
+      "name": "Pharma Digital Support | PHARPRO — Pharma 4.0, AI & DVS Software",
+      "isPartOf": {
+        "@id": "https://pharpro.co/#website"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "What is Pharma 4.0?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Pharma 4.0 applies Industry 4.0 principles — IoT, cloud computing, artificial intelligence, and advanced data analytics — to pharmaceutical manufacturing and quality systems. It enables real-time process monitoring, predictive quality, and paperless GMP operations while maintaining full regulatory compliance." }},
-          { "@type": "Question", "name": "How does AI relate to GMP compliance in pharma?",
-            "acceptedAnswer": { "@type": "Answer", "text": "AI tools used in GxP environments must be validated under the same principles as any other computerised system — defined intended use, risk classification, IQ/OQ/PQ where applicable, and ongoing monitoring. PHARPRO helps organisations adopt AI responsibly with a defensible compliance framework from the outset." }},
-          { "@type": "Question", "name": "What is PHARPRO DVS?",
-            "acceptedAnswer": { "@type": "Answer", "text": "PHARPRO DVS (Digital Validation Software) is an AI-assisted validation lifecycle management platform built for pharmaceutical teams. It includes 30 document builders — from URS through VSR — with built-in regulatory alignment, full requirements traceability, and configurable approval workflows. Available at dvs.pharpro.co." }},
-          { "@type": "Question", "name": "Does digital transformation require revalidation of existing systems?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Introducing digital tools or integrating new systems into an existing validated environment triggers a change control assessment. PHARPRO evaluates the impact of each digital change and determines what requalification or revalidation is required, keeping your operations compliant and your timelines realistic." }}
-        ]
+      "about": {
+        "@id": "https://pharpro.co/services/digital#service"
+      },
+      "inLanguage": "en",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-05-02"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pharpro.co/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://pharpro.co/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pharma Digital Support",
+          "item": "https://pharpro.co/services/digital/"
+        }
+      ],
+      "@id": "https://pharpro.co/services/digital/#breadcrumb"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Pharma 4.0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pharma 4.0 applies Industry 4.0 principles — IoT, cloud computing, artificial intelligence, and advanced data analytics — to pharmaceutical manufacturing and quality systems. It enables real-time process monitoring, predictive quality, and paperless GMP operations while maintaining full regulatory compliance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AI relate to GMP compliance in pharma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI tools used in GxP environments must be validated under the same principles as any other computerised system — defined intended use, risk classification, IQ/OQ/PQ where applicable, and ongoing monitoring. PHARPRO helps organisations adopt AI responsibly with a defensible compliance framework from the outset."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is PHARPRO DVS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PHARPRO DVS (Digital Validation Software) is an AI-assisted validation lifecycle management platform built for pharmaceutical teams. It includes 30 document builders — from URS through VSR — with built-in regulatory alignment, full requirements traceability, and configurable approval workflows. Available at dvs.pharpro.co."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does digital transformation require revalidation of existing systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introducing digital tools or integrating new systems into an existing validated environment triggers a change control assessment. PHARPRO evaluates the impact of each digital change and determines what requalification or revalidation is required, keeping your operations compliant and your timelines realistic."
+          }
+        }
+      ],
+      "@id": "https://pharpro.co/services/digital/#faqpage"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Axantia Group"
+      },
+      "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-06-01",
+      "@id": "https://pharpro.co/services/digital/#review-1",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/digital/#service"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Dar Al Dawa"
+      },
+      "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-09-01",
+      "@id": "https://pharpro.co/services/digital/#review-2",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/digital/#service"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Al Hayat Pharmaceuticals"
+      },
+      "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-12-01",
+      "@id": "https://pharpro.co/services/digital/#review-3",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/digital/#service"
+      }
+    }
+  ]
+}
+</script>
 
   <style>
     :root {

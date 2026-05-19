@@ -50,55 +50,210 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://pharpro.co/services/cqv#service",
-        "name": "CQV & Thermal Mapping",
-        "description": "Commissioning, Qualification, and Validation (CQV) for pharmaceutical equipment and utilities — plus temperature distribution studies for cold storage, cold chain, and controlled environments. Aligned with EU GMP Annex 15, ISPE Baseline Guide, and WHO Technical Reports.",
-        "url": "https://pharpro.co/services/cqv",
-        "provider": { "@id": "https://pharpro.co/#organization" },
-        "serviceType": "Qualification and Validation",
-        "areaServed": "Worldwide",
-        "inLanguage": ["en", "ar"]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://pharpro.co/services/cqv/#service",
+      "name": "CQV & Thermal Mapping",
+      "url": "https://pharpro.co/services/cqv/",
+      "provider": {
+        "@id": "https://pharpro.co/#organization"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://pharpro.co/services/cqv#webpage",
-        "url": "https://pharpro.co/services/cqv",
-        "name": "CQV & Thermal Mapping Services | PHARPRO — Amman, Jordan",
-        "isPartOf": { "@id": "https://pharpro.co/#website" },
-        "about": { "@id": "https://pharpro.co/services/cqv#service" },
-        "inLanguage": "en",
-        "datePublished": "2025-01-01",
-        "dateModified": "2026-05-02"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://pharpro.co/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://pharpro.co/services/" },
-          { "@type": "ListItem", "position": 3, "name": "CQV & Thermal Mapping", "item": "https://pharpro.co/services/cqv" }
-        ]
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Axantia Group"
+          },
+          "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-06-01"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Dar Al Dawa"
+          },
+          "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-09-01"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Al Hayat Pharmaceuticals"
+          },
+          "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-12-01"
+        }
+      ],
+      "serviceType": "Qualification and Validation",
+      "areaServed": "Worldwide",
+      "description": "Commissioning, Qualification, and Validation (CQV) for pharmaceutical equipment and utilities — plus temperature distribution studies for cold storage, cold chain, and controlled environments. Aligned with EU GMP Annex 15, ISPE Baseline Guide, and WHO Technical Reports.",
+      "inLanguage": [
+        "en",
+        "ar"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pharpro.co/services/cqv/#webpage",
+      "url": "https://pharpro.co/services/cqv/",
+      "name": "CQV & Thermal Mapping Services | PHARPRO — Amman, Jordan",
+      "isPartOf": {
+        "@id": "https://pharpro.co/#website"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "What is CQV in pharmaceutical manufacturing?",
-            "acceptedAnswer": { "@type": "Answer", "text": "CQV stands for Commissioning, Qualification, and Validation. It is the documented process of confirming that pharmaceutical equipment and utilities are installed correctly, operate as intended, and consistently perform within defined parameters — as required by EU GMP Annex 15 and WHO Technical Report Series." }},
-          { "@type": "Question", "name": "What types of equipment does PHARPRO qualify?",
-            "acceptedAnswer": { "@type": "Answer", "text": "PHARPRO qualifies a wide range of pharmaceutical equipment including autoclaves, lyophilisers, isolators, production vessels, HVAC systems, purified water and water for injection (WFI) systems, compressed air systems, cold rooms, refrigerators, and incubators." }},
-          { "@type": "Question", "name": "What is thermal mapping and when is it required?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Thermal mapping is a temperature distribution study that documents the uniformity of temperature throughout a controlled environment such as a cold room, freezer, oven, or incubator. It is required by WHO and EU GMP for any storage area holding temperature-sensitive pharmaceutical products, vaccines, or biologicals." }},
-          { "@type": "Question", "name": "What documentation does PHARPRO produce for CQV projects?",
-            "acceptedAnswer": { "@type": "Answer", "text": "PHARPRO delivers a complete documentation package: Qualification Plan, Design Qualification (DQ) where applicable, IQ/OQ/PQ protocols, executed test records, discrepancy reports and CAPA, thermal mapping reports with sensor placement maps, and a final Qualification Summary Report — all formatted for direct use in regulatory submissions." }}
-        ]
+      "about": {
+        "@id": "https://pharpro.co/services/cqv#service"
+      },
+      "inLanguage": "en",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-05-02"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pharpro.co/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://pharpro.co/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CQV & Thermal Mapping",
+          "item": "https://pharpro.co/services/cqv/"
+        }
+      ],
+      "@id": "https://pharpro.co/services/cqv/#breadcrumb"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is CQV in pharmaceutical manufacturing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CQV stands for Commissioning, Qualification, and Validation. It is the documented process of confirming that pharmaceutical equipment and utilities are installed correctly, operate as intended, and consistently perform within defined parameters — as required by EU GMP Annex 15 and WHO Technical Report Series."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of equipment does PHARPRO qualify?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PHARPRO qualifies a wide range of pharmaceutical equipment including autoclaves, lyophilisers, isolators, production vessels, HVAC systems, purified water and water for injection (WFI) systems, compressed air systems, cold rooms, refrigerators, and incubators."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is thermal mapping and when is it required?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Thermal mapping is a temperature distribution study that documents the uniformity of temperature throughout a controlled environment such as a cold room, freezer, oven, or incubator. It is required by WHO and EU GMP for any storage area holding temperature-sensitive pharmaceutical products, vaccines, or biologicals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documentation does PHARPRO produce for CQV projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PHARPRO delivers a complete documentation package: Qualification Plan, Design Qualification (DQ) where applicable, IQ/OQ/PQ protocols, executed test records, discrepancy reports and CAPA, thermal mapping reports with sensor placement maps, and a final Qualification Summary Report — all formatted for direct use in regulatory submissions."
+          }
+        }
+      ],
+      "@id": "https://pharpro.co/services/cqv/#faqpage"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Axantia Group"
+      },
+      "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-06-01",
+      "@id": "https://pharpro.co/services/cqv/#review-1",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/cqv/#service"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Dar Al Dawa"
+      },
+      "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-09-01",
+      "@id": "https://pharpro.co/services/cqv/#review-2",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/cqv/#service"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Al Hayat Pharmaceuticals"
+      },
+      "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-12-01",
+      "@id": "https://pharpro.co/services/cqv/#review-3",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/cqv/#service"
+      }
+    }
+  ]
+}
+</script>
 
   <style>
     :root {

@@ -50,55 +50,210 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://pharpro.co/services/csv#service",
-        "name": "Computerized System Validation (CSV) Consulting",
-        "description": "End-to-end Computerized System Validation lifecycle support for pharmaceutical and life sciences companies. Covers planning, risk classification, URS development, IQ/OQ/PQ protocols, execution, reporting, and closure — aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.",
-        "url": "https://pharpro.co/services/csv",
-        "provider": { "@id": "https://pharpro.co/#organization" },
-        "serviceType": "Computerized System Validation",
-        "areaServed": "Worldwide",
-        "inLanguage": ["en", "ar"]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://pharpro.co/services/csv/#service",
+      "name": "Computerized System Validation (CSV) Consulting",
+      "url": "https://pharpro.co/services/csv/",
+      "provider": {
+        "@id": "https://pharpro.co/#organization"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://pharpro.co/services/csv#webpage",
-        "url": "https://pharpro.co/services/csv",
-        "name": "Computerized System Validation (CSV) Consulting | PHARPRO — Amman, Jordan",
-        "isPartOf": { "@id": "https://pharpro.co/#website" },
-        "about": { "@id": "https://pharpro.co/services/csv#service" },
-        "inLanguage": "en",
-        "datePublished": "2025-01-01",
-        "dateModified": "2026-05-02"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://pharpro.co/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://pharpro.co/services/" },
-          { "@type": "ListItem", "position": 3, "name": "Computerized System Validation", "item": "https://pharpro.co/services/csv" }
-        ]
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Axantia Group"
+          },
+          "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-06-01"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Dar Al Dawa"
+          },
+          "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-09-01"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "Al Hayat Pharmaceuticals"
+          },
+          "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2025-12-01"
+        }
+      ],
+      "serviceType": "Computerized System Validation",
+      "areaServed": "Worldwide",
+      "description": "End-to-end Computerized System Validation lifecycle support for pharmaceutical and life sciences companies. Covers planning, risk classification, URS development, IQ/OQ/PQ protocols, execution, reporting, and closure — aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.",
+      "inLanguage": [
+        "en",
+        "ar"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pharpro.co/services/csv/#webpage",
+      "url": "https://pharpro.co/services/csv/",
+      "name": "Computerized System Validation (CSV) Consulting | PHARPRO — Amman, Jordan",
+      "isPartOf": {
+        "@id": "https://pharpro.co/#website"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "What is Computerized System Validation (CSV)?",
-            "acceptedAnswer": { "@type": "Answer", "text": "CSV is the documented process of demonstrating that a computerized system used in pharmaceutical manufacturing or quality control consistently does what it is designed to do. It is mandated by FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5." }},
-          { "@type": "Question", "name": "What does PHARPRO deliver for CSV projects?",
-            "acceptedAnswer": { "@type": "Answer", "text": "PHARPRO provides the complete CSV package: User Requirements Specification (URS), risk classification, Validation Master Plan, IQ/OQ/PQ protocols, execution support, discrepancy management, and final Validation Summary Report — all audit-ready from day one." }},
-          { "@type": "Question", "name": "Which regulatory frameworks does PHARPRO's CSV work cover?",
-            "acceptedAnswer": { "@type": "Answer", "text": "All CSV engagements are aligned with FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5 (5th and 6th editions), ICH Q10, and applicable WHO guidelines. We reference the current regulatory landscape and flag any upcoming changes." }},
-          { "@type": "Question", "name": "How long does a CSV project take?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A typical CSV project for a single system runs 6–12 weeks, depending on system complexity and risk category. We define the timeline clearly in the project proposal. Expedited timelines are available for inspection-driven projects." }}
-        ]
+      "about": {
+        "@id": "https://pharpro.co/services/csv#service"
+      },
+      "inLanguage": "en",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-05-02"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pharpro.co/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://pharpro.co/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Computerized System Validation",
+          "item": "https://pharpro.co/services/csv/"
+        }
+      ],
+      "@id": "https://pharpro.co/services/csv/#breadcrumb"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Computerized System Validation (CSV)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CSV is the documented process of demonstrating that a computerized system used in pharmaceutical manufacturing or quality control consistently does what it is designed to do. It is mandated by FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does PHARPRO deliver for CSV projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PHARPRO provides the complete CSV package: User Requirements Specification (URS), risk classification, Validation Master Plan, IQ/OQ/PQ protocols, execution support, discrepancy management, and final Validation Summary Report — all audit-ready from day one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which regulatory frameworks does PHARPRO's CSV work cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All CSV engagements are aligned with FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5 (5th and 6th editions), ICH Q10, and applicable WHO guidelines. We reference the current regulatory landscape and flag any upcoming changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a CSV project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A typical CSV project for a single system runs 6–12 weeks, depending on system complexity and risk category. We define the timeline clearly in the project proposal. Expedited timelines are available for inspection-driven projects."
+          }
+        }
+      ],
+      "@id": "https://pharpro.co/services/csv/#faqpage"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Axantia Group"
+      },
+      "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-06-01",
+      "@id": "https://pharpro.co/services/csv/#review-1",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/csv/#service"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Dar Al Dawa"
+      },
+      "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-09-01",
+      "@id": "https://pharpro.co/services/csv/#review-2",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/csv/#service"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "Al Hayat Pharmaceuticals"
+      },
+      "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2025-12-01",
+      "@id": "https://pharpro.co/services/csv/#review-3",
+      "itemReviewed": {
+        "@id": "https://pharpro.co/services/csv/#service"
+      }
+    }
+  ]
+}
+</script>
 
   <style>
     :root {
