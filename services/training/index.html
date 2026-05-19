@@ -54,68 +54,272 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Service",
+        "@id": "https://pharpro.co/services/training/#service",
+        "name": "GMP Training Programmes",
+        "description": "Instructor-led pharmaceutical training — Cleaning Validation, CSV, Compressed Air Testing, and EU GMP Annex 1. Delivered online and on-site to pharma, biotech, and medical device teams across Jordan and the MENA region.",
+        "url": "https://pharpro.co/services/training/",
+        "provider": { "@id": "https://pharpro.co/#organization" },
+        "serviceType": "Pharmaceutical Training",
+        "areaServed": ["Jordan", "United Arab Emirates", "Saudi Arabia", "Egypt", "Worldwide"],
+        "inLanguage": ["en", "ar"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "PHARPRO GMP Training Courses",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Course", "name": "Computerized System Validation (CSV) Training", "url": "https://pharpro.co/services/training/" },
+              "availability": "https://schema.org/InStock",
+              "url": "https://pharpro.co/services/training/"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Course", "name": "Cleaning Validation GMP Training", "url": "https://pharpro.co/services/training/" },
+              "availability": "https://schema.org/InStock",
+              "url": "https://pharpro.co/services/training/"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Course", "name": "Compressed Air Testing & Qualification Training", "url": "https://pharpro.co/services/training/" },
+              "availability": "https://schema.org/InStock",
+              "url": "https://pharpro.co/services/training/"
+            }
+          ]
+        }
+      },
+      {
         "@type": "WebPage",
-        "@id": "https://pharpro.co/services/training#webpage",
-        "url": "https://pharpro.co/services/training",
+        "@id": "https://pharpro.co/services/training/#webpage",
+        "url": "https://pharpro.co/services/training/",
         "name": "GMP Training Programmes — Pharmaceutical Courses | PHARPRO — Amman, Jordan",
         "isPartOf": { "@id": "https://pharpro.co/#website" },
+        "about": { "@id": "https://pharpro.co/services/training/#service" },
         "inLanguage": "en",
         "datePublished": "2025-01-01",
-        "dateModified": "2026-05-02"
+        "dateModified": "2026-05-19"
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://pharpro.co/services/training/#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://pharpro.co/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://pharpro.co/#services" },
-          { "@type": "ListItem", "position": 3, "name": "GMP Training", "item": "https://pharpro.co/services/training" }
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://pharpro.co/services/" },
+          { "@type": "ListItem", "position": 3, "name": "GMP Training", "item": "https://pharpro.co/services/training/" }
         ]
       },
       {
         "@type": "EducationEvent",
-        "name": "Cleaning Validation GMP Training",
-        "description": "Two-day instructor-led training on Cleaning Validation for pharmaceutical manufacturing — EU GMP Annex 15, FDA guidance, sampling strategies, and acceptance criteria.",
-        "url": "https://pharpro.co/services/training",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": ["https://schema.org/OnlineEventAttendanceMode","https://schema.org/OfflineEventAttendanceMode"],
-        "startDate": "2026-06-17", "endDate": "2026-06-18",
-        "organizer": { "@id": "https://pharpro.co/#organization" },
-        "location": [{"@type":"VirtualLocation","url":"https://pharpro.co/services/training"},{"@type":"Place","name":"Amman, Jordan","address":{"@type":"PostalAddress","addressLocality":"Amman","addressCountry":"JO"}}],
-        "offers": { "@type": "Offer", "url": "https://pharpro.co/#contact", "availability": "https://schema.org/InStock" }
-      },
-      {
-        "@type": "EducationEvent",
+        "@id": "https://pharpro.co/services/training/#event-csv-jun2026",
         "name": "Computerized System Validation (CSV) Training",
-        "description": "Two-day hands-on CSV methodology training — FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5, URS, IQ/OQ/PQ, and audit trail review.",
-        "url": "https://pharpro.co/services/training",
+        "description": "Two-day hands-on CSV methodology training covering risk-based approaches, FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5, URS development, IQ/OQ/PQ protocol writing, and audit trail review. Suitable for validation engineers, QA professionals, and IT/systems owners in regulated pharma environments.",
+        "url": "https://pharpro.co/services/training/",
+        "image": "https://pharpro.co/images/og-training.png",
         "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": ["https://schema.org/OnlineEventAttendanceMode","https://schema.org/OfflineEventAttendanceMode"],
-        "startDate": "2026-06-04", "endDate": "2026-06-05",
-        "organizer": { "@id": "https://pharpro.co/#organization" },
-        "location": [{"@type":"VirtualLocation","url":"https://pharpro.co/services/training"},{"@type":"Place","name":"Amman, Jordan","address":{"@type":"PostalAddress","addressLocality":"Amman","addressCountry":"JO"}}],
-        "offers": { "@type": "Offer", "url": "https://pharpro.co/#contact", "availability": "https://schema.org/InStock" }
+        "eventAttendanceMode": [
+          "https://schema.org/OnlineEventAttendanceMode",
+          "https://schema.org/OfflineEventAttendanceMode"
+        ],
+        "startDate": "2026-06-04",
+        "endDate": "2026-06-05",
+        "duration": "P2D",
+        "inLanguage": ["en", "ar"],
+        "educationalLevel": "Professional",
+        "teaches": "Computerized System Validation methodology aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5",
+        "organizer": {
+          "@type": "Organization",
+          "@id": "https://pharpro.co/#organization",
+          "name": "PHARPRO Consultation Company",
+          "url": "https://pharpro.co"
+        },
+        "performer": {
+          "@type": "Organization",
+          "@id": "https://pharpro.co/#organization"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Pharmaceutical professionals — validation engineers, QA/QC teams, regulatory affairs specialists"
+        },
+        "location": [
+          {
+            "@type": "VirtualLocation",
+            "url": "https://pharpro.co/services/training/"
+          },
+          {
+            "@type": "Place",
+            "name": "Amman, Jordan",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Amman",
+              "addressCountry": "JO"
+            }
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://pharpro.co/contact/",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2026-01-01",
+          "priceCurrency": "USD",
+          "category": "Contact for pricing"
+        }
       },
       {
         "@type": "EducationEvent",
+        "@id": "https://pharpro.co/services/training/#event-compressed-air-jun2026",
         "name": "Compressed Air Testing & Qualification Training",
-        "description": "Two-day specialist training on compressed air testing and qualification — ISO 8573, risk assessment, sampling, and GMP compliance documentation.",
-        "url": "https://pharpro.co/services/training",
+        "description": "Two-day specialist training on compressed air testing and qualification in pharmaceutical manufacturing — ISO 8573, risk assessment, sampling procedures, analytical testing methods, acceptance criteria, and GMP compliance documentation. Suitable for QA, engineering, and laboratory teams.",
+        "url": "https://pharpro.co/services/training/",
+        "image": "https://pharpro.co/images/og-training.png",
         "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": ["https://schema.org/OnlineEventAttendanceMode","https://schema.org/OfflineEventAttendanceMode"],
-        "startDate": "2026-06-10", "endDate": "2026-06-11",
-        "organizer": { "@id": "https://pharpro.co/#organization" },
-        "location": [{"@type":"VirtualLocation","url":"https://pharpro.co/services/training"},{"@type":"Place","name":"Amman, Jordan","address":{"@type":"PostalAddress","addressLocality":"Amman","addressCountry":"JO"}}],
-        "offers": { "@type": "Offer", "url": "https://pharpro.co/#contact", "availability": "https://schema.org/InStock" }
+        "eventAttendanceMode": [
+          "https://schema.org/OnlineEventAttendanceMode",
+          "https://schema.org/OfflineEventAttendanceMode"
+        ],
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-11",
+        "duration": "P2D",
+        "inLanguage": ["en", "ar"],
+        "educationalLevel": "Professional",
+        "teaches": "Compressed air testing and qualification per ISO 8573 for GMP-regulated pharmaceutical manufacturing environments",
+        "organizer": {
+          "@type": "Organization",
+          "@id": "https://pharpro.co/#organization",
+          "name": "PHARPRO Consultation Company",
+          "url": "https://pharpro.co"
+        },
+        "performer": {
+          "@type": "Organization",
+          "@id": "https://pharpro.co/#organization"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Pharmaceutical QA, engineering, and laboratory teams"
+        },
+        "location": [
+          {
+            "@type": "VirtualLocation",
+            "url": "https://pharpro.co/services/training/"
+          },
+          {
+            "@type": "Place",
+            "name": "Amman, Jordan",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Amman",
+              "addressCountry": "JO"
+            }
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://pharpro.co/contact/",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2026-01-01",
+          "priceCurrency": "USD",
+          "category": "Contact for pricing"
+        }
+      },
+      {
+        "@type": "EducationEvent",
+        "@id": "https://pharpro.co/services/training/#event-cleaning-validation-jun2026",
+        "name": "Cleaning Validation GMP Training",
+        "description": "Two-day instructor-led training on Cleaning Validation principles, regulatory requirements, and practical implementation for pharmaceutical manufacturing. Covers EU GMP Annex 15, FDA guidance, sampling strategies, MACO acceptance criteria, swab and rinse sampling, and documentation requirements.",
+        "url": "https://pharpro.co/services/training/",
+        "image": "https://pharpro.co/images/og-training.png",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": [
+          "https://schema.org/OnlineEventAttendanceMode",
+          "https://schema.org/OfflineEventAttendanceMode"
+        ],
+        "startDate": "2026-06-17",
+        "endDate": "2026-06-18",
+        "duration": "P2D",
+        "inLanguage": ["en", "ar"],
+        "educationalLevel": "Professional",
+        "teaches": "Cleaning Validation methodology aligned with EU GMP Annex 15 and FDA guidance — sampling, MACO, and documentation",
+        "organizer": {
+          "@type": "Organization",
+          "@id": "https://pharpro.co/#organization",
+          "name": "PHARPRO Consultation Company",
+          "url": "https://pharpro.co"
+        },
+        "performer": {
+          "@type": "Organization",
+          "@id": "https://pharpro.co/#organization"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Pharmaceutical manufacturing, QA/QC teams, validation engineers"
+        },
+        "location": [
+          {
+            "@type": "VirtualLocation",
+            "url": "https://pharpro.co/services/training/"
+          },
+          {
+            "@type": "Place",
+            "name": "Amman, Jordan",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Amman",
+              "addressCountry": "JO"
+            }
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://pharpro.co/contact/",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2026-01-01",
+          "priceCurrency": "USD",
+          "category": "Contact for pricing"
+        }
       },
       {
         "@type": "FAQPage",
+        "@id": "https://pharpro.co/services/training/#faqpage",
         "mainEntity": [
-          { "@type": "Question", "name": "Are PHARPRO training programmes available online?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. All PHARPRO training programmes are available both online and on-site. Online sessions use live interactive delivery — not pre-recorded video. Participants receive course materials and a certificate of attendance upon completion." }},
-          { "@type": "Question", "name": "Who are PHARPRO training programmes designed for?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Courses are designed for pharmaceutical professionals including QA/QC teams, validation engineers, regulatory affairs specialists, manufacturing supervisors, and laboratory staff. No prior specialised knowledge is required — courses are calibrated to the practical needs of working pharma teams." }},
-          { "@type": "Question", "name": "How do I register for a PHARPRO training course?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Use the Register Interest form on the PHARPRO website and select GMP Training from the service menu, or contact us directly at info@pharpro.co. We will confirm your registration and send joining instructions within one business day." }}
+          {
+            "@type": "Question",
+            "name": "Are PHARPRO training programmes available online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All PHARPRO training programmes are available both online and on-site. Online sessions use live interactive delivery — not pre-recorded video. Participants receive full course materials and a PHARPRO Certificate of Attendance upon completion."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who are PHARPRO GMP training programmes designed for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Courses are designed for pharmaceutical professionals including QA/QC teams, validation engineers, regulatory affairs specialists, manufacturing supervisors, and laboratory staff. No prior specialised knowledge is required — courses are calibrated to the practical needs of working pharma teams in regulated environments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I register for a PHARPRO training course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use the Register Interest button on the course card or contact us at info@pharpro.co. We will confirm your registration and send joining instructions within one business day. Bespoke private training for your team is also available on request."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can PHARPRO deliver training exclusively for our organisation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Bespoke private training can be arranged for your team — delivered online or at your facility, with content tailored to your systems, SOPs, and specific compliance gaps. Contact us at info@pharpro.co to discuss dates and scope."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What certificate do participants receive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All participants receive a PHARPRO Certificate of Attendance — a verifiable record of professional training suitable for training files, annual training records, and regulatory submissions."
+            }
+          }
         ]
       }
     ]
@@ -439,17 +643,17 @@
         <div class="related-card">
           <h3 data-i18n="rel1_h">Computerized System Validation</h3>
           <p data-i18n="rel1_p">End-to-end CSV consulting — URS, risk classification, IQ/OQ/PQ protocols, and Validation Summary Report.</p>
-          <a href="/services/csv" data-i18n="rel_learn">Learn more →</a>
+          <a href="/services/csv/" data-i18n="rel_learn">Learn more →</a>
         </div>
         <div class="related-card">
           <h3 data-i18n="rel2_h">Quality Assurance &amp; Gap Assessment</h3>
           <p data-i18n="rel2_p">QA gap assessments, SOP development, CAPA management, and inspection readiness reviews.</p>
-          <a href="/services/qa" data-i18n="rel_learn">Learn more →</a>
+          <a href="/services/qa/" data-i18n="rel_learn">Learn more →</a>
         </div>
         <div class="related-card">
           <h3 data-i18n="rel3_h">CQV &amp; Thermal Mapping</h3>
           <p data-i18n="rel3_p">Equipment commissioning, IQ/OQ/PQ, and temperature mapping for controlled pharmaceutical environments.</p>
-          <a href="/services/cqv" data-i18n="rel_learn">Learn more →</a>
+          <a href="/services/cqv/" data-i18n="rel_learn">Learn more →</a>
         </div>
       </div>
     </div>
@@ -485,8 +689,8 @@
     <div class="foot-inner">
       <a href="/" style="font-weight:800;color:#fff;font-size:1rem;">PHARPRO</a>
       <div style="display:flex;gap:20px;flex-wrap:wrap;">
-        <a href="/services/csv">CSV</a><a href="/services/qa">QA</a>
-        <a href="/services/cqv">CQV</a><a href="/services/training">Training</a>
+        <a href="/services/csv/">CSV</a><a href="/services/qa/">QA</a>
+        <a href="/services/cqv/">CQV</a><a href="/services/training/">Training</a>
         <a href="/#contact">Contact</a>
       </div>
     </div>
