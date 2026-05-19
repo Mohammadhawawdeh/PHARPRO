@@ -351,6 +351,72 @@
   </url>
 
 
+  <!-- RESOURCES / LEAD MAGNET -->
+  <url>
+    <loc>https://pharpro.co/resources/compliance-checklist/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/resources/compliance-checklist/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/resources/compliance-checklist/" />
+  </url>
+
+  <!-- GEO PAGES -->
+  <url>
+    <loc>https://pharpro.co/geo/uae/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/uae/" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/uae/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/uae/" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/geo/uae/?lang=ar</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/uae/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/uae/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/uae/" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/geo/ksa/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/ksa/" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/ksa/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/ksa/" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/geo/ksa/?lang=ar</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/ksa/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/ksa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/ksa/" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/geo/egypt/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/egypt/" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/egypt/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/egypt/" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/geo/egypt/?lang=ar</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/egypt/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/egypt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/egypt/" />
+  </url>
+
   <!-- NEW INSIGHT ARTICLES (2026) -->
   <url>
     <loc>https://pharpro.co/insights/capa-management-pharma-guide</loc>
