@@ -554,4 +554,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/" />
   </url>
 
+
+  <!-- SEARCH -->
+  <url>
+    <loc>https://pharpro.co/search/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
 </urlset>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search PHARPRO</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://pharpro.co/search/" />
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('q') || params.get('query') || '';
+      if (q) {
+        window.location.replace(
+          'https://www.google.com/search?q=' +
+          encodeURIComponent('site:pharpro.co ' + q)
+        );
+      } else {
+        window.location.replace('https://pharpro.co/');
+      }
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://pharpro.co/" />
+  </noscript>
+</head>
+<body>
+  <p>Redirecting to search results…</p>
+</body>
+</html>
