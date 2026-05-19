@@ -109,8 +109,8 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "31.9539",
-        "longitude": "35.9106"
+        "latitude": 31.9539,
+        "longitude": 35.9106
       },
       "contactPoint": [
         {
@@ -130,7 +130,7 @@
         "https://twitter.com/pharprocc",
         "https://x.com/pharprocc"
       ],
-            "aggregateRating": {
+      "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
         "reviewCount": "3",
@@ -140,23 +140,44 @@
       "review": [
         {
           "@type": "Review",
-          "author": { "@type": "Organization", "name": "Axantia Group" },
+          "author": {
+            "@type": "Organization",
+            "name": "Axantia Group"
+          },
           "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
           "datePublished": "2025-06-01"
         },
         {
           "@type": "Review",
-          "author": { "@type": "Organization", "name": "Dar Al Dawa" },
+          "author": {
+            "@type": "Organization",
+            "name": "Dar Al Dawa"
+          },
           "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
           "datePublished": "2025-09-01"
         },
         {
           "@type": "Review",
-          "author": { "@type": "Organization", "name": "Al Hayat Pharmaceuticals" },
+          "author": {
+            "@type": "Organization",
+            "name": "Al Hayat Pharmaceuticals"
+          },
           "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
           "datePublished": "2025-12-01"
         }
       ],
@@ -198,7 +219,7 @@
                 "@id": "https://pharpro.co/#organization"
               },
               "serviceType": "Computerized System Validation",
-              "url": "https://pharpro.co/services/csv/index.html"
+              "url": "https://pharpro.co/services/csv/"
             }
           },
           {
@@ -211,7 +232,7 @@
                 "@id": "https://pharpro.co/#organization"
               },
               "serviceType": "Quality Assurance",
-              "url": "https://pharpro.co/services/qa/index.html"
+              "url": "https://pharpro.co/services/qa/"
             }
           },
           {
@@ -224,7 +245,7 @@
                 "@id": "https://pharpro.co/#organization"
               },
               "serviceType": "Qualification and Validation",
-              "url": "https://pharpro.co/services/cqv/index.html"
+              "url": "https://pharpro.co/services/cqv/"
             }
           },
           {
@@ -237,7 +258,7 @@
                 "@id": "https://pharpro.co/#organization"
               },
               "serviceType": "Pharmaceutical Training",
-              "url": "https://pharpro.co/services/training/index.html"
+              "url": "https://pharpro.co/services/training/"
             }
           }
         ]
@@ -259,9 +280,13 @@
             "Thursday"
           ],
           "opens": "09:00",
-          "closes": "18:00"
+          "closes": "18:00",
+          "validFrom": "2026-01-01",
+          "validThrough": "2026-12-31"
         }
-      ]
+      ],
+      "legalName": "PHARPRO Consultation Company",
+      "hasMap": "https://maps.google.com/?q=PHARPRO+Consultation+Company+Amman+Jordan"
     },
     {
       "@type": "WebSite",
@@ -478,89 +503,183 @@
 </script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "EducationEvent",
-        "@id": "https://pharpro.co/#training-cleaning-validation-may2026",
-        "name": "Cleaning Validation GMP Training",
-        "description": "A two-day instructor-led GMP training programme on Cleaning Validation principles, regulatory requirements, and practical implementation for pharmaceutical manufacturing environments. Covers EU GMP Annex 15, FDA guidance, sampling strategies, acceptance criteria, and documentation.",
-        "url": "https://pharpro.co/#training",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": [
-          "https://schema.org/OnlineEventAttendanceMode",
-          "https://schema.org/OfflineEventAttendanceMode"
-        ],
-        "startDate": "2026-06-17",
-        "endDate": "2026-06-18",
-        "location": [
-          { "@type": "VirtualLocation", "url": "https://pharpro.co/#training" },
-          { "@type": "Place", "name": "Amman, Jordan", "address": { "@type": "PostalAddress", "addressLocality": "Amman", "addressCountry": "JO" } }
-        ],
-        "organizer": { "@id": "https://pharpro.co/#organization" },
-        "educationalLevel": "Professional",
-        "audience": { "@type": "Audience", "audienceType": "Pharmaceutical professionals, QA/QC teams, validation engineers" },
-        "inLanguage": ["en", "ar"],
-        "offers": { "@type": "Offer", "url": "https://pharpro.co/#contact", "availability": "https://schema.org/InStock", "validFrom": "2026-01-01" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationEvent",
+      "@id": "https://pharpro.co/#training-cleaning-validation-jun2026",
+      "name": "Cleaning Validation GMP Training",
+      "description": "A two-day instructor-led GMP training programme on Cleaning Validation principles, regulatory requirements, and practical implementation for pharmaceutical manufacturing environments. Covers EU GMP Annex 15, FDA guidance, sampling strategies, acceptance criteria, and documentation.",
+      "url": "https://pharpro.co/services/training/",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": [
+        "https://schema.org/OnlineEventAttendanceMode",
+        "https://schema.org/OfflineEventAttendanceMode"
+      ],
+      "startDate": "2026-06-17",
+      "endDate": "2026-06-18",
+      "location": [
+        {
+          "@type": "VirtualLocation",
+          "url": "https://pharpro.co/services/training/"
+        },
+        {
+          "@type": "Place",
+          "name": "Amman, Jordan",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Amman",
+            "addressCountry": "JO"
+          }
+        }
+      ],
+      "organizer": {
+        "@id": "https://pharpro.co/#organization",
+        "name": "PHARPRO Consultation Company"
       },
-      {
-        "@type": "EducationEvent",
-        "@id": "https://pharpro.co/#training-csv-may2026",
-        "name": "Computerized System Validation (CSV) Training",
-        "description": "A two-day hands-on training programme covering Computerized System Validation (CSV) methodology, risk-based approaches, and regulatory alignment with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5. Includes practical exercises on URS, IQ/OQ/PQ, and audit trail review.",
-        "url": "https://pharpro.co/#training",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": [
-          "https://schema.org/OnlineEventAttendanceMode",
-          "https://schema.org/OfflineEventAttendanceMode"
-        ],
-        "startDate": "2026-06-04",
-        "endDate": "2026-06-05",
-        "location": [
-          { "@type": "VirtualLocation", "url": "https://pharpro.co/#training" },
-          { "@type": "Place", "name": "Amman, Jordan", "address": { "@type": "PostalAddress", "addressLocality": "Amman", "addressCountry": "JO" } }
-        ],
-        "organizer": { "@id": "https://pharpro.co/#organization" },
-        "educationalLevel": "Professional",
-        "audience": { "@type": "Audience", "audienceType": "IT validation teams, QA professionals, regulatory affairs specialists, validation engineers" },
-        "inLanguage": ["en", "ar"],
-        "offers": { "@type": "Offer", "url": "https://pharpro.co/#contact", "availability": "https://schema.org/InStock", "validFrom": "2026-01-01" }
+      "educationalLevel": "Professional",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Pharmaceutical professionals, QA/QC teams, validation engineers"
       },
-      {
-        "@type": "EducationEvent",
-        "@id": "https://pharpro.co/#training-compressed-air-jun2026",
-        "name": "Compressed Air Testing & Qualification Training",
-        "description": "A two-day specialist training on compressed air testing and qualification in pharmaceutical manufacturing. Covers ISO 8573, risk assessment, sampling, analytical testing, acceptance criteria, and documentation requirements for GMP compliance.",
-        "url": "https://pharpro.co/#training",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": [
-          "https://schema.org/OnlineEventAttendanceMode",
-          "https://schema.org/OfflineEventAttendanceMode"
-        ],
-        "startDate": "2026-06-10",
-        "endDate": "2026-06-11",
-        "location": [
-          { "@type": "VirtualLocation", "url": "https://pharpro.co/#training" },
-          { "@type": "Place", "name": "Amman, Jordan", "address": { "@type": "PostalAddress", "addressLocality": "Amman", "addressCountry": "JO" } }
-        ],
-        "organizer": { "@id": "https://pharpro.co/#organization" },
-        "educationalLevel": "Professional",
-        "audience": { "@type": "Audience", "audienceType": "Validation engineers, QA/QC teams, facilities and utilities managers" },
-        "inLanguage": ["en", "ar"],
-        "offers": { "@type": "Offer", "url": "https://pharpro.co/#contact", "availability": "https://schema.org/InStock", "validFrom": "2026-01-01" }
+      "inLanguage": [
+        "en",
+        "ar"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://pharpro.co/contact/",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-01-01"
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://pharpro.co/#breadcrumb-training",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pharpro.co/" },
-          { "@type": "ListItem", "position": 2, "name": "Training Programmes", "item": "https://pharpro.co/#training" }
-        ]
-      }
-    ]
-  }
-  </script>
+      "image": "https://pharpro.co/images/og-training.png",
+      "duration": "P2D",
+      "teaches": "Cleaning Validation methodology aligned with EU GMP Annex 15 and FDA guidance"
+    },
+    {
+      "@type": "EducationEvent",
+      "@id": "https://pharpro.co/#training-csv-jun2026",
+      "name": "Computerized System Validation (CSV) Training",
+      "description": "A two-day hands-on training programme covering Computerized System Validation (CSV) methodology, risk-based approaches, and regulatory alignment with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5. Includes practical exercises on URS, IQ/OQ/PQ, and audit trail review.",
+      "url": "https://pharpro.co/services/training/",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": [
+        "https://schema.org/OnlineEventAttendanceMode",
+        "https://schema.org/OfflineEventAttendanceMode"
+      ],
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-05",
+      "location": [
+        {
+          "@type": "VirtualLocation",
+          "url": "https://pharpro.co/services/training/"
+        },
+        {
+          "@type": "Place",
+          "name": "Amman, Jordan",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Amman",
+            "addressCountry": "JO"
+          }
+        }
+      ],
+      "organizer": {
+        "@id": "https://pharpro.co/#organization",
+        "name": "PHARPRO Consultation Company"
+      },
+      "educationalLevel": "Professional",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "IT validation teams, QA professionals, regulatory affairs specialists, validation engineers"
+      },
+      "inLanguage": [
+        "en",
+        "ar"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://pharpro.co/contact/",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-01-01"
+      },
+      "image": "https://pharpro.co/images/og-training.png",
+      "duration": "P2D",
+      "teaches": "Computerized System Validation methodology aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5"
+    },
+    {
+      "@type": "EducationEvent",
+      "@id": "https://pharpro.co/#training-compressed-air-jun2026",
+      "name": "Compressed Air Testing & Qualification Training",
+      "description": "A two-day specialist training on compressed air testing and qualification in pharmaceutical manufacturing. Covers ISO 8573, risk assessment, sampling, analytical testing, acceptance criteria, and documentation requirements for GMP compliance.",
+      "url": "https://pharpro.co/services/training/",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": [
+        "https://schema.org/OnlineEventAttendanceMode",
+        "https://schema.org/OfflineEventAttendanceMode"
+      ],
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-11",
+      "location": [
+        {
+          "@type": "VirtualLocation",
+          "url": "https://pharpro.co/services/training/"
+        },
+        {
+          "@type": "Place",
+          "name": "Amman, Jordan",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Amman",
+            "addressCountry": "JO"
+          }
+        }
+      ],
+      "organizer": {
+        "@id": "https://pharpro.co/#organization",
+        "name": "PHARPRO Consultation Company"
+      },
+      "educationalLevel": "Professional",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Validation engineers, QA/QC teams, facilities and utilities managers"
+      },
+      "inLanguage": [
+        "en",
+        "ar"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://pharpro.co/contact/",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-01-01"
+      },
+      "image": "https://pharpro.co/images/og-training.png",
+      "duration": "P2D",
+      "teaches": "Compressed air testing and qualification per ISO 8573 for GMP-regulated pharmaceutical manufacturing"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pharpro.co/#breadcrumb-training",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pharpro.co/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "GMP Training",
+          "item": "https://pharpro.co/services/training/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <style>
     /* ── DESIGN TOKENS ────────────────────────────────────── */
