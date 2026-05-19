@@ -271,6 +271,7 @@ const translations = {
     foot_link_li:    "LinkedIn",
     foot_copy:       "© 2025 PHARPRO Consultation Company. All rights reserved.",
     foot_tag:        "Stay Audit-Ready with PHARPRO.",
+    wa_cta:          "Chat on WhatsApp",
   },
 
   ar: {

@@ -42,14 +42,24 @@
   <meta name="twitter:description" content="Expert pharma consulting in CSV, QA, CQV, thermal mapping, and GMP training. Serving regulated pharmaceutical operations worldwide from Amman, Jordan." />
   <meta name="twitter:image" content="https://pharpro.co/images/og-image.png" />
   <meta name="twitter:site" content="@pharprocc" />
+  <meta name="twitter:creator" content="@pharprocc" />
   <meta name="theme-color" content="#233A5E" />
   <meta name="msapplication-TileColor" content="#233A5E" />
   <meta name="apple-mobile-web-app-title" content="PHARPRO" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="telephone=no, address=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="alternate" type="application/rss+xml" title="PHARPRO Compliance Insights" href="https://pharpro.co/feed.xml" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRCV7XCWKT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XRCV7XCWKT');
+  </script>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
@@ -122,7 +132,37 @@
         "https://twitter.com/pharprocc",
         "https://x.com/pharprocc"
       ],
-      "priceRange": "$$",
+            "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Organization", "name": "Axantia Group" },
+          "reviewBody": "PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "datePublished": "2025-06-01"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Organization", "name": "Dar Al Dawa" },
+          "reviewBody": "Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "datePublished": "2025-09-01"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Organization", "name": "Al Hayat Pharmaceuticals" },
+          "reviewBody": "PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "datePublished": "2025-12-01"
+        }
+      ],
+      "priceRange": "$",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Invoice",
       "areaServed": "Worldwide",
@@ -1226,16 +1266,20 @@
   </div>
 </header>
 
-<main id="main-content" id="home">
+<main id="main-content">
 
   <!-- ── HERO ─────────────────────────────────────────────── -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="wrap">
       <div class="hero-inner">
         <div>
           <div class="hero-pill">
             <span class="dot"></span>
             <span data-i18n="hero_pill">Trusted by pharma teams in 7+ countries</span>
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(177,44,75,0.08);border:1px solid rgba(177,44,75,0.2);border-radius:999px;padding:5px 14px;font-size:0.78rem;font-weight:600;color:#B12C4B;margin-top:10px;">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+            Now accepting Q3 2026 engagements — limited slots available
           </div>
           <h1 class="h1" data-i18n="hero_h1">Stay <span class="accent">Audit-Ready</span><br/>with PHARPRO</h1>
           <p class="hero-sub" data-i18n="hero_sub">Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training — delivered by specialists who understand your regulatory environment.</p>
@@ -1857,6 +1901,14 @@
       <a href="mailto:info@pharpro.co" style="color:rgba(255,255,255,0.32);">info@pharpro.co</a>
     </address>
 
+    
+      <div style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:16px;display:flex;gap:16px;flex-wrap:wrap;font-size:0.78rem;">
+        <span style="color:rgba(255,255,255,0.35);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:0.7rem;">Locations:</span>
+        <a href="/geo/uae/" style="color:rgba(255,255,255,0.45);" title="Pharmaceutical Consulting UAE">UAE</a>
+        <a href="/geo/ksa/" style="color:rgba(255,255,255,0.45);" title="Pharmaceutical Consulting KSA">Saudi Arabia</a>
+        <a href="/geo/egypt/" style="color:rgba(255,255,255,0.45);" title="Pharmaceutical Consulting Egypt">Egypt</a>
+        <a href="/resources/compliance-checklist/" style="color:rgba(255,255,255,0.45);">Free Checklist</a>
+      </div>
     <div class="foot-bottom">
       <span data-i18n="foot_copy">&copy; 2026 PHARPRO Consultation Company. All rights reserved.</span>
       <span>CSV &middot; QA &middot; CQV &middot; GMP Training &middot; Amman, Jordan</span>
@@ -1886,5 +1938,6 @@
     <p>البريد الإلكتروني: info@pharpro.co | الهاتف / واتساب: +962 79 856 5807 | عمّان، الأردن</p>
   </div>
 </noscript>
+
 </body>
 </html>
