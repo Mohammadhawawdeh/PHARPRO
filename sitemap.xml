@@ -1,566 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- HOME -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pharpro.co/</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/" />
   </url>
   <url>
-    <loc>https://pharpro.co/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/" />
-  </url>
-
-  <!-- CONTACT PAGE -->
-  <url>
-    <loc>https://pharpro.co/contact/</loc>
+    <loc>https://pharpro.co/services/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/contact/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/contact/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/contact/" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/contact/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/contact/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/contact/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/contact/" />
-  </url>
-
-  <!-- SERVICE PAGES -->
-  <url>
-    <loc>https://pharpro.co/services/csv/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/csv/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/csv/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/csv/" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/services/csv/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/csv/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/csv/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/csv/" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/services/qa/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/qa/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/qa/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/qa/" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/services/qa/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/qa/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/qa/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/qa/" />
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pharpro.co/services/cqv/</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/cqv/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/cqv/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/cqv/" />
   </url>
   <url>
-    <loc>https://pharpro.co/services/cqv/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/services/csv/</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/cqv/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/cqv/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/cqv/" />
+  </url>
+  <url>
+    <loc>https://pharpro.co/services/digital/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/services/qa/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pharpro.co/services/training/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/training/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/training/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/training/" />
   </url>
   <url>
-    <loc>https://pharpro.co/services/training/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/training/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/training/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/training/" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/services/digital/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/digital/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/digital/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/digital/" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/services/digital/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/digital/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/digital/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/digital/" />
-  </url>
-
-  <!-- INSIGHTS HUB -->
-  <url>
-    <loc>https://pharpro.co/insights</loc>
+    <loc>https://pharpro.co/insights/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights" />
   </url>
-
-  <!-- EXISTING INSIGHT ARTICLES -->
   <url>
-    <loc>https://pharpro.co/insights/gamp5-second-edition-csv-changes</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gamp5-second-edition-csv-changes" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gamp5-second-edition-csv-changes?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gamp5-second-edition-csv-changes" />
   </url>
   <url>
-    <loc>https://pharpro.co/insights/gamp5-second-edition-csv-changes?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gamp5-second-edition-csv-changes?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gamp5-second-edition-csv-changes" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gamp5-second-edition-csv-changes" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity" />
-  </url>
-
-  <!-- NEW INSIGHT ARTICLES (May 2026) -->
-  <url>
-    <loc>https://pharpro.co/insights/iq-oq-pq-guide</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/iq-oq-pq-guide" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/iq-oq-pq-guide?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/iq-oq-pq-guide" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/iq-oq-pq-guide?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/iq-oq-pq-guide?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/iq-oq-pq-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/iq-oq-pq-guide" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/gamp5-risk-categories-explained</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gamp5-risk-categories-explained" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gamp5-risk-categories-explained?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gamp5-risk-categories-explained" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/gamp5-risk-categories-explained?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gamp5-risk-categories-explained?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gamp5-risk-categories-explained" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gamp5-risk-categories-explained" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/gmp-gap-assessment-guide</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gmp-gap-assessment-guide" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gmp-gap-assessment-guide?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gmp-gap-assessment-guide" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/gmp-gap-assessment-guide?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gmp-gap-assessment-guide?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gmp-gap-assessment-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gmp-gap-assessment-guide" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/how-to-write-urs-computerised-system</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/how-to-write-urs-computerised-system" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/how-to-write-urs-computerised-system?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/how-to-write-urs-computerised-system" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/how-to-write-urs-computerised-system?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/how-to-write-urs-computerised-system?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/how-to-write-urs-computerised-system" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/how-to-write-urs-computerised-system" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses" />
-  </url>
-
-
-  <!-- RESOURCES / LEAD MAGNET -->
-  <url>
-    <loc>https://pharpro.co/resources/compliance-checklist/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/resources/compliance-checklist/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/resources/compliance-checklist/" />
-  </url>
-
-  <!-- GEO PAGES -->
-  <url>
-    <loc>https://pharpro.co/geo/uae/</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/capa-management-pharma-guide/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/uae/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/uae/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/uae/" />
   </url>
   <url>
-    <loc>https://pharpro.co/geo/uae/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/csv-saas-cloud-pharma/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/uae/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/uae/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/uae/" />
   </url>
   <url>
-    <loc>https://pharpro.co/geo/ksa/</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/fda-warning-letter-response/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/ksa/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/ksa/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/ksa/" />
   </url>
   <url>
-    <loc>https://pharpro.co/geo/ksa/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/gamp5-risk-categories-explained/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/gamp5-second-edition-csv-changes/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/gmp-gap-assessment-guide/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/ksa/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/ksa/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/ksa/" />
   </url>
   <url>
-    <loc>https://pharpro.co/geo/egypt/</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/gmp-training-records-compliance/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/egypt/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/egypt/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/egypt/" />
   </url>
   <url>
-    <loc>https://pharpro.co/geo/egypt/?lang=ar</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/how-to-write-urs-computerised-system/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/iq-oq-pq-guide/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/pharmaceutical-inspection-readiness/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/egypt/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/egypt/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/egypt/" />
   </url>
-
-  <!-- NEW INSIGHT ARTICLES (2026) -->
   <url>
-    <loc>https://pharpro.co/insights/capa-management-pharma-guide</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/risk-assessment-computerised-systems/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/capa-management-pharma-guide" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/capa-management-pharma-guide?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/capa-management-pharma-guide" />
   </url>
   <url>
-    <loc>https://pharpro.co/insights/fda-warning-letter-response</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/supplier-qualification-gmp/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/fda-warning-letter-response" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/fda-warning-letter-response?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/fda-warning-letter-response" />
   </url>
   <url>
-    <loc>https://pharpro.co/insights/supplier-qualification-gmp</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/validation-master-plan-guide/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/supplier-qualification-gmp" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/supplier-qualification-gmp?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/supplier-qualification-gmp" />
   </url>
-  <url>
-    <loc>https://pharpro.co/insights/csv-saas-cloud-pharma</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/csv-saas-cloud-pharma" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/csv-saas-cloud-pharma?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/csv-saas-cloud-pharma" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/pharmaceutical-inspection-readiness</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/pharmaceutical-inspection-readiness" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/pharmaceutical-inspection-readiness?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/pharmaceutical-inspection-readiness" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/validation-master-plan-guide</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/validation-master-plan-guide" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/validation-master-plan-guide?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/validation-master-plan-guide" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/risk-assessment-computerised-systems</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/risk-assessment-computerised-systems" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/risk-assessment-computerised-systems?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/risk-assessment-computerised-systems" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/insights/gmp-training-records-compliance</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/insights/gmp-training-records-compliance" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/insights/gmp-training-records-compliance?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/insights/gmp-training-records-compliance" />
-  </url>
-
-  <!-- GEO LANDING PAGES -->
-  <url>
-    <loc>https://pharpro.co/geo/uae/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/uae/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/uae/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/uae/" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/geo/ksa/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/ksa/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/ksa/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/ksa/" />
-  </url>
-  <url>
-    <loc>https://pharpro.co/geo/egypt/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/egypt/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/egypt/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/egypt/" />
-  </url>
-
-  <!-- LEAD MAGNET / RESOURCES -->
-  <url>
-    <loc>https://pharpro.co/resources/compliance-checklist/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/resources/compliance-checklist/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/resources/compliance-checklist/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/resources/compliance-checklist/" />
-  </url>
-
-
-  <!-- SERVICES HUB -->
-  <url>
-    <loc>https://pharpro.co/services/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/services/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/services/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/services/" />
-  </url>
-
-  <!-- GEO HUB -->
   <url>
     <loc>https://pharpro.co/geo/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://pharpro.co/geo/" />
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://pharpro.co/geo/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pharpro.co/geo/" />
   </url>
-
-
-  <!-- SEARCH -->
+  <url>
+    <loc>https://pharpro.co/geo/egypt/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/geo/ksa/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/geo/uae/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/resources/compliance-checklist/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/contact/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://pharpro.co/search/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
   </url>
-
 </urlset>
