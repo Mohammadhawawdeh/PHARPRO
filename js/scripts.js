@@ -272,6 +272,7 @@ const translations = {
     foot_copy:       "© 2025 PHARPRO Consultation Company. All rights reserved.",
     foot_tag:        "Stay Audit-Ready with PHARPRO.",
     wa_cta:          "Chat on WhatsApp",
+    hero_pill2:      "Now accepting Q3 2026 engagements — limited slots available",
   },
 
   ar: {
@@ -501,6 +502,8 @@ const translations = {
     foot_link_li:    "لينكد إن",
     foot_copy:       "© 2025 PHARPRO Consultation Company. جميع الحقوق محفوظة.",
     foot_tag:        "ابقَ جاهزاً للتدقيق مع PHARPRO.",
+    wa_cta:          "تحدث معنا على واتساب",
+    hero_pill2:      "نقبل الآن مشاركات الربع الثالث 2026 — مقاعد محدودة",
   }
 };
 
