@@ -1,63 +1,8 @@
 User-agent: *
 Allow: /
-Allow: /services/csv
-Allow: /services/qa
-Allow: /services/cqv
-Allow: /services/training
-Allow: /services/digital
-Allow: /insights
+
 Disallow: /cgi-bin/
 Disallow: /api/
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: Meta-ExternalFetcher
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Slurp
-Allow: /
+Disallow: /.git/
 
 Sitemap: https://pharpro.co/sitemap.xml
