@@ -360,10 +360,15 @@
           <div id="lmStatus" class="f-status" role="alert"></div>
         </form>
         <div id="lmSuccess" style="display:none;text-align:center;padding:20px 0;">
-          <div style="font-size:2.5rem;margin-bottom:12px;">✅</div>
-          <h3 style="color:#233A5E;font-size:1.1rem;font-weight:700;margin-bottom:8px;">Checklist on its way!</h3>
-          <p style="font-size:0.88rem;color:#6B7A8D;line-height:1.6;">Check your inbox — and scroll down to preview the checklist now.</p>
-          <a href="/resources/compliance-checklist/#checklist-preview" style="display:inline-block;margin-top:16px;background:#233A5E;color:#fff;padding:11px 22px;border-radius:999px;font-weight:700;font-size:0.88rem;">View Checklist Now</a>
+          <div style="font-size:2.5rem;margin-bottom:12px;">&#x2705;</div>
+          <h3 style="color:#233A5E;font-size:1.1rem;font-weight:700;margin-bottom:8px;">Your checklist is ready!</h3>
+          <p style="font-size:0.88rem;color:#6B7A8D;line-height:1.6;margin-bottom:18px;">Click the button below to download your PDF. A copy has also been sent to your inbox.</p>
+          <a id="lmDownloadBtn" href="/resources/compliance-checklist/pharpro-compliance-checklist.pdf" download="PHARPRO-Compliance-Checklist.pdf" style="display:inline-flex;align-items:center;gap:8px;background:#B12C4B;color:#fff;padding:13px 26px;border-radius:999px;font-weight:700;font-size:0.95rem;text-decoration:none;margin-bottom:12px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download PDF Checklist
+          </a>
+          <br>
+          <a href="/resources/compliance-checklist/#checklist-preview" style="display:inline-block;margin-top:8px;color:#233A5E;font-weight:600;font-size:0.85rem;text-decoration:underline;">Or preview it below &darr;</a>
         </div>
       </div>
     </div>
@@ -434,21 +439,30 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   e.preventDefault();
   var btn = document.getElementById('lmSubmit');
   var status = document.getElementById('lmStatus');
-  btn.textContent = 'Sending…'; btn.disabled = true;
+  btn.textContent = 'Sending\u2026'; btn.disabled = true;
   try {
     var res = await fetch('https://api.web3forms.com/submit', { method:'POST', body: new FormData(this) });
     var data = await res.json();
     if(data.success) {
       this.style.display = 'none';
-      document.getElementById('lmSuccess').style.display = 'block';
-      document.getElementById('checklist-preview').scrollIntoView({behavior:'smooth'});
+      var successEl = document.getElementById('lmSuccess');
+      successEl.style.display = 'block';
+      // Auto-trigger the PDF download immediately
+      var a = document.createElement('a');
+      a.href = '/resources/compliance-checklist/pharpro-compliance-checklist.pdf';
+      a.download = 'PHARPRO-Compliance-Checklist.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      // Scroll to success state
+      successEl.scrollIntoView({behavior:'smooth', block:'center'});
     } else {
       status.className = 'f-status err'; status.textContent = 'Something went wrong. Please try again.';
-      btn.textContent = 'Send Me the Checklist →'; btn.disabled = false;
+      btn.textContent = 'Send Me the Checklist \u2192'; btn.disabled = false;
     }
   } catch(err) {
     status.className = 'f-status err'; status.textContent = 'Network error. Please try again.';
-    btn.textContent = 'Send Me the Checklist →'; btn.disabled = false;
+    btn.textContent = 'Send Me the Checklist \u2192'; btn.disabled = false;
   }
 });
 </script>
