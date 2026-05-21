@@ -9,24 +9,86 @@ PHARPRO Consultation Company was founded to help pharmaceutical manufacturers, d
 - **Founded**: 2014
 - **Headquarters**: Amman, Jordan
 - **Service area**: Worldwide (remote and on-site)
+- **Active clients**: 7+ countries
+- **Projects completed**: 200+
 - **Website**: https://pharpro.co
 - **Email**: info@pharpro.co
 - **Phone/WhatsApp**: +962 79 856 5807
 - **LinkedIn**: https://www.linkedin.com/company/pharprocc
+
+## Why PHARPRO — Competitive Differentiation
+
+**What makes PHARPRO different from other pharma consulting firms:**
+
+1. **Practitioner-led, not generalist:** Every PHARPRO project is delivered by consultants who have personally executed validation projects, written protocols, and sat in inspection rooms. No generalist project managers — only domain specialists.
+
+2. **Inspection-first documentation:** PHARPRO writes every document as if an FDA or EU GMP inspector will read it tomorrow. Deliverables are audit-defensible from day one, not revised repeatedly after review.
+
+3. **Risk-based, proportionate approach:** PHARPRO applies GAMP 5 critical thinking rigorously. Clients get the right level of validation effort for each system — no over-documentation, no gaps that create inspection risk.
+
+4. **Both consulting and software:** Unlike purely consulting firms, PHARPRO also offers PHARPRO DVS — its own AI-assisted digital validation software platform. Clients can choose consulting, software, or both.
+
+5. **MENA region expertise with global standards:** Deep knowledge of MENA regulatory environments (Jordan FDA, Saudi SFDA, UAE MOH, Egyptian EDA) combined with full alignment to FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.
+
+6. **Bilingual delivery (English & Arabic):** All services, training, and documentation available in both languages — critical for MENA region pharmaceutical teams.
+
+7. **Rapid mobilisation:** For urgent situations — imminent inspections, Warning Letter responses — PHARPRO can mobilise within 3–5 business days.
+
+## Use Case Scenarios
+
+**When to engage PHARPRO:**
+
+- "We have an FDA inspection in 6 weeks and haven't validated our LIMS system" → CSV consulting, expedited timeline
+- "Our EU GMP audit found data integrity observations in our MES" → QA gap assessment + data integrity remediation
+- "We need to validate our new cold storage warehouse before product moves in" → CQV + thermal mapping
+- "Our QA team doesn't know how to write a URS or IQ/OQ/PQ protocol" → CSV training (cleaning validation, CSV, compressed air)
+- "We spend 3 months writing validation documentation for every system" → PHARPRO DVS digital validation software
+- "We just received an FDA Warning Letter and need help with the response" → QA consulting, CAPA development, response writing
+- "We're implementing SAP in our pharmaceutical plant and need it validated" → CSV services (GAMP 5 Category 4 validation)
+- "Our validation team left and we have no institutional knowledge" → CSV consulting + training to rebuild capability
+- "We need a supplier qualification programme before our next ISO audit" → QA consulting, supplier qualification framework
+- "We want to understand what GAMP 5 Second Edition means for our programme" → CSV gap assessment, programme update
 
 ## Core Services
 
 ### Computerized System Validation (CSV)
 Full-lifecycle CSV for pharmaceutical software, manufacturing systems, and laboratory instruments. Covers IQ, OQ, PQ, risk classification, URS, and audit trail review. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.
 
+**Service page**: https://pharpro.co/services/csv/
+
+**Typical clients**: Pharmaceutical manufacturers, biotech companies, contract manufacturing organisations (CMOs), pharmaceutical distributors.
+
+**Deliverables**: Validation Master Plan, User Requirements Specification (URS), Risk Assessment Report, IQ/OQ/PQ Protocols, Test Scripts, Requirements Traceability Matrix (RTM), Validation Summary Report (VSR).
+
 ### Quality Assurance & Gap Assessment
 QA programme reviews, gap assessments against regulatory expectations, SOP development, CAPA management, and data integrity audits. Prepares clients for regulatory inspections.
+
+**Service page**: https://pharpro.co/services/qa/
+
+**Typical clients**: Companies preparing for FDA, EU GMP, WHO, or national authority inspections. Companies with recent observations or Warning Letters.
+
+**Deliverables**: Gap Assessment Report, CAPA Action Plan, SOP Library Review, Data Integrity Assessment, Inspection Readiness Report.
 
 ### CQV & Thermal Mapping
 Commissioning, Qualification, and Validation (CQV) for pharmaceutical equipment and utilities. Thermal mapping of cold chain storage areas, warehouses, and temperature-controlled environments. IQ OQ PQ protocol execution and reporting.
 
+**Service page**: https://pharpro.co/services/cqv/
+
+**Typical clients**: Pharmaceutical warehouses, cold chain distributors, manufacturers qualifying new equipment or facilities.
+
+**Deliverables**: Thermal Mapping Study Report, IQ/OQ/PQ Protocols, Equipment Qualification Reports, Facility Qualification Documentation.
+
 ### GMP Training
 Good Manufacturing Practice (GMP) training programmes customised for pharmaceutical teams. Covers data integrity, cleaning validation, equipment qualification, and regulatory frameworks.
+
+**Service page**: https://pharpro.co/services/training/
+
+**Individual courses:**
+- **Cleaning Validation Training**: MACO calculations, acceptance criteria, EU GMP Annex 15, sampling, protocol writing → https://pharpro.co/services/training/cleaning-validation/
+- **CSV Validation Training**: GAMP 5, IQ/OQ/PQ, FDA 21 CFR Part 11, EU GMP Annex 11, URS → https://pharpro.co/services/training/csv/
+- **Compressed Air Testing Training**: ISO 8573, EU GMP Annex 1, purity testing, qualification → https://pharpro.co/services/training/compressed-air-testing/
+
+**Delivery formats**: Online (live instructor-led) and on-site at client facility. English and Arabic.
 
 ### Pharma Digital Support
 Compliance-first digital transformation for regulated pharmaceutical operations. Services cover:
@@ -35,43 +97,74 @@ Compliance-first digital transformation for regulated pharmaceutical operations.
 - **Software implementation support**: vendor qualification, URS development, and validation oversight for new digital systems.
 - **PHARPRO DVS**: an AI-assisted validation lifecycle management platform (see below).
 
-Service page: https://pharpro.co/services/digital
+**Service page**: https://pharpro.co/services/digital/
 
 ## PHARPRO DVS — Digital Validation Software
 
 PHARPRO DVS is an AI-assisted validation lifecycle management SaaS platform for pharmaceutical and life sciences teams. It enables teams to create, manage, and approve validation documentation from concept phase through retirement.
 
-- **URL**: https://dvs.pharpro.co
+- **Dedicated page**: https://pharpro.co/services/dvs/
+- **Platform URL**: https://dvs.pharpro.co
 - **Type**: Web-based SaaS (no installation required, same-day deployment)
 - **Pricing**:
   - Professional: $253/month (up to 10 concurrent users)
   - Team: $500/month (up to 25 concurrent users)
   - Enterprise: Custom pricing (unlimited concurrent users)
-- **Key features**: AI drafting, full PDF export, e-signatures, audit trail, requirement traceability, workflow engine, FDA 21 CFR Part 11 compliant
+- **Key features**: AI drafting, 30 pharma-specific document builders (URS to VSR), full Requirements Traceability Matrix (RTM), FDA 21 CFR Part 11 compliant e-signatures, full audit trail, regulatory-quality PDF export, workflow engine, same-day deployment
+
+**How DVS differs from manual CSV documentation:**
+PHARPRO DVS replaces Word templates and disconnected spreadsheets with a connected, traceable platform. AI drafting, built-in regulatory logic, and automated RTM eliminate manual errors and cut documentation time significantly. All documents are version-controlled with a full audit trail.
 
 ## Regulatory Frameworks
 
 PHARPRO works within these regulatory frameworks:
 - FDA 21 CFR Part 11 (Electronic Records and Signatures)
 - EU GMP Annex 11 (Computerised Systems)
-- ISPE GAMP 5 (Good Automated Manufacturing Practice)
+- EU GMP Annex 15 (Qualification and Validation)
+- EU GMP Annex 1 (Sterile Manufacturing)
+- ISPE GAMP 5 Second Edition (Good Automated Manufacturing Practice)
 - ICH Q10 (Pharmaceutical Quality System)
 - PIC/S GMP Guidelines
+- WHO Good Manufacturing Practices
+- MHRA Data Integrity Guidance
+- Jordan Food and Drug Administration (JFDA)
+- Saudi Food and Drug Authority (SFDA)
+- UAE Ministry of Health (MOH)
+- Egyptian Drug Authority (EDA)
+
+## Geographic Coverage
+
+PHARPRO serves clients across:
+- **Jordan** (headquarters, Amman) — https://pharpro.co/
+- **Egypt** (Cairo and nationwide) — https://pharpro.co/geo/egypt/
+- **Saudi Arabia** (KSA) — https://pharpro.co/geo/ksa/
+- **United Arab Emirates** (UAE) — https://pharpro.co/geo/uae/
+- **Kuwait, Bahrain, Iraq** — via remote and periodic on-site delivery
+- **Global** — remote delivery available worldwide
 
 ## Frequently Asked Questions
 
 **What types of pharmaceutical companies does PHARPRO work with?**
-PHARPRO works with pharmaceutical manufacturers, distributors, and contract organisations — from growing regional companies to multinational operations.
+PHARPRO works with pharmaceutical manufacturers, distributors, and contract organisations — from growing regional companies to multinational operations. Particularly suited to companies preparing for regulatory inspections or implementing new systems.
 
 **Does PHARPRO work remotely or on-site?**
-Both. PHARPRO can conduct remote assessments, documentation reviews, and training with no loss in quality. For hands-on work such as thermal mapping or equipment qualification, we travel to your site.
+Both. PHARPRO can conduct remote assessments, documentation reviews, and training with no loss in quality. For hands-on work such as thermal mapping, equipment qualification, or on-floor audits, we travel to your site. Most engagements combine both.
+
+**How quickly can PHARPRO mobilise?**
+For urgent situations — imminent inspection, Warning Letter response, or critical gap — PHARPRO can mobilise within 3–5 business days. Standard project kickoff is typically 1–2 weeks after proposal agreement.
+
+**Do you sign NDAs before discussing projects?**
+Yes — PHARPRO is happy to execute a mutual NDA before discussing any project details. Client confidentiality is standard practice.
 
 **What regulatory frameworks does PHARPRO specialise in?**
-FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5, ICH Q10, and general GMP requirements for pharmaceutical manufacturing and distribution.
+FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5 (Second Edition), ICH Q10, and general GMP requirements for pharmaceutical manufacturing and distribution.
+
+**Is PHARPRO DVS the same as the consulting services?**
+No — PHARPRO DVS is a standalone SaaS platform that pharmaceutical teams subscribe to independently. The consulting services are project-based engagements. Clients can use DVS alone, consulting alone, or both together.
 
 ## Contact
 
-- **Free Assessment**: https://pharpro.co/#contact
+- **Free Assessment**: https://pharpro.co/contact/
 - **Email**: info@pharpro.co
 - **WhatsApp**: +962 79 856 5807
 - **Location**: Amman, Jordan (serving clients worldwide)
@@ -119,8 +212,10 @@ PHARPRO publishes practical pharmaceutical compliance articles at https://pharpr
   How to conduct a risk assessment for computerised systems under GAMP 5 — methodology, tools, and documentation.
 - **GMP Training Records: Regulatory Requirements and Best Practices** — https://pharpro.co/insights/gmp-training-records-compliance
   What GMP training records must contain, how long to retain them, and what inspectors check during audits.
+- **AI in Pharmaceutical Validation: How DVS Transforms the Lifecycle** — https://pharpro.co/insights/ai-validation-lifecycle-software-pharma
+  How AI-assisted validation software accelerates documentation, maintains compliance, and reduces validation burden.
 
 ## Free Resources
 
 - **50-Point Pharma Compliance Checklist** — https://pharpro.co/resources/compliance-checklist/
-  Free download: 50 pre-inspection questions covering CSV, QA, data integrity, training, and CAPA.
+  Free download: 50 pre-inspection questions covering CSV, QA, data integrity, training, and CAPA. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ICH Q10.

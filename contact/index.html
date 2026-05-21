@@ -377,7 +377,7 @@
       </div>
       <a href="/services/training/" data-i18n="nav_training">Training</a>
       <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
-      <a href="/insights/"" data-i18n="nav_insights">Insights</a>
+      <a href="/insights/" data-i18n="nav_insights">Insights</a>
       <a href="/contact/" class="active" data-i18n="nav_contact_pg">Contact</a>
       <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
     </div>
@@ -391,7 +391,7 @@
     <a href="/services/cqv/" data-i18n="nav_cqv">CQV &amp; Thermal Mapping</a>
     <a href="/services/training/" data-i18n="nav_training">Training</a>
     <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
-    <a href="/insights/"" data-i18n="nav_insights">Insights</a>
+    <a href="/insights/" data-i18n="nav_insights">Insights</a>
     <a href="/contact/" class="active" data-i18n="nav_contact_pg">Contact</a>
     <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
   </nav>
@@ -537,6 +537,20 @@
               </select>
             </div>
             <div class="fg">
+              <label for="country" data-i18n="fl_country">Country</label>
+              <select id="country" name="country" autocomplete="country-name">
+                <option value="">Select country…</option>
+                <option value="jordan">Jordan</option>
+                <option value="uae">UAE</option>
+                <option value="ksa">Saudi Arabia</option>
+                <option value="egypt">Egypt</option>
+                <option value="kuwait">Kuwait</option>
+                <option value="bahrain">Bahrain</option>
+                <option value="iraq">Iraq</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="fg">
               <label for="message" data-i18n="fl_message">Message *</label>
               <textarea id="message" name="message" placeholder="Describe your situation, challenge, or upcoming inspection…" required></textarea>
             </div>
@@ -605,7 +619,7 @@
         <a href="/services/cqv/">CQV &amp; Thermal Mapping</a>
         <a href="/services/training/">Training</a>
         <a href="/services/digital/">DVS Software</a>
-        <a href="/insights/"">Insights</a>
+        <a href="/insights/">Insights</a>
         <a href="/contact/">Contact</a>
       </nav>
     </div>
