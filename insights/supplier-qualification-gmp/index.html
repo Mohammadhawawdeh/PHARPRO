@@ -422,6 +422,7 @@ var lang = (new URLSearchParams(location.search).get('lang')) || 'en';
 var T = { en: { lang_label: 'عربي' }, ar: { lang_label: 'EN' } };
 function toggleLang() {
   lang = lang === 'en' ? 'ar' : 'en';
+  localStorage.setItem('pharpro_lang', lang);
   var u = new URL(location.href);
   lang === 'ar' ? u.searchParams.set('lang','ar') : u.searchParams.delete('lang');
   history.replaceState(null,'',u.toString());
