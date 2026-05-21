@@ -59,8 +59,8 @@ const translations = {
 
     /* Hero */
     hero_pill:      "Trusted by pharma teams in 7+ countries",
-    hero_h1:        'Stay <span class="accent">Audit-Ready</span><br/>with PHARPRO',
-    hero_sub:       "Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training — delivered by specialists who understand your regulatory environment.",
+    hero_h1:        'Expert <span class="accent">Pharma Consulting</span><br/>— CSV, QA &amp; GMP Compliance',
+    hero_sub:       "Pharma consulting specialists in computerized system validation (CSV), quality assurance, CQV, thermal mapping, and GMP training — delivering inspection-ready work for regulated pharmaceutical operations worldwide.",
     hero_btn1:      "Get Free Assessment",
     hero_btn2:      "Explore Services",
     hero_badge:     "Inspection-Ready Approach",
@@ -90,8 +90,8 @@ const translations = {
     svc3_p:  "Commissioning, qualification, and validation for equipment and utilities — plus temperature distribution studies for controlled environments.",
     svc4_h3: "GMP Training",
     svc4_p:  "Practical training in CSV, data integrity, and GMP systems — tailored to your team's actual gaps. Delivered onsite or online.",
-    svc5_h3: "Pharma Digital Support",
-    svc5_p:  "Navigate software implementation and digital transformation with a compliance-first approach — from process alignment to validation strategy.",
+    svc5_h3: "Digital Validation Software &amp; Pharma 4.0",
+    svc5_p:  "PHARPRO digital validation software (DVS) and Pharma 4.0 consulting — navigate software implementation and digital transformation with a compliance-first approach.",
     svc6_h3: "Not sure where to start?",
     svc6_p:  "Tell us your situation. We'll identify what matters most and give you a clear path forward.",
     svc6_cta: "Start Free Assessment",
