@@ -499,6 +499,59 @@
       .hamburger { display: flex; }
     }
     body.rtl .mob-nav { text-align: right; }
+    body.rtl .pricing-hdr { text-align: right; }
+    body.rtl .p-card      { text-align: right; }
+    body.rtl .p-eyebrow   { flex-direction: row-reverse; }
+    body.rtl .p-feat      { direction: rtl; }
+
+
+    /* ── PRICING ──────────────────────────────────────────── */
+    .pricing-sec { padding: 72px 0; background: var(--white); }
+    .pricing-hdr { text-align: center; margin-bottom: 40px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; align-items: start; }
+    .p-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 28px;
+    }
+    .p-card.feat {
+      background: var(--navy); border-color: var(--navy);
+      box-shadow: 0 4px 24px rgba(35,58,94,0.2), 0 16px 48px rgba(35,58,94,0.12);
+      transform: scale(1.03);
+    }
+    .p-eyebrow {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      background: rgba(177,44,75,0.1); color: var(--burgundy);
+      padding: 4px 10px; border-radius: 999px; margin-bottom: 16px;
+    }
+    .p-card.feat .p-eyebrow { background: rgba(201,142,132,0.2); color: var(--rose); }
+    .p-tier { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .p-card.feat .p-tier { color: var(--white); }
+    .p-conc { font-size: 0.82rem; color: var(--muted); margin-bottom: 18px; }
+    .p-card.feat .p-conc { color: rgba(255,255,255,0.5); }
+    .p-amount { margin-bottom: 20px; }
+    .p-amt { font-size: 2.4rem; font-weight: 800; color: var(--navy); letter-spacing: -0.04em; line-height: 1; }
+    .p-card.feat .p-amt { color: var(--white); }
+    .p-per { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+    .p-card.feat .p-per { color: rgba(255,255,255,0.45); }
+    .p-cta {
+      display: block; width: 100%; text-align: center; padding: 12px;
+      border-radius: 10px; font-weight: 600; font-size: 0.9rem;
+      margin-bottom: 22px; transition: background var(--t), opacity var(--t);
+      cursor: pointer; border: none; font-family: inherit;
+    }
+    .p-cta-default { background: rgba(35,58,94,0.08); color: var(--navy); }
+    .p-cta-default:hover { background: rgba(35,58,94,0.13); }
+    .p-cta-feat { background: var(--burgundy); color: var(--white); }
+    .p-cta-feat:hover { background: var(--burgundy-dk); }
+    .p-div { border: none; border-top: 1px solid var(--border); margin-bottom: 18px; }
+    .p-card.feat .p-div { border-color: rgba(255,255,255,0.1); }
+    .p-feats { display: grid; gap: 10px; }
+    .p-feat { display: flex; align-items: center; gap: 9px; font-size: 0.87rem; color: var(--ink); }
+    .p-card.feat .p-feat { color: rgba(255,255,255,0.8); }
+    .p-feat-ico { flex-shrink: 0; color: var(--success); }
+    .p-card.feat .p-feat-ico { color: var(--rose); }
+    @media(max-width:700px){ .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
   </style>
 </head>
 
@@ -875,6 +928,87 @@
     </div>
   </section>
 
+  <!-- ── PRICING ─────────────────────────────────────────────────────── -->
+  <section class="pricing-sec" id="pricing">
+    <div class="wrap">
+      <div class="pricing-hdr">
+        <div class="eyebrow" data-i18n="pricing_eyebrow">DVS Pricing</div>
+        <h2 class="h2" style="margin-bottom:8px;" data-i18n="pricing_h2">Simple, transparent pricing</h2>
+        <p class="body-lg" data-i18n="pricing_body">Concurrent-user SaaS — create unlimited accounts, pay only for simultaneous logins.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Professional -->
+        <div class="p-card feat">
+          <div class="p-eyebrow">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span data-i18n="plan1_eyebrow">Most Popular</span>
+          </div>
+          <div class="p-tier" data-i18n="plan1_tier">Professional</div>
+          <div class="p-conc" data-i18n="plan1_conc">Up to 10 concurrent users</div>
+          <div class="p-amount">
+            <div class="p-amt">$253</div>
+            <div class="p-per" data-i18n="plan1_per">per month</div>
+          </div>
+          <a href="https://dvs.pharpro.co" target="_blank" rel="noopener" class="p-cta p-cta-feat" data-i18n="plan1_cta">Get Started</a>
+          <hr class="p-div"/>
+          <div class="p-feats">
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan1_f1">Unlimited projects</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan1_f2">Full PDF export</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan1_f3">E-signatures &amp; audit trail</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan1_f4">Email support</span></div>
+          </div>
+        </div>
+
+        <!-- Team -->
+        <div class="p-card">
+          <div class="p-eyebrow">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="plan2_eyebrow">Team</span>
+          </div>
+          <div class="p-tier" data-i18n="plan2_tier">Team</div>
+          <div class="p-conc" data-i18n="plan2_conc">Up to 25 concurrent users</div>
+          <div class="p-amount">
+            <div class="p-amt">$500</div>
+            <div class="p-per" data-i18n="plan2_per">per month</div>
+          </div>
+          <a href="https://dvs.pharpro.co" target="_blank" rel="noopener" class="p-cta p-cta-default" data-i18n="plan2_cta">Get Started</a>
+          <hr class="p-div"/>
+          <div class="p-feats">
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan2_f1">Everything in Professional</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan2_f2">Priority support</span></div>
+          </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="p-card">
+          <div class="p-eyebrow">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <span data-i18n="plan3_eyebrow">Enterprise</span>
+          </div>
+          <div class="p-tier" data-i18n="plan3_tier">Enterprise</div>
+          <div class="p-conc" data-i18n="plan3_conc">Unlimited concurrent users</div>
+          <div class="p-amount">
+            <div class="p-amt" data-i18n="plan3_amt">Custom</div>
+            <div class="p-per" data-i18n="plan3_per">tailored to your organisation</div>
+          </div>
+          <a href="/contact/" class="p-cta p-cta-default" data-i18n="plan3_cta">Contact Sales</a>
+          <hr class="p-div"/>
+          <div class="p-feats">
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f1">SSO &amp; API access</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f2">Dedicated instance</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f3">Custom SLA &amp; onboarding</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f4">SOC 2 compliance report</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f5">Private cloud option</span></div>
+            <div class="p-feat"><svg class="p-feat-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="plan3_f6">CSV Master Plan Registry</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ── CTA ───────────────────────────────────────────────────────────── -->
   <section class="sec">
     <div class="wrap">
@@ -1037,6 +1171,13 @@ const T = {
     rel1_h:"Computerized System Validation (CSV)", rel1_p:"Full validation lifecycle support for any digital system — URS, risk classification, IQ/OQ/PQ protocols, and audit-trail reviews.",
     rel2_h:"Quality Assurance &amp; Gap Assessment", rel2_p:"Ensure your QMS and data integrity controls are ready for the digital environment — gap assessments, SOP reviews, and CAPA management.",
     rel3_h:"GMP Training Programmes", rel3_p:"Data integrity in digital environments, AI tool governance for QA teams, and GMP awareness training — online and on-site.",
+    pricing_eyebrow:"DVS Pricing", pricing_h2:"Simple, transparent pricing", pricing_body:"Concurrent-user SaaS — create unlimited accounts, pay only for simultaneous logins.",
+    plan1_eyebrow:"Most Popular", plan1_tier:"Professional", plan1_conc:"Up to 10 concurrent users", plan1_cta:"Get Started", plan1_per:"per month",
+    plan1_f1:"Unlimited projects", plan1_f2:"Full PDF export", plan1_f3:"E-signatures &amp; audit trail", plan1_f4:"Email support",
+    plan2_eyebrow:"Team", plan2_tier:"Team", plan2_conc:"Up to 25 concurrent users", plan2_cta:"Get Started", plan2_per:"per month",
+    plan2_f1:"Everything in Professional", plan2_f2:"Priority support",
+    plan3_eyebrow:"Enterprise", plan3_tier:"Enterprise", plan3_conc:"Unlimited concurrent users", plan3_amt:"Custom", plan3_per:"tailored to your organisation", plan3_cta:"Contact Sales",
+    plan3_f1:"SSO &amp; API access", plan3_f2:"Dedicated instance", plan3_f3:"Custom SLA &amp; onboarding", plan3_f4:"SOC 2 compliance report", plan3_f5:"Private cloud option", plan3_f6:"CSV Master Plan Registry",
     rel_learn:"Learn more →", foot_copy:"© 2026 PHARPRO Consultation Company. All rights reserved."
   },
   ar: {
@@ -1110,6 +1251,13 @@ const T = {
     rel1_h:"التحقق من صحة الأنظمة الحاسوبية (CSV)", rel1_p:"دعم شامل لدورة حياة التحقق لأي نظام رقمي — URS وتصنيف المخاطر وبروتوكولات IQ/OQ/PQ ومراجعات مسار التدقيق.",
     rel2_h:"ضمان الجودة وتقييم الثغرات", rel2_p:"تأكد من جاهزية نظام إدارة الجودة وضوابط سلامة البيانات للبيئة الرقمية — تقييمات الثغرات ومراجعة إجراءات التشغيل القياسية وإدارة CAPA.",
     rel3_h:"برامج تدريب GMP", rel3_p:"سلامة البيانات في البيئات الرقمية وحوكمة أدوات الذكاء الاصطناعي لفرق ضمان الجودة والتوعية بـ GMP — عبر الإنترنت وحضورياً.",
+    plan1_eyebrow:"الأكثر شعبية", plan1_tier:"الخطة الاحترافية", plan1_conc:"حتى 10 مستخدمين متزامنين", plan1_cta:"ابدأ الآن", plan1_per:"شهريًا",
+    plan1_f1:"مشاريع غير محدودة", plan1_f2:"تصدير PDF كامل", plan1_f3:"التوقيعات الإلكترونية ومسار التدقيق", plan1_f4:"دعم عبر البريد الإلكتروني",
+    plan2_eyebrow:"الفريق", plan2_tier:"خطة الفريق", plan2_conc:"حتى 25 مستخدماً متزامناً", plan2_cta:"ابدأ الآن", plan2_per:"شهريًا",
+    plan2_f1:"كل ما في الخطة الاحترافية", plan2_f2:"دعم ذو أولوية",
+    plan3_eyebrow:"المؤسسة", plan3_tier:"خطة المؤسسة", plan3_conc:"مستخدمون متزامنون غير محدودين", plan3_amt:"مخصص", plan3_per:"مصمم لمؤسستك", plan3_cta:"اتصل بالمبيعات",
+    plan3_f1:"تسجيل الدخول الموحد وصول API", plan3_f2:"نسخة مخصصة", plan3_f3:"اتفاقية خدمة مخصصة وتأهيل", plan3_f4:"تقرير امتثال SOC 2", plan3_f5:"خيار السحابة الخاصة", plan3_f6:"سجل خطة CSV الرئيسية",
+    pricing_eyebrow:"أسعار DVS", pricing_h2:"أسعار بسيطة وشفافة", pricing_body:"SaaS بالمستخدم المتزامن — أنشئ حسابات غير محدودة، وادفع فقط لتسجيلات الدخول المتزامنة.",
     rel_learn:"اعرف المزيد →", foot_copy:"© 2026 شركة PHARPRO للاستشارات. جميع الحقوق محفوظة.",
     cta2_pill:"نقبل الآن مشاركات الربع الثالث 2026",
     cta2_h2:"مستعد للبدء؟",
