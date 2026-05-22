@@ -127,7 +127,7 @@ app.post("/api/contact", (req, res) => {
     return res.status(403).json({ ok: false, error: "Forbidden" });
   }
 
-  const { name, company, email, service, message, hp } = req.body;
+  const { name, company, email, phone, service, message, hp } = req.body;
 
   if (hp) {
     return res.status(200).json({ ok: true });
@@ -152,6 +152,7 @@ app.post("/api/contact", (req, res) => {
   console.log(`Name:    ${sanitize(name)}`);
   console.log(`Company: ${sanitize(company) || "N/A"}`);
   console.log(`Email:   ${email.replace(/(?<=.{2}).(?=.*@)/g, "*")}`);
+  console.log(`Phone:   ${sanitize(phone) || "N/A"}`);
   console.log(`Service: ${sanitize(service) || "N/A"}`);
   console.log(`Message: ${sanitize(message).slice(0, 100)}...`);
   console.log("-----------------------------");
