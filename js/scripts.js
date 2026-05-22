@@ -275,6 +275,14 @@ const translations = {
     foot_tag:        "Stay Audit-Ready with PHARPRO.",
     wa_cta:          "Chat on WhatsApp",
     hero_pill2:      "Now accepting Q3 2026 engagements — limited slots available",
+
+    /* About section */
+    about_eyebrow: "About PHARPRO",
+    about_h2:      "Pharmaceutical Consulting Specialists — Jordan &amp; Worldwide",
+    about_p1:      "PHARPRO is a pharmaceutical consulting firm based in Amman, Jordan, providing expert pharma consulting services to regulated pharmaceutical manufacturers, distributors, and contract organisations across the Middle East, North Africa, and globally. Our pharma consulting team specialises in computerized system validation (CSV services), quality assurance, commissioning qualification and validation (CQV), thermal mapping, and pharmaceutical GMP training.",
+    about_p2:      "Our <strong>CSV services</strong> cover the complete validation lifecycle — user requirements specification (URS), risk classification, IQ/OQ/PQ protocols, execution, and validation summary reporting — all aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5. We also offer <strong>digital validation software</strong> through PHARPRO DVS, an AI-assisted platform that streamlines validation documentation for pharmaceutical teams.",
+    about_p3:      "Our <strong>pharmaceutical training</strong> courses — including CSV training, Cleaning Validation, and Compressed Air Testing — are delivered instructor-led, online and on-site, to pharma teams across Jordan, Saudi Arabia, UAE, Egypt, and beyond. Every programme is designed and delivered by practising consultants, not generalist trainers.",
+    about_p4:      'Whether you need pharma consulting for a specific CSV project, a comprehensive QA gap assessment, equipment qualification, or regulatory inspection preparation — PHARPRO delivers structured, audit-defensible work that holds up under scrutiny. <a href="/contact/" style="color:#B12C4B;font-weight:600;">Contact our pharma consulting team</a> for a free initial assessment.',
   },
 
   ar: {
@@ -508,6 +516,14 @@ const translations = {
     foot_tag:        "ابقَ جاهزاً للتدقيق مع PHARPRO.",
     wa_cta:          "تحدث معنا على واتساب",
     hero_pill2:      "نقبل الآن مشاركات الربع الثالث 2026 — مقاعد محدودة",
+
+    /* About section */
+    about_eyebrow: "عن PHARPRO",
+    about_h2:      "متخصصون في الاستشارات الدوائية — الأردن والعالم",
+    about_p1:      "PHARPRO شركة استشارات دوائية مقرها عمّان، الأردن، تقدم خدمات استشارية دوائية متخصصة لمصنّعي الأدوية الخاضعين للتنظيم والموزعين والمنظمات التعاقدية في منطقة الشرق الأوسط وشمال أفريقيا وعلى المستوى العالمي. يتخصص فريق استشاراتنا الدوائي في التحقق من صحة الأنظمة الحاسوبية (خدمات CSV) وضمان الجودة والتأهيل والتحقق (CQV) ورسم الخرائط الحرارية والتدريب على GMP الصيدلاني.",
+    about_p2:      "تغطي <strong>خدمات CSV</strong> لدينا دورة حياة التحقق الكاملة — مواصفات متطلبات المستخدم (URS) وتصنيف المخاطر وبروتوكولات IQ/OQ/PQ والتنفيذ وإعداد تقارير ملخص التحقق — بما يتوافق مع FDA 21 CFR Part 11 وEU GMP Annex 11 وISPE GAMP 5. كما نقدم <strong>برنامج التحقق الرقمي</strong> عبر PHARPRO DVS، وهو منصة بمساعدة الذكاء الاصطناعي تُبسّط توثيق التحقق لفرق الأدوية.",
+    about_p3:      "دوراتنا في <strong>التدريب الصيدلاني</strong> — بما فيها تدريب CSV والتحقق من التنظيف واختبار الهواء المضغوط — تُقدَّم بإشراف مدرب، عبر الإنترنت وفي الموقع، لفرق الأدوية في الأردن والمملكة العربية السعودية والإمارات ومصر وما بعدها. كل برنامج مصمم ومقدَّم من قِبَل مستشارين ممارسين، وليس مدربين عامين.",
+    about_p4:      'سواء كنت تحتاج إلى استشارات دوائية لمشروع CSV محدد، أو تقييم شامل لثغرات الجودة، أو تأهيل معدات، أو التحضير للتفتيش التنظيمي — تُقدم PHARPRO عملاً منظماً قابلاً للدفاع عنه في التدقيق. <a href="/contact/" style="color:#B12C4B;font-weight:600;">تواصل مع فريق استشاراتنا الدوائي</a> للحصول على تقييم أولي مجاني.',
   }
 };
 
