@@ -314,7 +314,7 @@
       <a href="/services/training/" data-i18n="nav_training">Training</a>
       <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
       <a href="/insights/" class="active" data-i18n="nav_insights">Insights</a>
-      <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
+      <a href="/contact/" data-i18n="nav_cta">Free Assessment</a>
       <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
     </div>
     <button type="button" class="hamburger" id="hamburger" aria-label="Open mobile menu">
@@ -328,7 +328,7 @@
       <a href="/services/training/" data-i18n="nav_training">Training</a>
       <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
       <a href="/insights/" class="active" data-i18n="nav_insights">Insights</a>
-      <a href="/#contact" data-i18n="nav_cta">Free Assessment</a>
+      <a href="/contact/" data-i18n="nav_cta">Free Assessment</a>
       <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
     </nav>
 </nav>
@@ -451,7 +451,7 @@
           <div style="flex:1;min-width:220px">
             <h3 style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:6px">Free 21 CFR Part 11 Audit Trail Self-Assessment Checklist</h3>
             <p style="font-size:.85rem;color:rgba(255,255,255,.7);margin-bottom:14px">Download our 35-point checklist to verify your electronic systems meet 21 CFR Part 11 audit trail requirements — audit trail configuration, review procedures, retention, and access controls.</p>
-            <a href="/#contact" style="display:inline-block;background:#B12C4B;color:#fff;padding:9px 20px;border-radius:999px;font-size:.84rem;font-weight:700">Get Free Checklist →</a>
+            <a href="/contact/" style="display:inline-block;background:#B12C4B;color:#fff;padding:9px 20px;border-radius:999px;font-size:.84rem;font-weight:700">Get Free Checklist →</a>
           </div>
         </div>
 
@@ -612,7 +612,7 @@
     <div class="wrap">
       <h2 id="cta-heading" data-i18n="cta_h2">Not Sure Where Your Part 11 Gaps Are?</h2>
       <p data-i18n="cta_p">PHARPRO's data integrity audit identifies every gap and delivers a prioritised remediation plan — in writing.</p>
-      <a href="/#contact" class="btn-primary" data-i18n="cta_btn">Request a Free Assessment</a>
+      <a href="/contact/" class="btn-primary" data-i18n="cta_btn">Request a Free Assessment</a>
       <a href="/services/qa/" class="btn-ghost" data-i18n="cta_btn2">View QA Services</a>
     </div>
   </section>
@@ -671,7 +671,7 @@
       <div style="display:flex;gap:20px;flex-wrap:wrap;">
         <a href="/services/csv/">CSV</a><a href="/services/qa/">QA</a>
         <a href="/services/cqv/">CQV</a><a href="/services/training/">Training</a>
-        <a href="/insights/">Insights</a><a href="/#contact">Contact</a>
+        <a href="/insights/">Insights</a><a href="/contact/">Contact</a>
       </div>
     </div>
     
@@ -818,6 +818,54 @@ applyLang();
 </script>
 
 
+
+<!-- Mobile Sticky CTA (appears after 40% scroll, mobile only) -->
+<div id="sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8000;background:#233A5E;padding:12px 20px 12px 16px;box-shadow:0 -2px 16px rgba(0,0,0,0.18);align-items:center;justify-content:space-between;gap:10px;border-top:2px solid #B12C4B;" role="complementary" aria-label="Call to action">
+  <div style="min-width:0;">
+    <div id="sticky-cta-sub" style="font-size:0.73rem;font-weight:600;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:1px;">PHARPRO</div>
+    <div id="sticky-cta-txt" style="font-size:0.9rem;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Ready to get compliant?</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+    <a id="sticky-cta-btn" href="/contact/" style="display:inline-block;background:#B12C4B;color:#fff;padding:9px 18px;border-radius:999px;font-size:0.85rem;font-weight:700;text-decoration:none;white-space:nowrap;font-family:inherit;">Free Assessment</a>
+    <button id="sticky-cta-close" aria-label="Dismiss" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.5);padding:6px;line-height:1;font-size:1.4rem;display:flex;align-items:center;">&times;</button>
+  </div>
+</div>
+<script>
+(function(){
+  if(window.innerWidth > 768) return; // desktop: never show
+  var bar = document.getElementById('sticky-cta');
+  var waBtn = document.getElementById('wa-float');
+  if(!bar) return;
+  var shown = false, dismissed = false;
+  function showBar(){
+    if(dismissed || shown) return;
+    shown = true;
+    bar.style.display = 'flex';
+    if(waBtn) waBtn.style.bottom = '80px';
+  }
+  window.addEventListener('scroll', function(){
+    if(dismissed) return;
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    if(total > 0 && window.scrollY / total > 0.4) showBar();
+  }, {passive:true});
+  document.getElementById('sticky-cta-close').addEventListener('click', function(){
+    dismissed = true;
+    bar.style.display = 'none';
+    if(waBtn) waBtn.style.bottom = '24px';
+  });
+  // Bilingual sync — wrap the current applyLang (which may already be wrapped by FAQ IIFE)
+  var _origLang = applyLang;
+  applyLang = function(){
+    _origLang();
+    var t = document.getElementById('sticky-cta-txt');
+    var b = document.getElementById('sticky-cta-btn');
+    var isAr = (typeof lang !== 'undefined' && lang === 'ar');
+    if(t) t.textContent = isAr ? 'هل أنت مستعد للامتثال؟' : 'Ready to get compliant?';
+    if(b){ b.textContent = isAr ? 'تقييم مجاني' : 'Free Assessment'; b.style.fontFamily = isAr ? 'Cairo,sans-serif' : 'inherit'; }
+  };
+  applyLang();
+})();
+</script>
 <!-- WhatsApp Float -->
 <a href="https://wa.me/962798565807" target="_blank" rel="noopener noreferrer" aria-label="Chat with PHARPRO on WhatsApp" id="wa-float" style="position:fixed;bottom:24px;left:24px;z-index:9000;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,0.35);text-decoration:none;transition:transform 0.2s ease,box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 24px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.35)'">
   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="white" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.47 2.027 7.774L.057 31.943a.5.5 0 0 0 .606.606l8.169-1.97A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.5c-2.55 0-4.94-.686-7.002-1.885l-.5-.295-5.18 1.25 1.25-5.18-.295-.5A13.437 13.437 0 0 1 2.5 16C2.5 8.544 8.544 2.5 16 2.5S29.5 8.544 29.5 16 23.456 29.5 16 29.5zm7.385-10.033c-.404-.202-2.393-1.18-2.764-1.315-.371-.135-.641-.202-.911.202-.27.404-1.044 1.315-1.28 1.585-.235.27-.471.304-.875.101-.404-.202-1.706-.629-3.251-2.007-1.202-1.073-2.014-2.398-2.25-2.802-.236-.404-.025-.623.177-.824.182-.181.404-.471.607-.707.202-.236.27-.404.404-.674.135-.27.067-.505-.034-.707-.1-.202-.91-2.194-1.246-3.003-.328-.788-.662-.681-.911-.694-.235-.011-.505-.014-.775-.014-.27 0-.707.101-1.078.505-.37.404-1.415 1.382-1.415 3.37s1.449 3.91 1.651 4.18c.202.27 2.852 4.353 6.909 6.104.966.417 1.719.666 2.306.851.969.309 1.851.265 2.548.161.777-.115 2.393-.978 2.729-1.922.336-.944.336-1.753.235-1.922-.101-.168-.37-.27-.774-.472z"/></svg>
