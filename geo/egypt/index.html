@@ -401,7 +401,6 @@
     .mob-nav a{display:block;padding:10px 0;font-size:.95rem;font-weight:500;color:var(--navy);opacity:.75}.mob-nav a:hover{opacity:1;color:var(--burgundy)}
     
     @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}}
-}
     .hero{background:var(--ivory);padding:72px 0 56px;position:relative;overflow:hidden;}
     .hero::after{content:"";position:absolute;right:-100px;top:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(177,44,75,0.15) 0%,transparent 70%);pointer-events:none;}
     .geo-badge{display:inline-block;background:rgba(35,58,94,0.08);color:var(--navy);font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 16px;border-radius:999px;border:1.5px solid rgba(35,58,94,0.20);margin-bottom:20px;}
@@ -491,6 +490,9 @@
     <a href="/services/digital/" data-i18n="nav_dvs">DVS Software</a>
     <a href="/insights/" data-i18n="nav_insights">Insights</a>
     <a href="/contact/" data-i18n="nav_cta">Free Assessment</a>
+    <div style="border-top:1px solid rgba(35,58,94,0.1);margin-top:6px;padding-top:10px;">
+      <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language" style="width:100%;text-align:inherit;padding:6px 0;border:none;background:none;color:var(--navy);font-size:0.9rem;font-weight:700;cursor:pointer;font-family:inherit;">عربي</button>
+    </div>
   </nav>
 </nav>
 
@@ -652,8 +654,20 @@
 
 <script>
 (function(){
-  var ham = document.getElementById('hamburger'); var mob = document.getElementById('mobNav');
-  if(ham && mob){ ham.addEventListener('click', function(){ mob.classList.toggle('open'); ham.setAttribute('aria-expanded', mob.classList.contains('open')); }); }
+  var ham = document.getElementById('hamburger');
+  var mob = document.getElementById('mobNav');
+  var SVG_HAM = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  var SVG_X   = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+  function closeMenu() { mob.classList.remove('open'); ham.setAttribute('aria-expanded','false'); ham.setAttribute('aria-label','Open mobile menu'); ham.innerHTML = SVG_HAM; }
+  if(ham && mob){
+    ham.addEventListener('click', function(){
+      var isOpen = mob.classList.toggle('open');
+      ham.setAttribute('aria-expanded', isOpen);
+      ham.setAttribute('aria-label', isOpen ? 'Close mobile menu' : 'Open mobile menu');
+      ham.innerHTML = isOpen ? SVG_X : SVG_HAM;
+    });
+    mob.querySelectorAll('a').forEach(function(link){ link.addEventListener('click', closeMenu); });
+  }
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(btn){
     btn.addEventListener('click', function(){
