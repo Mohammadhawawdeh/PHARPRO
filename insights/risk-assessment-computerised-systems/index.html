@@ -53,59 +53,131 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BlogPosting",
-        "@id": "https://pharpro.co/insights/risk-assessment-computerised-systems/#article",
-        "headline": "Risk Assessment in CSV: How to Apply GAMP 5 Risk Principles",
-        "description": "A practical guide to applying risk assessment in computerised system validation — GAMP 5 risk categories, risk-based testing, and how to document your risk rationale for regulators.",
-        "datePublished": "2026-05-05",
-        "dateModified": "2026-05-18",
-        "author": { "@id": "https://pharpro.co/#organization" },
-        "publisher": {
-          "@id": "https://pharpro.co/#organization",
-          "logo": { "@type": "ImageObject", "url": "https://pharpro.co/images/apple-touch-icon.png", "width": 180, "height": 180 }
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://pharpro.co/insights/risk-assessment-computerised-systems/#article",
+      "headline": "Risk Assessment in CSV: How to Apply GAMP 5 Risk Principles",
+      "description": "A practical guide to applying risk assessment in computerised system validation — GAMP 5 risk categories, risk-based testing, and how to document your risk rationale for regulators.",
+      "datePublished": "2026-05-05",
+      "dateModified": "2026-05-18",
+      "author": {
+        "@type": "Person",
+        "@id": "https://pharpro.co/#author-mawawdeh",
+        "name": "Mohammad Awawdeh",
+        "jobTitle": "Pharmaceutical Compliance Consultant",
+        "url": "https://www.linkedin.com/in/mohammadhawawdeh/",
+        "worksFor": {
+          "@id": "https://pharpro.co/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://pharpro.co/#organization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pharpro.co/images/apple-touch-icon.png",
+          "width": 180,
+          "height": 180
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pharpro.co/images/og-csv.png",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntityOfPage": {
+        "@id": "https://pharpro.co/insights/risk-assessment-computerised-systems/#webpage"
+      },
+      "articleSection": "CSV & Validation",
+      "keywords": [
+        "risk assessment CSV",
+        "GAMP 5 risk categories",
+        "computerised system risk assessment",
+        "pharmaceutical CSV risk",
+        "GAMP risk-based approach",
+        "system categorisation GAMP 5"
+      ],
+      "inLanguage": "en",
+      "url": "https://pharpro.co/insights/risk-assessment-computerised-systems/",
+      "wordCount": 699
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pharpro.co/insights/risk-assessment-computerised-systems/#webpage",
+      "url": "https://pharpro.co/insights/risk-assessment-computerised-systems/",
+      "name": "Risk Assessment in CSV: How to Apply GAMP 5 Risk Principles | PHARPRO",
+      "isPartOf": {
+        "@id": "https://pharpro.co/#website"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-05-05",
+      "dateModified": "2026-05-18"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pharpro.co/"
         },
-        "image": "https://pharpro.co/images/og-insights.png",
-        "mainEntityOfPage": { "@id": "https://pharpro.co/insights/risk-assessment-computerised-systems/#webpage" },
-        "articleSection": "CSV & Validation",
-        "keywords": ["risk assessment CSV","GAMP 5 risk categories","computerised system risk assessment","pharmaceutical CSV risk","GAMP risk-based approach","system categorisation GAMP 5"],
-        "inLanguage": "en",
-        "url": "https://pharpro.co/insights/risk-assessment-computerised-systems/"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://pharpro.co/insights/risk-assessment-computerised-systems/#webpage",
-        "url": "https://pharpro.co/insights/risk-assessment-computerised-systems/",
-        "name": "Risk Assessment in CSV: How to Apply GAMP 5 Risk Principles | PHARPRO",
-        "isPartOf": { "@id": "https://pharpro.co/#website" },
-        "inLanguage": "en",
-        "datePublished": "2026-05-05",
-        "dateModified": "2026-05-18"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pharpro.co/" },
-          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://pharpro.co/insights" },
-          { "@type": "ListItem", "position": 3, "name": "Risk Assessment in CSV", "item": "https://pharpro.co/insights/risk-assessment-computerised-systems" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "What are the GAMP 5 risk categories?", "acceptedAnswer": { "@type": "Answer", "text": "GAMP 5 Second Edition defines three software categories: Category 1 (Infrastructure Software — operating systems, middleware), Category 3 (Non-Configured and Configured Products — COTS software, configured applications like LIMS and ERP), and Category 4 (Custom Applications — bespoke software). The category determines the level of validation required." }},
-          { "@type": "Question", "name": "What is a GxP impact assessment?", "acceptedAnswer": { "@type": "Answer", "text": "A GxP impact assessment determines whether a computerised system is within the scope of GxP regulations. It asks: does this system create, modify, maintain, archive, retrieve, or transmit records that support GxP decisions? Systems with GxP impact must be validated. Non-GxP systems may be managed through IT governance without formal validation." }},
-          { "@type": "Question", "name": "What is risk-based testing in CSV?", "acceptedAnswer": { "@type": "Answer", "text": "Risk-based testing prioritises test cases based on the potential GxP impact of failure. High-risk functions (data integrity, product release, patient safety decisions) receive more extensive testing. Low-risk functions (cosmetic UI features, non-GxP reports) require less or no formal testing. This approach makes validation proportionate, efficient, and defensible." }},
-          { "@type": "Question", "name": "How do you document risk assessment in a CSV project?", "acceptedAnswer": { "@type": "Answer", "text": "Risk assessment documentation in CSV typically includes: a system risk assessment (determining GxP impact and GAMP category), a functional risk assessment (scoring each function by severity, probability, and detectability), and a risk-based testing rationale (linking test coverage to risk scores). All risk decisions must be reviewed by QA and signed by the project team." }}
-        ]
-      }
-    ]
-  }
-  </script>
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://pharpro.co/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Risk Assessment in CSV",
+          "item": "https://pharpro.co/insights/risk-assessment-computerised-systems"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the GAMP 5 risk categories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GAMP 5 Second Edition defines three software categories: Category 1 (Infrastructure Software — operating systems, middleware), Category 3 (Non-Configured and Configured Products — COTS software, configured applications like LIMS and ERP), and Category 4 (Custom Applications — bespoke software). The category determines the level of validation required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a GxP impact assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A GxP impact assessment determines whether a computerised system is within the scope of GxP regulations. It asks: does this system create, modify, maintain, archive, retrieve, or transmit records that support GxP decisions? Systems with GxP impact must be validated. Non-GxP systems may be managed through IT governance without formal validation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is risk-based testing in CSV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Risk-based testing prioritises test cases based on the potential GxP impact of failure. High-risk functions (data integrity, product release, patient safety decisions) receive more extensive testing. Low-risk functions (cosmetic UI features, non-GxP reports) require less or no formal testing. This approach makes validation proportionate, efficient, and defensible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you document risk assessment in a CSV project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Risk assessment documentation in CSV typically includes: a system risk assessment (determining GxP impact and GAMP category), a functional risk assessment (scoring each function by severity, probability, and detectability), and a risk-based testing rationale (linking test coverage to risk scores). All risk decisions must be reviewed by QA and signed by the project team."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
 
   <style>
     :root { --burgundy:#B12C4B; --navy:#233A5E; --ivory:#F5EEE8; --ink:#1E1E1E; --muted:#6B7A8D; --white:#FFFFFF; --border:#E8E0D8; --surface:#FAFAF8; --r-md:16px; --r-lg:24px; --t:0.2s ease; }

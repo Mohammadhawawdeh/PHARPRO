@@ -53,8 +53,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <script type="application/ld+json">
-{
+  <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -65,7 +64,14 @@
       "datePublished": "2025-03-15",
       "dateModified": "2026-05-02",
       "author": {
-        "@id": "https://pharpro.co/#organization"
+        "@type": "Person",
+        "@id": "https://pharpro.co/#author-mawawdeh",
+        "name": "Mohammad Awawdeh",
+        "jobTitle": "Pharmaceutical Compliance Consultant",
+        "url": "https://www.linkedin.com/in/mohammadhawawdeh/",
+        "worksFor": {
+          "@id": "https://pharpro.co/#organization"
+        }
       },
       "publisher": {
         "@id": "https://pharpro.co/#organization",
@@ -76,7 +82,12 @@
           "height": 180
         }
       },
-      "image": "https://pharpro.co/images/og-image.png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pharpro.co/images/og-csv.png",
+        "width": 1200,
+        "height": 630
+      },
       "mainEntityOfPage": {
         "@id": "https://pharpro.co/insights/gamp5-second-edition-csv-changes/#webpage"
       },
@@ -143,8 +154,7 @@
       ]
     }
   ]
-}
-</script>
+}</script>
 
   <style>
     :root {
