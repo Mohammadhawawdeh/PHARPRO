@@ -6,300 +6,300 @@
   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>PHARPRO Compliance Insights</title>
-    <link>https://pharpro.co</link>
+    <link>https://www.pharpro.co</link>
     <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
     <language>en</language>
     <lastBuildDate>Tue, 26 May 2026 09:00:00 +0300</lastBuildDate>
     <managingEditor>info@pharpro.co (PHARPRO Consulting Team)</managingEditor>
     <webMaster>info@pharpro.co (PHARPRO)</webMaster>
     <image>
-      <url>https://pharpro.co/images/apple-touch-icon.png</url>
+      <url>https://www.pharpro.co/images/apple-touch-icon.png</url>
       <title>PHARPRO Compliance Insights</title>
-      <link>https://pharpro.co</link>
+      <link>https://www.pharpro.co</link>
       <width>180</width>
       <height>180</height>
     </image>
-    <atom:link href="https://pharpro.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://www.pharpro.co/feed.xml" rel="self" type="application/rss+xml"/>
     <copyright>Copyright 2026 PHARPRO Consultation Company</copyright>
     <category>Pharmaceutical Compliance</category>
 
     <item>
       <title>FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture</title>
-      <link>https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/</guid>
+      <link>https://www.pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/</guid>
       <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Data Integrity</category>
       <description>21 CFR Part 11 audit trail requirements: what events must be captured, how to configure compliant audit trails, and the most common inspection findings.</description>
       <content:encoded><![CDATA[
         <p><strong>FDA 21 CFR Part 11</strong> requires that audit trails capture specific events — system access, data creation, modification, and deletion — with timestamps and user attribution. This guide covers exactly what your system must capture and how to evidence compliance during inspections.</p>
-        <p><a href="https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>Cleaning Validation Acceptance Criteria: MACO and Carryover Limits Explained</title>
-      <link>https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/</guid>
+      <link>https://www.pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/</guid>
       <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Cleaning Validation</category>
       <description>How to set cleaning validation acceptance criteria — calculate MACO, apply 10 ppm and 0.1% dose limits, and choose between rinse and swab sampling methods.</description>
       <content:encoded><![CDATA[
         <p>Setting the right <strong>cleaning validation acceptance criteria</strong> is one of the most critical steps in any cleaning validation programme. This guide walks through MACO calculations, the 10 ppm and 0.1% dose limit approaches, and how to document your rationale for EU GMP Annex 15 compliance.</p>
-        <p><a href="https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>Data Integrity in Pharmaceutical Manufacturing: ALCOA+ and Regulatory Requirements</title>
-      <link>https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/</guid>
+      <link>https://www.pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/</guid>
       <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Data Integrity</category>
       <description>Pharmaceutical data integrity guide — ALCOA+ principles, FDA and EU GMP expectations, common violations, and how to build a robust data integrity programme.</description>
       <content:encoded><![CDATA[
         <p><strong>Data integrity</strong> remains the most cited area in FDA warning letters and EU GMP inspection observations. This guide explains the ALCOA+ principles, what FDA and EU GMP inspectors check, and how to build a programme that withstands scrutiny.</p>
-        <p><a href="https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>GAMP 5 Risk Categories Explained: How to Classify Your System</title>
-      <link>https://pharpro.co/insights/gamp5-risk-categories-explained/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/gamp5-risk-categories-explained/</guid>
+      <link>https://www.pharpro.co/insights/gamp5-risk-categories-explained/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/gamp5-risk-categories-explained/</guid>
       <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>CSV &amp; Validation</category>
       <description>GAMP 5 software categories explained — what changed in the Second Edition, how to classify your system, and how category drives validation scope.</description>
       <content:encoded><![CDATA[
         <p><strong>GAMP 5</strong> classifies computerised systems into categories that determine the depth of validation effort required. The Second Edition simplified the framework. This guide explains how to classify your system correctly and what that means for your documentation scope.</p>
-        <p><a href="https://pharpro.co/insights/gamp5-risk-categories-explained/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/gamp5-risk-categories-explained/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>What Is a GMP Gap Assessment? A Complete Guide</title>
-      <link>https://pharpro.co/insights/gmp-gap-assessment-guide/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/gmp-gap-assessment-guide/</guid>
+      <link>https://www.pharpro.co/insights/gmp-gap-assessment-guide/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/gmp-gap-assessment-guide/</guid>
       <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Quality Assurance</category>
       <description>What a GMP gap assessment covers, when to conduct one, what regulators expect, and how PHARPRO structures assessments to deliver actionable CAPA plans.</description>
       <content:encoded><![CDATA[
         <p>A <strong>GMP gap assessment</strong> identifies compliance shortfalls before a regulatory inspector does. This guide covers when to conduct one, what a structured assessment covers, and how findings should be classified and addressed in a CAPA plan.</p>
-        <p><a href="https://pharpro.co/insights/gmp-gap-assessment-guide/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/gmp-gap-assessment-guide/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>How to Write a User Requirements Specification (URS) for a Computerised System</title>
-      <link>https://pharpro.co/insights/how-to-write-urs-computerised-system/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/how-to-write-urs-computerised-system/</guid>
+      <link>https://www.pharpro.co/insights/how-to-write-urs-computerised-system/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/how-to-write-urs-computerised-system/</guid>
       <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>CSV &amp; Validation</category>
       <description>How to write a GxP-compliant URS for pharmaceutical computerised systems — structure, content, GxP requirements, and common mistakes to avoid.</description>
       <content:encoded><![CDATA[
         <p>The <strong>User Requirements Specification (URS)</strong> is the foundation of every CSV project. A poorly structured URS creates traceability gaps and inspection risk. This guide covers what it must contain, how to structure requirements correctly, and the mistakes that most commonly generate observations.</p>
-        <p><a href="https://pharpro.co/insights/how-to-write-urs-computerised-system/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/how-to-write-urs-computerised-system/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>IQ OQ PQ Explained: What Each Qualification Phase Requires</title>
-      <link>https://pharpro.co/insights/iq-oq-pq-guide/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/iq-oq-pq-guide/</guid>
+      <link>https://www.pharpro.co/insights/iq-oq-pq-guide/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/iq-oq-pq-guide/</guid>
       <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Validation &amp; Qualification</category>
       <description>Complete guide to IQ, OQ, and PQ in pharmaceutical validation — regulatory basis, documentation requirements, and when each qualification phase applies.</description>
       <content:encoded><![CDATA[
         <p><strong>IQ, OQ, and PQ</strong> are the three qualification phases that demonstrate a system or piece of equipment is installed, operates, and performs as intended. This guide explains what each phase must cover, what documentation is required, and how to structure protocols that satisfy FDA and EU GMP inspectors.</p>
-        <p><a href="https://pharpro.co/insights/iq-oq-pq-guide/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/iq-oq-pq-guide/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>Thermal Mapping for Pharmaceutical Warehouses and Cold Rooms: A Complete Guide</title>
-      <link>https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/</guid>
+      <link>https://www.pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/</guid>
       <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>CQV &amp; Qualification</category>
       <description>Pharmaceutical temperature mapping guide — when required, how to design a study, sensor placement, excursion handling, and EU GMP Annex 15 requirements.</description>
       <content:encoded><![CDATA[
         <p><strong>Thermal mapping</strong> is mandatory for pharmaceutical storage areas where temperature-sensitive products are held. This guide covers study design, sensor placement rationale, excursion handling, and how to write a mapping report that satisfies EU GMP Annex 15 and WHO GDP expectations.</p>
-        <p><a href="https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>AI Validation Lifecycle Software for Pharma: PHARPRO DVS Review (2026)</title>
-      <link>https://pharpro.co/insights/ai-validation-lifecycle-software-pharma/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/ai-validation-lifecycle-software-pharma/</guid>
+      <link>https://www.pharpro.co/insights/ai-validation-lifecycle-software-pharma/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/ai-validation-lifecycle-software-pharma/</guid>
       <pubDate>Thu, 21 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Digital Validation</category>
       <description>PHARPRO DVS is AI validation lifecycle software for pharmaceutical teams — 30 document builders from URS to VSR, built-in FDA 21 CFR Part 11 and EU GMP Annex 11 compliance, RTM, and same-day deployment.</description>
       <content:encoded><![CDATA[
         <p><strong>AI-assisted validation software</strong> is transforming how pharmaceutical teams produce and manage validation documentation. This article reviews how PHARPRO DVS works, what it covers across the full V-model lifecycle, and how it compares to traditional Word-and-spreadsheet approaches.</p>
-        <p><a href="https://pharpro.co/insights/ai-validation-lifecycle-software-pharma/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/ai-validation-lifecycle-software-pharma/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>GMP Training Records: What Regulators Expect and How to Stay Audit-Ready</title>
-      <link>https://pharpro.co/insights/gmp-training-records-compliance/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/gmp-training-records-compliance/</guid>
+      <link>https://www.pharpro.co/insights/gmp-training-records-compliance/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/gmp-training-records-compliance/</guid>
       <pubDate>Tue, 12 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>GMP Training</category>
       <description>GMP training documentation guide — what records regulators require, how to structure your training matrix, and common inspection findings to avoid.</description>
       <content:encoded><![CDATA[
         <p><strong>GMP training records</strong> are among the first documents an inspector requests. Gaps in training matrices, missing effectiveness checks, and inadequate record retention are consistently cited in FDA and EU GMP inspections. This guide explains exactly what records are required and how to structure a training programme that holds up under scrutiny.</p>
-        <p><a href="https://pharpro.co/insights/gmp-training-records-compliance/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/gmp-training-records-compliance/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>Risk Assessment in CSV: How to Apply GAMP 5 Risk Principles</title>
-      <link>https://pharpro.co/insights/risk-assessment-computerised-systems/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/risk-assessment-computerised-systems/</guid>
+      <link>https://www.pharpro.co/insights/risk-assessment-computerised-systems/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/risk-assessment-computerised-systems/</guid>
       <pubDate>Tue, 05 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>CSV &amp; Validation</category>
       <description>Risk assessment for computerised systems — GAMP 5 categories, risk-based testing, and how to document your risk rationale for regulators under CSV.</description>
       <content:encoded><![CDATA[
         <p>A <strong>risk assessment for computerised systems</strong> determines which functions carry GxP impact and how much validation effort each requires. This guide covers the GAMP 5 risk methodology, how to conduct a functional risk assessment, and how to document your rationale in a way regulators find convincing.</p>
-        <p><a href="https://pharpro.co/insights/risk-assessment-computerised-systems/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/risk-assessment-computerised-systems/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>What Is a Validation Master Plan? Requirements and Best Practice</title>
-      <link>https://pharpro.co/insights/validation-master-plan-guide/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/validation-master-plan-guide/</guid>
+      <link>https://www.pharpro.co/insights/validation-master-plan-guide/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/validation-master-plan-guide/</guid>
       <pubDate>Tue, 28 Apr 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>CSV &amp; Validation</category>
       <description>A practical guide to writing and maintaining a Validation Master Plan (VMP) — what it must contain, who signs it, and how it links to your validation programme.</description>
       <content:encoded><![CDATA[
         <p>The <strong>Validation Master Plan (VMP)</strong> is the top-level document that defines the scope, approach, and governance of your validation programme. This guide covers what a VMP must contain, who approves it, and the common gaps regulators find during inspections.</p>
-        <p><a href="https://pharpro.co/insights/validation-master-plan-guide/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/validation-master-plan-guide/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>Pharmaceutical Inspection Readiness: A 7-Step Site Preparation Guide</title>
-      <link>https://pharpro.co/insights/pharmaceutical-inspection-readiness/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/pharmaceutical-inspection-readiness/</guid>
+      <link>https://www.pharpro.co/insights/pharmaceutical-inspection-readiness/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/pharmaceutical-inspection-readiness/</guid>
       <pubDate>Tue, 21 Apr 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>QA &amp; Compliance</category>
       <description>How to prepare your pharmaceutical site for an FDA, EU GMP, or national authority inspection — documentation, staff readiness, and response strategies.</description>
       <content:encoded><![CDATA[
         <p><strong>Inspection readiness</strong> is not a one-time activity — it's an ongoing state. This 7-step guide covers documentation reviews, mock inspections, staff preparation, back-room management, and how to handle inspector requests during the actual inspection.</p>
-        <p><a href="https://pharpro.co/insights/pharmaceutical-inspection-readiness/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/pharmaceutical-inspection-readiness/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>Computer System Validation for SaaS and Cloud Applications in Pharma</title>
-      <link>https://pharpro.co/insights/csv-saas-cloud-pharma/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/csv-saas-cloud-pharma/</guid>
+      <link>https://www.pharpro.co/insights/csv-saas-cloud-pharma/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/csv-saas-cloud-pharma/</guid>
       <pubDate>Tue, 14 Apr 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>CSV &amp; Validation</category>
       <description>How to validate SaaS and cloud systems in pharma GxP — risk approach, vendor qualification, and documentation strategy under GAMP 5 and EU GMP Annex 11.</description>
       <content:encoded><![CDATA[
         <p>Validating <strong>SaaS and cloud-hosted GxP systems</strong> requires a different approach than traditional on-premise software. This article explains the GAMP 5 classification for cloud systems, how to qualify vendors, and what documentation a cloud CSV project must produce under EU GMP Annex 11.</p>
-        <p><a href="https://pharpro.co/insights/csv-saas-cloud-pharma/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/csv-saas-cloud-pharma/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>Supplier Qualification in GMP: Vendor Audit Checklist and Process</title>
-      <link>https://pharpro.co/insights/supplier-qualification-gmp/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/supplier-qualification-gmp/</guid>
+      <link>https://www.pharpro.co/insights/supplier-qualification-gmp/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/supplier-qualification-gmp/</guid>
       <pubDate>Tue, 07 Apr 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>QA &amp; Compliance</category>
       <description>How to qualify pharmaceutical suppliers under GMP — audit checklist, qualification steps, and ongoing monitoring requirements for contract manufacturers.</description>
       <content:encoded><![CDATA[
         <p><strong>Supplier qualification</strong> is a GMP requirement, not a commercial formality. Regulators expect documented evidence that your suppliers meet defined quality standards. This guide covers the risk-based qualification approach, audit checklist, and quality agreement requirements.</p>
-        <p><a href="https://pharpro.co/insights/supplier-qualification-gmp/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/supplier-qualification-gmp/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>FDA Warning Letter Response: A Practical Recovery Plan</title>
-      <link>https://pharpro.co/insights/fda-warning-letter-response/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/fda-warning-letter-response/</guid>
+      <link>https://www.pharpro.co/insights/fda-warning-letter-response/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/fda-warning-letter-response/</guid>
       <pubDate>Wed, 25 Mar 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>QA &amp; Compliance</category>
       <description>Received an FDA Warning Letter? This guide explains how to structure your response, address observations, and restore regulatory standing — step by step.</description>
       <content:encoded><![CDATA[
         <p>An <strong>FDA Warning Letter</strong> demands a structured, credible response within 15 business days. This guide explains how to acknowledge observations correctly, present root cause analysis, commit to corrective actions, and restore FDA's confidence in your quality system.</p>
-        <p><a href="https://pharpro.co/insights/fda-warning-letter-response/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/fda-warning-letter-response/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>CAPA Management in Pharmaceutical QA: A Step-by-Step Guide</title>
-      <link>https://pharpro.co/insights/capa-management-pharma-guide/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/capa-management-pharma-guide/</guid>
+      <link>https://www.pharpro.co/insights/capa-management-pharma-guide/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/capa-management-pharma-guide/</guid>
       <pubDate>Tue, 10 Mar 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>QA &amp; Compliance</category>
       <description>How to build an effective CAPA system in pharma — from root cause analysis to effectiveness checks. Aligned with FDA 21 CFR Part 11, EU GMP, and ICH Q10.</description>
       <content:encoded><![CDATA[
         <p><strong>CAPA management</strong> is central to every pharmaceutical quality system. Poorly documented CAPAs — with superficial root cause analysis or missing effectiveness checks — are among the most common inspection observations. This step-by-step guide covers how to build a CAPA process that satisfies FDA and EU GMP expectations.</p>
-        <p><a href="https://pharpro.co/insights/capa-management-pharma-guide/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/capa-management-pharma-guide/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>GAMP 5 Second Edition: Key Changes for Your CSV Programme</title>
-      <link>https://pharpro.co/insights/gamp5-second-edition-csv-changes/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/gamp5-second-edition-csv-changes/</guid>
+      <link>https://www.pharpro.co/insights/gamp5-second-edition-csv-changes/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/gamp5-second-edition-csv-changes/</guid>
       <pubDate>Sat, 15 Mar 2025 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>CSV &amp; Validation</category>
       <description>What ISPE GAMP 5 Second Edition means for your CSV programme — new risk categories, critical thinking principles, and lifecycle documentation changes.</description>
       <content:encoded><![CDATA[
         <p>ISPE released the second edition of the <strong>Good Automated Manufacturing Practice (GAMP 5)</strong> guide in 2022. This article breaks down the most significant changes and tells you exactly what to review in your existing programme.</p>
-        <p><a href="https://pharpro.co/insights/gamp5-second-edition-csv-changes/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/gamp5-second-edition-csv-changes/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>EU GMP Annex 11: A Practical Compliance Checklist for 2025</title>
-      <link>https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/</guid>
+      <link>https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/</guid>
       <pubDate>Mon, 10 Feb 2025 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Regulatory Compliance</category>
       <description>A practical EU GMP Annex 11 compliance checklist for 2025 — covering supplier assessment, validation, data integrity, and audit trail requirements.</description>
       <content:encoded><![CDATA[
         <p><strong>EU GMP Annex 11</strong> governs computerized systems in pharmaceutical manufacturing. Whether you are preparing for an EMA inspection or reviewing your current compliance state, this checklist covers the areas inspectors assess most closely.</p>
-        <p><a href="https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title>FDA 21 CFR Part 11: Data Integrity Requirements Explained</title>
-      <link>https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity/</guid>
+      <link>https://www.pharpro.co/insights/fda-21-cfr-part-11-data-integrity/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/fda-21-cfr-part-11-data-integrity/</guid>
       <pubDate>Mon, 20 Jan 2025 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Data Integrity</category>
       <description>Understand FDA 21 CFR Part 11 data integrity requirements — electronic records, audit trails, electronic signatures, and common compliance gaps to close.</description>
       <content:encoded><![CDATA[
         <p><strong>21 CFR Part 11</strong> is the FDA regulation that defines when electronic records and signatures are considered equivalent to paper. Audit trail deficiencies remain among the top five observations in FDA drug inspections.</p>
-        <p><a href="https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity/">Read the full article →</a></p>
+        <p><a href="https://www.pharpro.co/insights/fda-21-cfr-part-11-data-integrity/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
