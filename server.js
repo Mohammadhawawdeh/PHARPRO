@@ -68,11 +68,20 @@ app.get("/feed.xml", (req, res) => {
 });
 
 // Service pages (directory/index.html structure for GitHub Pages compatibility)
-const SERVICE_PAGES = ["csv", "qa", "cqv", "training"];
+const SERVICE_PAGES = ["csv", "qa", "cqv", "training", "dvs", "digital"];
 SERVICE_PAGES.forEach((svc) => {
   app.get([`/services/${svc}`, `/services/${svc}/`], (req, res) => {
     res.setHeader("Cache-Control", "no-cache, must-revalidate");
     res.sendFile(path.join(__dirname, "services", svc, "index.html"));
+  });
+});
+
+// Training sub-pages
+const TRAINING_SUB_PAGES = ["csv", "cleaning-validation", "compressed-air-testing"];
+TRAINING_SUB_PAGES.forEach((sub) => {
+  app.get([`/services/training/${sub}`, `/services/training/${sub}/`], (req, res) => {
+    res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    res.sendFile(path.join(__dirname, "services", "training", sub, "index.html"));
   });
 });
 
@@ -84,9 +93,27 @@ app.get(["/insights", "/insights/"], (req, res) => {
 
 // Insights article pages
 const INSIGHT_SLUGS = [
-  "gamp5-second-edition-csv-changes",
+  "21-cfr-part-11-audit-trail-requirements",
+  "ai-validation-lifecycle-software-pharma",
+  "capa-management-pharma-guide",
+  "cleaning-validation-maco-acceptance-criteria",
+  "csv-saas-cloud-pharma",
+  "data-integrity-pharmaceutical-manufacturing",
   "eu-gmp-annex-11-compliance-checklist",
   "fda-21-cfr-part-11-data-integrity",
+  "fda-warning-letter-response",
+  "gamp5-risk-categories-explained",
+  "gamp5-second-edition-csv-changes",
+  "gmp-gap-assessment-guide",
+  "gmp-training-records-compliance",
+  "how-to-write-urs-computerised-system",
+  "iq-oq-pq-guide",
+  "pharmaceutical-inspection-readiness",
+  "pharmaceutical-validation-software",
+  "risk-assessment-computerised-systems",
+  "supplier-qualification-gmp",
+  "thermal-mapping-pharmaceutical-warehouses",
+  "validation-master-plan-guide",
 ];
 INSIGHT_SLUGS.forEach((slug) => {
   app.get([`/insights/${slug}`, `/insights/${slug}/`], (req, res) => {
