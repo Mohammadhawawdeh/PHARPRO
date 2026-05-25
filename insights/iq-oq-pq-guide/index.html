@@ -112,6 +112,103 @@
       "wordCount": 1168
     },
     {
+      "@type": "HowTo",
+      "@id": "https://www.pharpro.co/insights/iq-oq-pq-guide/#howto",
+      "name": "How to Conduct IQ OQ PQ Qualification for Pharmaceutical Equipment",
+      "description": "A step-by-step guide to running Installation Qualification (IQ), Operational Qualification (OQ), and Performance Qualification (PQ) for GMP-critical equipment, in line with FDA 21 CFR Part 11, EU GMP Annex 15, and ISPE GAMP 5.",
+      "totalTime": "P8W",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "supply": [
+        { "@type": "HowToSupply", "name": "User Requirements Specification (URS)" },
+        { "@type": "HowToSupply", "name": "Qualification protocol templates (IQ/OQ/PQ)" },
+        { "@type": "HowToSupply", "name": "Calibrated test instruments" },
+        { "@type": "HowToSupply", "name": "Supplier documentation and FAT records" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "Validation Management Software (e.g. PHARPRO DVS)" },
+        { "@type": "HowToTool", "name": "Electronic signature system" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Conduct Design Qualification (DQ)",
+          "text": "Before equipment is purchased or installed, verify that the proposed design meets your User Requirements Specification (URS). Review supplier documentation, assess the risk category under GAMP 5, and document evidence that the design is fit for purpose. A thorough DQ reduces the risk of failures during IQ and OQ.",
+          "url": "https://www.pharpro.co/insights/iq-oq-pq-guide/#dq"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Execute Installation Qualification (IQ)",
+          "text": "After equipment is delivered and installed, verify that it matches the approved specifications. The IQ protocol checks model and serial numbers, utilities connections, safety interlocks, calibration status, and the completeness of supplier documentation. All deviations must be recorded and resolved before moving to OQ.",
+          "url": "https://www.pharpro.co/insights/iq-oq-pq-guide/#what-is-iq"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Execute Operational Qualification (OQ)",
+          "text": "Test that the equipment operates correctly across its full intended operating range, including worst-case (upper and lower) parameter limits. Pre-define all acceptance criteria in the approved protocol before execution begins. Confirm alarms, interlocks, and control system functions. Resolve all deviations before PQ.",
+          "url": "https://www.pharpro.co/insights/iq-oq-pq-guide/#what-is-oq"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Execute Performance Qualification (PQ)",
+          "text": "Demonstrate that the equipment consistently performs under actual or simulated production conditions. Conduct a minimum of three consecutive successful runs using actual product or a validated surrogate. Document all results against pre-approved acceptance criteria. PQ bridges equipment qualification and process validation.",
+          "url": "https://www.pharpro.co/insights/iq-oq-pq-guide/#what-is-pq"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Issue the Qualification Summary Report",
+          "text": "Compile the completed protocols, test results, deviation reports, and impact assessments into a Qualification Summary Report. The report must be reviewed and approved by QA before the equipment is released for routine GMP use. Retain all records for the equipment lifecycle plus the required regulatory retention period.",
+          "url": "https://www.pharpro.co/insights/iq-oq-pq-guide/#documentation"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.pharpro.co/insights/iq-oq-pq-guide/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between IQ, OQ, and PQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IQ (Installation Qualification) verifies that equipment is correctly installed per approved specifications. OQ (Operational Qualification) verifies that it operates correctly across its full intended operating range. PQ (Performance Qualification) demonstrates that it consistently performs under actual production conditions. They are sequential — each phase must be approved before the next begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Design Qualification (DQ) mandatory for pharmaceutical equipment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EU GMP Annex 15 requires DQ, and FDA process validation guidance strongly implies it. While some companies treat DQ as optional for lower-risk equipment, skipping it increases the risk of IQ and OQ failures and can lead to regulatory findings. PHARPRO recommends conducting DQ for all GMP-critical equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many PQ runs are required by regulators?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EU GMP Annex 15 does not specify a fixed number of PQ runs, but three consecutive successful runs is the industry standard and the expectation regulators bring into inspections. For continuous processes or where statistical justification is provided, the approach may differ — but the number and rationale must be documented in the validation plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can IQ, OQ, and PQ be combined into one protocol?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — combined IQ/OQ protocols (and occasionally IQ/OQ/PQ) are acceptable and common for simpler equipment or time-constrained projects, provided each phase is clearly delineated within the protocol and IQ acceptance is separately approved before OQ execution begins."
+          }
+        }
+      ]
+    },
+    {
       "@type": "WebPage",
       "@id": "https://www.pharpro.co/insights/iq-oq-pq-guide/#webpage",
       "url": "https://www.pharpro.co/insights/iq-oq-pq-guide/",
