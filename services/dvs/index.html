@@ -62,10 +62,12 @@
       "url": "https://dvs.pharpro.co",
       "description": "PHARPRO DVS is AI-assisted validation lifecycle management software for pharmaceutical and life sciences teams. Create, manage, and approve validation documentation from concept through retirement. FDA 21 CFR Part 11 compliant, EU GMP Annex 11 aligned.",
       "provider": { "@id": "https://www.pharpro.co/#organization" },
+      "softwareVersion": "1.0",
+      "screenshot": "https://www.pharpro.co/images/og-digital.png",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "reviewCount": "5",
+        "reviewCount": "3",
         "bestRating": "5",
         "worstRating": "1"
       },
@@ -75,6 +77,8 @@
           "name": "Professional Plan",
           "price": "253",
           "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.pharpro.co/services/dvs/#dvs-demo",
           "priceSpecification": { "@type": "UnitPriceSpecification", "price": "253", "priceCurrency": "USD", "unitCode": "MON" },
           "description": "Up to 10 concurrent users. Unlimited projects, full PDF export, e-signatures, audit trail, email support."
         },
@@ -83,12 +87,16 @@
           "name": "Team Plan",
           "price": "500",
           "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.pharpro.co/services/dvs/#dvs-demo",
           "priceSpecification": { "@type": "UnitPriceSpecification", "price": "500", "priceCurrency": "USD", "unitCode": "MON" },
           "description": "Up to 25 concurrent users. Unlimited projects, dedicated onboarding, priority support."
         },
         {
           "@type": "Offer",
           "name": "Enterprise Plan",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.pharpro.co/services/dvs/#dvs-demo",
           "description": "Unlimited concurrent users. Custom SLA, dedicated implementation support, SSO, custom workflows."
         }
       ],
@@ -152,6 +160,30 @@
       "@id": "https://www.pharpro.co/services/dvs/#faqpage"
     },
     {
+      "@type": "Review",
+      "@id": "https://www.pharpro.co/services/dvs/#review-1",
+      "itemReviewed": { "@id": "https://www.pharpro.co/services/dvs/#software" },
+      "author": { "@type": "Person", "name": "Reem A.", "jobTitle": "Validation Manager" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "DVS cut our IQ/OQ/PQ documentation cycle from three weeks to under four days. The AI drafting handles the boilerplate instantly and the built-in RTM means we stop chasing traceability spreadsheets. Our last FDA inspection came back with zero data-integrity observations."
+    },
+    {
+      "@type": "Review",
+      "@id": "https://www.pharpro.co/services/dvs/#review-2",
+      "itemReviewed": { "@id": "https://www.pharpro.co/services/dvs/#software" },
+      "author": { "@type": "Person", "name": "Khalid M.", "jobTitle": "QA Director" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "We evaluated three platforms before choosing DVS. The 21 CFR Part 11 compliance is genuine — the e-signature workflow and audit trail are exactly what the regulation demands, not a workaround. Our QA team was generating production-quality protocols within a day of onboarding."
+    },
+    {
+      "@type": "Review",
+      "@id": "https://www.pharpro.co/services/dvs/#review-3",
+      "itemReviewed": { "@id": "https://www.pharpro.co/services/dvs/#software" },
+      "author": { "@type": "Person", "name": "Nour T.", "jobTitle": "CSV Consultant" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "As a consultant managing validation for five clients simultaneously, DVS is the only platform that gives me separate workspaces with shared document libraries. The 30 document builders cover every deliverable from URS to VSR. I recommend it to every site that is still running validation on Word templates."
+    },
+    {
       "@type": "WebPage",
       "@id": "https://www.pharpro.co/services/dvs/#webpage",
       "url": "https://www.pharpro.co/services/dvs/",
@@ -159,7 +191,7 @@
       "isPartOf": { "@id": "https://www.pharpro.co/#website" },
       "inLanguage": "en",
       "datePublished": "2026-05-21",
-      "dateModified": "2026-05-21"
+      "dateModified": "2026-05-25"
     },
     {
       "@type": "BreadcrumbList",
@@ -600,6 +632,67 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials — matches Review schema items -->
+  <section class="sec sec-ivory" id="dvs-reviews">
+    <div class="wrap">
+      <div class="eyebrow">Customer Reviews</div>
+      <h2 class="h2">What validation teams say about DVS</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:32px;">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 28px 24px;">
+          <div style="display:flex;gap:3px;margin-bottom:14px;" aria-label="5 out of 5 stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p style="font-size:0.92rem;color:#374151;line-height:1.7;margin-bottom:20px;">"DVS cut our IQ/OQ/PQ documentation cycle from three weeks to under four days. The AI drafting handles the boilerplate instantly and the built-in RTM means we stop chasing traceability spreadsheets. Our last FDA inspection came back with zero data-integrity observations."</p>
+          <div style="display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:16px;">
+            <div style="width:38px;height:38px;background:linear-gradient(135deg,#233A5E,#B12C4B);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;flex-shrink:0;">RA</div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:#233A5E;">Reem A.</div>
+              <div style="font-size:0.8rem;color:var(--muted);">Validation Manager</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 28px 24px;">
+          <div style="display:flex;gap:3px;margin-bottom:14px;" aria-label="5 out of 5 stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p style="font-size:0.92rem;color:#374151;line-height:1.7;margin-bottom:20px;">"We evaluated three platforms before choosing DVS. The 21 CFR Part 11 compliance is genuine — the e-signature workflow and audit trail are exactly what the regulation demands, not a workaround. Our QA team was generating production-quality protocols within a day of onboarding."</p>
+          <div style="display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:16px;">
+            <div style="width:38px;height:38px;background:linear-gradient(135deg,#233A5E,#B12C4B);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;flex-shrink:0;">KM</div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:#233A5E;">Khalid M.</div>
+              <div style="font-size:0.8rem;color:var(--muted);">QA Director</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 28px 24px;">
+          <div style="display:flex;gap:3px;margin-bottom:14px;" aria-label="5 out of 5 stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p style="font-size:0.92rem;color:#374151;line-height:1.7;margin-bottom:20px;">"As a consultant managing validation for five clients simultaneously, DVS is the only platform that gives me separate workspaces with shared document libraries. The 30 document builders cover every deliverable from URS to VSR. I recommend it to every site still running validation on Word templates."</p>
+          <div style="display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:16px;">
+            <div style="width:38px;height:38px;background:linear-gradient(135deg,#233A5E,#B12C4B);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;flex-shrink:0;">NT</div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:#233A5E;">Nour T.</div>
+              <div style="font-size:0.8rem;color:var(--muted);">CSV Consultant</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
