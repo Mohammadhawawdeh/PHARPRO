@@ -125,6 +125,112 @@
       ]
     },
     {
+      "@type": "HowTo",
+      "@id": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#howto",
+      "name": "How to Achieve EU GMP Annex 11 Compliance for Pharmaceutical Computerized Systems",
+      "description": "A seven-step checklist for pharmaceutical manufacturers to assess and close compliance gaps against EU GMP Annex 11, covering scope, supplier assessment, validation, data integrity, access controls, change control, and periodic review.",
+      "totalTime": "P4W",
+      "supply": [
+        { "@type": "HowToSupply", "name": "Validated system inventory" },
+        { "@type": "HowToSupply", "name": "Validation Master Plan (VMP)" },
+        { "@type": "HowToSupply", "name": "Quality Technical Agreements (QTAs)" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "EU GMP Annex 11 (2011 revision)" },
+        { "@type": "HowToTool", "name": "Validation management software (e.g. PHARPRO DVS)" },
+        { "@type": "HowToTool", "name": "Gap assessment checklist" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Define scope and build a complete validated system inventory",
+          "text": "Identify every computerized system that creates, processes, or stores GxP data — including LIMS, MES, SCADA, QMS, EMS, and WMS. Any system not in the validated inventory is a compliance gap before any other check is made.",
+          "url": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#scope"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Conduct supplier assessment and establish Quality Technical Agreements",
+          "text": "Qualify all GxP system vendors with documented audits and put a Quality Technical Agreement (QTA) in place covering validation responsibilities, change control notifications, data access rights, and disaster recovery. For cloud and SaaS suppliers, ensure the SLA addresses data backup and incident response times.",
+          "url": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#supplier-assessment"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Prepare and execute validation documentation",
+          "text": "Ensure each system has a completed URS, GAMP 5 risk classification, IQ/OQ/PQ protocols with a signed discrepancy log, a Validation Summary Report, and a current traceability matrix linking requirements to test cases. The VMP or site validation policy must explicitly reference computerized systems.",
+          "url": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#validation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Implement data integrity controls and audit trail review",
+          "text": "Enable audit trails for all GxP data fields capturing original entries, changes, and deletions. Establish a documented, risk-based audit trail review schedule — a blank review log is one of the most common major findings in Annex 11 inspections. Timestamps must come from a controlled, non-adjustable source. Define and control raw data separately from processed data.",
+          "url": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#data-integrity"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Configure role-based access controls",
+          "text": "Implement a least-privilege access model with documented role definitions. Prohibit shared or generic usernames for GxP activities. Enforce a password policy covering complexity, expiry, and no reuse. Conduct and document periodic access reviews — at minimum annually. Control physical access to system hardware and administration interfaces.",
+          "url": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#access-controls"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Establish change control for all system changes",
+          "text": "Route every change to a validated system — including vendor patches and upgrades — through a documented change control process. Complete an impact assessment before implementation to define whether re-validation is required. Document emergency change procedures with mandatory retrospective review.",
+          "url": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#change-control"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Schedule and conduct periodic reviews",
+          "text": "Define a periodic review schedule for every validated system — annually for GxP-critical systems is the industry standard. Each review must assess changes since the last review, system incidents, audit trail review records, access control reviews, and continued fitness for purpose. Document outcomes with clear conclusions and track remediation actions to closure.",
+          "url": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#periodic-review"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is EU GMP Annex 11?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EU GMP Annex 11 is the European Good Manufacturing Practice guideline that governs computerized systems used in pharmaceutical manufacturing and quality control. It covers the full system lifecycle — from risk assessment and supplier qualification through validation, data integrity, access controls, change control, and periodic review. Compliance is mandatory for any company placing medicinal products on the EU market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does EU GMP Annex 11 apply to cloud and SaaS systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Annex 11 applies to all computerized systems that process GxP data, regardless of whether they are hosted on-premise, in the cloud, or delivered as SaaS. For cloud and SaaS systems, supplier assessment requirements are particularly important — a Quality Technical Agreement must define responsibilities for validation, change control, data access, and business continuity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the most common EU GMP Annex 11 inspection finding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most common finding is audit trails that are enabled but never reviewed. Annex 11 Clause 9 requires that audit trail reviews are conducted based on risk and documented. Inspectors routinely check for evidence of regular, documented reviews — a blank audit trail review log is a major finding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often must periodic reviews be conducted under EU GMP Annex 11?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Annex 11 does not specify a fixed frequency, but the industry expectation is at least annually for GxP-critical systems. The review must assess changes since the last review, incidents, audit trail reviews, access control reviews, and continued fitness for purpose. Outcomes must be documented with clear conclusions and follow-up actions tracked to closure."
+          }
+        }
+      ]
+    },
+    {
       "@type": "WebPage",
       "@id": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/#webpage",
       "url": "https://www.pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/",
@@ -625,6 +731,35 @@
       </aside>
     </div>
   </section>
+
+  <!-- FAQ -->
+  <section style="padding:56px 0 48px;background:var(--ivory,#F5EEE8)">
+    <div style="width:min(760px,calc(100% - 2.5rem));margin-inline:auto">
+      <h2 style="font-size:1.35rem;font-weight:700;color:#233A5E;margin-bottom:20px">Frequently asked questions</h2>
+      <div style="display:grid;gap:8px" id="a11FaqList">
+        <div class="a11-faq-item" style="border:1px solid #E8E0D8;border-radius:14px;overflow:hidden;background:#fff">
+          <button onclick="this.closest('.a11-faq-item').classList.toggle('a11-open')" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;width:100%;text-align:left;font-size:.95rem;font-weight:600;color:#233A5E;background:none;border:none;cursor:pointer;font-family:inherit">What is EU GMP Annex 11?<svg style="flex-shrink:0;transition:transform .2s" class="a11-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7A8D" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="a11-ans" style="max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;font-size:.9rem;color:#6B7A8D;line-height:1.7;padding:0 20px">EU GMP Annex 11 is the European Good Manufacturing Practice guideline that governs computerized systems used in pharmaceutical manufacturing and quality control. It covers the full system lifecycle — from risk assessment and supplier qualification through validation, data integrity, access controls, change control, and periodic review. Compliance is mandatory for any company placing medicinal products on the EU market.</div>
+        </div>
+        <div class="a11-faq-item" style="border:1px solid #E8E0D8;border-radius:14px;overflow:hidden;background:#fff">
+          <button onclick="this.closest('.a11-faq-item').classList.toggle('a11-open')" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;width:100%;text-align:left;font-size:.95rem;font-weight:600;color:#233A5E;background:none;border:none;cursor:pointer;font-family:inherit">Does EU GMP Annex 11 apply to cloud and SaaS systems?<svg style="flex-shrink:0;transition:transform .2s" class="a11-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7A8D" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="a11-ans" style="max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;font-size:.9rem;color:#6B7A8D;line-height:1.7;padding:0 20px">Yes. Annex 11 applies to all computerized systems that process GxP data, regardless of whether they are hosted on-premise, in the cloud, or delivered as SaaS. For cloud and SaaS systems, supplier assessment requirements are particularly important — a Quality Technical Agreement must define responsibilities for validation, change control, data access, and business continuity.</div>
+        </div>
+        <div class="a11-faq-item" style="border:1px solid #E8E0D8;border-radius:14px;overflow:hidden;background:#fff">
+          <button onclick="this.closest('.a11-faq-item').classList.toggle('a11-open')" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;width:100%;text-align:left;font-size:.95rem;font-weight:600;color:#233A5E;background:none;border:none;cursor:pointer;font-family:inherit">What is the most common EU GMP Annex 11 inspection finding?<svg style="flex-shrink:0;transition:transform .2s" class="a11-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7A8D" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="a11-ans" style="max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;font-size:.9rem;color:#6B7A8D;line-height:1.7;padding:0 20px">The most common finding is audit trails that are enabled but never reviewed. Annex 11 Clause 9 requires that audit trail reviews are conducted based on risk and documented. Inspectors routinely check for evidence of regular, documented reviews — a blank audit trail review log is a major finding.</div>
+        </div>
+        <div class="a11-faq-item" style="border:1px solid #E8E0D8;border-radius:14px;overflow:hidden;background:#fff">
+          <button onclick="this.closest('.a11-faq-item').classList.toggle('a11-open')" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;width:100%;text-align:left;font-size:.95rem;font-weight:600;color:#233A5E;background:none;border:none;cursor:pointer;font-family:inherit">How often must periodic reviews be conducted under Annex 11?<svg style="flex-shrink:0;transition:transform .2s" class="a11-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7A8D" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="a11-ans" style="max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;font-size:.9rem;color:#6B7A8D;line-height:1.7;padding:0 20px">Annex 11 does not specify a fixed frequency, but the industry expectation is at least annually for GxP-critical systems. The review must assess changes since the last review, incidents, audit trail reviews, access control reviews, and continued fitness for purpose. Outcomes must be documented with clear conclusions and follow-up actions tracked to closure.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .a11-faq-item.a11-open .a11-ans { max-height:320px !important; padding:0 20px 18px !important; }
+    .a11-faq-item.a11-open .a11-chev { transform:rotate(180deg); }
+  </style>
 
   <section class="art-cta" aria-labelledby="cta-heading">
     <div class="wrap">

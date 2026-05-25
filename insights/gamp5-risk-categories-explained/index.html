@@ -112,6 +112,97 @@
       "wordCount": 1092
     },
     {
+      "@type": "HowTo",
+      "@id": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/#howto",
+      "name": "How to Classify a Pharmaceutical Computerized System Under GAMP 5",
+      "description": "A step-by-step process for assigning the correct GAMP 5 category to a GxP computerized system, based on the GAMP 5 Second Edition (2022) risk-based approach.",
+      "totalTime": "P3D",
+      "supply": [
+        { "@type": "HowToSupply", "name": "Validated system inventory" },
+        { "@type": "HowToSupply", "name": "Supplier documentation and software description" },
+        { "@type": "HowToSupply", "name": "User Requirements Specification (URS)" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "GAMP 5 Second Edition guide" },
+        { "@type": "HowToTool", "name": "Risk assessment template" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Confirm GxP relevance and add the system to your validated inventory",
+          "text": "Determine whether the system creates, processes, stores, or transmits GxP data. If it does, it falls within the scope of Annex 11 and must be included in your validated system inventory. Any system not in that inventory is your first compliance gap.",
+          "url": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/#why-categories"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Review the current GAMP 5 Second Edition categories",
+          "text": "The GAMP 5 Second Edition (2022) replaced the original five categories with four: Category 1 (infrastructure software), Category 3 (non-configured commercial products), Category 4 (configured commercial products), and Category 5 (custom applications). Category 2 was removed — systems previously in Category 2 now classify as Category 1 or Category 3.",
+          "url": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/#second-edition-changes"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Assign the appropriate category based on system type",
+          "text": "Classify non-configured commercial software (used as-supplied, no user configuration) as Category 3. Classify configured commercial software — where settings, workflows, or rules are defined by the user — as Category 4. Assign Category 5 to fully custom-developed systems. Infrastructure and operating systems are Category 1 and typically require only basic documentation.",
+          "url": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/#category-4"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Apply additional considerations for SaaS and cloud-hosted systems",
+          "text": "SaaS and cloud-hosted systems generally classify as Category 3 or Category 4 depending on the degree of user configuration. The hosting model does not change the category, but it adds supplier assessment obligations — a Quality Technical Agreement (QTA) must define responsibilities for validation, change control, data access, and disaster recovery.",
+          "url": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/#saas-cloud"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Document the classification rationale and calibrate validation depth",
+          "text": "Record the category, the rationale for the decision, and the applicable regulatory basis in your Validation Master Plan or system-specific validation plan. Conduct a risk assessment to determine the required depth of testing — a high-risk Category 3 system may demand more test cases than a low-risk Category 4 system. Risk, not category alone, drives validation scope.",
+          "url": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/#why-categories"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What happened to GAMP 5 Category 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GAMP 5 Category 2 (non-configured firmware on instruments) was removed in the Second Edition (2022). Systems previously classified as Category 2 now fall under Category 1 (if they are infrastructure) or Category 3 (if they are non-configured commercial products). Companies should review any systems documented as Category 2 and update their validation rationale accordingly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a spreadsheet (Excel) a GAMP 5 Category 3 or Category 4 system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An Excel spreadsheet used for GxP calculations is typically Category 3 or Category 4 depending on complexity. A simple spreadsheet with fixed, locked formulas may be Category 3. A spreadsheet with macros, user-defined functions, or significant user configuration is Category 4. All GxP spreadsheets require validation — the category determines the depth of testing required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the GAMP 5 category determine how many test cases are required?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indirectly, yes. The category influences the depth of functional testing — Category 4 systems require comprehensive functional testing against the FRS, while Category 3 systems typically need installation verification and basic functional checks. However, risk assessment results take precedence — a low-risk Category 4 system may require fewer test cases than a high-risk Category 3 system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a system's GAMP 5 category change over time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If a vendor releases a major software update that adds significant new functionality, or if the company adds custom development on top of a configured product, the classification should be re-evaluated through the change control process. Any change that could affect a system's GxP status requires a formal change control assessment."
+          }
+        }
+      ]
+    },
+    {
       "@type": "WebPage",
       "@id": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/#webpage",
       "url": "https://www.pharpro.co/insights/gamp5-risk-categories-explained/",
