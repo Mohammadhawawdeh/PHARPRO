@@ -116,17 +116,31 @@
           "telephone": "+962798565807",
           "email": "info@pharpro.co",
           "contactType": "customer service",
-          "availableLanguage": [
-            "English",
-            "Arabic"
-          ],
-          "areaServed": "Worldwide"
+          "availableLanguage": ["English", "Arabic"],
+          "areaServed": "Worldwide",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+962798565807",
+          "contactType": "customer service",
+          "url": "https://wa.me/962798565807",
+          "name": "WhatsApp",
+          "availableLanguage": ["English", "Arabic"],
+          "areaServed": "Worldwide",
+          "description": "Instant messaging via WhatsApp — typically responds within 1 hour during business hours"
         }
       ],
       "sameAs": [
         "https://www.linkedin.com/company/pharprocc",
         "https://twitter.com/pharprocc",
-        "https://x.com/pharprocc"
+        "https://x.com/pharprocc",
+        "https://wa.me/962798565807"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -213,9 +227,7 @@
               "@type": "Service",
               "name": "Computerized System Validation (CSV)",
               "description": "Full-lifecycle CSV for pharmaceutical software, manufacturing systems, and laboratory instruments. IQ, OQ, PQ, risk classification, URS, and audit trail review. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.",
-              "provider": {
-                "@id": "https://www.pharpro.co/#organization"
-              },
+              "provider": { "@id": "https://www.pharpro.co/#organization" },
               "serviceType": "Computerized System Validation",
               "url": "https://www.pharpro.co/services/csv/"
             }
@@ -226,9 +238,7 @@
               "@type": "Service",
               "name": "Quality Assurance & Gap Assessment",
               "description": "QA programme reviews, gap assessments against regulatory expectations, SOP development, CAPA management, and data integrity audits.",
-              "provider": {
-                "@id": "https://www.pharpro.co/#organization"
-              },
+              "provider": { "@id": "https://www.pharpro.co/#organization" },
               "serviceType": "Quality Assurance",
               "url": "https://www.pharpro.co/services/qa/"
             }
@@ -239,9 +249,7 @@
               "@type": "Service",
               "name": "CQV & Thermal Mapping",
               "description": "Commissioning, Qualification, and Validation (CQV) for pharmaceutical equipment and utilities. Thermal mapping for cold chain storage and temperature-controlled environments.",
-              "provider": {
-                "@id": "https://www.pharpro.co/#organization"
-              },
+              "provider": { "@id": "https://www.pharpro.co/#organization" },
               "serviceType": "Qualification and Validation",
               "url": "https://www.pharpro.co/services/cqv/"
             }
@@ -252,11 +260,21 @@
               "@type": "Service",
               "name": "GMP Training",
               "description": "Good Manufacturing Practice training programmes customised for pharmaceutical teams. Covers data integrity, cleaning validation, equipment qualification, and regulatory frameworks.",
-              "provider": {
-                "@id": "https://www.pharpro.co/#organization"
-              },
+              "provider": { "@id": "https://www.pharpro.co/#organization" },
               "serviceType": "Pharmaceutical Training",
               "url": "https://www.pharpro.co/services/training/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "@id": "https://www.pharpro.co/services/dvs/#software",
+              "name": "PHARPRO DVS — Digital Validation Software",
+              "description": "AI-assisted validation lifecycle management software for pharmaceutical and life sciences teams. FDA 21 CFR Part 11 compliant, EU GMP Annex 11 aligned. Professional plan from $253/month.",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Web",
+              "url": "https://www.pharpro.co/services/dvs/"
             }
           }
         ]
