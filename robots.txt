@@ -4,5 +4,6 @@ Allow: /
 Disallow: /cgi-bin/
 Disallow: /api/
 Disallow: /.git/
+Disallow: /search/
 
-Sitemap: https://pharpro.co/sitemap.xml
+Sitemap: https://www.pharpro.co/sitemap.xml
