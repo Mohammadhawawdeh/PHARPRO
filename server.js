@@ -55,6 +55,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// ── NON-WWW → WWW REDIRECT ────────────────────────────────────────────────
+// Canonical is https://www.pharpro.co/ — redirect bare domain to preserve
+// link equity and avoid duplicate-content splits in Google Search Console.
+app.use((req, res, next) => {
+  const host = req.headers.host || "";
+  if (host === "pharpro.co" || host.startsWith("pharpro.co:")) {
+    return res.redirect(301, `https://www.pharpro.co${req.url}`);
+  }
+  next();
+});
+
 // ── ALL EXPLICIT PAGE ROUTES — must be declared BEFORE express.static ──────
 // express.static sees directories (services/csv/, insights/, etc.) and issues
 // a 301 redirect to the trailing-slash URL before our route handlers can fire.
@@ -67,13 +78,55 @@ app.get("/feed.xml", (req, res) => {
   res.sendFile(path.join(__dirname, "feed.xml"));
 });
 
+// /services/digital is a legacy alias — 301 to the canonical DVS page
+app.get(["/services/digital", "/services/digital/"], (req, res) => {
+  res.redirect(301, "/services/dvs/");
+});
+
 // Service pages (directory/index.html structure for GitHub Pages compatibility)
-const SERVICE_PAGES = ["csv", "qa", "cqv", "training", "dvs", "digital"];
+const SERVICE_PAGES = ["csv", "qa", "cqv", "training", "dvs"];
 SERVICE_PAGES.forEach((svc) => {
   app.get([`/services/${svc}`, `/services/${svc}/`], (req, res) => {
     res.setHeader("Cache-Control", "no-cache, must-revalidate");
     res.sendFile(path.join(__dirname, "services", svc, "index.html"));
   });
+});
+
+// Services hub
+app.get(["/services", "/services/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "index.html"));
+});
+
+// Contact page
+app.get(["/contact", "/contact/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "contact", "index.html"));
+});
+
+// Geo landing pages
+const GEO_PAGES = ["egypt", "jordan", "ksa", "uae"];
+app.get(["/geo", "/geo/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "geo", "index.html"));
+});
+GEO_PAGES.forEach((geo) => {
+  app.get([`/geo/${geo}`, `/geo/${geo}/`], (req, res) => {
+    res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    res.sendFile(path.join(__dirname, "geo", geo, "index.html"));
+  });
+});
+
+// Resources
+app.get(["/resources/compliance-checklist", "/resources/compliance-checklist/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "resources", "compliance-checklist", "index.html"));
+});
+
+// Search
+app.get(["/search", "/search/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "search", "index.html"));
 });
 
 // Training sub-pages
