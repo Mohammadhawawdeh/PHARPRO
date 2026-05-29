@@ -6,16 +6,16 @@
   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>PHARPRO Compliance Insights</title>
-    <link>https://www.pharpro.co</link>
+    <link>https://www.pharpro.co/</link>
     <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 26 May 2026 09:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 09:00:00 +0300</lastBuildDate>
     <managingEditor>info@pharpro.co (PHARPRO Consulting Team)</managingEditor>
     <webMaster>info@pharpro.co (PHARPRO)</webMaster>
     <image>
       <url>https://www.pharpro.co/images/apple-touch-icon.png</url>
       <title>PHARPRO Compliance Insights</title>
-      <link>https://www.pharpro.co</link>
+      <link>https://www.pharpro.co/</link>
       <width>180</width>
       <height>180</height>
     </image>
@@ -132,6 +132,20 @@
       <content:encoded><![CDATA[
         <p><strong>Thermal mapping</strong> is mandatory for pharmaceutical storage areas where temperature-sensitive products are held. This guide covers study design, sensor placement rationale, excursion handling, and how to write a mapping report that satisfies EU GMP Annex 15 and WHO GDP expectations.</p>
         <p><a href="https://www.pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/">Read the full article →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Pharmaceutical Validation Software: A Buyer's Guide (2026)</title>
+      <link>https://www.pharpro.co/insights/pharmaceutical-validation-software/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/pharmaceutical-validation-software/</guid>
+      <pubDate>Tue, 26 May 2026 09:00:00 +0300</pubDate>
+      <dc:creator>PHARPRO Consulting Team</dc:creator>
+      <category>Digital Validation</category>
+      <description>Comparing pharmaceutical validation software options in 2026? This guide covers what to look for, how leading platforms differ, and why PHARPRO DVS is built specifically for GxP-regulated teams.</description>
+      <content:encoded><![CDATA[
+        <p>Choosing the right <strong>pharmaceutical validation software</strong> is a significant decision for any GxP-regulated team. This guide compares the main approaches — from generic document management to purpose-built CSV lifecycle platforms — and explains what separates tools that satisfy regulators from those that create more work than they save.</p>
+        <p><a href="https://www.pharpro.co/insights/pharmaceutical-validation-software/">Read the full article →</a></p>
       ]]></content:encoded>
     </item>
 
