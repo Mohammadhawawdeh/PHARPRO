@@ -66,6 +66,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// ── LANG QUERY PARAM — PREVENT REDIRECT ───────────────────────────────────
+// ?lang=ar is a client-side-only language switch. Ensure the server never
+// strips or redirects these URLs — they must return 200 with Vary so Google
+// does not classify them as "Page with redirect" in Search Console.
+// NOTE: hreflang="ar" tags now point to the base URL (not ?lang=ar), so
+// Google no longer crawls ?lang=ar URLs from hreflang signals.
+app.use((req, res, next) => {
+  res.setHeader("Vary", "Accept-Language");
+  next();
+});
+
 // ── ALL EXPLICIT PAGE ROUTES — must be declared BEFORE express.static ──────
 // express.static sees directories (services/csv/, insights/, etc.) and issues
 // a 301 redirect to the trailing-slash URL before our route handlers can fire.
