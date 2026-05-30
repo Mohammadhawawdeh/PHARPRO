@@ -133,7 +133,7 @@
       },
       "inLanguage": "en",
       "datePublished": "2025-01-01",
-      "dateModified": "2026-05-26",
+      "dateModified": "2026-05-30",
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
@@ -200,6 +200,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "PHARPRO delivers a complete documentation package: Qualification Plan, Design Qualification (DQ) where applicable, IQ/OQ/PQ protocols, executed test records, discrepancy reports and CAPA, thermal mapping reports with sensor placement maps, and a final Qualification Summary Report — all formatted for direct use in regulatory submissions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between DQ, IQ, OQ, and PQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Design Qualification (DQ) confirms the equipment design meets GMP requirements before purchase or build. Installation Qualification (IQ) verifies correct installation against approved specifications. Operational Qualification (OQ) confirms operation within the defined range under worst-case conditions. Performance Qualification (PQ) demonstrates consistent performance under actual production conditions. PHARPRO produces all four phases as a coherent lifecycle, with a shared risk assessment driving test depth at each stage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should thermal mapping studies be repeated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WHO Technical Report 1010 and EU GDP guidelines recommend an initial mapping study followed by annual requalification for cold rooms, refrigerators, and freezers. Requalification is also triggered by significant changes — such as relocation, major maintenance, or a significant temperature excursion. PHARPRO documents requalification intervals in each study's final report."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does EU GMP Annex 15 define commissioning versus qualification?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EU GMP Annex 15 (2015) defines commissioning as the engineering process of installing and verifying equipment prior to GMP use, while qualification is the GMP-documented phase confirming suitability for intended purpose. PHARPRO aligns commissioning activities with qualification documentation to leverage engineering evidence and reduce duplication, consistent with ISPE GPgpq baseline guidance."
           }
         }
       ],
@@ -441,6 +465,10 @@
     }
     body.rtl .mob-nav { text-align: right; }
   </style>
+<style id="nav-ltr-fix">
+/* Force nav-inner to always lay out LTR regardless of page dir attribute */
+.nav-inner { direction: ltr !important; }
+</style>
 </head>
 
 <body>
@@ -619,6 +647,18 @@
           <button class="faq-q"><span data-i18n="faq4_q">What documentation does PHARPRO produce for CQV projects?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
           <div class="faq-a" data-i18n="faq4_a">PHARPRO delivers a complete documentation package: Qualification Plan, DQ where applicable, IQ/OQ/PQ protocols, executed test records, discrepancy reports and CAPA, thermal mapping reports with sensor placement maps, and a final Qualification Summary Report — all formatted for direct use in regulatory submissions.</div>
         </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>What is the difference between DQ, IQ, OQ, and PQ?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Design Qualification (DQ) confirms the equipment design meets GMP requirements before purchase. Installation Qualification (IQ) verifies correct installation. Operational Qualification (OQ) confirms operation within the defined range under worst-case conditions. Performance Qualification (PQ) demonstrates consistent performance under actual production conditions. PHARPRO delivers all four phases as a coherent lifecycle.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>How often should thermal mapping studies be repeated?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">WHO Technical Report 1010 and EU GDP guidelines recommend initial mapping followed by annual requalification for cold rooms, refrigerators, and freezers. Requalification is also triggered by significant changes — such as relocation, major maintenance, or a significant temperature excursion. PHARPRO documents requalification intervals in each study's final report.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>How does EU GMP Annex 15 define commissioning versus qualification?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">EU GMP Annex 15 defines commissioning as the engineering process of installing and verifying equipment before GMP use, while qualification is the GMP-documented phase confirming suitability for intended purpose. PHARPRO aligns commissioning activities with qualification documentation to leverage engineering evidence and reduce duplication.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -680,6 +720,47 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RELATED INSIGHTS ──────────────────────────────────────────────── -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">Related Insights</div>
+      <h2>Go deeper on CQV and qualification</h2>
+      <p class="sub">In-depth guides from the PHARPRO team on IQ/OQ/PQ, thermal mapping, EU GMP Annex 15, and equipment qualification best practice.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
+        <a href="/insights/iq-oq-pq-guide/" style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-sm);transition:box-shadow var(--t);" onmouseover="this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--burgundy);">Qualification Guide</div>
+          <div style="font-size:0.97rem;font-weight:700;color:var(--navy);line-height:1.4;">IQ OQ PQ Explained: What Each Phase Requires</div>
+          <div style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Regulatory basis, documentation requirements, and what auditors look for in each qualification phase.</div>
+          <div style="font-size:0.82rem;font-weight:600;color:var(--burgundy);margin-top:4px;">Read article →</div>
+        </a>
+        <a href="/insights/thermal-mapping-cold-room-guide/" style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-sm);transition:box-shadow var(--t);" onmouseover="this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--burgundy);">Thermal Mapping</div>
+          <div style="font-size:0.97rem;font-weight:700;color:var(--navy);line-height:1.4;">Thermal Mapping for Cold Rooms: WHO &amp; EU GMP Requirements</div>
+          <div style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Sensor placement, acceptance criteria, excursion handling, and requalification intervals for temperature-controlled storage.</div>
+          <div style="font-size:0.82rem;font-weight:600;color:var(--burgundy);margin-top:4px;">Read article →</div>
+        </a>
+        <a href="/insights/eu-gmp-annex-15-qualification-validation/" style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-sm);transition:box-shadow var(--t);" onmouseover="this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--burgundy);">Regulation</div>
+          <div style="font-size:0.97rem;font-weight:700;color:var(--navy);line-height:1.4;">EU GMP Annex 15: Qualification &amp; Validation Requirements</div>
+          <div style="font-size:0.85rem;color:var(--muted);line-height:1.6;">What the 2015 revision requires for qualification plans, risk-based approaches, and continued process verification.</div>
+          <div style="font-size:0.82rem;font-weight:600;color:var(--burgundy);margin-top:4px;">Read article →</div>
+        </a>
+        <a href="/insights/hvac-validation-pharmaceutical/" style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-sm);transition:box-shadow var(--t);" onmouseover="this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--burgundy);">HVAC</div>
+          <div style="font-size:0.97rem;font-weight:700;color:var(--navy);line-height:1.4;">HVAC Validation in Pharma: Annex 1 and FDA Requirements</div>
+          <div style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Air handling qualification, clean room classification, and the documentation an HVAC validation package must contain.</div>
+          <div style="font-size:0.82rem;font-weight:600;color:var(--burgundy);margin-top:4px;">Read article →</div>
+        </a>
+        <a href="/insights/risk-assessment-computerised-systems/" style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-sm);transition:box-shadow var(--t);" onmouseover="this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--burgundy);">Risk Management</div>
+          <div style="font-size:0.97rem;font-weight:700;color:var(--navy);line-height:1.4;">CSV Risk Assessment: Applying GAMP 5 Principles</div>
+          <div style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Risk-based thinking applied to computerised system validation — how to scope testing depth and document the rationale.</div>
+          <div style="font-size:0.82rem;font-weight:600;color:var(--burgundy);margin-top:4px;">Read article →</div>
+        </a>
       </div>
     </div>
   </section>

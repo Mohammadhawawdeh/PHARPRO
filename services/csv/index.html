@@ -472,6 +472,10 @@
     }
     body.rtl .mob-nav { text-align: right; }
   </style>
+<style id="nav-ltr-fix">
+/* Force nav-inner to always lay out LTR regardless of page dir attribute */
+.nav-inner { direction: ltr !important; }
+</style>
 </head>
 
 <body>

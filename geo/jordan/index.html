@@ -438,6 +438,10 @@
     body.rtl .nav-dropdown-menu { left: auto; right: 50%; transform: translateX(50%); }
     body.rtl .foot-bottom { flex-direction: row-reverse; }
   </style>
+<style id="nav-ltr-fix">
+/* Force nav-inner to always lay out LTR regardless of page dir attribute */
+.nav-inner { direction: ltr !important; }
+</style>
 </head>
 <body>
 <a href="#main-content" style="position:absolute;left:-999px;top:4px;background:var(--burgundy);color:#fff;padding:6px 12px;border-radius:6px;font-size:0.8rem;z-index:9999;">Skip to content</a>
