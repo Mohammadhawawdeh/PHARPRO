@@ -758,8 +758,8 @@
 
     /* ── RESET ────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; background: var(--ivory); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; background: var(--ivory); color: var(--ink); line-height: 1.6; }
     img  { max-width: 100%; display: block; }
     a    { text-decoration: none; color: inherit; }
     button { font-family: inherit; cursor: pointer; background: none; border: none; }
@@ -1321,7 +1321,9 @@
     }
     body.rtl .nav-inner   { direction: ltr; }
     body.rtl .nav-links   { flex-direction: row-reverse; }
-    body.rtl .nav-cta     { display: flex; flex-direction: row-reverse; gap: 8px; }
+    @media (min-width: 901px) {
+      body.rtl .nav-cta   { display: flex; flex-direction: row-reverse; gap: 8px; }
+    }
     body.rtl .logo svg,     body.rtl .foot-logo svg,     body.rtl .dvs-logo svg,
     body.rtl .logo img,    body.rtl .foot-logo img,    body.rtl .dvs-logo img
       { direction: ltr; unicode-bidi: bidi-override; }
