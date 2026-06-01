@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const helmet = require("helmet");
+const https = require("https");
 
 const app = express();
 const PORT = 5000;
@@ -209,7 +210,7 @@ app.use(
 );
 
 // ── CONTACT API ───────────────────────────────────────────────────────────
-app.post("/api/contact", (req, res) => {
+app.post("/api/contact", async (req, res) => {
   const origin = req.headers.origin || req.headers.referer || "";
   const isAllowed =
     ALLOWED_ORIGINS.some((o) => origin.startsWith(o)) ||
@@ -240,14 +241,82 @@ app.post("/api/contact", (req, res) => {
       .trim()
       .slice(0, 500);
 
+  const safeName    = sanitize(name);
+  const safeCompany = sanitize(company) || "N/A";
+  const safePhone   = sanitize(phone)   || "N/A";
+  const safeService = sanitize(service) || "N/A";
+  const safeMsg     = sanitize(message);
+
   console.log("--- New Contact Submission ---");
-  console.log(`Name:    ${sanitize(name)}`);
-  console.log(`Company: ${sanitize(company) || "N/A"}`);
+  console.log(`Name:    ${safeName}`);
+  console.log(`Company: ${safeCompany}`);
   console.log(`Email:   ${email.replace(/(?<=.{2}).(?=.*@)/g, "*")}`);
-  console.log(`Phone:   ${sanitize(phone) || "N/A"}`);
-  console.log(`Service: ${sanitize(service) || "N/A"}`);
-  console.log(`Message: ${sanitize(message).slice(0, 100)}...`);
+  console.log(`Phone:   ${safePhone}`);
+  console.log(`Service: ${safeService}`);
+  console.log(`Message: ${safeMsg.slice(0, 100)}...`);
   console.log("-----------------------------");
+
+  const web3Key = process.env.WEB3FORMS_KEY;
+  if (web3Key) {
+    try {
+      await new Promise((resolve, reject) => {
+        const payload = JSON.stringify({
+          access_key: web3Key,
+          subject: `[PHARPRO] New enquiry — ${safeService} (${safeName})`,
+          from_name: "PHARPRO Website",
+          replyto: email,
+          name: safeName,
+          email,
+          company: safeCompany,
+          phone: safePhone,
+          service: safeService,
+          message: safeMsg,
+        });
+
+        const options = {
+          hostname: "api.web3forms.com",
+          path: "/submit",
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Content-Length": Buffer.byteLength(payload),
+            "User-Agent": "PHARPRO-Website/1.0",
+          },
+        };
+
+        const req = https.request(options, (res) => {
+          let data = "";
+          res.on("data", (chunk) => { data += chunk; });
+          res.on("end", () => {
+            try {
+              const json = JSON.parse(data);
+              if (!json.success) {
+                console.error("Web3Forms error:", json.message);
+              } else {
+                console.log("Email sent via Web3Forms ✓");
+              }
+            } catch (e) {
+              console.error("Web3Forms parse error:", e.message);
+            }
+            resolve();
+          });
+        });
+
+        req.on("error", (err) => {
+          console.error("Web3Forms request error:", err.message);
+          resolve();
+        });
+
+        req.write(payload);
+        req.end();
+      });
+    } catch (err) {
+      console.error("Web3Forms unexpected error:", err.message);
+    }
+  } else {
+    console.warn("WEB3FORMS_KEY not set — email not sent.");
+  }
 
   res.status(200).json({
     ok: true,
