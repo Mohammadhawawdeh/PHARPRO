@@ -439,6 +439,9 @@
           <label style="font-size:0.82rem;font-weight:600;color:#233A5E;">Tell us about your validation programme</label>
           <textarea name="message" rows="3" placeholder="e.g. We have 5 systems to validate — LIMS, MES, and lab instruments. Looking to reduce time spent generating IQ/OQ/PQ documentation." style="padding:11px 14px;border:1.5px solid #E2E8F0;border-radius:10px;font-size:0.9rem;outline:none;resize:vertical;font-family:inherit;"></textarea>
         </div>
+        <input type="hidden" name="access_key" value="83fc2882-83bb-4976-b2e6-81c5405ff00f" />
+        <input type="hidden" name="subject" value="[PHARPRO] DVS demo request from website" />
+        <input type="hidden" name="from_name" value="PHARPRO Website" />
         <input type="hidden" name="service" value="PHARPRO DVS — Demo Request" />
         <input type="text" name="hp" style="display:none;" tabindex="-1" autocomplete="off" />
         <div style="grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
@@ -464,16 +467,16 @@
     const btn = document.getElementById('dvs-submit-btn');
     const msg = document.getElementById('dvs-form-msg');
     btn.disabled = true; btn.textContent = 'Sending…';
-    const data = Object.fromEntries(new FormData(e.target));
+    const formData = new FormData(e.target);
     try {
-      const res = await fetch('/api/contact', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      const res = await fetch('https://api.web3forms.com/submit', {method:'POST', body: formData});
       const json = await res.json();
-      if (json.ok) {
+      if (json.success) {
         msg.style.cssText = 'grid-column:1/-1;display:block;padding:14px 18px;border-radius:10px;font-size:0.9rem;font-weight:600;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;';
         msg.textContent = '✓ Demo request received! We\'ll be in touch within 24 hours to confirm your slot.';
         e.target.reset();
         if (typeof gtag === 'function') gtag('event','dvs_demo_request',{event_category:'lead'});
-      } else { throw new Error(); }
+      } else { throw new Error(json.message || 'Submission failed'); }
     } catch {
       msg.style.cssText = 'grid-column:1/-1;display:block;padding:14px 18px;border-radius:10px;font-size:0.9rem;font-weight:600;background:#fef2f2;color:#dc2626;border:1px solid #fecaca;';
       msg.textContent = 'Something went wrong. Please try again or email info@pharpro.co';
@@ -767,6 +770,9 @@
             <input type="email" name="email" required placeholder="Work email" />
           </div>
           <input type="text" name="company" placeholder="Company / site name" />
+          <input type="hidden" name="access_key" value="83fc2882-83bb-4976-b2e6-81c5405ff00f" />
+          <input type="hidden" name="subject" value="[PHARPRO] DVS mid-page demo request" />
+          <input type="hidden" name="from_name" value="PHARPRO Website" />
           <input type="hidden" name="service" value="PHARPRO DVS — Mid-page Demo Request" />
           <input type="hidden" name="message" value="Demo request submitted via mid-page form on DVS page." />
           <input type="text" name="hp" style="display:none" tabindex="-1" autocomplete="off" />
@@ -961,16 +967,16 @@ async function submitMidForm(e) {
   const btn = document.getElementById('mid-submit-btn');
   const msg = document.getElementById('mid-form-msg');
   btn.disabled = true; btn.textContent = 'Sending…';
-  const data = Object.fromEntries(new FormData(e.target));
+  const formData = new FormData(e.target);
   try {
-    const res = await fetch('/api/contact', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+    const res = await fetch('https://api.web3forms.com/submit', {method:'POST', body: formData});
     const json = await res.json();
-    if (json.ok) {
+    if (json.success) {
       msg.style.cssText = 'display:block;padding:12px 16px;border-radius:8px;font-size:0.85rem;font-weight:600;background:rgba(22,163,74,0.15);color:#4ade80;border:1px solid rgba(74,222,128,0.3);';
       msg.textContent = '✓ Demo request received! We\'ll confirm your slot within 24 hours.';
       e.target.reset();
       if (typeof gtag === 'function') gtag('event','dvs_mid_demo_request', {event_category:'lead'});
-    } else { throw new Error(); }
+    } else { throw new Error(json.message || 'Submission failed'); }
   } catch {
     msg.style.cssText = 'display:block;padding:12px 16px;border-radius:8px;font-size:0.85rem;font-weight:600;background:rgba(220,38,38,0.15);color:#fca5a5;border:1px solid rgba(252,165,165,0.3);';
     msg.textContent = 'Something went wrong. Email info@pharpro.co or use WhatsApp below.';

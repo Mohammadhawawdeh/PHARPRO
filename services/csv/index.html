@@ -578,6 +578,9 @@
           <label style="font-size:0.82rem;font-weight:600;color:#233A5E;">System to validate &amp; current situation</label>
           <textarea name="message" rows="3" placeholder="e.g. We need to validate our LIMS (LabWare 7) — currently unvalidated, facing an FDA inspection in Q4 2026." style="padding:11px 14px;border:1.5px solid #E8E0D8;border-radius:10px;font-size:0.9rem;outline:none;resize:vertical;font-family:inherit;"></textarea>
         </div>
+        <input type="hidden" name="access_key" value="83fc2882-83bb-4976-b2e6-81c5405ff00f" />
+        <input type="hidden" name="subject" value="[PHARPRO] New CSV enquiry from website" />
+        <input type="hidden" name="from_name" value="PHARPRO Website" />
         <input type="hidden" name="service" value="CSV Consulting — Project Enquiry" />
         <input type="text" name="hp" style="display:none;" tabindex="-1" autocomplete="off" />
         <div style="grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
@@ -595,16 +598,16 @@
     const btn = document.getElementById('csv-submit-btn');
     const msg = document.getElementById('csv-form-msg');
     btn.disabled = true; btn.textContent = 'Sending…';
-    const data = Object.fromEntries(new FormData(e.target));
+    const formData = new FormData(e.target);
     try {
-      const res = await fetch('/api/contact', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      const res = await fetch('https://api.web3forms.com/submit', {method:'POST', body: formData});
       const json = await res.json();
-      if (json.ok) {
+      if (json.success) {
         msg.style.cssText = 'grid-column:1/-1;display:block;padding:14px 18px;border-radius:10px;font-size:0.9rem;font-weight:600;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;';
         msg.textContent = '✓ Enquiry received! We\'ll respond within one business day with a clear scope and approach.';
         e.target.reset();
         if (typeof gtag === 'function') gtag('event','csv_assessment_request',{event_category:'lead'});
-      } else { throw new Error(); }
+      } else { throw new Error(json.message || 'Submission failed'); }
     } catch {
       msg.style.cssText = 'grid-column:1/-1;display:block;padding:14px 18px;border-radius:10px;font-size:0.9rem;font-weight:600;background:#fef2f2;color:#dc2626;border:1px solid #fecaca;';
       msg.textContent = 'Something went wrong. Please try again or email info@pharpro.co';
