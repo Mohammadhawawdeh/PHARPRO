@@ -7,31 +7,40 @@
 const TRAINING_DATA = {
   upcoming: [
     {
-      en: "CSV Training",
-      ar: "تدريب CSV",
-      dates: "4–5 Jun 2026",
-      dayDisplay: "4",
-      monthDisplay: "JUN",
-      startDate: "2026-06-04",
+      en: "CSV Validation Training",
+      ar: "تدريب التحقق من CSV",
+      desc_en: "Master the full CSV lifecycle from URS through IQ/OQ/PQ — aligned with FDA 21 CFR Part 11 & GAMP 5.",
+      desc_ar: "أتقن دورة حياة CSV الكاملة من URS حتى IQ/OQ/PQ — وفقاً لـ FDA 21 CFR Part 11 وGAMP 5.",
+      startDate: "2026-06-11",
       format: "both",
+      seats: 4,
     },
     {
       en: "Compressed Air Testing",
       ar: "اختبار الهواء المضغوط",
-      dates: "10–11 Jun 2026",
-      dayDisplay: "10",
-      monthDisplay: "JUN",
-      startDate: "2026-06-10",
+      desc_en: "Hands-on training on pharmaceutical compressed air testing, sampling strategies, and GMP documentation.",
+      desc_ar: "تدريب عملي على اختبار الهواء المضغوط الدوائي واستراتيجيات أخذ العينات وتوثيق GMP.",
+      startDate: "2026-06-18",
       format: "both",
+      seats: 6,
+    },
+    {
+      en: "GMP Fundamentals",
+      ar: "أساسيات GMP",
+      desc_en: "Core GMP principles for pharmaceutical manufacturing — regulatory expectations, data integrity, and audit readiness.",
+      desc_ar: "مبادئ GMP الأساسية للتصنيع الدوائي — التوقعات التنظيمية وسلامة البيانات والاستعداد للتدقيق.",
+      startDate: "2026-07-02",
+      format: "both",
+      seats: 8,
     },
     {
       en: "Cleaning Validation",
       ar: "التحقق من التنظيف",
-      dates: "17–18 Jun 2026",
-      dayDisplay: "17",
-      monthDisplay: "JUN",
-      startDate: "2026-06-17",
+      desc_en: "EU GMP Annex 15 & FDA-aligned cleaning validation — MACO calculations, acceptance criteria, and sampling.",
+      desc_ar: "التحقق من التنظيف وفق EU GMP Annex 15 وFDA — حسابات MACO ومعايير القبول وأخذ العينات.",
+      startDate: "2026-07-09",
       format: "both",
+      seats: 5,
     },
   ],
   completed: [
@@ -59,8 +68,8 @@ const translations = {
 
     /* Hero */
     hero_pill:      "Trusted by pharma teams in 7+ countries",
-    hero_h1:        'Your Pharma Compliance — <span class="accent">Inspection-Ready.</span>',
-    hero_sub:       "Expert CSV, QA &amp; CQV consulting for regulated pharma teams. We close compliance gaps before auditors find them.",
+    hero_h1:        'The Pharma Compliance Experts — <span class="accent">Inspection-Ready.</span>',
+    hero_sub:       "PHARPRO is the Middle East's most trusted pharmaceutical validation & compliance firm. 10+ years of delivering audit-defensible outcomes across 7+ countries — we find and close compliance gaps before regulators do.",
     hero_btn1:      "Get Free Assessment",
     hero_btn2:      "Explore Services",
     hero_badge:     "Inspection-Ready Approach",
@@ -99,7 +108,7 @@ const translations = {
 
     /* DVS */
     dvs_h2:       "30 Document Builders.<br/>One Platform.",
-    dvs_p:        "AI-assisted validation lifecycle management for pharmaceutical and life sciences teams. From concept through retirement — structured, guided, and audit-ready.",
+    dvs_p:        "The only validation software built specifically for pharma compliance teams. AI-assisted, audit-ready, and deployed same-day — no consultants, no setup fees.",
     dvs_btn1:     "Explore DVS",
     dvs_btn2:     "Book a Demo",
     dvs_feat1_h4: "AI Drafting",
@@ -247,7 +256,7 @@ const translations = {
     /* Training */
     tr_eyebrow:     "GMP Training",
     tr_h2:          "Training Programmes",
-    tr_body:        "Practical training delivered on-site and online for pharmaceutical teams across the region.",
+    tr_body:        "Instructor-led training — on-site and online — for pharma teams. Seats are limited; register early.",
     tr_upcoming_h3: "Upcoming Trainings",
     tr_past_h3:     "Completed Programmes",
     tr_past_note:   "Building expertise across the pharmaceutical sector",
@@ -275,15 +284,15 @@ const translations = {
     foot_copy:       "© 2025 PHARPRO Consultation Company. All rights reserved.",
     foot_tag:        "Stay Audit-Ready with PHARPRO.",
     wa_cta:          "Chat on WhatsApp",
-    hero_pill2:      "Now accepting Q3 2026 engagements — limited slots available",
+    hero_pill2:      "Q3 2026 project slots almost full — only 2 remaining",
 
     /* About section */
     about_eyebrow: "About PHARPRO",
-    about_h2:      "Pharmaceutical Consulting Specialists — Jordan &amp; Worldwide",
-    about_p1:      "PHARPRO is a pharmaceutical consulting firm based in Amman, Jordan, providing expert pharma consulting services to regulated pharmaceutical manufacturers, distributors, and contract organisations across the Middle East, North Africa, and globally. Our pharma consulting team specialises in computerized system validation (CSV services), quality assurance, commissioning qualification and validation (CQV), thermal mapping, and pharmaceutical GMP training.",
-    about_p2:      "Our <strong>CSV services</strong> cover the complete validation lifecycle — user requirements specification (URS), risk classification, IQ/OQ/PQ protocols, execution, and validation summary reporting — all aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5. We also offer <strong>digital validation software</strong> through PHARPRO DVS, an AI-assisted platform that streamlines validation documentation for pharmaceutical teams.",
-    about_p3:      "Our <strong>pharmaceutical training</strong> courses — including CSV training, Cleaning Validation, and Compressed Air Testing — are delivered instructor-led, online and on-site, to pharma teams across Jordan, Saudi Arabia, UAE, Egypt, and beyond. Every programme is designed and delivered by practising consultants, not generalist trainers.",
-    about_p4:      'Whether you need pharma consulting for a specific CSV project, a comprehensive QA gap assessment, equipment qualification, or regulatory inspection preparation — PHARPRO delivers structured, audit-defensible work that holds up under scrutiny. <a href="/contact/" style="color:#B12C4B;font-weight:600;">Contact our pharma consulting team</a> for a free initial assessment.',
+    about_h2:      "The Pharmaceutical Compliance Experts — Jordan &amp; Worldwide",
+    about_p1:      "PHARPRO is a pharmaceutical compliance consulting firm based in Amman, Jordan, specialising in CSV, QA, CQV, thermal mapping, and GMP training for regulated manufacturers across the Middle East and globally. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5 — our work is audit-defensible from day one.",
+    about_p2:      "We also offer PHARPRO DVS, an AI-assisted validation software platform that cuts documentation time by up to 30 working days per project — deployed same-day, no implementation partner needed.",
+    about_p3:      'Every service is delivered by practising consultants — not generalist trainers. <a href="#contact" style="color:#B12C4B;font-weight:600;">Book your free compliance assessment today →</a>',
+    about_p4:      "",
   },
 
   ar: {
@@ -301,8 +310,8 @@ const translations = {
 
     /* Hero */
     hero_pill:     "موثوق من فرق دوائية في أكثر من 7 دول",
-    hero_h1:       'امتثالك الدوائي — <span class="accent">جاهز للتفتيش.</span>',
-    hero_sub:      "استشارات CSV وضمان الجودة وCQV للفرق الدوائية الخاضعة للتنظيم. نغلق ثغرات الامتثال قبل أن يكتشفها المدققون.",
+    hero_h1:       'خبراء الامتثال الدوائي — <span class="accent">جاهزون للتفتيش.</span>',
+    hero_sub:      "PHARPRO هي الشركة الأكثر ثقة في مجال التحقق والامتثال الدوائي في الشرق الأوسط. أكثر من 10 سنوات من تقديم نتائج قابلة للدفاع عنها في التدقيق عبر أكثر من 7 دول — نكتشف ثغرات الامتثال ونغلقها قبل أن يجدها المنظمون.",
     hero_btn1:     "احصل على تقييم مجاني",
     hero_btn2:     "استعرض الخدمات",
     hero_badge:    "نهج جاهز للتفتيش",
@@ -488,7 +497,7 @@ const translations = {
     /* Training */
     tr_eyebrow:     "التدريب على GMP",
     tr_h2:          "برامج التدريب",
-    tr_body:        "تدريب عملي يُقدَّم حضورياً وعبر الإنترنت لفرق الأدوية في جميع أنحاء المنطقة.",
+    tr_body:        "تدريب بإشراف مدرب — حضورياً وعبر الإنترنت — لفرق الأدوية. المقاعد محدودة؛ سجّل مبكراً.",
     tr_upcoming_h3: "التدريبات القادمة",
     tr_past_h3:     "البرامج المكتملة",
     tr_past_note:   "بناء الخبرة عبر القطاع الدوائي",
@@ -521,11 +530,11 @@ const translations = {
 
     /* About section */
     about_eyebrow: "عن PHARPRO",
-    about_h2:      "متخصصون في الاستشارات الدوائية — الأردن والعالم",
-    about_p1:      "PHARPRO شركة استشارات دوائية مقرها عمّان، الأردن، تقدم خدمات استشارية دوائية متخصصة لمصنّعي الأدوية الخاضعين للتنظيم والموزعين والمنظمات التعاقدية في منطقة الشرق الأوسط وشمال أفريقيا وعلى المستوى العالمي. يتخصص فريق استشاراتنا الدوائي في التحقق من صحة الأنظمة الحاسوبية (خدمات CSV) وضمان الجودة والتأهيل والتحقق (CQV) ورسم الخرائط الحرارية والتدريب على GMP الصيدلاني.",
-    about_p2:      "تغطي <strong>خدمات CSV</strong> لدينا دورة حياة التحقق الكاملة — مواصفات متطلبات المستخدم (URS) وتصنيف المخاطر وبروتوكولات IQ/OQ/PQ والتنفيذ وإعداد تقارير ملخص التحقق — بما يتوافق مع FDA 21 CFR Part 11 وEU GMP Annex 11 وISPE GAMP 5. كما نقدم <strong>برنامج التحقق الرقمي</strong> عبر PHARPRO DVS، وهو منصة بمساعدة الذكاء الاصطناعي تُبسّط توثيق التحقق لفرق الأدوية.",
-    about_p3:      "دوراتنا في <strong>التدريب الصيدلاني</strong> — بما فيها تدريب CSV والتحقق من التنظيف واختبار الهواء المضغوط — تُقدَّم بإشراف مدرب، عبر الإنترنت وفي الموقع، لفرق الأدوية في الأردن والمملكة العربية السعودية والإمارات ومصر وما بعدها. كل برنامج مصمم ومقدَّم من قِبَل مستشارين ممارسين، وليس مدربين عامين.",
-    about_p4:      'سواء كنت تحتاج إلى استشارات دوائية لمشروع CSV محدد، أو تقييم شامل لثغرات الجودة، أو تأهيل معدات، أو التحضير للتفتيش التنظيمي — تُقدم PHARPRO عملاً منظماً قابلاً للدفاع عنه في التدقيق. <a href="/contact/" style="color:#B12C4B;font-weight:600;">تواصل مع فريق استشاراتنا الدوائي</a> للحصول على تقييم أولي مجاني.',
+    about_h2:      "خبراء الامتثال الدوائي — الأردن والعالم",
+    about_p1:      "PHARPRO شركة استشارات امتثال دوائي مقرها عمّان، الأردن، متخصصة في CSV وضمان الجودة وCQV ورسم الخرائط الحرارية والتدريب على GMP للشركات الخاضعة للتنظيم في الشرق الأوسط وعالمياً. متوافقة مع FDA 21 CFR Part 11 وEU GMP Annex 11 وISPE GAMP 5 — أعمالنا قابلة للدفاع عنها في التدقيق من اليوم الأول.",
+    about_p2:      "نقدم أيضاً PHARPRO DVS، منصة برمجيات تحقق بمساعدة الذكاء الاصطناعي توفر ما يصل إلى 30 يوم عمل لكل مشروع — تُنشر في نفس اليوم، بدون الحاجة إلى شريك تنفيذ.",
+    about_p3:      '<a href="#contact" style="color:#B12C4B;font-weight:600;">احجز تقييمك المجاني اليوم →</a>',
+    about_p4:      "",
   }
 };
 
@@ -721,59 +730,60 @@ function initTrainings() {
 
   upcomingGrid.innerHTML = TRAINING_DATA.upcoming.map(tr => {
     const title = isAr ? tr.ar : tr.en;
-    const formatPills = tr.format === "both"
-      ? `<span class="tr-pill tr-pill-online">${t("tr_online")}</span>
-         <span class="tr-pill tr-pill-onsite">${t("tr_onsite")}</span>`
+    const desc  = isAr ? tr.desc_ar : tr.desc_en;
+    const seats = tr.seats || 0;
+
+    const formatTag = tr.format === "both"
+      ? `<span class="tr-pill tr-pill-online">${t("tr_online")}</span><span class="tr-pill tr-pill-onsite">${t("tr_onsite")}</span>`
       : tr.format === "online"
         ? `<span class="tr-pill tr-pill-online">${t("tr_online")}</span>`
         : `<span class="tr-pill tr-pill-onsite">${t("tr_onsite")}</span>`;
 
-    const regUrl   = "https://pharpro.co/#contact";
-    const waText   = encodeURIComponent(
+    const regUrl = "https://pharpro.co/#contact";
+    const waText = encodeURIComponent(
       isAr
-        ? `🎓 ${title}\n📅 ${tr.dates}\n\nسجّل اهتمامك: ${regUrl}`
-        : `🎓 ${title} — ${tr.dates}\n\nRegister your interest: ${regUrl}`
+        ? `🎓 ${title}\n\nسجّل اهتمامك: ${regUrl}`
+        : `🎓 ${title}\n\nRegister your interest: ${regUrl}`
     );
     const emailSubject = encodeURIComponent(
       isAr ? `تدريب PHARPRO: ${title}` : `PHARPRO Training: ${title}`
     );
     const emailBody = encodeURIComponent(
       isAr
-        ? `السلام عليكم،\n\nأودّ الاستفسار عن برنامج التدريب: ${title}\nالتاريخ: ${tr.dates}\n\nرابط التسجيل: ${regUrl}`
-        : `Hello,\n\nI'd like to register my interest in:\n${title}\nDates: ${tr.dates}\n\nRegistration link: ${regUrl}`
+        ? `السلام عليكم،\n\nأودّ الاستفسار عن برنامج التدريب: ${title}\n\nرابط التسجيل: ${regUrl}`
+        : `Hello,\n\nI'd like to register my interest in:\n${title}\n\nRegistration link: ${regUrl}`
     );
+
+    const seatsLabel = seats <= 6
+      ? `<span class="tr-seats-warn">${isAr ? `${seats} مقاعد متبقية فقط` : `Only ${seats} seats left`}</span>`
+      : `<span class="tr-seats-ok">${isAr ? `${seats} مقعد متاح` : `${seats} seats available`}</span>`;
 
     return `
       <div class="tr-card" data-start="${tr.startDate}">
-        <div class="tr-date-badge">
-          <div class="tr-cal">
-            <span class="tr-cal-day">${tr.dayDisplay}</span>
-            <span class="tr-cal-mon">${tr.monthDisplay}</span>
-          </div>
-          <span class="tr-date-text">${tr.dates}</span>
+        <div class="tr-countdown-wrap tr-countdown-abs">${getCountdownHtml(tr.startDate, isAr)}</div>
+        <div class="tr-card-top">
+          <h4>${title}</h4>
+          <div class="tr-format-inline">${formatTag}</div>
         </div>
-        <span class="tr-countdown-wrap">${getCountdownHtml(tr.startDate, isAr)}</span>
-        <h4>${title}</h4>
-        <div class="tr-format">${formatPills}</div>
+        <p class="tr-desc">${desc}</p>
+        ${seatsLabel}
         <div class="tr-actions">
           <a href="#contact" class="tr-register" onclick="document.getElementById('service').value='training'">${t("tr_register")}</a>
           <div class="tr-share">
             <a href="https://wa.me/?text=${waText}"
                class="tr-share-btn tr-share-wa" target="_blank" rel="noopener noreferrer"
                aria-label="Share on WhatsApp">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
-              ${t("tr_share_wa")}
             </a>
             <a href="mailto:?subject=${emailSubject}&body=${emailBody}"
                class="tr-share-btn tr-share-email"
                aria-label="Share via Email">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
               </svg>
-              ${t("tr_share_email")}
             </a>
           </div>
         </div>
