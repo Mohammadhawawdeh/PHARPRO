@@ -1360,6 +1360,42 @@
     body.rtl .foot-links  { text-align: right; }
     body.rtl .foot-bottom { flex-direction: row-reverse; }
     body.rtl .eyebrow     { display: block; }
+
+    /* ── SERVICE CARD ARROW LINK ─────────────────────────────── */
+    .svc-learn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; margin-top: 14px;
+      background: rgba(35,58,94,0.07); border-radius: 50%;
+      font-size: 1rem; color: var(--navy);
+      transition: background var(--t), color var(--t), transform var(--t);
+      text-decoration: none;
+    }
+    .svc-learn:hover { background: var(--burgundy); color: var(--white); transform: translateX(2px); }
+    body.rtl .svc-learn { transform: scaleX(-1); }
+    body.rtl .svc-learn:hover { transform: scaleX(-1) translateX(-2px); }
+
+    /* ── DVS FEATURES SECTION ────────────────────────────────── */
+    .dvs-feats-sec { padding: 80px 0; }
+    .dvs-feats-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 16px;
+    }
+    .dvs-feat-tile {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--r-md); padding: 28px;
+      transition: box-shadow var(--t), transform var(--t);
+    }
+    .dvs-feat-tile:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .dvs-feat-tile-ico {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: rgba(35,58,94,0.07);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px; color: var(--navy);
+    }
+    .dvs-feat-tile h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .dvs-feat-tile p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+    @media (max-width: 900px) { .dvs-feats-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .dvs-feats-grid { grid-template-columns: 1fr; } }
   </style>
 
   
@@ -1447,24 +1483,16 @@
     <div class="wrap">
       <div class="hero-inner">
         <div>
-          <div class="hero-pill">
-            <span class="dot"></span>
-            <span data-i18n="hero_pill">Trusted by pharma teams in 7+ countries</span>
-          </div>
-          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(177,44,75,0.08);border:1px solid rgba(177,44,75,0.2);border-radius:999px;padding:5px 14px;font-size:0.78rem;font-weight:600;color:#B12C4B;margin-top:10px;">
-            <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
-            <span data-i18n="hero_pill2">Now accepting Q3 2026 engagements — limited slots available</span>
-          </div>
-          <h1 class="h1" data-i18n="hero_h1">Expert <span class="accent">Pharma Consulting</span><br/>— CSV, QA &amp; GMP Compliance</h1>
-          <p class="hero-sub" data-i18n="hero_sub">Pharma consulting specialists in computerized system validation (CSV), quality assurance, CQV, thermal mapping, and GMP training — delivering inspection-ready work for regulated pharmaceutical operations worldwide.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary" data-i18n="hero_btn1">Get Free Assessment</a>
-            <a href="#services" class="btn btn-outline" data-i18n="hero_btn2">Explore Services</a>
-          </div>
-          <div class="ctag-row">
+          <div class="ctag-row" style="margin-bottom:22px;">
             <span class="ctag">FDA 21 CFR Part 11</span>
             <span class="ctag">EU GMP Annex 11</span>
             <span class="ctag">ISPE GAMP 5</span>
+          </div>
+          <h1 class="h1" data-i18n="hero_h1">Your Pharma Compliance — <span class="accent">Inspection-Ready.</span></h1>
+          <p class="hero-sub" data-i18n="hero_sub">Expert CSV, QA &amp; CQV consulting for regulated pharma teams. We close compliance gaps before auditors find them.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero_btn1">Get Free Assessment</a>
+            <a href="#services" class="btn btn-outline" data-i18n="hero_btn2">Explore Services</a>
           </div>
         </div>
 
@@ -1510,8 +1538,7 @@
   <section class="sec on-white" id="services">
     <div class="wrap">
       <div class="eyebrow" data-i18n="svc_eyebrow">Services</div>
-      <h2 class="h2" style="margin-bottom:8px;" data-i18n="svc_h2">Everything your compliance programme needs</h2>
-      <p class="body-lg" style="max-width:540px;" data-i18n="svc_body">Practical, inspection-ready support across the full spectrum of pharmaceutical compliance and validation.</p>
+      <h2 class="h2" style="margin-bottom:36px;" data-i18n="svc_h2">Everything your compliance programme needs</h2>
 
       <div class="svc-grid">
         <div class="svc-card">
@@ -1519,9 +1546,8 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <h3 data-i18n="svc1_h3">Computerized System Validation</h3>
-          <p data-i18n="svc1_p">End-to-end CSV lifecycle support — from planning through closure — aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5.</p>
-        
-          <a href="/services/csv/" class="svc-learn" data-i18n="svc_learn">Learn more →</a>
+          <p data-i18n="svc1_p">Full CSV lifecycle — planning through closure — aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5.</p>
+          <a href="/services/csv/" class="svc-learn" aria-label="CSV Validation service">→</a>
         </div>
 
         <div class="svc-card">
@@ -1529,9 +1555,8 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3 data-i18n="svc2_h3">Quality Assurance &amp; Gap Assessment</h3>
-          <p data-i18n="svc2_p">Find compliance gaps before auditors do. SOP reviews, documentation assessments, and QA support structured to close findings fast.</p>
-        
-          <a href="/services/qa/" class="svc-learn" data-i18n="svc_learn">Learn more →</a>
+          <p data-i18n="svc2_p">Find gaps before auditors do. SOP reviews, QA assessments, and CAPA support to close findings fast.</p>
+          <a href="/services/qa/" class="svc-learn" aria-label="QA service">→</a>
         </div>
 
         <div class="svc-card">
@@ -1539,9 +1564,8 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
           </div>
           <h3 data-i18n="svc3_h3">CQV &amp; Thermal Mapping</h3>
-          <p data-i18n="svc3_p">Commissioning, qualification, and validation for equipment and utilities — plus temperature distribution studies for controlled environments.</p>
-        
-          <a href="/services/cqv/" class="svc-learn" data-i18n="svc_learn">Learn more →</a>
+          <p data-i18n="svc3_p">Equipment and utility qualification, plus temperature distribution studies for controlled storage environments.</p>
+          <a href="/services/cqv/" class="svc-learn" aria-label="CQV service">→</a>
         </div>
 
         <div class="svc-card">
@@ -1549,18 +1573,17 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
           <h3 data-i18n="svc4_h3">GMP Training</h3>
-          <p data-i18n="svc4_p">Practical training in CSV, data integrity, and GMP systems — tailored to your team's actual gaps. Delivered onsite or online.</p>
-        
-          <a href="/services/training/" class="svc-learn" data-i18n="svc_learn">Learn more →</a>
+          <p data-i18n="svc4_p">CSV, data integrity, and GMP training tailored to your team's actual gaps. Delivered on-site or online.</p>
+          <a href="/services/training/" class="svc-learn" aria-label="Training service">→</a>
         </div>
 
         <div class="svc-card">
           <div class="svc-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <h3 data-i18n="svc5_h3">Digital Validation Software &amp; Pharma 4.0</h3>
-          <p data-i18n="svc5_p">PHARPRO digital validation software (DVS) and Pharma 4.0 consulting — navigate software implementation and digital transformation with a compliance-first approach.</p>
-          <a href="/services/dvs/" class="svc-learn" data-i18n="svc_learn">Learn more →</a>
+          <h3 data-i18n="svc5_h3">Digital Validation Software</h3>
+          <p data-i18n="svc5_p">AI-assisted validation lifecycle management. 30 document builders, one compliant platform.</p>
+          <a href="/services/dvs/" class="svc-learn" aria-label="DVS Software service">→</a>
         </div>
 
         <div class="svc-card svc-cta">
@@ -1568,7 +1591,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
           <h3 data-i18n="svc6_h3">Not sure where to start?</h3>
-          <p data-i18n="svc6_p">Tell us your situation. We'll identify what matters most and give you a clear path forward.</p>
+          <p data-i18n="svc6_p">Tell us your situation. We'll find what matters most and give you a clear path forward.</p>
           <a href="#contact" class="btn btn-primary" style="margin-top:18px; font-size:0.86rem; padding:10px 20px;" data-i18n="svc6_cta">Start Free Assessment</a>
         </div>
       </div>
@@ -1633,67 +1656,6 @@
             <a href="#contact" class="btn btn-ghost" data-i18n="dvs_btn2">Book a Demo</a>
           </div>
 
-          <div class="dvs-feat-grid">
-            <div class="dvs-feat">
-              <div class="dvs-feat-ico">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-              </div>
-              <div class="dvs-feat-body">
-                <h3 class="h4" data-i18n="dvs_feat1_h4">AI Drafting</h3>
-                <p data-i18n="dvs_feat1_p">Generate protocol content in minutes instead of 2–3 weeks</p>
-              </div>
-            </div>
-
-            <div class="dvs-feat">
-              <div class="dvs-feat-ico">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div class="dvs-feat-body">
-                <h3 class="h4" data-i18n="dvs_feat2_h4">FDA Compliance</h3>
-                <p data-i18n="dvs_feat2_p">Built-in alignment with 21 CFR Part 11 and EU GMP Annex 11</p>
-              </div>
-            </div>
-
-            <div class="dvs-feat">
-              <div class="dvs-feat-ico">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              </div>
-              <div class="dvs-feat-body">
-                <h3 class="h4" data-i18n="dvs_feat3_h4">Full Traceability</h3>
-                <p data-i18n="dvs_feat3_p">Requirements auto-linked through every test phase automatically</p>
-              </div>
-            </div>
-
-            <div class="dvs-feat">
-              <div class="dvs-feat-ico">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-              </div>
-              <div class="dvs-feat-body">
-                <h3 class="h4" data-i18n="dvs_feat4_h4">Workflow Engine</h3>
-                <p data-i18n="dvs_feat4_p">Configurable approval workflows replacing manual handwritten cycles</p>
-              </div>
-            </div>
-
-            <div class="dvs-feat">
-              <div class="dvs-feat-ico">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
-              </div>
-              <div class="dvs-feat-body">
-                <h3 class="h4" data-i18n="dvs_feat5_h4">Digital Documents</h3>
-                <p data-i18n="dvs_feat5_p">Over 1,500 paper pages saved per validation project</p>
-              </div>
-            </div>
-
-            <div class="dvs-feat">
-              <div class="dvs-feat-ico">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/><path d="M8 13h8M8 17h8"/></svg>
-              </div>
-              <div class="dvs-feat-body">
-                <h3 class="h4" data-i18n="dvs_feat6_h4">Same-Day Deployment</h3>
-                <p data-i18n="dvs_feat6_p">No implementation partner needed. Deploy today, validate tomorrow.</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- Right: Lifecycle Illustration -->
@@ -1749,6 +1711,66 @@
           <div style="margin-top:14px; padding:14px; background:rgba(255,255,255,0.05); border-radius:10px; border:1px solid rgba(255,255,255,0.08);">
             <p style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.55; font-style:italic;" data-i18n="dvs_quote">"One month of DVS Professional costs less than two hours of an external CSV consultant."</p>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── PHARPRO DVS — FEATURES ───────────────────────────── -->
+  <section class="dvs-feats-sec on-ivory" id="dvs-features">
+    <div class="wrap">
+      <div class="eyebrow">DVS Platform</div>
+      <h2 class="h2" style="margin-bottom:36px;" data-i18n="dvs_feats_h2">Everything Built In</h2>
+      <div class="dvs-feats-grid">
+
+        <div class="dvs-feat-tile">
+          <div class="dvs-feat-tile-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3 data-i18n="dvs_feat1_h4">AI Drafting</h3>
+          <p data-i18n="dvs_feat1_p">Generate protocol content in minutes instead of 2–3 weeks</p>
+        </div>
+
+        <div class="dvs-feat-tile">
+          <div class="dvs-feat-tile-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-i18n="dvs_feat2_h4">FDA Compliance</h3>
+          <p data-i18n="dvs_feat2_p">Built-in alignment with 21 CFR Part 11 and EU GMP Annex 11</p>
+        </div>
+
+        <div class="dvs-feat-tile">
+          <div class="dvs-feat-tile-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 data-i18n="dvs_feat3_h4">Full Traceability</h3>
+          <p data-i18n="dvs_feat3_p">Requirements auto-linked through every test phase automatically</p>
+        </div>
+
+        <div class="dvs-feat-tile">
+          <div class="dvs-feat-tile-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          </div>
+          <h3 data-i18n="dvs_feat4_h4">Workflow Engine</h3>
+          <p data-i18n="dvs_feat4_p">Configurable approval workflows replacing manual handwritten cycles</p>
+        </div>
+
+        <div class="dvs-feat-tile">
+          <div class="dvs-feat-tile-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3 data-i18n="dvs_feat5_h4">Digital Documents</h3>
+          <p data-i18n="dvs_feat5_p">Over 1,500 paper pages saved per validation project</p>
+        </div>
+
+        <div class="dvs-feat-tile">
+          <div class="dvs-feat-tile-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/><path d="M8 13h8M8 17h8"/></svg>
+          </div>
+          <h3 data-i18n="dvs_feat6_h4">Same-Day Deployment</h3>
+          <p data-i18n="dvs_feat6_p">No implementation partner needed. Deploy today, validate tomorrow.</p>
         </div>
 
       </div>
