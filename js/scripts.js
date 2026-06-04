@@ -824,6 +824,13 @@ function initContactForm() {
         status.className = "f-status ok";
         status.textContent = t("form_success");
         form.reset();
+        if (window.gtag) {
+          gtag("event", "generate_lead", {
+            event_category: "lead",
+            event_label: "contact_form",
+            method: "contact_form",
+          });
+        }
       } else {
         throw new Error(json.message || "error");
       }
@@ -866,6 +873,59 @@ document.addEventListener("DOMContentLoaded", () => {
   initStickyBar();
   initViewerCount();
   initExitIntent();
+
+  /* ── GA4 MICRO-CONVERSION TRACKING ─────────────────────── */
+  /* WhatsApp float button */
+  const waFloat = document.getElementById("wa-float");
+  if (waFloat && window.gtag) {
+    waFloat.addEventListener("click", () => {
+      gtag("event", "contact", {
+        event_category: "engagement",
+        event_label: "whatsapp_float",
+        method: "whatsapp",
+      });
+    });
+  }
+
+  /* All tel: links (phone clicks) */
+  document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+    el.addEventListener("click", () => {
+      if (window.gtag) {
+        gtag("event", "contact", {
+          event_category: "engagement",
+          event_label: "phone_click",
+          method: "phone",
+        });
+      }
+    });
+  });
+
+  /* All mailto: links (email clicks) */
+  document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+    el.addEventListener("click", () => {
+      if (window.gtag) {
+        gtag("event", "contact", {
+          event_category: "engagement",
+          event_label: "email_click",
+          method: "email",
+        });
+      }
+    });
+  });
+
+  /* All WhatsApp wa.me links (training cards, etc.) */
+  document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
+    if (el.id === "wa-float") return;
+    el.addEventListener("click", () => {
+      if (window.gtag) {
+        gtag("event", "contact", {
+          event_category: "engagement",
+          event_label: "whatsapp_training",
+          method: "whatsapp",
+        });
+      }
+    });
+  });
 });
 
 /* ── STICKY URGENCY BAR ─────────────────────────────────────── */
@@ -904,6 +964,13 @@ function initStickyBar() {
     suCta.addEventListener("click", () => {
       sessionStorage.setItem("su_dismissed", "1");
       dismissed = true;
+      if (window.gtag) {
+        gtag("event", "generate_lead", {
+          event_category: "lead",
+          event_label: "sticky_bar",
+          method: "sticky_bar",
+        });
+      }
     });
   }
 }
@@ -968,6 +1035,13 @@ function initExitIntent() {
     ctaBtn.addEventListener("click", (e) => {
       e.preventDefault();
       closeOverlay();
+      if (window.gtag) {
+        gtag("event", "generate_lead", {
+          event_category: "lead",
+          event_label: "exit_intent",
+          method: "exit_intent",
+        });
+      }
       const contactSection = document.getElementById("contact");
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: "smooth" });

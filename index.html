@@ -58,9 +58,14 @@
   </script>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+  <link rel="preload" href="/css/styles.css" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
@@ -1878,7 +1883,7 @@
             </a>
           </div>
           <div class="dvs-preview-body">
-            <img src="/images/pharpro_dvs_ivory.png" alt="PHARPRO DVS — Digital Validation Software" loading="eager" />
+            <img src="/images/pharpro_dvs_ivory.png" alt="PHARPRO DVS — Digital Validation Software" loading="eager" fetchpriority="high" />
             <div class="dvs-preview-overlay">
               <div class="dvs-preview-badge">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
