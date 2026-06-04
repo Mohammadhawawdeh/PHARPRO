@@ -449,6 +449,14 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
       this.style.display = 'none';
       var successEl = document.getElementById('lmSuccess');
       successEl.style.display = 'block';
+      // GA4 lead conversion event
+      if (window.gtag) {
+        gtag('event', 'generate_lead', {
+          event_category: 'lead',
+          event_label: 'checklist_download',
+          method: 'lead_magnet',
+        });
+      }
       // Auto-trigger the PDF download immediately
       var a = document.createElement('a');
       a.href = '/resources/compliance-checklist/pharpro-compliance-checklist.pdf';
@@ -465,6 +473,28 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   } catch(err) {
     status.className = 'f-status err'; status.textContent = 'Network error. Please try again.';
     btn.textContent = 'Send Me the Checklist \u2192'; btn.disabled = false;
+  }
+});
+
+// GA4 tracking for manual PDF download button
+document.addEventListener('DOMContentLoaded', function() {
+  var dlBtn = document.getElementById('lmDownloadBtn');
+  if (dlBtn) {
+    dlBtn.addEventListener('click', function() {
+      if (window.gtag) {
+        gtag('event', 'file_download', {
+          event_category: 'engagement',
+          event_label: 'compliance_checklist_pdf',
+          file_name: 'PHARPRO-Compliance-Checklist.pdf',
+        });
+      }
+    });
+  }
+  var waFloat = document.getElementById('wa-float');
+  if (waFloat && window.gtag) {
+    waFloat.addEventListener('click', function() {
+      gtag('event', 'contact', { method: 'whatsapp', event_label: 'checklist_page' });
+    });
   }
 });
 </script>
