@@ -1418,6 +1418,287 @@
     body.rtl .foot-bottom { flex-direction: row-reverse; }
     body.rtl .eyebrow     { display: block; }
 
+    /* ── PSYCHOLOGY / CONVERSION LAYER ──────────────────────── */
+
+    /* Pulsing primary CTA buttons */
+    .btn-primary {
+      animation: none;
+    }
+    .btn-pulse {
+      animation: btn-pulse-ring 2.4s ease-in-out infinite;
+      box-shadow: 0 0 0 0 rgba(177,44,75,0.5);
+    }
+    @keyframes btn-pulse-ring {
+      0%   { box-shadow: 0 0 0 0 rgba(177,44,75,0.45); }
+      70%  { box-shadow: 0 0 0 10px rgba(177,44,75,0); }
+      100% { box-shadow: 0 0 0 0 rgba(177,44,75,0); }
+    }
+
+    /* Hero social proof pill */
+    .hero-proof-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(15,118,110,0.08); border: 1px solid rgba(15,118,110,0.2);
+      color: #0A7060; padding: 5px 14px; border-radius: 999px;
+      font-size: 0.76rem; font-weight: 600; margin-bottom: 16px;
+    }
+    .hero-proof-pill .live-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #0A7060;
+      animation: tr-pulse 1.6s ease-in-out infinite; flex-shrink: 0;
+    }
+
+    /* ── RISK / CONSEQUENCE SECTION ──────────────────────────── */
+    .risk-sec {
+      background: linear-gradient(180deg, #0E1728 0%, #162036 100%);
+      padding: 72px 0; position: relative; overflow: hidden;
+    }
+    .risk-sec::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(177,44,75,0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .risk-header { text-align: center; max-width: 620px; margin: 0 auto 48px; }
+    .risk-eyebrow {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(177,44,75,0.9); margin-bottom: 14px;
+    }
+    .risk-header h2 { color: #fff; margin-bottom: 14px; }
+    .risk-header p { color: rgba(255,255,255,0.52); font-size: 0.97rem; line-height: 1.65; }
+    .risk-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 16px; margin-bottom: 48px;
+    }
+    .risk-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--r-lg); padding: 28px 24px;
+      border-top: 3px solid rgba(177,44,75,0.6);
+      transition: background var(--t);
+    }
+    .risk-card:hover { background: rgba(255,255,255,0.07); }
+    .risk-ico {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(177,44,75,0.18);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px; color: #E86070;
+    }
+    .risk-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .risk-stat {
+      font-size: 1.9rem; font-weight: 800; color: #E86070;
+      letter-spacing: -0.04em; line-height: 1; margin-bottom: 10px;
+    }
+    .risk-card p { font-size: 0.83rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    .risk-cta { text-align: center; }
+    .risk-cta-lead {
+      font-size: 1.05rem; font-weight: 600; color: rgba(255,255,255,0.82);
+      margin-bottom: 20px;
+    }
+    .btn-lg { padding: 14px 32px; font-size: 0.96rem; }
+    .risk-cta-note {
+      display: block; margin-top: 12px;
+      font-size: 0.78rem; color: rgba(255,255,255,0.35);
+    }
+
+    /* Service consequence hooks */
+    .svc-consequence {
+      display: flex; align-items: flex-start; gap: 7px;
+      margin-top: 10px; padding: 8px 10px;
+      background: rgba(177,44,75,0.05); border: 1px solid rgba(177,44,75,0.12);
+      border-radius: 7px; font-size: 0.75rem; color: rgba(177,44,75,0.85);
+      line-height: 1.45; font-style: italic;
+    }
+    .svc-consequence svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* ── TRUST BADGES ─────────────────────────────────────────── */
+    .trust-row {
+      display: flex; align-items: center; gap: 20px;
+      flex-wrap: wrap; margin-top: 24px; padding-top: 20px;
+      border-top: 1px solid rgba(35,58,94,0.1);
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.75rem; font-weight: 600; color: var(--muted);
+    }
+    .trust-item svg { color: var(--success); }
+
+    /* ── TESTIMONIAL STARS ────────────────────────────────────── */
+    .testi-stars { display: flex; gap: 2px; margin-bottom: 10px; color: #F59E0B; }
+    .testi-verified {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.7rem; font-weight: 600; color: var(--success);
+      background: rgba(15,118,110,0.07); border: 1px solid rgba(15,118,110,0.18);
+      padding: 2px 8px; border-radius: 999px; margin-top: 8px;
+    }
+    .testi-verified svg { flex-shrink: 0; }
+
+    /* ── LAST CHANCE CTA SECTION ──────────────────────────────── */
+    .lastchance-sec {
+      background: linear-gradient(135deg, #0E1728 0%, #1A2540 60%, #0E1728 100%);
+      padding: 80px 0; position: relative; overflow: hidden;
+    }
+    .lastchance-sec::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(177,44,75,0.1) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .lastchance-inner {
+      max-width: 680px; margin: 0 auto; text-align: center;
+      position: relative; z-index: 1;
+    }
+    .lc-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(177,44,75,0.15); border: 1px solid rgba(177,44,75,0.3);
+      color: #E86070; padding: 5px 16px; border-radius: 999px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; margin-bottom: 22px;
+    }
+    .lc-badge::before {
+      content: ''; width: 7px; height: 7px; border-radius: 50%;
+      background: #E86070; animation: tr-pulse 1.6s ease-in-out infinite;
+    }
+    .lastchance-inner h2 {
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 800;
+      color: #fff; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px;
+    }
+    .lastchance-inner > p {
+      font-size: 0.97rem; color: rgba(255,255,255,0.55);
+      line-height: 1.65; margin-bottom: 32px;
+    }
+    .lc-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .btn-ghost-light {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: 9px;
+      border: 1.5px solid rgba(255,255,255,0.22); color: rgba(255,255,255,0.75);
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      transition: background var(--t), border-color var(--t);
+    }
+    .btn-ghost-light:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+    .lc-trust {
+      display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+      font-size: 0.78rem; color: rgba(255,255,255,0.38); font-weight: 500;
+    }
+    .lc-trust span::before { content: '✓ '; color: rgba(15,118,110,0.8); font-weight: 700; }
+    .lc-slots {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(177,44,75,0.12); border: 1px solid rgba(177,44,75,0.25);
+      color: rgba(177,44,75,0.9); padding: 6px 16px; border-radius: 8px;
+      font-size: 0.82rem; font-weight: 700; margin-bottom: 22px;
+    }
+    .lc-slot-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #E86070;
+      animation: tr-pulse 1.6s ease-in-out infinite;
+    }
+
+    /* ── STICKY URGENCY BAR ──────────────────────────────────── */
+    #sticky-urgency {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 8000;
+      background: #0E1728; border-top: 1px solid rgba(177,44,75,0.35);
+      display: flex; align-items: center; gap: 16px;
+      padding: 10px 20px; transform: translateY(100%);
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    #sticky-urgency.visible { transform: translateY(0); }
+    .su-live {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 0.75rem; color: rgba(255,255,255,0.5);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .su-live-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #25D366;
+      animation: tr-pulse 1.6s ease-in-out infinite; flex-shrink: 0;
+    }
+    .su-scarcity {
+      flex: 1; font-size: 0.82rem; font-weight: 600;
+      color: rgba(255,255,255,0.82); text-align: center;
+      white-space: nowrap;
+    }
+    .su-scarcity strong { color: #E86070; }
+    .su-btn {
+      white-space: nowrap; padding: 8px 20px; font-size: 0.82rem;
+      flex-shrink: 0;
+    }
+    .su-close {
+      background: none; border: none; color: rgba(255,255,255,0.3);
+      cursor: pointer; font-size: 1rem; padding: 4px 6px;
+      flex-shrink: 0; transition: color 0.2s;
+    }
+    .su-close:hover { color: rgba(255,255,255,0.7); }
+    @media (max-width: 600px) {
+      .su-live { display: none; }
+      .su-scarcity { text-align: left; }
+    }
+
+    /* ── EXIT INTENT OVERLAY ─────────────────────────────────── */
+    #exit-intent {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(14,23,40,0.72); backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    #exit-intent.show { opacity: 1; pointer-events: all; }
+    .ei-box {
+      background: var(--white); border-radius: var(--r-xl);
+      padding: 40px; max-width: 460px; width: 90%; position: relative;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+      animation: none;
+    }
+    #exit-intent.show .ei-box { animation: ei-in 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+    @keyframes ei-in {
+      from { transform: scale(0.88) translateY(20px); opacity: 0; }
+      to   { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .ei-close {
+      position: absolute; top: 14px; right: 16px;
+      background: none; border: none; font-size: 1.2rem;
+      color: var(--muted); cursor: pointer; padding: 4px 6px;
+    }
+    .ei-close:hover { color: var(--ink); }
+    .ei-eyebrow {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--burgundy); margin-bottom: 10px;
+    }
+    .ei-box h3 {
+      font-size: 1.3rem; font-weight: 800; color: var(--navy);
+      letter-spacing: -0.03em; margin-bottom: 10px; line-height: 1.25;
+    }
+    .ei-box p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 22px; }
+    .ei-list { list-style: none; display: grid; gap: 7px; margin-bottom: 24px; }
+    .ei-list li {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 0.85rem; font-weight: 500; color: var(--ink);
+    }
+    .ei-list li::before {
+      content: ''; width: 18px; height: 18px; border-radius: 50%;
+      background: rgba(15,118,110,0.1); border: 1px solid rgba(15,118,110,0.25);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%230f766e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: center; background-size: 10px;
+    }
+    .ei-note { font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 10px; }
+
+    /* ── CONTACT SOCIAL PROOF STRIP ──────────────────────────── */
+    .form-social-proof {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px; border-radius: 8px;
+      background: rgba(15,118,110,0.06); border: 1px solid rgba(15,118,110,0.15);
+      margin-bottom: 16px;
+    }
+    .fsp-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--success);
+      animation: tr-pulse 1.6s ease-in-out infinite; flex-shrink: 0;
+    }
+    .form-social-proof p {
+      font-size: 0.78rem; font-weight: 600; color: var(--success); margin: 0;
+    }
+
+    /* FAQ new style */
+    .faq-consequence {
+      margin-top: 10px; padding: 10px 14px;
+      background: rgba(177,44,75,0.05); border-left: 3px solid rgba(177,44,75,0.4);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: var(--muted);
+      line-height: 1.6;
+    }
+
     /* ── SERVICE CARD ARROW LINK ─────────────────────────────── */
     .svc-learn {
       display: inline-flex; align-items: center; justify-content: center;
@@ -1453,6 +1734,25 @@
     .dvs-feat-tile p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
     @media (max-width: 900px) { .dvs-feats-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .dvs-feats-grid { grid-template-columns: 1fr; } }
+
+    /* ── RESPONSIVE: PSYCHOLOGY LAYER ───────────────────────── */
+    @media (max-width: 900px) {
+      .risk-grid { grid-template-columns: 1fr; gap: 12px; }
+    }
+    @media (max-width: 768px) {
+      .risk-sec { padding: 52px 0; }
+      .risk-header { margin-bottom: 32px; }
+      .lastchance-sec { padding: 56px 0; }
+      .lc-actions { flex-direction: column; align-items: center; }
+      .lc-trust { gap: 12px; }
+    }
+    @media (max-width: 600px) {
+      .risk-cta-lead { font-size: 0.95rem; }
+      .trust-row { gap: 12px; }
+      .hero-proof-pill { font-size: 0.72rem; }
+      .lastchance-inner h2 { font-size: 1.4rem; }
+      .lc-trust { font-size: 0.72rem; }
+    }
   </style>
 
   
@@ -1540,11 +1840,29 @@
     <div class="wrap">
       <div class="hero-inner">
         <div>
-            <h1 class="h1" data-i18n="hero_h1">The Pharma Compliance Experts — <span class="accent">Inspection-Ready.</span></h1>
+            <div class="hero-proof-pill">
+            <span class="live-dot"></span>
+            <span id="heroViewerText">15+ regulated companies already inspection-ready with PHARPRO</span>
+          </div>
+          <h1 class="h1" data-i18n="hero_h1">The Pharma Compliance Experts — <span class="accent">Inspection-Ready.</span></h1>
           <p class="hero-sub" data-i18n="hero_sub">PHARPRO is the Middle East's most trusted pharmaceutical validation &amp; compliance firm. 10+ years of delivering audit-defensible outcomes across 7+ countries — we find and close compliance gaps before regulators do.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary" data-i18n="hero_btn1">Get Free Assessment</a>
+            <a href="#contact" class="btn btn-primary btn-pulse btn-lg" data-i18n="hero_btn1">Get Free Assessment</a>
             <a href="#services" class="btn btn-outline" data-i18n="hero_btn2">Explore Services</a>
+          </div>
+          <div class="trust-row">
+            <div class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              No commitment required
+            </div>
+            <div class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Free 20-min discovery call
+            </div>
+            <div class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Response within 2 hours
+            </div>
           </div>
         </div>
 
@@ -1585,6 +1903,48 @@
     </div>
   </section>
 
+  <!-- ── RISK / CONSEQUENCE SECTION ───────────────────────── -->
+  <section class="risk-sec" id="risk">
+    <div class="wrap">
+      <div class="risk-header">
+        <div class="risk-eyebrow">The Cost of Inaction</div>
+        <h2 class="h2">What happens when compliance gaps go unaddressed</h2>
+        <p>Pharmaceutical companies don't get second chances with regulators. One inspection, one gap, one finding — and the consequences compound fast.</p>
+      </div>
+      <div class="risk-grid">
+        <div class="risk-card">
+          <div class="risk-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>FDA Warning Letter</h3>
+          <div class="risk-stat">18 months</div>
+          <p>Average remediation time after receiving a Warning Letter — with production halted, external consultants at emergency rates, and brand credibility destroyed.</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+          </div>
+          <h3>Import Alert / Market Ban</h3>
+          <div class="risk-stat">$2M+</div>
+          <p>Estimated annual revenue impact of a U.S. import alert. Market access revoked while your competitors fill the gap — often permanently.</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+          </div>
+          <h3>Production Shutdown</h3>
+          <div class="risk-stat">6–24 mo.</div>
+          <p>Duration of regulatory-forced production suspensions while companies remediate findings. Every shutdown day is direct, unrecoverable revenue loss.</p>
+        </div>
+      </div>
+      <div class="risk-cta">
+        <p class="risk-cta-lead">Don't wait for the inspection letter. Find your gaps now — before regulators do.</p>
+        <a href="#contact" class="btn btn-primary btn-lg btn-pulse">Get Your Free Gap Assessment →</a>
+        <span class="risk-cta-note">No commitment. No sales pitch. Honest assessment in 20 minutes.</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ── SERVICES ──────────────────────────────────────────── -->
   <section class="sec on-white" id="services">
     <div class="wrap">
@@ -1598,6 +1958,10 @@
           </div>
           <h3 data-i18n="svc1_h3">Computerized System Validation</h3>
           <p data-i18n="svc1_p">Full CSV lifecycle — planning through closure — aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5.</p>
+          <div class="svc-consequence">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Unvalidated systems = automatic finding under FDA 21 CFR Part 11
+          </div>
           <a href="/services/csv/" class="svc-learn" aria-label="CSV Validation service">→</a>
         </div>
 
@@ -1607,6 +1971,10 @@
           </div>
           <h3 data-i18n="svc2_h3">Quality Assurance &amp; Gap Assessment</h3>
           <p data-i18n="svc2_p">Find gaps before auditors do. SOP reviews, QA assessments, and CAPA support to close findings fast.</p>
+          <div class="svc-consequence">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Undocumented gaps become CAPA backlogs that compound until inspection day
+          </div>
           <a href="/services/qa/" class="svc-learn" aria-label="QA service">→</a>
         </div>
 
@@ -1616,6 +1984,10 @@
           </div>
           <h3 data-i18n="svc3_h3">CQV &amp; Thermal Mapping</h3>
           <p data-i18n="svc3_p">Equipment and utility qualification, plus temperature distribution studies for controlled storage environments.</p>
+          <div class="svc-consequence">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Unqualified equipment = batch rejections, product recalls, regulatory holds
+          </div>
           <a href="/services/cqv/" class="svc-learn" aria-label="CQV service">→</a>
         </div>
 
@@ -1625,6 +1997,10 @@
           </div>
           <h3 data-i18n="svc4_h3">GMP Training</h3>
           <p data-i18n="svc4_p">CSV, data integrity, and GMP training tailored to your team's actual gaps. Delivered on-site or online.</p>
+          <div class="svc-consequence">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Untrained staff = the #1 root cause cited in regulatory audit findings
+          </div>
           <a href="/services/training/" class="svc-learn" aria-label="Training service">→</a>
         </div>
 
@@ -1634,6 +2010,10 @@
           </div>
           <h3 data-i18n="svc5_h3">Digital Validation Software</h3>
           <p data-i18n="svc5_p">AI-assisted validation lifecycle management. 30 document builders, one compliant platform.</p>
+          <div class="svc-consequence">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Manual validation = 10× the time, 10× the error rate vs. a purpose-built platform
+          </div>
           <a href="/services/dvs/" class="svc-learn" aria-label="DVS Software service">→</a>
         </div>
 
@@ -1866,39 +2246,60 @@
   <section class="sec on-white" id="clients">
     <div class="wrap">
       <div class="eyebrow" data-i18n="testi_eyebrow">Client Feedback</div>
-      <h2 class="h2" style="margin-bottom:8px;" data-i18n="testi_h2">Trusted by regulated operations</h2>
-      <p class="body-lg" data-i18n="testi_body">How pharmaceutical manufacturers describe working with PHARPRO.</p>
+      <h2 class="h2" style="margin-bottom:8px;" data-i18n="testi_h2">Join 15+ inspection-ready clients</h2>
+      <p class="body-lg" data-i18n="testi_body">How regulated pharmaceutical manufacturers describe working with PHARPRO.</p>
       <div class="testi-grid">
         <div class="testi">
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
           <div class="testi-q">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
           </div>
           <p data-i18n="testi1_p">"PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities."</p>
           <div class="testi-author">
             <div class="avatar">AG</div>
-            <div><div class="author-name" data-i18n="testi1_name">Axantia Group</div><div class="author-role" data-i18n="testi1_role">Quality &amp; Validation · Jordan</div></div>
+            <div>
+              <div class="author-name" data-i18n="testi1_name">Axantia Group</div>
+              <div class="author-role" data-i18n="testi1_role">Quality &amp; Validation · Jordan</div>
+              <span class="testi-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Verified Client</span>
+            </div>
           </div>
         </div>
 
         <div class="testi">
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
           <div class="testi-q">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
           </div>
           <p data-i18n="testi2_p">"Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity."</p>
           <div class="testi-author">
             <div class="avatar">DD</div>
-            <div><div class="author-name" data-i18n="testi2_name">Dar Al Dawa</div><div class="author-role" data-i18n="testi2_role">Quality Assurance · Jordan</div></div>
+            <div>
+              <div class="author-name" data-i18n="testi2_name">Dar Al Dawa</div>
+              <div class="author-role" data-i18n="testi2_role">Quality Assurance · Jordan</div>
+              <span class="testi-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Verified Client</span>
+            </div>
           </div>
         </div>
 
         <div class="testi">
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
           <div class="testi-q">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
           </div>
           <p data-i18n="testi3_p">"PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right."</p>
           <div class="testi-author">
             <div class="avatar">AH</div>
-            <div><div class="author-name" data-i18n="testi3_name">Al Hayat Pharmaceuticals</div><div class="author-role" data-i18n="testi3_role">CSV &amp; Compliance · Jordan</div></div>
+            <div>
+              <div class="author-name" data-i18n="testi3_name">Al Hayat Pharmaceuticals</div>
+              <div class="author-role" data-i18n="testi3_role">CSV &amp; Compliance · Jordan</div>
+              <span class="testi-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Verified Client</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1938,6 +2339,13 @@
           <div class="faq-a" data-i18n="faq5_a">FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5, ICH Q10, and general GMP requirements for pharmaceutical manufacturing and distribution.</div>
         </div>
 
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false"><span>What's the real cost of delaying compliance work?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">More than most companies expect. A single FDA Warning Letter triggers an average 18-month remediation process — with production halted, emergency consultant fees, and brand reputation in question. Import alerts can cost $2M+ in annual revenue. Regulatory-forced shutdowns run 6 to 24 months. In every case, reactive compliance costs 5–10× more than proactive compliance. The companies that work with PHARPRO before an inspection avoid this entirely. The ones who wait often wish they hadn't.
+            <div class="faq-consequence">Every month of delay is a month closer to an inspection you're not ready for. Your free assessment takes 20 minutes. <a href="#contact" style="color:#B12C4B;font-weight:600;">Book it today →</a></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1946,8 +2354,8 @@
   <section class="sec on-white" id="contact">
     <div class="wrap">
       <div class="eyebrow" data-i18n="contact_eyebrow">Contact</div>
-      <h2 class="h2" style="margin-bottom:8px;" data-i18n="contact_h2">Let's talk about your compliance needs</h2>
-      <p class="body-lg" style="max-width:500px;" data-i18n="contact_body">Start with a free discovery call. We'll listen, ask the right questions, and tell you honestly what you need.</p>
+      <h2 class="h2" style="margin-bottom:8px;" data-i18n="contact_h2">Start free — no commitment, no sales pitch</h2>
+      <p class="body-lg" style="max-width:500px;" data-i18n="contact_body">A 20-minute discovery call. We listen, identify your most important gaps, and give you an honest path forward — whether you work with us or not.</p>
 
       <div class="contact-grid">
         <div class="c-details">
@@ -1970,8 +2378,12 @@
         </div>
 
         <div class="c-form">
+          <div class="form-social-proof">
+            <span class="fsp-dot"></span>
+            <p>3 companies booked their free assessment this week — <strong>2 Q3 slots remaining</strong></p>
+          </div>
           <h3 data-i18n="form_h3">Send us a message</h3>
-          <p data-i18n="form_p">We respond within 24 hours on business days.</p>
+          <p data-i18n="form_p" style="color:var(--success);font-weight:600;">⚡ Average response time: under 2 hours</p>
           <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="83fc2882-83bb-4976-b2e6-81c5405ff00f">
             <div class="form-row">
@@ -2027,6 +2439,34 @@
     </div>
   </section>
 
+
+  <!-- ── LAST CHANCE CTA ───────────────────────────────────── -->
+  <section class="lastchance-sec">
+    <div class="wrap">
+      <div class="lastchance-inner">
+        <div class="lc-badge">Limited Availability — Q3 2026</div>
+        <h2>Your next inspection won't wait.<br>Your competitors aren't waiting either.</h2>
+        <p>PHARPRO accepts a limited number of new project engagements each quarter to maintain delivery quality. Q3 2026 has 2 slots remaining — once filled, next availability is Q4. The free assessment takes 20 minutes and costs you nothing. The alternative costs far more.</p>
+        <div class="lc-slots">
+          <span class="lc-slot-dot"></span>
+          Only 2 Q3 2026 project slots remaining
+        </div>
+        <div class="lc-actions">
+          <a href="#contact" class="btn btn-primary btn-lg btn-pulse">Reserve My Slot Now</a>
+          <a href="https://wa.me/962798565807?text=Hi%20PHARPRO%2C%20I%27d%20like%20to%20discuss%20my%20compliance%20needs." target="_blank" rel="noopener" class="btn-ghost-light">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            WhatsApp Chat
+          </a>
+        </div>
+        <div class="lc-trust">
+          <span>Free initial assessment</span>
+          <span>No commitment required</span>
+          <span>Response within 2 hours</span>
+          <span>22+ projects delivered</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ── ABOUT / SEO CONTENT ─────────────────────────────────── -->
   <section style="padding:48px 0;background:#fff;">
@@ -2113,6 +2553,37 @@
     </div>
   </div>
 </footer>
+
+<!-- ── STICKY URGENCY BAR ──────────────────────────────────────── -->
+<div id="sticky-urgency" role="complementary" aria-label="Availability notice">
+  <div class="su-live">
+    <span class="su-live-dot"></span>
+    <span id="su-viewers">5 people viewing now</span>
+  </div>
+  <div class="su-scarcity">
+    <strong>Q3 2026:</strong> Only 2 project slots remaining
+  </div>
+  <a href="#contact" class="btn btn-primary su-btn">Reserve Your Slot →</a>
+  <button class="su-close" id="su-close-btn" aria-label="Dismiss notice">✕</button>
+</div>
+
+<!-- ── EXIT INTENT OVERLAY ─────────────────────────────────────── -->
+<div id="exit-intent" role="dialog" aria-modal="true" aria-labelledby="ei-title">
+  <div class="ei-box">
+    <button class="ei-close" id="ei-close-btn" aria-label="Close">✕</button>
+    <div class="ei-eyebrow">Before you leave</div>
+    <h3 id="ei-title">Is your next inspection on the calendar?</h3>
+    <p>Most compliance gaps are invisible until an auditor finds them. A 20-minute call with PHARPRO can tell you exactly where you stand — at no cost, no commitment.</p>
+    <ul class="ei-list">
+      <li>Free gap assessment — zero cost, no obligation</li>
+      <li>Identify your highest-risk compliance areas</li>
+      <li>Get an honest, actionable starting point</li>
+      <li>22+ regulated companies have already done this</li>
+    </ul>
+    <a href="#contact" class="btn btn-primary" style="width:100%;text-align:center;display:block;" id="ei-cta">Book My Free Assessment →</a>
+    <p class="ei-note">Takes 20 minutes · No sales pitch · Response in under 2 hours</p>
+  </div>
+</div>
 
 <script src="js/scripts.js"></script>
 

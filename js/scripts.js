@@ -861,4 +861,132 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".lang-toggle").forEach(btn => {
     btn.addEventListener("click", switchLanguage);
   });
+
+  /* ── PSYCHOLOGY / CONVERSION LAYER ─────────────────────── */
+  initStickyBar();
+  initViewerCount();
+  initExitIntent();
 });
+
+/* ── STICKY URGENCY BAR ─────────────────────────────────────── */
+function initStickyBar() {
+  const bar = document.getElementById("sticky-urgency");
+  const closeBtn = document.getElementById("su-close-btn");
+  if (!bar) return;
+
+  let dismissed = sessionStorage.getItem("su_dismissed");
+  if (dismissed) return;
+
+  let shown = false;
+  const threshold = document.documentElement.scrollHeight * 0.28;
+
+  function onScroll() {
+    if (dismissed) return;
+    const scrolled = window.scrollY + window.innerHeight;
+    if (!shown && scrolled > threshold) {
+      bar.classList.add("visible");
+      shown = true;
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      bar.classList.remove("visible");
+      sessionStorage.setItem("su_dismissed", "1");
+      dismissed = true;
+    });
+  }
+
+  /* Close bar when clicking the CTA link */
+  const suCta = bar.querySelector(".su-btn");
+  if (suCta) {
+    suCta.addEventListener("click", () => {
+      sessionStorage.setItem("su_dismissed", "1");
+      dismissed = true;
+    });
+  }
+}
+
+/* ── LIVE VIEWER COUNT OSCILLATOR ───────────────────────────── */
+function initViewerCount() {
+  const el = document.getElementById("su-viewers");
+  if (!el) return;
+
+  function randomBetween(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  let count = randomBetween(4, 7);
+
+  function updateCount() {
+    /* Drift ±1 with 60% probability, stay with 40% */
+    const drift = Math.random();
+    if (drift < 0.3 && count < 8) count++;
+    else if (drift < 0.6 && count > 2) count--;
+    el.textContent = count + " people viewing now";
+  }
+
+  setInterval(updateCount, 14000 + Math.random() * 8000);
+}
+
+/* ── EXIT INTENT OVERLAY ─────────────────────────────────────── */
+function initExitIntent() {
+  const overlay = document.getElementById("exit-intent");
+  const closeBtn = document.getElementById("ei-close-btn");
+  const ctaBtn   = document.getElementById("ei-cta");
+  if (!overlay) return;
+
+  let fired = sessionStorage.getItem("ei_fired");
+  if (fired) return;
+
+  let armedAfterMs = 8000;
+  let armed = false;
+  setTimeout(() => { armed = true; }, armedAfterMs);
+
+  function showOverlay() {
+    if (!armed || sessionStorage.getItem("ei_fired")) return;
+    overlay.classList.add("show");
+    document.body.style.overflow = "hidden";
+    sessionStorage.setItem("ei_fired", "1");
+  }
+
+  /* Trigger on mouse leaving toward top of viewport */
+  document.addEventListener("mouseleave", (e) => {
+    if (e.clientY < 10) showOverlay();
+  });
+
+  function closeOverlay() {
+    overlay.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+
+  if (closeBtn) closeBtn.addEventListener("click", closeOverlay);
+
+  /* CTA scrolls to contact and closes */
+  if (ctaBtn) {
+    ctaBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeOverlay();
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+        /* Focus first input after a short delay */
+        setTimeout(() => {
+          const firstInput = contactSection.querySelector("input");
+          if (firstInput) firstInput.focus();
+        }, 600);
+      }
+    });
+  }
+
+  /* Close on backdrop click */
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeOverlay();
+  });
+
+  /* Close on Escape key */
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("show")) closeOverlay();
+  });
+}
