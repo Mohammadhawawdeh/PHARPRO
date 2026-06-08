@@ -48,14 +48,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="alternate" type="application/rss+xml" title="PHARPRO Compliance Insights" href="https://www.pharpro.co/feed.xml" />
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRCV7XCWKT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XRCV7XCWKT');
-  </script>
+  
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -2713,6 +2706,79 @@
   </div>
 </noscript>
 
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2d4a;color:#f0f4f8;padding:18px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);font-family:'Inter',system-ui,sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <p id="cookie-text" style="margin:0;font-size:0.875rem;line-height:1.55;flex:1;min-width:220px;">
+      We use cookies to analyse site traffic and improve your experience. By clicking <strong>Accept</strong>, you consent to our use of analytics cookies. You can decline and only essential cookies will be used.
+    </p>
+    <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;">
+      <button id="cookie-decline" onclick="cookieDecline()" style="padding:9px 20px;border-radius:6px;border:1px solid rgba(255,255,255,0.3);background:transparent;color:#f0f4f8;font-size:0.85rem;font-weight:500;cursor:pointer;">Decline</button>
+      <button id="cookie-accept" onclick="cookieAccept()" style="padding:9px 20px;border-radius:6px;border:none;background:#B12C4B;color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var COOKIE_KEY = 'pharpro_cookie_consent';
+  var choice = localStorage.getItem(COOKIE_KEY);
+
+  function loadAnalytics(){
+    if(window._gaLoaded) return;
+    window._gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XRCV7XCWKT';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-XRCV7XCWKT');
+  }
+
+  function hideBanner(){ document.getElementById('cookie-banner').style.display='none'; }
+
+  window.cookieAccept = function(){
+    localStorage.setItem(COOKIE_KEY,'accepted');
+    hideBanner();
+    loadAnalytics();
+  };
+
+  window.cookieDecline = function(){
+    localStorage.setItem(COOKIE_KEY,'declined');
+    hideBanner();
+  };
+
+  function updateBannerLang(){
+    var isAr = document.body.classList.contains('rtl');
+    var txt = document.getElementById('cookie-text');
+    var acc = document.getElementById('cookie-accept');
+    var dec = document.getElementById('cookie-decline');
+    var banner = document.getElementById('cookie-banner');
+    if(isAr){
+      txt.innerHTML = 'نستخدم ملفات تعريف الارتباط لتحليل حركة الموقع وتحسين تجربتك. بالنقر على <strong>قبول</strong>، توافق على استخدامنا لملفات التحليل. يمكنك الرفض واستخدام ملفات الارتباط الأساسية فقط.';
+      acc.textContent = 'قبول';
+      dec.textContent = 'رفض';
+      banner.style.direction = 'rtl';
+    } else {
+      txt.innerHTML = 'We use cookies to analyse site traffic and improve your experience. By clicking <strong>Accept</strong>, you consent to our use of analytics cookies. You can decline and only essential cookies will be used.';
+      acc.textContent = 'Accept';
+      dec.textContent = 'Decline';
+      banner.style.direction = 'ltr';
+    }
+  }
+
+  if(!choice){
+    document.getElementById('cookie-banner').style.display='block';
+    var obs = new MutationObserver(function(){ updateBannerLang(); });
+    obs.observe(document.body, {attributes:true, attributeFilter:['class']});
+  } else if(choice === 'accepted'){
+    loadAnalytics();
+  }
+})();
+</script>
 
 <!-- WhatsApp Float -->
 <a href="https://wa.me/962798565807" target="_blank" rel="noopener noreferrer" aria-label="Chat with PHARPRO on WhatsApp" id="wa-float" style="position:fixed;bottom:24px;left:24px;z-index:9000;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,0.35);text-decoration:none;transition:transform 0.2s ease,box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 24px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.35)'">
