@@ -276,6 +276,50 @@ body.rtl .mob-nav{text-align:right}
 /* Force nav-inner to always lay out LTR regardless of page dir attribute */
 .nav-inner { direction: ltr !important;}
 </style>
+
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/#faqpage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is MACO in pharmaceutical cleaning validation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MACO (Maximum Allowable Carryover) is the maximum quantity of a previous product's residue permitted on equipment surfaces without posing a risk to the next product manufactured. It is calculated using a dose-based or toxicity-based (HBEL/PDE) approach and directly sets the acceptance criteria for swab and rinse sampling in pharmaceutical cleaning validation studies."
+        }
+      },
+    {
+        "@type": "Question",
+        "name": "What is the regulatory basis for cleaning validation in pharmaceutical manufacturing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cleaning validation requirements derive from FDA 21 CFR Part 211.67, EU GMP Annex 15, and ICH Q7 for API manufacturing. The EMA's 2014 guideline on health-based exposure limits introduced the HBEL/PDE approach, now the primary method for calculating MACO in multi-product facilities. WHO Technical Report 1010 also provides current cleaning validation guidance."
+        }
+      },
+    {
+        "@type": "Question",
+        "name": "What is the difference between swab sampling and rinse sampling in cleaning validation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Swab sampling physically wipes a defined surface area with a pre-moistened swab and analyses it for residue — the preferred method for direct contact surfaces and hard-to-clean areas such as joints, crevices, and welded connections. Rinse sampling collects and analyses the final rinse solvent — suitable for large or inaccessible surfaces but subject to dilution effects that may underestimate actual residue levels."
+        }
+      }
+    ]
+  }</script>
+
+  <style>
+  .art-related-services{margin:40px 0 32px;padding:28px 32px;background:linear-gradient(135deg,#f0f4f8 0%,#e8edf2 100%);border-radius:12px;border-left:4px solid #B12C4B}
+  .rs-heading{font-size:1.05rem;font-weight:800;color:#233A5E;margin:0 0 20px;letter-spacing:-.02em}
+  .rs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+  .rs-card{background:#fff;border-radius:8px;padding:18px 20px;border:1px solid #dce3eb;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+  .rs-cat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#B12C4B;margin-bottom:6px}
+  .rs-title{font-size:.92rem;font-weight:700;color:#233A5E;margin:0 0 8px;line-height:1.35}
+  .rs-title a{color:inherit;text-decoration:none}.rs-title a:hover{color:#B12C4B}
+  .rs-desc{font-size:.8rem;color:#6B7A8D;line-height:1.6;margin:0 0 10px}
+  .rs-link{font-size:.8rem;font-weight:600;color:#B12C4B;text-decoration:none}.rs-link:hover{text-decoration:underline}
+  </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -400,7 +444,26 @@ body.rtl .mob-nav{text-align:right}
           <p>Demonstrating cleaning validation for the worst-case product validates the cleaning procedure for all other products in the "family" — provided the cleaning procedure is the same and the products are of similar category.</p>
 
           <!-- Lead magnet CTA -->
-          <div class="lead-magnet">
+          
+        <!-- PHARPRO Related Services -->
+        <aside class="art-related-services" aria-label="Related PHARPRO services">
+          <h3 class="rs-heading">Work with PHARPRO on This</h3>
+          <div class="rs-grid">
+        <div class="rs-card">
+          <div class="rs-cat">Consulting</div>
+          <h3 class="rs-title"><a href="/services/cqv/">CQV & Thermal Mapping</a></h3>
+          <p class="rs-desc">Equipment and facility qualification (IQ/OQ/PQ) and thermal distribution studies for controlled pharmaceutical environments.</p>
+          <a href="/services/cqv/" class="rs-link" aria-label="Learn more about CQV & Thermal Mapping">Learn more →</a>
+        </div>
+      <div class="rs-card">
+          <div class="rs-cat">Training</div>
+          <h3 class="rs-title"><a href="/services/training/cleaning-validation/">Cleaning Validation Training</a></h3>
+          <p class="rs-desc">Specialist training covering MACO calculations, sampling methods, acceptance criteria, and regulatory expectations for pharmaceutical cleaning validation.</p>
+          <a href="/services/training/cleaning-validation/" class="rs-link" aria-label="Learn more about Cleaning Validation Training">Learn more →</a>
+        </div>
+          </div>
+        </aside>
+      <div class="lead-magnet">
             <div class="lead-magnet-ico">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             </div>
@@ -879,5 +942,6 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
 <a href="https://wa.me/962798565807" target="_blank" rel="noopener noreferrer" aria-label="Chat with PHARPRO on WhatsApp" id="wa-float" style="position:fixed;bottom:24px;left:24px;z-index:9000;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,0.35);text-decoration:none;transition:transform 0.2s ease,box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 24px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.35)'">
   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="white" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.47 2.027 7.774L.057 31.943a.5.5 0 0 0 .606.606l8.169-1.97A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.5c-2.55 0-4.94-.686-7.002-1.885l-.5-.295-5.18 1.25 1.25-5.18-.295-.5A13.437 13.437 0 0 1 2.5 16C2.5 8.544 8.544 2.5 16 2.5S29.5 8.544 29.5 16 23.456 29.5 16 29.5zm7.385-10.033c-.404-.202-2.393-1.18-2.764-1.315-.371-.135-.641-.202-.911.202-.27.404-1.044 1.315-1.28 1.585-.235.27-.471.304-.875.101-.404-.202-1.706-.629-3.251-2.007-1.202-1.073-2.014-2.398-2.25-2.802-.236-.404-.025-.623.177-.824.182-.181.404-.471.607-.707.202-.236.27-.404.404-.674.135-.27.067-.505-.034-.707-.1-.202-.91-2.194-1.246-3.003-.328-.788-.662-.681-.911-.694-.235-.011-.505-.014-.775-.014-.27 0-.707.101-1.078.505-.37.404-1.415 1.382-1.415 3.37s1.449 3.91 1.651 4.18c.202.27 2.852 4.353 6.909 6.104.966.417 1.719.666 2.306.851.969.309 1.851.265 2.548.161.777-.115 2.393-.978 2.729-1.922.336-.944.336-1.753.235-1.922-.101-.168-.37-.27-.774-.472z"/></svg>
 </a>
+<script src="/js/lead-boost.js" defer></script>
 </body>
 </html>

@@ -320,6 +320,17 @@
 <style id="nav-ltr-fix">
 .nav-inner{direction:ltr !important;}
 </style>
+<style>
+  .art-related-services{margin:40px 0 32px;padding:28px 32px;background:linear-gradient(135deg,#f0f4f8 0%,#e8edf2 100%);border-radius:12px;border-left:4px solid #B12C4B}
+  .rs-heading{font-size:1.05rem;font-weight:800;color:#233A5E;margin:0 0 20px;letter-spacing:-.02em}
+  .rs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+  .rs-card{background:#fff;border-radius:8px;padding:18px 20px;border:1px solid #dce3eb;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+  .rs-cat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#B12C4B;margin-bottom:6px}
+  .rs-title{font-size:.92rem;font-weight:700;color:#233A5E;margin:0 0 8px;line-height:1.35}
+  .rs-title a{color:inherit;text-decoration:none}.rs-title a:hover{color:#B12C4B}
+  .rs-desc{font-size:.8rem;color:#6B7A8D;line-height:1.6;margin:0 0 10px}
+  .rs-link{font-size:.8rem;font-weight:600;color:#B12C4B;text-decoration:none}.rs-link:hover{text-decoration:underline}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -545,7 +556,24 @@
 
             <p><strong>Start your free trial at <a href="https://dvs.pharpro.co" target="_blank" rel="noopener">dvs.pharpro.co</a></strong> or speak to a PHARPRO consultant about how DVS fits your validation programme.</p>
 
-          </article>
+                  <aside class="art-related-services" aria-label="Related PHARPRO services">
+            <h3 class="rs-heading">Work with PHARPRO on This</h3>
+            <div class="rs-grid">
+            <div class="rs-card">
+              <div class="rs-cat">Software</div>
+              <h3 class="rs-title"><a href="/services/dvs/">PHARPRO DVS — Validation Software</a></h3>
+              <p class="rs-desc">AI-assisted platform that generates IQ/OQ/PQ documentation, risk assessments, and traceability matrices in a fraction of the time of manual approaches.</p>
+              <a href="/services/dvs/" class="rs-link" aria-label="Learn more about PHARPRO DVS — Validation Software">Learn more →</a>
+            </div>
+          <div class="rs-card">
+              <div class="rs-cat">Consulting</div>
+              <h3 class="rs-title"><a href="/services/csv/">CSV Validation Services</a></h3>
+              <p class="rs-desc">Full validation lifecycle support — URS, risk assessment, IQ/OQ/PQ protocols, and reports — aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5.</p>
+              <a href="/services/csv/" class="rs-link" aria-label="Learn more about CSV Validation Services">Learn more →</a>
+            </div>
+            </div>
+          </aside>
+        </article>
 
           <article class="art-content art-ar" aria-label="محتوى المقال بالعربية" style="display:none">
 
@@ -1028,5 +1056,6 @@ applyLang();
    });
  }
 })();
+<script src="/js/lead-boost.js" defer></script>
 </body>
 </html>

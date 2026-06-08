@@ -849,7 +849,7 @@
     <form onsubmit="submitCmpForm(event)">
       <input type="hidden" name="access_key" value="83fc2882-83bb-4976-b2e6-81c5405ff00f" />
       <input type="hidden" name="subject" value="DVS Compare Page — Demo Request" />
-      <input type="hidden" name="redirect" value="https://www.pharpro.co/services/dvs/" />
+      <input type="hidden" name="redirect" value="false" />
       <div class="demo-form">
         <input type="text" name="name" placeholder="Your name" required />
         <input type="text" name="company" placeholder="Your company" />
@@ -916,5 +916,6 @@ async function submitCmpForm(e) {
   btn.disabled = false; btn.textContent = 'Book My Free Demo →';
 }
 </script>
+<script src="/js/lead-boost.js" defer></script>
 </body>
 </html>

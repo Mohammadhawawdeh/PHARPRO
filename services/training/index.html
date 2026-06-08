@@ -632,9 +632,6 @@
     .cal-day{display:block;font-size:1.3rem;font-weight:800;line-height:1;}
     .cal-mon{display:block;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;opacity:0.7;margin-top:2px;}
     .course-dates-text{font-size:0.87rem;color:var(--muted);font-weight:500;}
-    .countdown-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(194,87,10,0.08);color:#B85A00;border:1px solid rgba(194,87,10,0.18);}
-    .cd-dot{width:5px;height:5px;border-radius:50%;background:currentColor;animation:pulse 1.6s infinite;}
-    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
     .course-card h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin:0;}
     .course-card p{font-size:0.87rem;color:var(--muted);line-height:1.65;flex:1;}
     .course-pills{display:flex;gap:6px;flex-wrap:wrap;}
@@ -814,7 +811,6 @@
             <span class="course-dates-text" data-i18n="c1_dates">4–5 Jun 2026</span>
           </div>
           <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <span class="countdown-badge"><span class="cd-dot"></span><span class="cd-text" data-start="2026-06-04"></span></span>
             <span class="enroll-count"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:1px"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>1 enrolled</span>
           </div>
           <div class="seats-row">
@@ -835,7 +831,6 @@
             <span class="course-dates-text" data-i18n="c2_dates">10–11 Jun 2026</span>
           </div>
           <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <span class="countdown-badge"><span class="cd-dot"></span><span class="cd-text" data-start="2026-06-10"></span></span>
             <span class="enroll-count"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:1px"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>1 enrolled</span>
           </div>
           <div class="seats-row">
@@ -856,7 +851,6 @@
             <span class="course-dates-text" data-i18n="c3_dates">17–18 Jun 2026</span>
           </div>
           <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <span class="countdown-badge"><span class="cd-dot"></span><span class="cd-text" data-start="2026-06-17"></span></span>
             <span class="enroll-count"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:1px"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>1 enrolled</span>
           </div>
           <div class="seats-row">
@@ -1241,14 +1235,6 @@ function applyLang(){
   document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(T[lang][k]!==undefined)el.innerHTML=T[lang][k];});
   document.querySelectorAll('.lang-btn').forEach(b=>b.textContent=lang==='en'?'عربي':'EN');
   preserveLang();
-  // Update countdown labels
-  document.querySelectorAll('.cd-text[data-start]').forEach(el=>{
-    const start=new Date(el.dataset.start+'T00:00:00');
-    const days=Math.ceil((start-new Date())/86400000);
-    if(days<0)el.closest('.countdown-badge').style.display='none';
-    else if(days===0)el.textContent=lang==='ar'?'يبدأ اليوم!':'Starts today!';
-    else el.textContent=lang==='ar'?`${days} ${days===1?'يوم متبق':'أيام متبقية'}`:`${days} ${days===1?'day left':'days left'}`;
- });
 }
 function toggleLang(){lang=lang==='en'?'ar':'en';localStorage.setItem('pharpro_lang',lang);const u=new URL(location.href);lang==='ar'?u.searchParams.set('lang','ar'):u.searchParams.delete('lang');history.replaceState(null,'',u.toString());applyLang();}
 applyLang();
@@ -1321,5 +1307,6 @@ async function submitTrainForm(e) {
 <a href="https://wa.me/962798565807" target="_blank" rel="noopener noreferrer" aria-label="Chat with PHARPRO on WhatsApp" id="wa-float" style="position:fixed;bottom:80px;left:24px;z-index:9000;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,0.35);text-decoration:none;transition:transform 0.2s ease,box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 24px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.35)'">
   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="white" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.47 2.027 7.774L.057 31.943a.5.5 0 0 0 .606.606l8.169-1.97A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.5c-2.55 0-4.94-.686-7.002-1.885l-.5-.295-5.18 1.25 1.25-5.18-.295-.5A13.437 13.437 0 0 1 2.5 16C2.5 8.544 8.544 2.5 16 2.5S29.5 8.544 29.5 16 23.456 29.5 16 29.5zm7.385-10.033c-.404-.202-2.393-1.18-2.764-1.315-.371-.135-.641-.202-.911.202-.27.404-1.044 1.315-1.28 1.585-.235.27-.471.304-.875.101-.404-.202-1.706-.629-3.251-2.007-1.202-1.073-2.014-2.398-2.25-2.802-.236-.404-.025-.623.177-.824.182-.181.404-.471.607-.707.202-.236.27-.404.404-.674.135-.27.067-.505-.034-.707-.1-.202-.91-2.194-1.246-3.003-.328-.788-.662-.681-.911-.694-.235-.011-.505-.014-.775-.014-.27 0-.707.101-1.078.505-.37.404-1.415 1.382-1.415 3.37s1.449 3.91 1.651 4.18c.202.27 2.852 4.353 6.909 6.104.966.417 1.719.666 2.306.851.969.309 1.851.265 2.548.161.777-.115 2.393-.978 2.729-1.922.336-.944.336-1.753.235-1.922-.101-.168-.37-.27-.774-.472z"/></svg>
 </a>
+<script src="/js/lead-boost.js" defer></script>
 </body>
 </html>
