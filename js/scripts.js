@@ -68,8 +68,8 @@ const translations = {
 
     /* Hero */
     hero_pill:      "Trusted by pharma teams in 7+ countries",
-    hero_h1:        'The Pharma Compliance Experts — <span class="accent">Inspection-Ready.</span>',
-    hero_sub:       "PHARPRO is the Middle East's most trusted pharmaceutical validation & compliance firm. 10+ years of delivering audit-defensible outcomes across 7+ countries — we find and close compliance gaps before regulators do.",
+    hero_h1:        'Pharma Compliance Consulting, Built on Integrity — <span class="accent">Inspection-Ready.</span>',
+    hero_sub:       "We report what we find. We document what we do. PHARPRO delivers pharmaceutical CSV, QA, CQV, and compliance consulting aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5 — serving regulated operations across 7+ countries.",
     hero_btn1:      "Get Free Assessment",
     hero_btn2:      "Explore Services",
     hero_badge:     "Inspection-Ready Approach",
@@ -310,8 +310,8 @@ const translations = {
 
     /* Hero */
     hero_pill:     "موثوق من فرق دوائية في أكثر من 7 دول",
-    hero_h1:       'خبراء الامتثال الدوائي — <span class="accent">جاهزون للتفتيش.</span>',
-    hero_sub:      "PHARPRO هي الشركة الأكثر ثقة في مجال التحقق والامتثال الدوائي في الشرق الأوسط. أكثر من 10 سنوات من تقديم نتائج قابلة للدفاع عنها في التدقيق عبر أكثر من 7 دول — نكتشف ثغرات الامتثال ونغلقها قبل أن يجدها المنظمون.",
+    hero_h1:       'استشارات الامتثال الدوائي بنزاهة وشفافية — <span class="accent">جاهزون للتفتيش.</span>',
+    hero_sub:      "نقول ما نجده. نوثّق ما نفعله. تقدم PHARPRO خدمات CSV والجودة وCQV والامتثال الدوائي وفق FDA 21 CFR Part 11 وEU GMP Annex 11 وGAMP 5 — لخدمة العمليات الدوائية المُنظَّمة في أكثر من 7 دول.",
     hero_btn1:     "احصل على تقييم مجاني",
     hero_btn2:     "استعرض الخدمات",
     hero_badge:    "نهج جاهز للتفتيش",
