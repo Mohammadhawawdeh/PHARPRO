@@ -339,7 +339,13 @@
       </div>
       <a href="/services/training/" data-i18n="nav_training">Training</a>
       <a href="/services/dvs/" data-i18n="nav_dvs">DVS Software</a>
-      <a href="/insights/" class="active" data-i18n="nav_insights">Insights</a>
+      <div class="nav-dropdown">
+          <a href="/insights/" class="active" data-i18n="nav_insights">Insights <svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="/insights/" class="active" data-i18n="nav_insights_hub">Compliance Insights</a>
+            <a href="/insights/real-world-stories/" data-i18n="nav_stories">Real World Stories</a>
+          </div>
+        </div>
       <a href="/contact/" class="nav-cta-btn" data-i18n="nav_cta">Free Assessment</a>
       <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
     </div>
@@ -353,7 +359,8 @@
       <a href="/services/cqv/" data-i18n="nav_cqv">CQV &amp; Thermal Mapping</a>
       <a href="/services/training/" data-i18n="nav_training">Training</a>
       <a href="/services/dvs/" data-i18n="nav_dvs">DVS Software</a>
-      <a href="/insights/" class="active" data-i18n="nav_insights">Insights</a>
+      <a href="/insights/" class="active" data-i18n="nav_insights">Compliance Insights</a>
+        <a href="/insights/real-world-stories/" data-i18n="nav_stories">Real World Stories</a>
       <a href="/contact/" data-i18n="nav_cta">Free Assessment</a>
       <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language">عربي</button>
     </nav>
@@ -378,6 +385,27 @@
     <div class="wrap">
       <h2 id="articles-heading" class="visually-hidden" data-i18n="all_articles">All articles</h2>
       <div class="articles-grid">
+
+          <!-- REAL WORLD STORIES PROMO CARD -->
+          <article class="article-card" style="border:2px solid rgba(177,44,75,0.35);background:linear-gradient(135deg,#fff 70%,rgba(177,44,75,0.04));position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:rgba(177,44,75,0.05);border-radius:0 0 0 100%;pointer-events:none;"></div>
+            <div class="art-card-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <div style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:#FF0000;border-radius:8px;flex-shrink:0;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </div>
+                <div class="art-cat" style="margin-bottom:0;">YouTube Shorts Series</div>
+              </div>
+              <h2><a href="/insights/real-world-stories/">Pharma Real World Stories — All Episodes in Writing</a></h2>
+              <div class="art-meta">
+                <span>18 episodes</span>
+                <span class="dot" aria-hidden="true"></span>
+                <span>Real failures · Warning letters · 30-sec training</span>
+              </div>
+              <p>Written transcripts of every PHARPRO YouTube Short — data integrity failures, FDA Warning Letter breakdowns, cleaning validation cases, and pharmaceutical training in readable format. Each episode includes a Key Lesson and a link to the original short.</p>
+              <a href="/insights/real-world-stories/" class="read-link">Read all episodes &rarr;</a>
+            </div>
+          </article>
 
         <!-- Lead Magnet promo card -->
         <article class="article-card" style="border:2px solid rgba(177,44,75,0.3);background:rgba(177,44,75,0.03);">

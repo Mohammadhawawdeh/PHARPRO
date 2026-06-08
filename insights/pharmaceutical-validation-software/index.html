@@ -99,7 +99,16 @@
         "contactType": "customer support",
         "email": "info@pharpro.co"
      }
-   }
+   },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.pharpro.co/insights/pharmaceutical-validation-software/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pharpro.co/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.pharpro.co/insights/" },
+          { "@type": "ListItem", "position": 3, "name": "Pharmaceutical Validation Software", "item": "https://www.pharpro.co/insights/pharmaceutical-validation-software/" }
+        ]
+      }
   ]
 }</script>
 
@@ -259,7 +268,13 @@ html[dir="rtl"] .nav-inner{direction:ltr !important;}
       <a href="/services/cqv/">CQV &amp; Thermal Mapping</a>
       <a href="/services/training/">Training</a>
       <a href="/services/dvs/">DVS Software</a>
-      <a href="/insights/">Insights</a>
+      <div class="nav-dropdown">
+          <a href="/insights/">Insights <svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="/insights/">Compliance Insights</a>
+            <a href="/insights/real-world-stories/">Real World Stories</a>
+          </div>
+        </div>
       <a href="/contact/">Contact</a>
       <button class="lang-btn" onclick="toggleLang()">عربي</button>
     </div>
@@ -270,7 +285,8 @@ html[dir="rtl"] .nav-inner{direction:ltr !important;}
   <div class="wrap">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a><span class="sep">›</span>
-      <a href="/insights/">Insights</a><span class="sep">›</span>
+      <a href="/insights/">Compliance Insights</a>
+      <a href="/insights/real-world-stories/">Real World Stories</a><span class="sep">›</span>
       <span>Pharmaceutical Validation Software Guide</span>
     </nav>
 
