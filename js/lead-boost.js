@@ -119,7 +119,48 @@
     '#lb-contact-badge .lb-dot{width:7px;height:7px;border-radius:50%;background:#0A7060;',
     'animation:lb-pulse 1.6s infinite;display:inline-block;flex-shrink:0;}',
 
-    '@media(max-width:899px){#lb-desk{display:none!important;}}'
+    '@media(max-width:899px){#lb-desk{display:none!important;}}',
+
+    /* Sticky bottom bar */
+    '#lb-sticky{position:fixed;bottom:0;left:0;right:0;background:#233A5E;color:#fff;z-index:8500;',
+    'padding:12px 16px;display:flex;align-items:center;justify-content:center;gap:12px;',
+    'font-family:Inter,system-ui,sans-serif;font-size:.875rem;',
+    'transform:translateY(100%);transition:transform .4s cubic-bezier(.34,1.56,.64,1);',
+    'flex-wrap:wrap;text-align:center;}',
+    '#lb-sticky.show{transform:translateY(0);}',
+    '#lb-sticky .lbs-msg{flex:1 1 auto;min-width:180px;}',
+    '#lb-sticky .lbs-btn{background:#B12C4B;color:#fff;border:none;border-radius:6px;',
+    'padding:8px 18px;font-weight:700;font-size:.875rem;cursor:pointer;',
+    'text-decoration:none;white-space:nowrap;font-family:inherit;display:inline-block;}',
+    '#lb-sticky .lbs-x{background:none;border:none;color:rgba(255,255,255,.55);',
+    'cursor:pointer;font-size:1.3rem;padding:0 4px;line-height:1;flex-shrink:0;}',
+
+    /* Exit intent overlay */
+    '#lb-ov{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9900;',
+    'display:flex;align-items:center;justify-content:center;',
+    'opacity:0;pointer-events:none;transition:opacity .25s ease;padding:20px;',
+    'font-family:Inter,system-ui,sans-serif;}',
+    '#lb-ov.show{opacity:1;pointer-events:all;}',
+    '#lb-ov .lb-ob{background:#fff;border-radius:12px;padding:36px;max-width:460px;',
+    'width:100%;position:relative;text-align:center;',
+    'transform:scale(.92);transition:transform .3s cubic-bezier(.34,1.56,.64,1);}',
+    '#lb-ov.show .lb-ob{transform:scale(1);}',
+    '#lb-ov .lb-ob-eye{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;',
+    'color:#B12C4B;font-weight:700;margin-bottom:8px;}',
+    '#lb-ov .lb-ob h3{font-size:1.35rem;font-weight:800;color:#233A5E;margin:0 0 10px;line-height:1.2;}',
+    '#lb-ov .lb-ob p{color:#5a6475;font-size:.9rem;margin:0 0 20px;line-height:1.5;}',
+    '#lb-ov .lb-ob-btns{display:flex;flex-direction:column;gap:10px;}',
+    '#lb-ov .lb-ob-main{background:#B12C4B;color:#fff;border:none;border-radius:8px;',
+    'padding:13px 24px;font-weight:700;font-size:.95rem;cursor:pointer;',
+    'text-decoration:none;display:block;font-family:inherit;}',
+    '#lb-ov .lb-ob-wa{background:#25D366;color:#fff;border:none;border-radius:8px;',
+    'padding:13px 24px;font-weight:700;font-size:.95rem;cursor:pointer;',
+    'text-decoration:none;display:block;font-family:inherit;}',
+    '#lb-ov .lb-ob-dis{font-size:.8rem;color:#9ca3af;cursor:pointer;',
+    'background:none;border:none;margin-top:6px;font-family:inherit;}',
+    '#lb-ov .lb-ob-cls{position:absolute;top:12px;right:14px;background:none;border:none;',
+    'font-size:1.3rem;cursor:pointer;color:#9ca3af;line-height:1;}',
+    '@media(max-width:480px){#lb-ov .lb-ob{padding:24px 20px;}#lb-ov .lb-ob h3{font-size:1.15rem;}}'
   ].join('');
 
   var styleEl = document.createElement('style');
@@ -349,6 +390,128 @@
     }
   }
 
+  /* ── 7. STICKY BOTTOM BAR ────────────────────────────────── */
+  function initStickyBar() {
+    if (document.getElementById('lb-sticky') || document.getElementById('sticky-urgency')) return;
+    try { if (sessionStorage.getItem('lb_su')) return; } catch (e) {}
+
+    var bar = document.createElement('div');
+    bar.id = 'lb-sticky';
+    bar.setAttribute('role', 'complementary');
+    bar.innerHTML =
+      '<span class="lbs-msg">\u26A1 <strong>Q3 2026 slots are limited</strong> \u2014 Book your free compliance assessment today</span>' +
+      '<a href="' + CONTACT_URL + '" class="lbs-btn" id="lb-s-cta">Book Free Assessment \u2192</a>' +
+      '<button class="lbs-x" id="lb-s-x" aria-label="Dismiss">\xD7</button>';
+    document.body.appendChild(bar);
+
+    var shown = false;
+    var threshold = Math.max(300, document.documentElement.scrollHeight * 0.25);
+
+    window.addEventListener('scroll', function () {
+      try { if (sessionStorage.getItem('lb_su')) return; } catch (e) {}
+      if (shown) return;
+      if (window.scrollY + window.innerHeight > threshold) {
+        bar.classList.add('show');
+        shown = true;
+      }
+    }, { passive: true });
+
+    document.getElementById('lb-s-x').addEventListener('click', function () {
+      bar.classList.remove('show');
+      try { sessionStorage.setItem('lb_su', '1'); } catch (e) {}
+    });
+
+    document.getElementById('lb-s-cta').addEventListener('click', function () {
+      try { sessionStorage.setItem('lb_su', '1'); } catch (e) {}
+      track('generate_lead', 'sticky_bar');
+    });
+  }
+
+  /* ── 8. EXIT INTENT OVERLAY ──────────────────────────────── */
+  function initExitIntent() {
+    if (document.getElementById('lb-ov') || document.getElementById('exit-intent')) return;
+    try { if (sessionStorage.getItem('lb_ei')) return; } catch (e) {}
+
+    var ov = document.createElement('div');
+    ov.id = 'lb-ov';
+    ov.setAttribute('role', 'dialog');
+    ov.setAttribute('aria-modal', 'true');
+    ov.innerHTML =
+      '<div class="lb-ob">' +
+      '<button class="lb-ob-cls" id="lb-ov-cls" aria-label="Close">\xD7</button>' +
+      '<div class="lb-ob-eye">Free Consultation</div>' +
+      '<h3>Before you go \u2014 get a free compliance review</h3>' +
+      '<p>Our consultants identify your validation gaps at no charge.<br>Most clients uncover 3\u20135 priority issues in the first call.</p>' +
+      '<div class="lb-ob-btns">' +
+      '<a href="' + CONTACT_URL + '" class="lb-ob-main" id="lb-ov-cta">Book Free Assessment \u2192</a>' +
+      '<a href="' + WA_URL + '" target="_blank" rel="noopener" class="lb-ob-wa" id="lb-ov-wa">\uD83D\uDCAC WhatsApp Us Now</a>' +
+      '<button class="lb-ob-dis" id="lb-ov-dis">No thanks, I\'ll skip the free review</button>' +
+      '</div></div>';
+    document.body.appendChild(ov);
+
+    var armed = false;
+    setTimeout(function () { armed = true; }, 9000);
+
+    function showOv() {
+      try { if (sessionStorage.getItem('lb_ei')) return; } catch (e) {}
+      if (!armed) return;
+      ov.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      try { sessionStorage.setItem('lb_ei', '1'); } catch (e) {}
+    }
+    function hideOv() {
+      ov.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('mouseleave', function (e) { if (e.clientY < 10) showOv(); });
+    document.getElementById('lb-ov-cls').addEventListener('click', hideOv);
+    document.getElementById('lb-ov-dis').addEventListener('click', hideOv);
+    ov.addEventListener('click', function (e) { if (e.target === ov) hideOv(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideOv(); });
+
+    document.getElementById('lb-ov-cta').addEventListener('click', function () {
+      track('generate_lead', 'exit_intent_cta');
+    });
+    document.getElementById('lb-ov-wa').addEventListener('click', function () {
+      track('whatsapp_click', 'exit_intent_wa');
+    });
+  }
+
+  /* ── 9. GA4 MICRO-CONVERSION TRACKING ───────────────────── */
+  function wireGATracking() {
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+      el.addEventListener('click', function () { track('phone_click', 'tel_link'); });
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
+      el.addEventListener('click', function () { track('email_click', 'mailto_link'); });
+    });
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
+      if (el.id === 'wa-float') return;
+      el.addEventListener('click', function () { track('whatsapp_click', 'wa_inline'); });
+    });
+    var waFloat = document.getElementById('wa-float');
+    if (waFloat) {
+      waFloat.addEventListener('click', function () { track('whatsapp_click', 'wa_float'); });
+    }
+  }
+
+  /* ── 10. CONTACT PAGE: fire generate_lead on page view ───── */
+  function trackContactPageView() {
+    var p = window.location.pathname;
+    if (p === '/contact/' || p === '/contact') {
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'lead',
+            event_label: 'contact_page_view',
+            method: 'page_view',
+          });
+        }
+      } catch (e) {}
+    }
+  }
+
   /* ── INIT ────────────────────────────────────────────────── */
   function init() {
     addNavPhone();
@@ -357,6 +520,10 @@
     injectServiceStrip();
     injectChecklistPromo();
     injectContactUrgency();
+    initStickyBar();
+    initExitIntent();
+    wireGATracking();
+    trackContactPageView();
   }
 
   if (document.readyState === 'loading') {
