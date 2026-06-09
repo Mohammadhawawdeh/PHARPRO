@@ -11,36 +11,28 @@ const TRAINING_DATA = {
       ar: "تدريب التحقق من CSV",
       desc_en: "Master the full CSV lifecycle from URS through IQ/OQ/PQ — aligned with FDA 21 CFR Part 11 & GAMP 5.",
       desc_ar: "أتقن دورة حياة CSV الكاملة من URS حتى IQ/OQ/PQ — وفقاً لـ FDA 21 CFR Part 11 وGAMP 5.",
-      startDate: "2026-06-11",
       format: "both",
-      seats: 4,
     },
     {
       en: "Compressed Air Testing",
       ar: "اختبار الهواء المضغوط",
       desc_en: "Hands-on training on pharmaceutical compressed air testing, sampling strategies, and GMP documentation.",
       desc_ar: "تدريب عملي على اختبار الهواء المضغوط الدوائي واستراتيجيات أخذ العينات وتوثيق GMP.",
-      startDate: "2026-06-18",
       format: "both",
-      seats: 6,
     },
     {
       en: "GMP Fundamentals",
       ar: "أساسيات GMP",
       desc_en: "Core GMP principles for pharmaceutical manufacturing — regulatory expectations, data integrity, and audit readiness.",
       desc_ar: "مبادئ GMP الأساسية للتصنيع الدوائي — التوقعات التنظيمية وسلامة البيانات والاستعداد للتدقيق.",
-      startDate: "2026-07-02",
       format: "both",
-      seats: 8,
     },
     {
       en: "Cleaning Validation",
       ar: "التحقق من التنظيف",
       desc_en: "EU GMP Annex 15 & FDA-aligned cleaning validation — MACO calculations, acceptance criteria, and sampling.",
       desc_ar: "التحقق من التنظيف وفق EU GMP Annex 15 وFDA — حسابات MACO ومعايير القبول وأخذ العينات.",
-      startDate: "2026-07-09",
       format: "both",
-      seats: 5,
     },
   ],
   completed: [
@@ -256,7 +248,7 @@ const translations = {
     /* Training */
     tr_eyebrow:     "GMP Training",
     tr_h2:          "Training Programmes",
-    tr_body:        "Instructor-led training — on-site and online — for pharma teams. Seats are limited; register early.",
+    tr_body:        "Instructor-led training — on-site and online — for pharma teams. Register your interest to be notified when dates are confirmed.",
     tr_upcoming_h3: "Upcoming Trainings",
     tr_past_h3:     "Completed Programmes",
     tr_past_note:   "Building expertise across the pharmaceutical sector",
@@ -265,9 +257,7 @@ const translations = {
     tr_register:    "Register Interest",
     tr_share_wa:    "WhatsApp",
     tr_share_email: "Email",
-    tr_cd_days:     "days left",
-    tr_cd_day:      "day left",
-    tr_cd_today:    "Starts today!",
+    tr_tbd:         "Date to be announced",
 
     foot_brand_p:    "Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training.",
     foot_col1_h5:    "Services",
@@ -497,7 +487,7 @@ const translations = {
     /* Training */
     tr_eyebrow:     "التدريب على GMP",
     tr_h2:          "برامج التدريب",
-    tr_body:        "تدريب بإشراف مدرب — حضورياً وعبر الإنترنت — لفرق الأدوية. المقاعد محدودة؛ سجّل مبكراً.",
+    tr_body:        "تدريب بإشراف مدرب — حضورياً وعبر الإنترنت — لفرق الأدوية. سجّل اهتمامك لتُبلَّغ عند تأكيد المواعيد.",
     tr_upcoming_h3: "التدريبات القادمة",
     tr_past_h3:     "البرامج المكتملة",
     tr_past_note:   "بناء الخبرة عبر القطاع الدوائي",
@@ -506,9 +496,7 @@ const translations = {
     tr_register:    "سجّل اهتمامك",
     tr_share_wa:    "واتساب",
     tr_share_email: "بريد إلكتروني",
-    tr_cd_days:     "أيام متبقية",
-    tr_cd_day:      "يوم متبق",
-    tr_cd_today:    "يبدأ اليوم!",
+    tr_tbd:         "سيُحدَّد التاريخ لاحقاً",
 
     /* Footer */
     foot_brand_p:    "استشارات الامتثال الدوائي — التحقق من صحة الأنظمة الحاسوبية وضمان الجودة وCQV ورسم الخرائط الحرارية والتدريب على GMP.",
@@ -697,26 +685,11 @@ function initFaq() {
   });
 }
 
-/* ── COUNTDOWN HELPER ─────────────────────────────────────────── */
-function getCountdownHtml(isoStart, isAr) {
-  const now   = new Date();
-  const start = new Date(isoStart + "T00:00:00");
-  const msLeft = start - now;
-  const days  = Math.ceil(msLeft / 86400000);
-
-  if (days < 0)  return "";
-  if (days === 0) {
-    return `<span class="tr-countdown tr-cd-today">
-              <span class="tr-cd-dot" aria-hidden="true"></span>
-              ${t("tr_cd_today")}
-            </span>`;
-  }
-  const cls   = days <= 14 ? "tr-cd-soon" : "tr-cd-normal";
-  const label = days === 1 ? t("tr_cd_day") : t("tr_cd_days");
-  const num   = isAr ? days.toLocaleString("ar-EG") : days;
-  return `<span class="tr-countdown ${cls}">
+/* ── TBD BADGE HELPER ─────────────────────────────────────────── */
+function getTbdHtml(isAr) {
+  return `<span class="tr-countdown tr-cd-tbd">
             <span class="tr-cd-dot" aria-hidden="true"></span>
-            ${num} ${label}
+            ${isAr ? "سيُحدَّد التاريخ لاحقاً" : "Date to be announced"}
           </span>`;
 }
 
@@ -754,19 +727,14 @@ function initTrainings() {
         : `Hello,\n\nI'd like to register my interest in:\n${title}\n\nRegistration link: ${regUrl}`
     );
 
-    const seatsLabel = seats <= 6
-      ? `<span class="tr-seats-warn">${isAr ? `${seats} مقاعد متبقية فقط` : `Only ${seats} seats left`}</span>`
-      : `<span class="tr-seats-ok">${isAr ? `${seats} مقعد متاح` : `${seats} seats available`}</span>`;
-
     return `
-      <div class="tr-card" data-start="${tr.startDate}">
-        <div class="tr-countdown-wrap tr-countdown-abs">${getCountdownHtml(tr.startDate, isAr)}</div>
+      <div class="tr-card">
+        <div class="tr-countdown-wrap tr-countdown-abs">${getTbdHtml(isAr)}</div>
         <div class="tr-card-top">
           <h4>${title}</h4>
           <div class="tr-format-inline">${formatTag}</div>
         </div>
         <p class="tr-desc">${desc}</p>
-        ${seatsLabel}
         <div class="tr-actions">
           <a href="#contact" class="tr-register" onclick="document.getElementById('service').value='training'">${t("tr_register")}</a>
           <div class="tr-share">
@@ -844,15 +812,6 @@ function initContactForm() {
   });
 }
 
-/* ── COUNTDOWN TICK ───────────────────────────────────────────── */
-function tickCountdowns() {
-  const isAr = currentLang === "ar";
-  document.querySelectorAll(".tr-card[data-start]").forEach(card => {
-    const wrap = card.querySelector(".tr-countdown-wrap");
-    if (wrap) wrap.innerHTML = getCountdownHtml(card.dataset.start, isAr);
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   initNavDropdown();
   initHamburger();
@@ -860,9 +819,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   applyTranslations();
   initTrainings();
-
-  /* Auto-refresh countdowns every 60 seconds */
-  setInterval(tickCountdowns, 60000);
 
   /* Wire lang toggle buttons */
   document.querySelectorAll(".lang-toggle").forEach(btn => {
