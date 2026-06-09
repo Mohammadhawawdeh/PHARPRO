@@ -85,7 +85,13 @@ const TRAINING_DATA = {
     },
   ],
   completed: [
-    { en: "Excel Sheet Validation", ar: "التحقق من جداول Excel" },
+    { en: "Excel Sheet Validation",   ar: "التحقق من جداول Excel" },
+    { en: "CSV Training",             ar: "تدريب CSV" },
+    { en: "ISO 13485",                ar: "ISO 13485" },
+    { en: "EU GMP Annex 1",           ar: "EU GMP الملحق 1" },
+    { en: "Thermal Mapping Training", ar: "تدريب الخرائط الحرارية" },
+    { en: "GMP Training",             ar: "تدريب GMP" },
+    { en: "Data Integrity Training",  ar: "تدريب سلامة البيانات" },
   ],
 };
 
@@ -304,6 +310,9 @@ const translations = {
     tr_share_wa:    "WhatsApp",
     tr_share_email: "Email",
     tr_tbd:         "Date to be announced",
+    tr_cta_card_title: "10+ Training Programmes Available",
+    tr_cta_card_body:  "From CSV validation and GMP fundamentals to data integrity, ISO 13485, and EU GMP Annex 1 — explore the full training catalogue.",
+    tr_cta_card_btn:   "View All Trainings →",
 
     foot_brand_p:    "Pharmaceutical compliance consulting — CSV, QA, CQV, thermal mapping, and GMP training.",
     foot_col1_h5:    "Services",
@@ -543,6 +552,9 @@ const translations = {
     tr_share_wa:    "واتساب",
     tr_share_email: "بريد إلكتروني",
     tr_tbd:         "سيُحدَّد التاريخ لاحقاً",
+    tr_cta_card_title: "أكثر من 10 برامج تدريبية متاحة",
+    tr_cta_card_body:  "من التحقق من CSV ومبادئ GMP إلى سلامة البيانات وISO 13485 وEU GMP Annex 1 — استعرض الكتالوج الكامل.",
+    tr_cta_card_btn:   "عرض جميع التدريبات ←",
 
     /* Footer */
     foot_brand_p:    "استشارات الامتثال الدوائي — التحقق من صحة الأنظمة الحاسوبية وضمان الجودة وCQV ورسم الخرائط الحرارية والتدريب على GMP.",
@@ -747,7 +759,7 @@ function initTrainings() {
 
   const isAr = currentLang === "ar";
 
-  upcomingGrid.innerHTML = TRAINING_DATA.upcoming.map(tr => {
+  upcomingGrid.innerHTML = TRAINING_DATA.upcoming.slice(0, 3).map(tr => {
     const title = isAr ? tr.ar : tr.en;
     const desc  = isAr ? tr.desc_ar : tr.desc_en;
     const seats = tr.seats || 0;
@@ -803,6 +815,21 @@ function initTrainings() {
         </div>
       </div>`;
   }).join("");
+
+  upcomingGrid.innerHTML += `
+    <div class="tr-card tr-cta-card">
+      <div class="tr-cta-card-inner">
+        <div class="tr-cta-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <h4 class="tr-cta-title">${t("tr_cta_card_title")}</h4>
+        <p class="tr-cta-body">${t("tr_cta_card_body")}</p>
+        <a href="/services/training/" class="tr-cta-link">${t("tr_cta_card_btn")}</a>
+      </div>
+    </div>`;
 
   tagsGrid.innerHTML = TRAINING_DATA.completed.map(tr => {
     const label = isAr ? tr.ar : tr.en;

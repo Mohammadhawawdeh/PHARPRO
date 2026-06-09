@@ -1323,6 +1323,43 @@
     body.rtl .tr-tags { flex-direction: row-reverse; }
     body.rtl .tr-tag { flex-direction: row-reverse; }
 
+    /* ── TRAINING CTA CARD ────────────────────────────────── */
+    .tr-cta-card {
+      background: linear-gradient(145deg, var(--navy) 0%, #1A2F52 100%);
+      border: 1.5px solid rgba(177,44,75,0.35);
+      display: flex; align-items: stretch;
+    }
+    .tr-cta-card:hover { box-shadow: 0 8px 32px rgba(35,58,94,0.22); transform: translateY(-2px); }
+    .tr-cta-card-inner {
+      display: flex; flex-direction: column;
+      align-items: flex-start; justify-content: center;
+      gap: 14px; width: 100%;
+    }
+    .tr-cta-icon {
+      width: 48px; height: 48px; border-radius: var(--r-sm);
+      background: rgba(177,44,75,0.18); border: 1px solid rgba(177,44,75,0.3);
+      display: flex; align-items: center; justify-content: center;
+      color: #E85A7A; flex-shrink: 0;
+    }
+    .tr-cta-title {
+      font-size: 1rem !important; font-weight: 800 !important;
+      color: #fff !important; line-height: 1.3; margin: 0 !important;
+    }
+    .tr-cta-body {
+      font-size: 0.78rem; color: rgba(255,255,255,0.6);
+      line-height: 1.55; margin: 0; flex: 1;
+    }
+    .tr-cta-link {
+      display: inline-block; margin-top: auto;
+      background: var(--burgundy); color: #fff;
+      padding: 10px 20px; border-radius: var(--r-sm);
+      font-size: 0.82rem; font-weight: 700;
+      text-decoration: none; transition: opacity var(--t);
+      white-space: nowrap;
+    }
+    .tr-cta-link:hover { opacity: 0.88; }
+    body.rtl .tr-cta-card-inner { align-items: flex-end; text-align: right; }
+
     /* ── RESPONSIVE ───────────────────────────────────────── */
     @media (max-width: 900px) {
       .nav-links, .nav-cta { display: none; }
@@ -2635,7 +2672,7 @@
   </div>
 </div>
 
-<script src="js/scripts.js"></script>
+<script src="js/scripts.js?v=2"></script>
 
 
 <noscript>
