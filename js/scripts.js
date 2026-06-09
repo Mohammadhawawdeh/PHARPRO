@@ -787,8 +787,8 @@ function initTrainings() {
 
     return `
       <div class="tr-card">
-        <div class="tr-countdown-wrap tr-countdown-abs">${getTbdHtml(isAr)}</div>
         <div class="tr-card-top">
+          <div class="tr-countdown-wrap tr-countdown-abs">${getTbdHtml(isAr)}</div>
           <h4>${title}</h4>
           <div class="tr-format-inline">${formatTag}</div>
         </div>

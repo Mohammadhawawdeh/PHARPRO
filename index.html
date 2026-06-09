@@ -1215,13 +1215,11 @@
     .tr-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
     /* Countdown positioned top-right */
     .tr-countdown-abs {
-      position: absolute; top: 14px; right: 14px;
-      min-height: auto; margin: 0;
+      min-height: auto; margin: 0 0 10px 0;
     }
-    body.rtl .tr-countdown-abs { right: auto; left: 14px; }
     /* Card top: title + format pills */
-    .tr-card-top { padding-right: 90px; margin-bottom: 8px; }
-    body.rtl .tr-card-top { padding-right: 0; padding-left: 90px; }
+    .tr-card-top { margin-bottom: 8px; }
+    body.rtl .tr-card-top { padding-right: 0; padding-left: 0; }
     .tr-card h4, .tr-card .h4 { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
     .tr-format-inline { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 0; }
     /* 1-line description */
