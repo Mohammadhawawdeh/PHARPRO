@@ -585,21 +585,11 @@ const translations = {
 };
 
 
-function preserveLang() {
-  document.querySelectorAll('a[href]').forEach(function(a) {
-    var href = a.getAttribute('href');
-    if (!href || href.charAt(0) === '#' || /^(https?:|mailto:|\/\/)/.test(href)) return;
-    var parts = href.split('?');
-    var base = parts[0];
-    var params = new URLSearchParams(parts[1] || '');
-    if (currentLang === 'ar') { params.set('lang', 'ar'); } else { params.delete('lang'); }
-    var qs = params.toString();
-    a.setAttribute('href', base + (qs ? '?' + qs : ''));
-  });
-}
+function preserveLang() {}
 
 /* ── i18n ENGINE ──────────────────────────────────────────────── */
 const _urlLang = new URLSearchParams(window.location.search).get("lang");
+if (_urlLang) { history.replaceState(null, "", window.location.pathname + window.location.hash); }
 let currentLang = (_urlLang === "ar" || _urlLang === "en")
   ? _urlLang
   : (localStorage.getItem("pharpro_lang") || "en");
@@ -644,13 +634,6 @@ function applyTranslations() {
 function switchLanguage() {
   currentLang = currentLang === "en" ? "ar" : "en";
   localStorage.setItem("pharpro_lang", currentLang);
-  const url = new URL(window.location.href);
-  if (currentLang === "ar") {
-    url.searchParams.set("lang", "ar");
-  } else {
-    url.searchParams.delete("lang");
-  }
-  history.replaceState(null, "", url.toString());
   const mobNav = document.getElementById("mobNav");
   if (mobNav) mobNav.classList.remove("open");
   applyTranslations();

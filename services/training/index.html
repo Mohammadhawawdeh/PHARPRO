@@ -1301,18 +1301,7 @@ const T={en:{nav_services:"Services",nav_csv:"CSV Validation",nav_qa:"QA & Gap A
     cta2_foot:"مقرّنا في عمّان، الأردن · نخدم عملاء حول العالم · رد خلال 24 ساعة"
  }};
 let lang=new URLSearchParams(location.search).get('lang')==='ar'?'ar':(localStorage.getItem('pharpro_lang')||'en');
-function preserveLang() {
-  document.querySelectorAll('a[href]').forEach(function(a) {
-    var href = a.getAttribute('href');
-    if (!href || href.charAt(0) === '#' || /^(https?:|mailto:|\/\/)/.test(href)) return;
-    var parts = href.split('?');
-    var base = parts[0];
-    var params = new URLSearchParams(parts[1] || '');
-    if (lang === 'ar') { params.set('lang', 'ar');} else { params.delete('lang'); }
-    var qs = params.toString();
-    a.setAttribute('href', base + (qs ? '?' + qs : ''));
- });
-}
+function preserveLang() {}
 function applyLang(){
   document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
   document.body.classList.toggle('rtl',lang==='ar');
@@ -1320,7 +1309,7 @@ function applyLang(){
   document.querySelectorAll('.lang-btn').forEach(b=>b.textContent=lang==='en'?'عربي':'EN');
   preserveLang();
 }
-function toggleLang(){lang=lang==='en'?'ar':'en';localStorage.setItem('pharpro_lang',lang);const u=new URL(location.href);lang==='ar'?u.searchParams.set('lang','ar'):u.searchParams.delete('lang');history.replaceState(null,'',u.toString());applyLang();}
+function toggleLang(){lang=lang==='en'?'ar':'en';localStorage.setItem('pharpro_lang',lang);applyLang();}
 applyLang();
 document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q').addEventListener('click',()=>{const open=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(o=>o.classList.remove('open'));if(!open)item.classList.add('open');});});
 
