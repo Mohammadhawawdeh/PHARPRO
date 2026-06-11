@@ -9,7 +9,7 @@
     <link>https://www.pharpro.co/</link>
     <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 29 May 2026 09:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jun 2026 09:00:00 +0300</lastBuildDate>
     <managingEditor>info@pharpro.co (PHARPRO Consulting Team)</managingEditor>
     <webMaster>info@pharpro.co (PHARPRO)</webMaster>
     <image>
@@ -22,6 +22,21 @@
     <atom:link href="https://www.pharpro.co/feed.xml" rel="self" type="application/rss+xml"/>
     <copyright>Copyright 2026 PHARPRO Consultation Company</copyright>
     <category>Pharmaceutical Compliance</category>
+
+    <item>
+      <title>PHARPRO June 2026 Update: DVS-PQR Module Launched, GAMP 5 Validation Completed &amp; Thermal Mapping Expands to Pakistan</title>
+      <link>https://www.pharpro.co/insights/pharpro-latest-news-june-2026/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/pharpro-latest-news-june-2026/</guid>
+      <pubDate>Wed, 11 Jun 2026 09:00:00 +0300</pubDate>
+      <dc:creator>Mohammad Awawdeh</dc:creator>
+      <category>Company News</category>
+      <description>PHARPRO June 2026 highlights: AI-powered DVS-PQR Module reduces Product Quality Review time by 91%, utility and software validation completed per GAMP 5 Second Edition and EU GMP Annex 11, thermal mapping qualification training launched in Pakistan, and 12+ pharmaceutical clients served this month.</description>
+      <content:encoded><![CDATA[
+        <p><strong>PHARPRO June 2026</strong> — Four major milestones: (1) Full utility and software validation project completed per <strong>ISPE GAMP 5 Second Edition, C&amp;Q, and EU GMP Annex 11</strong>. (2) Thermal Mapping Qualification training initiated for a pharmaceutical client in <strong>Pakistan</strong>, including equipment and instrumentation consultation. (3) <strong>PHARPRO DVS-PQR Module</strong> launched — AI-powered Product Quality Review lifecycle software reducing PQR time by <strong>91%</strong>. (4) Over <strong>12 pharmaceutical clients</strong> served across CSV, QA, CQV, training, and DVS onboarding.</p>
+        <p><a href="https://www.pharpro.co/insights/pharpro-latest-news-june-2026/">Read the full update →</a></p>
+        <p>Arabic version: <a href="https://www.pharpro.co/insights/pharpro-latest-news-june-2026/ar/">اقرأ بالعربية →</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title>FDA 21 CFR Part 11 Audit Trail Requirements: What Your System Must Capture</title>

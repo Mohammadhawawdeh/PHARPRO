@@ -195,6 +195,12 @@ INSIGHT_SLUGS.forEach((slug) => {
   });
 });
 
+// Arabic insight pages
+app.get(["/insights/pharpro-latest-news-june-2026/ar", "/insights/pharpro-latest-news-june-2026/ar/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "insights", "pharpro-latest-news-june-2026", "ar", "index.html"));
+});
+
 // ── STATIC FILE SERVING ───────────────────────────────────────────────────
 // Cache-Control strategy:
 //   • Versioned assets (CSS/JS/images/fonts) → 1 year immutable
