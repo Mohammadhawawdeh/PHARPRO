@@ -1842,6 +1842,21 @@
 
     /* ── FREE RESOURCES CARD GRID ─────────────────────────── */
     .res-sec { background:#fff; padding:72px 0; }
+    .news-sec { padding:56px 0; background:var(--ivory); }
+    .news-featured { background:var(--white); border:1px solid var(--border); border-left:4px solid var(--burgundy); border-radius:0 var(--r-md) var(--r-md) 0; padding:28px 32px; display:flex; gap:20px; align-items:flex-start; box-shadow:var(--shadow-sm); margin-top:28px; }
+    .news-featured-badge { display:inline-flex; align-items:center; gap:6px; background:var(--burgundy); color:#fff; font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 12px; border-radius:999px; margin-bottom:12px; white-space:nowrap; flex-shrink:0; }
+    .news-featured-body { flex:1; }
+    .news-featured-body h3 { font-size:1.1rem; font-weight:700; color:var(--navy); line-height:1.4; margin-bottom:10px; }
+    .news-featured-body p { font-size:.9rem; color:#4a5568; line-height:1.75; margin-bottom:14px; }
+    .news-cta { color:var(--burgundy); font-size:.9rem; font-weight:600; }
+    .news-cta:hover { text-decoration:underline; }
+    .news-footer { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-top:18px; }
+    .news-all { font-size:.85rem; color:var(--muted); font-weight:500; }
+    .news-all:hover { color:var(--navy); }
+    body.rtl .news-featured { border-left:1px solid var(--border); border-right:4px solid var(--burgundy); border-radius:var(--r-md) 0 0 var(--r-md); flex-direction:row-reverse; }
+    body.rtl .news-footer { flex-direction:row-reverse; }
+    body.rtl .news-featured-body h3 { text-align:right; }
+    body.rtl .news-featured-body p { text-align:right; }
     .res-header { text-align:center; margin-bottom:40px; }
     .res-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
     @media(max-width:760px){ .res-grid { grid-template-columns:1fr; } }
@@ -2344,6 +2359,29 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LATEST FROM PHARPRO ───────────────────────────────── -->
+  <section class="news-sec" id="latest-news" aria-label="Latest from PHARPRO">
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="news_eyebrow">Latest from PHARPRO</div>
+      <h2 class="h2" data-i18n="news_h2">June 2026 Update</h2>
+      <div class="news-featured">
+        <div class="news-featured-body">
+          <div class="news-featured-badge">
+            <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+            <span data-i18n="news_badge">New</span>
+          </div>
+          <h3 data-i18n="news_feat_title">DVS-PQR Module Launched — AI Cuts Product Quality Review Time by 91%</h3>
+          <p data-i18n="news_feat_desc">PHARPRO June 2026: utility &amp; software validation completed per GAMP 5 2nd Edition &amp; EU GMP Annex 11, thermal mapping qualification training launched in Pakistan, DVS-PQR module released, and 12+ pharmaceutical clients served this month.</p>
+          <a href="/insights/pharpro-latest-news-june-2026/" class="news-cta" data-i18n="news_feat_cta" onclick="if(window.gtag){gtag('event','select_content',{content_type:'news_article',item_id:'pharpro-latest-news-june-2026',event_label:'homepage_latest_news'});}">Read the full update →</a>
+        </div>
+      </div>
+      <div class="news-footer">
+        <span style="font-size:.82rem;color:var(--muted);">11 Jun 2026 &middot; Company Update</span>
+        <a href="/insights/" class="news-all" data-i18n="news_all">View all insights →</a>
       </div>
     </div>
   </section>

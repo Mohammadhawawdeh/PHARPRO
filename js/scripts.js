@@ -331,6 +331,15 @@ const translations = {
     wa_cta:          "Chat on WhatsApp",
     hero_pill2:      "Q3 2026 project slots almost full — only 2 remaining",
 
+    /* Latest news section */
+    news_eyebrow:    "Latest from PHARPRO",
+    news_h2:         "June 2026 Update",
+    news_badge:      "New",
+    news_feat_title: "DVS-PQR Module Launched — AI Cuts Product Quality Review Time by 91%",
+    news_feat_desc:  "PHARPRO June 2026: utility &amp; software validation completed per GAMP 5 2nd Edition &amp; EU GMP Annex 11, thermal mapping qualification training launched in Pakistan, DVS-PQR module released, and 12+ pharmaceutical clients served this month.",
+    news_feat_cta:   "Read the full update →",
+    news_all:        "View all insights →",
+
     /* About section */
     about_eyebrow: "About PHARPRO",
     about_h2:      "The Pharmaceutical Compliance Experts — Jordan &amp; Worldwide",
@@ -573,6 +582,15 @@ const translations = {
     foot_tag:        "ابقَ جاهزاً للتدقيق مع PHARPRO.",
     wa_cta:          "تحدث معنا على واتساب",
     hero_pill2:      "نقبل الآن مشاركات الربع الثالث 2026 — مقاعد محدودة",
+
+    /* Latest news section */
+    news_eyebrow:    "آخر أخبار PHARPRO",
+    news_h2:         "تحديثات يونيو 2026",
+    news_badge:      "جديد",
+    news_feat_title: "إطلاق وحدة DVS-PQR — الذكاء الاصطناعي يقلل وقت مراجعة جودة المنتج بنسبة 91%",
+    news_feat_desc:  "تحديثات PHARPRO يونيو 2026: إتمام التحقق من المرافق والبرمجيات وفق GAMP 5 الإصدار الثاني وEU GMP Annex 11، إطلاق تدريب الخرائط الحرارية في باكستان، وإطلاق وحدة DVS-PQR، وخدمة أكثر من 12 عميلاً دوائياً هذا الشهر.",
+    news_feat_cta:   "اقرأ التحديث الكامل ←",
+    news_all:        "جميع المقالات ←",
 
     /* About section */
     about_eyebrow: "عن PHARPRO",
