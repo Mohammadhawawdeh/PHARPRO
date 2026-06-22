@@ -465,12 +465,13 @@
               <label for="service" data-i18n="fl_service">Service of Interest</label>
               <select id="service" name="service">
                 <option value="" data-i18n="svc_opt0">Select a service…</option>
+                <option value="dvs-demo" data-i18n="svc_opt_dvsdemo">Book a DVS Demo (Free, 30 min)</option>
                 <option value="csv" data-i18n="svc_opt1">Computerized System Validation (CSV)</option>
                 <option value="qa" data-i18n="svc_opt2">Quality Assurance &amp; Gap Assessment</option>
                 <option value="cqv" data-i18n="svc_opt3">CQV &amp; Thermal Mapping</option>
                 <option value="training" data-i18n="svc_opt4">GMP Training</option>
                 <option value="digital" data-i18n="svc_opt5">Pharma Digital Support</option>
-                <option value="dvs" data-i18n="svc_opt6">PHARPRO DVS  -  Digital Validation Software</option>
+                <option value="dvs" data-i18n="svc_opt6">PHARPRO DVS  -  Platform Inquiry</option>
                 <option value="unsure" data-i18n="svc_opt7">Not sure  -  need guidance</option>
               </select>
             </div>
@@ -600,10 +601,11 @@ const T = {
     form_sub:"Describe your compliance challenge  -  we respond within 24 hours on business days.",
     fl_name:"Full Name *", fl_company:"Company", fl_email:"Email Address *",
     fl_phone:"Phone / WhatsApp", fl_service:"Service of Interest",
-    svc_opt0:"Select a service…", svc_opt1:"Computerized System Validation (CSV)",
+    svc_opt0:"Select a service…", svc_opt_dvsdemo:"Book a DVS Demo (Free, 30 min)",
+    svc_opt1:"Computerized System Validation (CSV)",
     svc_opt2:"Quality Assurance &amp; Gap Assessment", svc_opt3:"CQV &amp; Thermal Mapping",
     svc_opt4:"GMP Training", svc_opt5:"Pharma Digital Support",
-    svc_opt6:"PHARPRO DVS  -  Digital Validation Software", svc_opt7:"Not sure  -  need guidance",
+    svc_opt6:"PHARPRO DVS  -  Platform Inquiry", svc_opt7:"Not sure  -  need guidance",
     fl_message:"Message *", fl_submit:"Send Message", fl_priv:"Your information is kept private",
     faq_h2:"Common questions",
     faq1_q:"How quickly can PHARPRO start work?",
@@ -642,10 +644,11 @@ const T = {
     form_sub:"صف تحدي الامتثال لديك  -  نرد خلال 24 ساعة في أيام العمل.",
     fl_name:"الاسم الكامل *", fl_company:"الشركة", fl_email:"البريد الإلكتروني *",
     fl_phone:"الهاتف / واتساب", fl_service:"الخدمة المطلوبة",
-    svc_opt0:"اختر خدمة…", svc_opt1:"التحقق من الأنظمة الحاسوبية (CSV)",
+    svc_opt0:"اختر خدمة…", svc_opt_dvsdemo:"احجز عرض DVS (مجاني، 30 دقيقة)",
+    svc_opt1:"التحقق من الأنظمة الحاسوبية (CSV)",
     svc_opt2:"ضمان الجودة وتقييم الفجوات", svc_opt3:"CQV والخرائط الحرارية",
     svc_opt4:"التدريب على GMP", svc_opt5:"الدعم الرقمي الدوائي",
-    svc_opt6:"برنامج DVS من PHARPRO", svc_opt7:"غير متأكد  -  أحتاج توجيهاً",
+    svc_opt6:"استفسار عن منصة DVS من PHARPRO", svc_opt7:"غير متأكد  -  أحتاج توجيهاً",
     fl_message:"الرسالة *", fl_submit:"إرسال الرسالة", fl_priv:"معلوماتك تُحفظ بسرية تامة",
     faq_h2:"أسئلة شائعة",
     faq1_q:"كم سرعة بدء PHARPRO للعمل؟",
@@ -704,7 +707,29 @@ applyLang();
   var btn  = document.getElementById('submitBtn');
   var status = document.getElementById('formStatus');
   if(!form) return;
+
+  var subjectMap = {
+    'dvs-demo': '[PHARPRO] DVS Demo Request',
+    'dvs':      '[PHARPRO] DVS Platform Inquiry',
+    'csv':      '[PHARPRO] CSV Validation Inquiry',
+    'qa':       '[PHARPRO] QA & Gap Assessment Inquiry',
+    'cqv':      '[PHARPRO] CQV & Thermal Mapping Inquiry',
+    'training': '[PHARPRO] GMP Training Inquiry',
+    'digital':  '[PHARPRO] Pharma Digital Support Inquiry',
+    'unsure':   '[PHARPRO] General Enquiry',
+  };
+  var svcSel = form.querySelector("[name='service']");
+  var subjectInp = form.querySelector("[name='subject']");
+  if(svcSel && subjectInp){
+    svcSel.addEventListener('change', function(){
+      subjectInp.value = subjectMap[svcSel.value] || 'New Contact Form Submission  -  pharpro.co/contact';
+    });
+  }
+
   form.addEventListener('submit', async function(e){
+    if(svcSel && subjectInp){
+      subjectInp.value = subjectMap[svcSel.value] || 'New Contact Form Submission  -  pharpro.co/contact';
+    }
     e.preventDefault();
     btn.disabled = true;
     btn.textContent = lang === 'ar' ? 'جارٍ الإرسال…' : 'Sending…';

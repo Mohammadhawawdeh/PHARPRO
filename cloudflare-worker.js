@@ -12,42 +12,44 @@
  * Free tier: 3,000 emails/month, 100/day — more than enough.
  */
 
-const ALLOWED_ORIGIN = "https://pharpro.co";
+const ALLOWED_ORIGINS = ["https://pharpro.co", "https://www.pharpro.co"];
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const origin = request.headers.get("Origin") || "";
 
     if (request.method === "OPTIONS") {
-      return corsResponse(null, 204);
+      return corsResponse(null, 204, origin);
     }
 
     if (request.method === "POST" && url.pathname === "/api/contact") {
-      return handleContact(request, env);
+      return handleContact(request, env, origin);
     }
 
     return new Response("Not found", { status: 404 });
   }
 };
 
-async function handleContact(request, env) {
+async function handleContact(request, env, origin) {
   let body;
   try {
     body = await request.json();
   } catch {
-    return corsResponse(JSON.stringify({ ok: false, error: "Invalid JSON" }), 400);
+    return corsResponse(JSON.stringify({ ok: false, error: "Invalid JSON" }), 400, origin);
   }
 
   const { name, company, email, service, message, hp } = body;
 
   if (hp) {
-    return corsResponse(JSON.stringify({ ok: true }), 200);
+    return corsResponse(JSON.stringify({ ok: true }), 200, origin);
   }
 
   if (!name || !email || !message) {
     return corsResponse(
       JSON.stringify({ ok: false, error: "Missing required fields." }),
-      400
+      400,
+      origin
     );
   }
 
@@ -57,7 +59,8 @@ async function handleContact(request, env) {
   if (!resendApiKey) {
     return corsResponse(
       JSON.stringify({ ok: false, error: "Email service not configured." }),
-      500
+      500,
+      origin
     );
   }
 
@@ -116,16 +119,19 @@ async function handleContact(request, env) {
 
   return corsResponse(
     JSON.stringify({ ok: true, message: "Message received. We will be in touch within 24 hours." }),
-    200
+    200,
+    origin
   );
 }
 
-function corsResponse(body, status) {
+function corsResponse(body, status, requestOrigin) {
+  const origin = ALLOWED_ORIGINS.includes(requestOrigin) ? requestOrigin : ALLOWED_ORIGINS[1];
   const headers = {
-    "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
+    "Access-Control-Allow-Origin": origin,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    "Vary": "Origin"
   };
 
   return new Response(body, { status, headers });

@@ -73,13 +73,15 @@ app.use((req, res, next) => {
   next();
 });
 
-// ── LANG QUERY PARAM — PREVENT REDIRECT ───────────────────────────────────
-// ?lang=ar is a client-side-only language switch. Ensure the server never
-// strips or redirects these URLs — they must return 200 with Vary so Google
-// does not classify them as "Page with redirect" in Search Console.
-// NOTE: hreflang="ar" tags now point to the base URL (not ?lang=ar), so
-// Google no longer crawls ?lang=ar URLs from hreflang signals.
+// ── LANG QUERY PARAM — 301 TO CANONICAL ───────────────────────────────────
+// ?lang=ar is client-side only. If Google or a user visits /?lang=ar, we 301
+// to the canonical URL (same path, no query param) so GSC does not report it
+// as "Page with redirect" due to canonical mismatch.
 app.use((req, res, next) => {
+  if (req.query.lang !== undefined) {
+    const cleanPath = req.path.replace(/\/$/, "") + "/";
+    return res.redirect(301, cleanPath);
+  }
   res.setHeader("Vary", "Accept-Language");
   next();
 });
@@ -199,6 +201,30 @@ INSIGHT_SLUGS.forEach((slug) => {
 app.get(["/insights/pharpro-latest-news-june-2026/ar", "/insights/pharpro-latest-news-june-2026/ar/"], (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
   res.sendFile(path.join(__dirname, "insights", "pharpro-latest-news-june-2026", "ar", "index.html"));
+});
+
+// Insights — real-world-stories sub-page
+app.get(["/insights/real-world-stories", "/insights/real-world-stories/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "insights", "real-world-stories", "index.html"));
+});
+
+// Services — supplier qualification
+app.get(["/services/supplier-qualification", "/services/supplier-qualification/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "supplier-qualification", "index.html"));
+});
+
+// Services — DVS compare page
+app.get(["/services/dvs/compare", "/services/dvs/compare/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "dvs", "compare", "index.html"));
+});
+
+// Resources — inspection readiness quiz
+app.get(["/resources/inspection-readiness-quiz", "/resources/inspection-readiness-quiz/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "resources", "inspection-readiness-quiz", "index.html"));
 });
 
 // ── STATIC FILE SERVING ───────────────────────────────────────────────────

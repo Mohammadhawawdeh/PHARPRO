@@ -279,14 +279,15 @@ const translations = {
     form_email_label:      "Email Address *",
     form_email_ph:         "you@company.com",
     form_service_label:    "Service of Interest",
-    form_service_opt0:     "Select a service…",
-    form_service_opt1:     "Computerized System Validation (CSV)",
-    form_service_opt2:     "Quality Assurance &amp; Gap Assessment",
-    form_service_opt3:     "CQV &amp; Thermal Mapping",
-    form_service_opt4:     "GMP Training",
-    form_service_opt5:     "Pharma Digital Support",
-    form_service_opt6:     "PHARPRO DVS — Digital Validation Software",
-    form_service_opt7:     "Not sure — need guidance",
+    form_service_opt0:         "Select a service…",
+    form_service_opt_dvsdemo:  "Book a DVS Demo (Free, 30 min)",
+    form_service_opt1:         "Computerized System Validation (CSV)",
+    form_service_opt2:         "Quality Assurance &amp; Gap Assessment",
+    form_service_opt3:         "CQV &amp; Thermal Mapping",
+    form_service_opt4:         "GMP Training",
+    form_service_opt5:         "Pharma Digital Support",
+    form_service_opt6:         "PHARPRO DVS — Platform Inquiry",
+    form_service_opt7:         "Not sure — need guidance",
     form_phone_label:      "Phone / WhatsApp",
     form_phone_ph:         "+962 79 000 0000",
     form_message_label:    "Message *",
@@ -531,14 +532,15 @@ const translations = {
     form_email_label:    "عنوان البريد الإلكتروني *",
     form_email_ph:       "you@company.com",
     form_service_label:  "الخدمة المطلوبة",
-    form_service_opt0:   "اختر خدمة...",
-    form_service_opt1:   "التحقق من صحة الأنظمة الحاسوبية (CSV)",
-    form_service_opt2:   "ضمان الجودة وتقييم الثغرات",
-    form_service_opt3:   "CQV ورسم الخرائط الحرارية",
-    form_service_opt4:   "التدريب على GMP",
-    form_service_opt5:   "الدعم الرقمي الدوائي",
-    form_service_opt6:   "PHARPRO DVS — برنامج التحقق الرقمي",
-    form_service_opt7:   "غير متأكد — أحتاج إلى توجيه",
+    form_service_opt0:         "اختر خدمة...",
+    form_service_opt_dvsdemo:  "احجز عرض DVS (مجاني، 30 دقيقة)",
+    form_service_opt1:         "التحقق من صحة الأنظمة الحاسوبية (CSV)",
+    form_service_opt2:         "ضمان الجودة وتقييم الثغرات",
+    form_service_opt3:         "CQV ورسم الخرائط الحرارية",
+    form_service_opt4:         "التدريب على GMP",
+    form_service_opt5:         "الدعم الرقمي الدوائي",
+    form_service_opt6:         "PHARPRO DVS — استفسار عن المنصة",
+    form_service_opt7:         "غير متأكد — أحتاج إلى توجيه",
     form_phone_label:    "الهاتف / واتساب",
     form_phone_ph:       "+962 79 000 0000",
     form_message_label:  "الرسالة *",
@@ -843,13 +845,35 @@ function initTrainings() {
 }
 
 /* ── CONTACT FORM ─────────────────────────────────────────────── */
+const DVS_SUBJECT_MAP = {
+  "dvs-demo": "[PHARPRO] DVS Demo Request",
+  "dvs":      "[PHARPRO] DVS Platform Inquiry",
+  "csv":      "[PHARPRO] CSV Validation Inquiry",
+  "qa":       "[PHARPRO] QA & Gap Assessment Inquiry",
+  "cqv":      "[PHARPRO] CQV & Thermal Mapping Inquiry",
+  "training": "[PHARPRO] GMP Training Inquiry",
+  "digital":  "[PHARPRO] Pharma Digital Support Inquiry",
+  "unsure":   "[PHARPRO] General Enquiry",
+};
+
 function initContactForm() {
   const form   = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
   if (!form || !status) return;
 
+  const svcSelect = form.querySelector("[name='service']");
+  const subjectInput = form.querySelector("[name='subject']");
+  if (svcSelect && subjectInput) {
+    svcSelect.addEventListener("change", () => {
+      subjectInput.value = DVS_SUBJECT_MAP[svcSelect.value] || "[PHARPRO] New Website Enquiry";
+    });
+  }
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (svcSelect && subjectInput) {
+      subjectInput.value = DVS_SUBJECT_MAP[svcSelect.value] || "[PHARPRO] New Website Enquiry";
+    }
     const btn = document.getElementById("submitBtn");
     btn.disabled    = true;
     btn.textContent = currentLang === "ar" ? "جاري الإرسال..." : "Sending…";
