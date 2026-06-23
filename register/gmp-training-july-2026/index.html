@@ -859,11 +859,14 @@ document.getElementById('regFormEl').addEventListener('submit', async function(e
 
     if (json.success) {
       if (typeof gtag === 'function') {
-        gtag('event', 'gmp_training_registration', {
+        // Standard GA4 event — picked up by Google Ads conversion tracking
+        gtag('event', 'generate_lead', {
           event_category: 'Registration',
           event_label: 'GMP Training July 2026',
           attendance_mode: mode
         });
+        // Also fire the named conversion tag once you have it from Google Ads
+        // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXX/YYYYYYYYYYY' });
       }
       document.getElementById('formWrap').style.display = 'none';
       document.getElementById('successState').style.display = 'block';
