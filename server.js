@@ -143,6 +143,12 @@ app.get(["/resources/compliance-checklist", "/resources/compliance-checklist/"],
   res.sendFile(path.join(__dirname, "resources", "compliance-checklist", "index.html"));
 });
 
+// Registration pages
+app.get(["/register/gmp-training-july-2026", "/register/gmp-training-july-2026/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "register", "gmp-training-july-2026", "index.html"));
+});
+
 // Search
 app.get(["/search", "/search/"], (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
