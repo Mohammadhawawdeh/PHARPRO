@@ -167,6 +167,7 @@ app.get(["/insights", "/insights/"], (req, res) => {
 // Insights article pages
 const INSIGHT_SLUGS = [
   "pharpro-latest-news-june-2026",
+  "gmp-training-july-2026",
   "csv-training-pharma-june-2026",
   "21-cfr-part-11-audit-trail-requirements",
   "ai-validation-lifecycle-software-pharma",

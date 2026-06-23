@@ -174,6 +174,8 @@ No — PHARPRO DVS is a standalone SaaS platform that pharmaceutical teams subsc
 PHARPRO publishes practical pharmaceutical compliance articles at https://pharpro.co/insights covering regulatory frameworks, CSV best practices, and GMP guidance.
 
 ### Current Articles
+- **GMP Training — 1 & 2 July 2026: 12 Modules, 16 Hours, Certificate of Completion** — https://pharpro.co/insights/gmp-training-july-2026/
+  Two-day comprehensive Good Manufacturing Practice training covering regulatory frameworks, pharmaceutical quality systems, GMP documentation, data integrity, deviation management, CAPA, validation lifecycle, and GMP inspection readiness. Online & in-person. English & Arabic. Certificate of Completion issued to all participants. Limited seats.
 - **GAMP 5 Second Edition: Key Changes for Your CSV Programme** — https://pharpro.co/insights/gamp5-second-edition-csv-changes/
   Risk categories, critical thinking, and lifecycle documentation changes in ISPE GAMP 5 Second Edition.
 - **EU GMP Annex 11: A Practical Compliance Checklist for 2025** — https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/
