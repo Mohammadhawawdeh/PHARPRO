@@ -868,8 +868,8 @@ document.getElementById('regFormEl').addEventListener('submit', async function(e
         // Also fire the named conversion tag once you have it from Google Ads
         // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXX/YYYYYYYYYYY' });
       }
-      document.getElementById('formWrap').style.display = 'none';
-      document.getElementById('successState').style.display = 'block';
+      // Redirect to thank-you page — fires conversion tracking there
+      window.location.href = '/thank-you/gmp-training-july-2026/';
     } else {
       throw new Error(json.message || 'Submission failed');
     }

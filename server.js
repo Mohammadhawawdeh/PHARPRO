@@ -149,6 +149,12 @@ app.get(["/register/gmp-training-july-2026", "/register/gmp-training-july-2026/"
   res.sendFile(path.join(__dirname, "register", "gmp-training-july-2026", "index.html"));
 });
 
+// Thank-you / confirmation page
+app.get(["/thank-you/gmp-training-july-2026", "/thank-you/gmp-training-july-2026/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "thank-you", "gmp-training-july-2026", "index.html"));
+});
+
 // Search
 app.get(["/search", "/search/"], (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
