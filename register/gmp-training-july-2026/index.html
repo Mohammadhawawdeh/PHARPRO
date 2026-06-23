@@ -252,6 +252,21 @@
     @media(max-width:520px){.form-row{grid-template-columns:1fr}}
     .field-hint{font-size:.74rem;color:var(--muted);margin-top:2px}
 
+    /* Group registration */
+    .group-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,rgba(35,58,94,.08),rgba(35,58,94,.04));border:1px solid rgba(35,58,94,.15);border-radius:999px;padding:5px 14px;font-size:.76rem;font-weight:700;color:var(--navy);margin-bottom:12px}
+    .group-badge svg{color:var(--burgundy);flex-shrink:0}
+    .group-panel{display:none;background:rgba(35,58,94,.04);border:1.5px solid rgba(35,58,94,.12);border-radius:12px;padding:14px 16px;margin-top:10px;margin-bottom:4px}
+    .group-panel.visible{display:block}
+    .group-panel-head{font-size:.8rem;font-weight:700;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+    .group-panel-head svg{color:var(--burgundy)}
+    .attendee-row{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:auto 1fr 1fr;gap:10px;align-items:center}
+    .attendee-row:last-child{margin-bottom:0}
+    .attendee-num{width:24px;height:24px;border-radius:6px;background:var(--burgundy);color:#fff;font-size:.72rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .attendee-row input{font-family:inherit;font-size:.85rem;color:var(--ink);background:var(--ivory);border:1.5px solid var(--border);border-radius:8px;padding:8px 10px;width:100%;transition:border-color var(--t)}
+    .attendee-row input:focus{outline:none;border-color:var(--navy)}
+    @media(max-width:520px){.attendee-row{grid-template-columns:auto 1fr;}.attendee-row input:last-child{grid-column:2}}
+    .group-note{font-size:.74rem;color:var(--muted);margin-top:8px;line-height:1.5}
+
     /* Honeypot */
     .hp{display:none!important}
 
@@ -637,6 +652,33 @@
                 </select>
               </div>
 
+              <!-- Group registration -->
+              <div class="fg">
+                <label for="reg-count">Number of Attendees</label>
+                <div class="group-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  Registering a team? Add all names in one submission
+                </div>
+                <select id="reg-count" name="attendee_count">
+                  <option value="1" selected>1 person (just me)</option>
+                  <option value="2">2 people</option>
+                  <option value="3">3 people</option>
+                  <option value="4">4 people</option>
+                  <option value="5+">5 or more people</option>
+                </select>
+                <span class="field-hint">Groups of 3+ receive priority seat confirmation</span>
+
+                <!-- Extra attendees panel — shown when count > 1 -->
+                <div class="group-panel" id="groupPanel">
+                  <div class="group-panel-head">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Additional attendees (name + email)
+                  </div>
+                  <div id="attendeeRows"></div>
+                  <p class="group-note">We'll send each person their own confirmation and materials. The primary registrant's details are in the fields above.</p>
+                </div>
+              </div>
+
               <div class="fg">
                 <label for="reg-notes">Your Role / Message *</label>
                 <textarea id="reg-notes" name="notes" placeholder="Your role, your team's GMP training needs, or any questions…" required></textarea>
@@ -734,6 +776,56 @@ setInterval(updateAll, 1000);
 document.getElementById('hamburger').addEventListener('click', function() {
   document.getElementById('mobNav').classList.toggle('open');
 });
+
+/* Group registration — attendee count select */
+(function() {
+  const countSel  = document.getElementById('reg-count');
+  const panel     = document.getElementById('groupPanel');
+  const rowsWrap  = document.getElementById('attendeeRows');
+  const subjectEl = document.querySelector('input[name="subject"]');
+  const baseSubject = 'GMP Training Registration — 1 & 2 July 2026 | pharpro.co';
+
+  function buildRows(n) {
+    rowsWrap.innerHTML = '';
+    for (let i = 2; i <= n; i++) {
+      const row = document.createElement('div');
+      row.className = 'attendee-row';
+      row.innerHTML = `
+        <span class="attendee-num">${i}</span>
+        <input type="text"  name="attendee_${i}_name"  placeholder="Full name"   aria-label="Attendee ${i} name" />
+        <input type="email" name="attendee_${i}_email" placeholder="Email address" aria-label="Attendee ${i} email" />`;
+      rowsWrap.appendChild(row);
+    }
+  }
+
+  function onCountChange() {
+    const val = countSel.value;
+    const isGroup = val !== '1';
+    panel.classList.toggle('visible', isGroup);
+
+    if (val === '5+') {
+      rowsWrap.innerHTML = `
+        <div class="fg" style="margin-bottom:0">
+          <textarea name="group_attendees" placeholder="List each person's name and email, one per line&#10;e.g. Sara Ahmed — sara@company.com" style="min-height:90px;font-family:inherit;font-size:.85rem;color:var(--ink);background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:10px 12px;width:100%;resize:vertical" aria-label="Additional attendees"></textarea>
+        </div>`;
+    } else if (isGroup) {
+      buildRows(parseInt(val, 10));
+    } else {
+      rowsWrap.innerHTML = '';
+    }
+
+    if (subjectEl) {
+      subjectEl.value = isGroup
+        ? `Group Registration (${val} people) — GMP Training 1 & 2 July 2026 | pharpro.co`
+        : baseSubject;
+    }
+
+    const btn = document.getElementById('regSubmit');
+    if (btn) btn.textContent = isGroup ? `Register ${val} Attendees →` : 'Secure My Seat →';
+  }
+
+  countSel.addEventListener('change', onCountChange);
+})();
 
 /* Form submission — Web3Forms */
 document.getElementById('regFormEl').addEventListener('submit', async function(e) {
