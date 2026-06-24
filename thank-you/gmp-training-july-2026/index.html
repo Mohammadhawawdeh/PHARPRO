@@ -90,7 +90,7 @@
     .btn-outline:hover{border-color:var(--navy)}
 
     /* Share strip */
-    .share-strip{background:rgba(177,44,75,.05);border:1px solid rgba(177,44,75,.15);border-radius:var(--r-md);padding:16px 20px;margin-bottom:28px}
+    .share-strip{background:rgba(177,44,75,.05);border:1px solid rgba(177,44,75,.15);border-radius:var(--r-md);padding:16px 20px;margin-bottom:20px}
     .share-strip p{font-size:.84rem;color:var(--ink);margin-bottom:10px}
     .share-strip p strong{color:var(--burgundy)}
     .share-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
@@ -99,6 +99,29 @@
     .share-btn.wa{background:#25D366;color:#fff}
     .share-btn.li{background:#0077B5;color:#fff}
     .share-btn.cp{background:var(--navy);color:#fff}
+
+    /* LinkedIn post block */
+    .li-block{background:#fff;border:1.5px solid #0077B5;border-radius:var(--r-md);padding:20px 24px;margin-bottom:28px;text-align:left}
+    .li-block-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .li-block-head svg{flex-shrink:0}
+    .li-block-title{font-size:.88rem;font-weight:800;color:#0077B5}
+    .li-block-sub{font-size:.76rem;color:var(--muted);margin-top:1px}
+    .li-steps{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+    .li-step-pill{display:flex;align-items:center;gap:5px;background:rgba(0,119,181,.07);border:1px solid rgba(0,119,181,.15);border-radius:999px;padding:5px 12px;font-size:.76rem;font-weight:700;color:#0077B5;white-space:nowrap}
+    .li-step-pill span{width:17px;height:17px;border-radius:50%;background:#0077B5;color:#fff;font-size:.65rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .li-post-box{background:rgba(0,119,181,.04);border:1px solid rgba(0,119,181,.15);border-radius:10px;padding:14px 16px;font-size:.84rem;color:var(--ink);line-height:1.7;white-space:pre-wrap;margin-bottom:12px;font-family:inherit;user-select:text}
+    .li-post-box em{font-style:normal;color:#0077B5;font-weight:700}
+    .li-actions{display:flex;gap:8px;flex-wrap:wrap}
+    .li-copy-btn{flex:1;min-width:160px;display:flex;align-items:center;justify-content:center;gap:7px;background:#0077B5;color:#fff;border:none;border-radius:999px;padding:11px 18px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity var(--t)}
+    .li-copy-btn:hover{opacity:.9}
+    .li-open-btn{flex:1;min-width:160px;display:flex;align-items:center;justify-content:center;gap:7px;background:transparent;color:#0077B5;border:1.5px solid #0077B5;border-radius:999px;padding:11px 18px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit;text-decoration:none;transition:opacity var(--t)}
+    .li-open-btn:hover{opacity:.8}
+    .li-copied-note{font-size:.76rem;color:#0077B5;font-weight:600;margin-top:8px;min-height:18px;text-align:center}
+    /* Language toggle */
+    .li-lang-toggle{display:flex;gap:0;margin-bottom:14px;border:1.5px solid #0077B5;border-radius:999px;overflow:hidden;width:fit-content}
+    .li-lang-btn{padding:6px 18px;font-size:.8rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:#0077B5;font-family:inherit;transition:background var(--t),color var(--t)}
+    .li-lang-btn.active{background:#0077B5;color:#fff}
+    .li-post-box[dir="rtl"]{font-family:'Cairo',sans-serif;text-align:right}
 
     /* Testimonial */
     .testimonial{background:var(--navy);border-radius:var(--r-md);padding:20px 24px;margin-bottom:28px;text-align:left}
@@ -204,23 +227,80 @@
         </a>
       </div>
 
-      <!-- Share strip -->
+      <!-- Share strip — WhatsApp -->
       <div class="share-strip">
-        <p><strong>Know a colleague who should attend?</strong> Share the training — seats are almost gone.</p>
+        <p><strong>Know a colleague who should attend?</strong> Seats are almost gone — share now.</p>
         <div class="share-btns">
           <button class="share-btn wa" onclick="shareWA()" aria-label="Share on WhatsApp">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
-          </button>
-          <button class="share-btn li" onclick="shareLI()" aria-label="Share on LinkedIn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            LinkedIn
+            Share on WhatsApp
           </button>
           <button class="share-btn cp" onclick="copyLink()" id="copyBtn" aria-label="Copy link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             Copy link
           </button>
         </div>
+      </div>
+
+      <!-- LinkedIn post block -->
+      <div class="li-block">
+        <div class="li-block-head">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0077B5" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <div>
+            <div class="li-block-title">Share on LinkedIn — ready-to-post template</div>
+            <div class="li-block-sub">LinkedIn doesn't allow pre-filled text — copy first, then paste when LinkedIn opens</div>
+          </div>
+        </div>
+
+        <!-- Language toggle -->
+        <div class="li-lang-toggle" role="group" aria-label="Choose post language">
+          <button class="li-lang-btn active" id="liLangEN" onclick="switchLILang('en')" aria-pressed="true">English</button>
+          <button class="li-lang-btn" id="liLangAR" onclick="switchLILang('ar')" aria-pressed="false">العربية</button>
+        </div>
+
+        <div class="li-steps">
+          <div class="li-step-pill"><span>1</span> Copy the post text below</div>
+          <div class="li-step-pill"><span>2</span> Click "Open LinkedIn"</div>
+          <div class="li-step-pill"><span>3</span> Paste into a new post &amp; share</div>
+        </div>
+
+        <!-- English post -->
+        <div class="li-post-box" id="liPostEN" dir="ltr">Just registered for the GMP Fundamentals &amp; Compliance Training by PHARPRO Consultation — 1 &amp; 2 July 2026 in Amman, Jordan (also available online).
+
+2 days · 12 modules · 16 CPD hours · internationally recognised certificate.
+
+Covers WHO GMP, PIC/S, ICH Q10, JFDA standards, documentation, validation, CAPA, audits, and more — delivered in English and Arabic.
+
+If you work in pharma QA, regulatory affairs, or production in the MENA region, I'd highly recommend it. Only a few seats left.
+
+🔗 https://www.pharpro.co/insights/gmp-training-july-2026/
+
+#GMP #PharmaCompliance #QualityAssurance #PharmaceuticalTraining #RegulatoryAffairs #MENA #Amman #Jordan</div>
+
+        <!-- Arabic post -->
+        <div class="li-post-box" id="liPostAR" dir="rtl" style="display:none;font-family:'Cairo',sans-serif;">يسعدني أن أشاركم تسجيلي في برنامج التدريب على أسس GMP والامتثال التنظيمي، الذي تنظّمه شركة PHARPRO للاستشارات — يومَي 1 و2 يوليو 2026 في عمّان، الأردن (مع إمكانية المشاركة عبر الإنترنت).
+
+يومان تدريبيان · 12 وحدة · 16 ساعة CPD · شهادة معترف بها دولياً.
+
+يغطّي البرنامج: ممارسات التصنيع الجيد GMP وفق منظمة الصحة العالمية WHO وPIC/S وICH Q10 ومعايير هيئة الغذاء والدواء الأردنية JFDA، إلى جانب التوثيق، والتحقق والتأهيل، وإجراءات CAPA، والتدقيق الداخلي — مقدَّم باللغتين العربية والإنجليزية.
+
+إن كنتَ تعمل في مجال ضمان الجودة أو الشؤون التنظيمية أو الإنتاج الدوائي في منطقة الشرق الأوسط وشمال أفريقيا، فأنصح بشدة بالالتحاق. المقاعد المتبقية محدودة.
+
+🔗 https://www.pharpro.co/insights/gmp-training-july-2026/
+
+#GMP #ضمان_الجودة #الشؤون_التنظيمية #تدريب_صيدلاني #امتثال_تنظيمي #MENA #عمان #الأردن #PharmaceuticalTraining #PharmaCompliance</div>
+
+        <div class="li-actions">
+          <button class="li-copy-btn" onclick="copyLIPost()" id="liCopyBtn" aria-label="Copy LinkedIn post text">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="liCopyLabel">Copy post text</span>
+          </button>
+          <a href="https://www.linkedin.com/feed/?shareActive=true" target="_blank" rel="noopener noreferrer" class="li-open-btn" id="liOpenBtn" aria-label="Open LinkedIn to post">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#0077B5" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            Open LinkedIn
+          </a>
+        </div>
+        <div class="li-copied-note" id="liCopiedNote" aria-live="polite"></div>
       </div>
 
       <!-- Testimonial -->
@@ -250,20 +330,81 @@
 </footer>
 
 <script>
-const SHARE_URL = 'https://www.pharpro.co/insights/gmp-training-july-2026/';
+const SHARE_URL  = 'https://www.pharpro.co/insights/gmp-training-july-2026/';
 const SHARE_TEXT = 'GMP Training — 1 & 2 July 2026 in Amman + online. 12 modules, certificate included. Seats almost full:';
 
 function shareWA() {
   window.open('https://wa.me/?text=' + encodeURIComponent(SHARE_TEXT + ' ' + SHARE_URL), '_blank');
 }
-function shareLI() {
-  window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(SHARE_URL), '_blank');
-}
+
 function copyLink() {
   navigator.clipboard.writeText(SHARE_URL).then(() => {
     const btn = document.getElementById('copyBtn');
-    btn.textContent = '✓ Copied!';
-    setTimeout(() => { btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy link'; }, 2000);
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Copied!';
+    setTimeout(() => { btn.innerHTML = orig; }, 2000);
+  });
+}
+
+let liActiveLang = 'en';
+
+function switchLILang(lang) {
+  liActiveLang = lang;
+  const enBox  = document.getElementById('liPostEN');
+  const arBox  = document.getElementById('liPostAR');
+  const enBtn  = document.getElementById('liLangEN');
+  const arBtn  = document.getElementById('liLangAR');
+  const label  = document.getElementById('liCopyLabel');
+  const note   = document.getElementById('liCopiedNote');
+
+  if (lang === 'ar') {
+    enBox.style.display = 'none';
+    arBox.style.display = '';
+    enBtn.classList.remove('active'); enBtn.setAttribute('aria-pressed','false');
+    arBtn.classList.add('active');    arBtn.setAttribute('aria-pressed','true');
+    label.textContent = 'نسخ نص المنشور';
+  } else {
+    arBox.style.display = 'none';
+    enBox.style.display = '';
+    arBtn.classList.remove('active'); arBtn.setAttribute('aria-pressed','false');
+    enBtn.classList.add('active');    enBtn.setAttribute('aria-pressed','true');
+    label.textContent = 'Copy post text';
+  }
+  note.textContent = '';
+}
+
+function copyLIPost() {
+  const box  = liActiveLang === 'ar'
+    ? document.getElementById('liPostAR')
+    : document.getElementById('liPostEN');
+  const note = document.getElementById('liCopiedNote');
+  const btn  = document.getElementById('liCopyBtn');
+  const isAR = liActiveLang === 'ar';
+
+  const text = box.innerText;
+
+  const successMsg = isAR
+    ? '✓ تم نسخ النص — افتح LinkedIn، ابدأ منشوراً جديداً، ثم الصق (Ctrl+V)'
+    : '✓ Post text copied — now click "Open LinkedIn", start a post, and paste (Ctrl+V / ⌘V)';
+  const fallbackMsg = isAR
+    ? 'النص محدَّد — اضغط Ctrl+C أو ⌘C للنسخ، ثم افتح LinkedIn وألصق.'
+    : 'Text selected — press Ctrl+C (or ⌘C) to copy, then open LinkedIn and paste.';
+
+  navigator.clipboard.writeText(text).then(() => {
+    const origHTML = btn.innerHTML;
+    btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span id="liCopyLabel">' + (isAR ? '✓ تم النسخ' : '✓ Copied!') + '</span>';
+    note.textContent = successMsg;
+    setTimeout(() => {
+      btn.innerHTML = origHTML;
+      note.textContent = '';
+    }, 6000);
+  }).catch(() => {
+    const range = document.createRange();
+    range.selectNodeContents(box);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    note.textContent = fallbackMsg;
   });
 }
 </script>
