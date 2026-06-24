@@ -493,7 +493,10 @@
               <label for="message" data-i18n="fl_message">Message *</label>
               <textarea id="message" name="message" placeholder="Describe your situation, challenge, or upcoming inspection…" required></textarea>
             </div>
-            <div class="hp" aria-hidden="true"><input type="text" name="hp" tabindex="-1" autocomplete="off" /></div>
+            <!-- Bot traps: timing field + enticing honeypot + JS token (all set/checked in JS) -->
+            <input type="hidden" name="_start_time" id="_start_time" value="" />
+            <input type="hidden" name="_token" id="_token" value="" />
+            <div class="hp" aria-hidden="true"><input type="text" name="website" id="hp_website" tabindex="-1" autocomplete="off" placeholder="https://" /></div>
             <div class="form-foot">
               <button type="submit" class="btn-submit" id="submitBtn" data-i18n="fl_submit">Send Message</button>
               <div class="form-priv">
@@ -701,6 +704,15 @@ applyLang();
   }
 })();
 
+// Bot protection — set timing + JS token on page load
+(function(){
+  var t = document.getElementById('_start_time');
+  var k = document.getElementById('_token');
+  if(t) t.value = Date.now();
+  // Token = simple JS-only value bots that don't execute JS won't have
+  if(k) k.value = (Date.now() % 99991).toString(36) + '_pharpro';
+})();
+
 // Form submission
 (function(){
   var form = document.getElementById('contactForm');
@@ -727,10 +739,37 @@ applyLang();
   }
 
   form.addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    // ── Bot checks ────────────────────────────────────────
+    // 1. Honeypot — if the "website" field has any value, it's a bot
+    var hp = document.getElementById('hp_website');
+    if(hp && hp.value.trim() !== '') return;
+
+    // 2. JS token — if empty, JS didn't run (bot submitted directly)
+    var tokenEl = document.getElementById('_token');
+    if(!tokenEl || tokenEl.value.trim() === '') return;
+
+    // 3. Timing — reject if form submitted in under 3 seconds
+    var startEl = document.getElementById('_start_time');
+    if(startEl && startEl.value) {
+      var elapsed = Date.now() - parseInt(startEl.value, 10);
+      if(elapsed < 3000) return;
+    }
+
+    // 4. Require name AND email to be non-empty
+    var nameVal  = (form.querySelector("[name='name']") || {}).value || '';
+    var emailVal = (form.querySelector("[name='email']") || {}).value || '';
+    if(!nameVal.trim() || !emailVal.trim()){
+      status.className = 'f-status err';
+      status.textContent = lang === 'ar' ? 'الرجاء إدخال الاسم وعنوان البريد الإلكتروني.' : 'Please enter your name and email address.';
+      return;
+    }
+    // ──────────────────────────────────────────────────────
+
     if(svcSel && subjectInp){
       subjectInp.value = subjectMap[svcSel.value] || 'New Contact Form Submission  -  pharpro.co/contact';
     }
-    e.preventDefault();
     btn.disabled = true;
     btn.textContent = lang === 'ar' ? 'جارٍ الإرسال…' : 'Sending…';
     status.className = 'f-status';
