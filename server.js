@@ -228,6 +228,12 @@ app.get(["/services/supplier-qualification", "/services/supplier-qualification/"
   res.sendFile(path.join(__dirname, "services", "supplier-qualification", "index.html"));
 });
 
+// Services — DVS Arabic page
+app.get(["/services/dvs/ar", "/services/dvs/ar/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "dvs", "ar", "index.html"));
+});
+
 // Services — DVS compare page
 app.get(["/services/dvs/compare", "/services/dvs/compare/"], (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");

@@ -676,21 +676,10 @@
 </footer>
 
 <script>
-var lang = (new URLSearchParams(location.search).get('lang')) || 'en';
-var T = { en: { lang_label: 'عربي'}, ar: { lang_label: 'EN' } };
-function toggleLang() {
-  lang = lang === 'en' ? 'ar' : 'en';
-  localStorage.setItem('pharpro_lang', lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  document.body.classList.toggle('rtl', lang === 'ar');
-  document.querySelectorAll('.lang-btn').forEach(b => b.textContent = lang === 'en' ? 'عربي' : 'EN');
-}
 (function(){
   var ham = document.getElementById('hamburger');
   var mob = document.getElementById('mobNav');
   if(ham && mob){ ham.addEventListener('click', function(){ mob.classList.toggle('open'); ham.setAttribute('aria-expanded', mob.classList.contains('open'));}); }
-  if(lang === 'ar'){ document.documentElement.lang='ar'; document.documentElement.dir='rtl'; document.body.classList.add('rtl'); document.querySelectorAll('.lang-btn').forEach(b=>b.textContent='EN');}
 })();
 </script>
 
