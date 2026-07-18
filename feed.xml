@@ -9,7 +9,7 @@
     <link>https://www.pharpro.co/</link>
     <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Jun 2026 09:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 09:00:00 +0300</lastBuildDate>
     <managingEditor>info@pharpro.co (PHARPRO Consulting Team)</managingEditor>
     <webMaster>info@pharpro.co (PHARPRO)</webMaster>
     <image>
@@ -22,6 +22,52 @@
     <atom:link href="https://www.pharpro.co/feed.xml" rel="self" type="application/rss+xml"/>
     <copyright>Copyright 2026 PHARPRO Consultation Company</copyright>
     <category>Pharmaceutical Compliance</category>
+
+    <item>
+      <title>CSV Validation Training — 5 &amp; 6 August 2026: GAMP 5, IQ/OQ/PQ, Data Integrity &amp; Annex 11 | PHARPRO</title>
+      <link>https://www.pharpro.co/insights/csv-training-august-2026/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/csv-training-august-2026/</guid>
+      <pubDate>Sat, 18 Jul 2026 09:00:00 +0300</pubDate>
+      <dc:creator>Mohammad Awawdeh</dc:creator>
+      <category>CSV Training</category>
+      <description>PHARPRO CSV Training — 5 &amp; 6 August 2026. Two-day intensive covering GAMP 5 Second Edition risk model, IQ/OQ/PQ protocol and report writing, data integrity (ALCOA+), FDA 21 CFR Part 11, EU GMP Annex 11, risk assessment, and a full pharma case study. Online and in-person. Certificate of Completion. Limited to 20 seats — register now.</description>
+      <content:encoded><![CDATA[
+        <p><strong>PHARPRO CSV Training — 5 &amp; 6 August 2026</strong></p>
+        <p>Two-day intensive Computerised System Validation training covering 9 modules: GAMP 5 Second Edition risk model, system inventory &amp; categorisation, risk assessment, URS writing, IQ/OQ/PQ protocol and report writing, data integrity controls (ALCOA+), FDA 21 CFR Part 11, EU GMP Annex 11, Excel validation, and change control. Participants work through real pharmaceutical case studies and leave with draft templates.</p>
+        <p><strong>Format:</strong> Online (live instructor-led) and in-person in Amman, Jordan. Delivered in English with Arabic support. Certificate of Completion for all participants.</p>
+        <p><strong>Seats are limited to 20 participants.</strong> Register at: <a href="https://www.pharpro.co/insights/csv-training-august-2026/">https://www.pharpro.co/insights/csv-training-august-2026/</a> or WhatsApp: +962 79 856 5807</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Book a PHARPRO DVS Demo — See Pharmaceutical Validation Software in 30 Minutes</title>
+      <link>https://www.pharpro.co/insights/pharpro-dvs-demo-booking/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/pharpro-dvs-demo-booking/</guid>
+      <pubDate>Sat, 18 Jul 2026 09:00:00 +0300</pubDate>
+      <dc:creator>Mohammad Awawdeh</dc:creator>
+      <category>DVS Software</category>
+      <description>Book a free 30-minute PHARPRO DVS demo. See AI-assisted pharmaceutical validation software build IQ/OQ/PQ protocols, URS documents, automated RTM, and audit trails in real time for your specific system type. FDA 21 CFR Part 11 and EU GMP Annex 11 compliant. Pick your slot and book now via Calendly.</description>
+      <content:encoded><![CDATA[
+        <p><strong>PHARPRO DVS</strong> is AI-assisted validation lifecycle management software providing 30+ document builders covering URS through VSR, automated Requirements Traceability Matrix (RTM), FDA 21 CFR Part 11 e-signatures, audit trail, and EU GMP Annex 11 compliance — all in a single web-based system deployable the same day.</p>
+        <p>The free 30-minute demo covers: a live walkthrough for your specific use case (LIMS, ERP, SCADA, etc.), AI-assisted document generation for IQ/OQ/PQ and URS, the automated RTM, e-signature and audit trail features, and a Q&amp;A session.</p>
+        <p><a href="https://www.pharpro.co/insights/pharpro-dvs-demo-booking/">Book your free 30-minute demo →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Software &amp; CSV Gap Assessment for Pharma — Find Every Compliance Gap Before Auditors Do | PHARPRO</title>
+      <link>https://www.pharpro.co/insights/software-csv-gap-assessment/</link>
+      <guid isPermaLink="true">https://www.pharpro.co/insights/software-csv-gap-assessment/</guid>
+      <pubDate>Sat, 18 Jul 2026 09:00:00 +0300</pubDate>
+      <dc:creator>Mohammad Awawdeh</dc:creator>
+      <category>CSV Validation</category>
+      <description>PHARPRO's Software &amp; CSV Gap Assessment identifies compliance gaps in your GxP-critical computerised systems against FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5. Deliverable: written gap report with risk-prioritised remediation roadmap. Free initial consultation — no commitment required.</description>
+      <content:encoded><![CDATA[
+        <p>A <strong>CSV gap assessment</strong> identifies which systems are under-validated, which documentation is missing, and prioritises remediation by risk level. PHARPRO's assessment covers all GxP-critical systems: LIMS, ERP (SAP, Oracle), SCADA/DCS, MES, QMS, laboratory instruments, EDMS, and custom software.</p>
+        <p><strong>Deliverable:</strong> Written Gap Assessment Report covering system inventory, regulatory compliance status per system (21 CFR Part 11 / Annex 11 / GAMP 5), gaps with severity classification (critical / major / minor), and a prioritised remediation roadmap with timelines. Post-assessment review meeting included.</p>
+        <p><strong>Free initial consultation</strong> — working session, not a sales call. <a href="https://www.pharpro.co/insights/software-csv-gap-assessment/">Request your assessment →</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title>GMP Training — 1 &amp; 2 July 2026: 12 Modules, 16 Hours, Certificate of Completion | PHARPRO</title>
