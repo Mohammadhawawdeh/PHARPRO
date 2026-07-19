@@ -184,6 +184,7 @@ app.get(["/insights", "/insights/"], (req, res) => {
 const INSIGHT_SLUGS = [
   "pharpro-latest-news-june-2026",
   "gmp-training-july-2026",
+  "gmp-training-september-2026",
   "csv-training-pharma-june-2026",
   "csv-training-august-2026",
   "pharpro-dvs-demo-booking",
