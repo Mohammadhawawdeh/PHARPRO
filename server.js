@@ -184,6 +184,7 @@ const INSIGHT_SLUGS = [
   "drug-registration-jordan-mena-partnership",
   "medicine-marketing-jordan-partnership",
   "pharpro-dvs-saves-528-hours-ai-validation",
+  "digitalization-digital-validation-software-pharma",
   "gsdp-good-storage-distribution-practice",
   "csv-training-pharma-june-2026",
   "csv-training-august-2026",
