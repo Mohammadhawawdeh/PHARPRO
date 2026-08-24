@@ -77,16 +77,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// ── LANG QUERY PARAM — 301 TO CANONICAL ───────────────────────────────────
-// ?lang=ar is client-side only. If Google or a user visits /?lang=ar, we 301
-// to the canonical URL (same path, no query param) so GSC does not report it
-// as "Page with redirect" due to canonical mismatch.
+// ── LANGUAGE QUERY PARAM ───────────────────────────────────────────────────
+// Language selection is handled client-side. Do not redirect ?lang=ar:
+// returning the page itself avoids creating "Page with redirect" URLs in
+// Search Console for language links that have already been discovered.
 app.use((req, res, next) => {
-  if (req.query.lang !== undefined) {
-    const cleanPath = req.path.replace(/\/$/, "") + "/";
-    return res.redirect(301, cleanPath);
-  }
-  res.setHeader("Vary", "Accept-Language");
   next();
 });
 
