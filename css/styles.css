@@ -10872,15 +10872,15 @@ body{
   left: 0;
   bottom: 0;
   right: 0;
-  background-image: 
-    radial-gradient(20px 20px at 100px 50px, #fff , transparent), 
-    radial-gradient(5px 5px at 200px 150px, #fff, transparent), 
-    radial-gradient(10px 10px at 300px 250px, #fff 50%, transparent), 
-    radial-gradient(20px 20px at 400px 350px, #fff 50%, transparent), 
-    radial-gradient(10px 10px at 500px 100px, #fff 50%, transparent), 
-    radial-gradient(5px 5px at 50px 200px, #fff 50%, transparent), 
-    radial-gradient(5px 5px at 150px 300px, #fff 50%, transparent), 
-    radial-gradient(10px 10px at 250px 400px, #fff 50%, transparent), 
+  background-image:
+    radial-gradient(20px 20px at 100px 50px, #fff , transparent),
+    radial-gradient(5px 5px at 200px 150px, #fff, transparent),
+    radial-gradient(10px 10px at 300px 250px, #fff 50%, transparent),
+    radial-gradient(20px 20px at 400px 350px, #fff 50%, transparent),
+    radial-gradient(10px 10px at 500px 100px, #fff 50%, transparent),
+    radial-gradient(5px 5px at 50px 200px, #fff 50%, transparent),
+    radial-gradient(5px 5px at 150px 300px, #fff 50%, transparent),
+    radial-gradient(10px 10px at 250px 400px, #fff 50%, transparent),
     radial-gradient(10px 10px at 350px 500px, #fff 50%, transparent);
   background-size: 650px 650px;
   animation: snow 3s linear infinite;
@@ -10939,7 +10939,7 @@ body{
     background-color: #005582;
 }
 .background-container {
-    background-image: url('./images/PHARPRO.jpg');
+    background-image: url('../images/PHARPRO.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Ensures the image doesn't repeat */
@@ -11123,7 +11123,7 @@ body{
     background-color: transparent; /* Ensure transparency */
     border-radius: 50%;
     width: 80%; /* Slightly smaller than the gauge container */
-    height: 80%; 
+    height: 80%;
     position: absolute;
     top: 10%;
     left: 10%;

@@ -7,10 +7,23 @@
 const TRAINING_DATA = {
   upcoming: [
     {
+      en: "GMP Training",
+      ar: "تدريب GMP",
+      desc_en: "GMP quality systems, data integrity, CAPA and inspection readiness.",
+      desc_ar: "أنظمة الجودة وسلامة البيانات وCAPA والاستعداد للتفتيش.",
+      date_en: "2–3 September 2026",
+      date_ar: "2–3 سبتمبر 2026",
+      url: "/insights/gmp-training-september-2026/",
+      format: "both",
+    },
+    {
       en: "CSV Validation Training",
       ar: "تدريب التحقق من CSV",
-      desc_en: "IQ/OQ/PQ lifecycle aligned with FDA 21 CFR Part 11 and GAMP 5.",
-      desc_ar: "دورة حياة IQ/OQ/PQ وفق FDA 21 CFR Part 11 وGAMP 5.",
+      desc_en: "GAMP 5, URS, risk assessment, IQ/OQ/PQ, Part 11 and Annex 11.",
+      desc_ar: "GAMP 5 وURS وتقييم المخاطر وIQ/OQ/PQ وPart 11 وAnnex 11.",
+      date_en: "16–17 September 2026",
+      date_ar: "16–17 سبتمبر 2026",
+      url: "/insights/csv-training-rescheduled-september-2026/",
       format: "both",
     },
     {
@@ -18,13 +31,6 @@ const TRAINING_DATA = {
       ar: "اختبار الهواء المضغوط",
       desc_en: "ISO 8573 pharma air testing — sampling, risk assessment & GMP docs.",
       desc_ar: "اختبار الهواء وفق ISO 8573 — أخذ العينات وتوثيق GMP.",
-      format: "both",
-    },
-    {
-      en: "GMP Training",
-      ar: "تدريب GMP",
-      desc_en: "GMP essentials — data integrity, CAPA & audit readiness.",
-      desc_ar: "GMP الأساسي — سلامة البيانات وCAPAوالاستعداد للتدقيق.",
       format: "both",
     },
     {
@@ -330,7 +336,7 @@ const translations = {
     foot_copy:       "© 2025 PHARPRO Consultation Company. All rights reserved.",
     foot_tag:        "Stay Audit-Ready with PHARPRO.",
     wa_cta:          "Chat on WhatsApp",
-    hero_pill2:      "Q3 2026 project slots almost full — only 2 remaining",
+    hero_pill2:      "Upcoming GMP and CSV training — September 2026",
 
     /* Latest news section */
     news_eyebrow:    "Latest from PHARPRO",
@@ -773,7 +779,10 @@ function initTrainings() {
         ? `<span class="tr-pill tr-pill-online">${t("tr_online")}</span>`
         : `<span class="tr-pill tr-pill-onsite">${t("tr_onsite")}</span>`;
 
-    const regUrl = "https://pharpro.co/#contact";
+    const regUrl = tr.url ? `https://pharpro.co${tr.url}` : "https://pharpro.co/#contact";
+    const dateHtml = tr.date_en
+      ? `<span class="tr-countdown tr-cd-tbd"><span class="tr-cd-dot" aria-hidden="true"></span>${isAr ? tr.date_ar : tr.date_en}</span>`
+      : getTbdHtml(isAr);
     const waText = encodeURIComponent(
       isAr
         ? `🎓 ${title}\n\nسجّل اهتمامك: ${regUrl}`
@@ -791,13 +800,13 @@ function initTrainings() {
     return `
       <div class="tr-card">
         <div class="tr-card-top">
-          <div class="tr-countdown-wrap tr-countdown-abs">${getTbdHtml(isAr)}</div>
+          <div class="tr-countdown-wrap tr-countdown-abs">${dateHtml}</div>
           <h4>${title}</h4>
           <div class="tr-format-inline">${formatTag}</div>
         </div>
         <p class="tr-desc">${desc}</p>
         <div class="tr-actions">
-          <a href="#contact" class="tr-register" onclick="document.getElementById('service').value='training'">${t("tr_register")}</a>
+          <a href="${tr.url || '#contact'}" class="tr-register"${tr.url ? '' : " onclick=\"document.getElementById('service').value='training'\""}>${t("tr_register")}</a>
           <div class="tr-share">
             <a href="https://wa.me/?text=${waText}"
                class="tr-share-btn tr-share-wa" target="_blank" rel="noopener noreferrer"
@@ -923,11 +932,6 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", switchLanguage);
   });
 
-  /* ── PSYCHOLOGY / CONVERSION LAYER ─────────────────────── */
-  initStickyBar();
-  initViewerCount();
-  initExitIntent();
-
   /* ── GA4 MICRO-CONVERSION TRACKING ─────────────────────── */
   /* WhatsApp float button */
   const waFloat = document.getElementById("wa-float");
@@ -981,140 +985,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-/* ── STICKY URGENCY BAR ─────────────────────────────────────── */
-function initStickyBar() {
-  const bar = document.getElementById("sticky-urgency");
-  const closeBtn = document.getElementById("su-close-btn");
-  if (!bar) return;
-
-  let dismissed = sessionStorage.getItem("su_dismissed");
-  if (dismissed) return;
-
-  let shown = false;
-  const threshold = document.documentElement.scrollHeight * 0.28;
-
-  function onScroll() {
-    if (dismissed) return;
-    const scrolled = window.scrollY + window.innerHeight;
-    if (!shown && scrolled > threshold) {
-      bar.classList.add("visible");
-      shown = true;
-    }
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      bar.classList.remove("visible");
-      sessionStorage.setItem("su_dismissed", "1");
-      dismissed = true;
-    });
-  }
-
-  /* Close bar when clicking the CTA link */
-  const suCta = bar.querySelector(".su-btn");
-  if (suCta) {
-    suCta.addEventListener("click", () => {
-      sessionStorage.setItem("su_dismissed", "1");
-      dismissed = true;
-      if (window.gtag) {
-        gtag("event", "generate_lead", {
-          event_category: "lead",
-          event_label: "sticky_bar",
-          method: "sticky_bar",
-        });
-      }
-    });
-  }
-}
-
-/* ── LIVE VIEWER COUNT OSCILLATOR ───────────────────────────── */
-function initViewerCount() {
-  const el = document.getElementById("su-viewers");
-  if (!el) return;
-
-  function randomBetween(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  let count = randomBetween(4, 7);
-
-  function updateCount() {
-    /* Drift ±1 with 60% probability, stay with 40% */
-    const drift = Math.random();
-    if (drift < 0.3 && count < 8) count++;
-    else if (drift < 0.6 && count > 2) count--;
-    el.textContent = count + " people viewing now";
-  }
-
-  setInterval(updateCount, 14000 + Math.random() * 8000);
-}
-
-/* ── EXIT INTENT OVERLAY ─────────────────────────────────────── */
-function initExitIntent() {
-  const overlay = document.getElementById("exit-intent");
-  const closeBtn = document.getElementById("ei-close-btn");
-  const ctaBtn   = document.getElementById("ei-cta");
-  if (!overlay) return;
-
-  let fired = sessionStorage.getItem("ei_fired");
-  if (fired) return;
-
-  let armedAfterMs = 8000;
-  let armed = false;
-  setTimeout(() => { armed = true; }, armedAfterMs);
-
-  function showOverlay() {
-    if (!armed || sessionStorage.getItem("ei_fired")) return;
-    overlay.classList.add("show");
-    document.body.style.overflow = "hidden";
-    sessionStorage.setItem("ei_fired", "1");
-  }
-
-  /* Trigger on mouse leaving toward top of viewport */
-  document.addEventListener("mouseleave", (e) => {
-    if (e.clientY < 10) showOverlay();
-  });
-
-  function closeOverlay() {
-    overlay.classList.remove("show");
-    document.body.style.overflow = "";
-  }
-
-  if (closeBtn) closeBtn.addEventListener("click", closeOverlay);
-
-  /* CTA scrolls to contact and closes */
-  if (ctaBtn) {
-    ctaBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      closeOverlay();
-      if (window.gtag) {
-        gtag("event", "generate_lead", {
-          event_category: "lead",
-          event_label: "exit_intent",
-          method: "exit_intent",
-        });
-      }
-      const contactSection = document.getElementById("contact");
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth" });
-        /* Focus first input after a short delay */
-        setTimeout(() => {
-          const firstInput = contactSection.querySelector("input");
-          if (firstInput) firstInput.focus();
-        }, 600);
-      }
-    });
-  }
-
-  /* Close on backdrop click */
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) closeOverlay();
-  });
-
-  /* Close on Escape key */
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && overlay.classList.contains("show")) closeOverlay();
-  });
-}

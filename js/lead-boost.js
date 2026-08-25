@@ -20,6 +20,13 @@
   /* ── GA4 HELPER ──────────────────────────────────────────── */
   function track(action, label) {
     try {
+      if (typeof window.pharproTrackLead === 'function') {
+        var method = action === 'whatsapp_click' ? 'whatsapp' :
+          action === 'phone_click' ? 'phone' :
+          action === 'email_click' ? 'email' : 'form';
+        window.pharproTrackLead(method, label || 'lead_boost');
+        return;
+      }
       if (typeof gtag === 'function') {
         gtag('event', action, { event_category: 'Lead', event_label: label });
       }
@@ -366,7 +373,7 @@
 
     var badge = document.createElement('div');
     badge.id = 'lb-contact-badge';
-    badge.innerHTML = '<span class="lb-dot"></span>We typically respond within 2 business hours';
+    badge.innerHTML = '<span class="lb-dot"></span>We typically respond within one business day';
     anchor.after(badge);
 
     /* Also surface a direct WhatsApp option above the form */
@@ -392,6 +399,9 @@
 
   /* ── 7. STICKY BOTTOM BAR ────────────────────────────────── */
   function initStickyBar() {
+    /* Desktop already has persistent navigation CTAs. Keep the compact helper
+       only on small screens to avoid competing overlays. */
+    if (window.innerWidth >= 900) return;
     if (document.getElementById('lb-sticky') || document.getElementById('sticky-urgency')) return;
     try { if (sessionStorage.getItem('lb_su')) return; } catch (e) {}
 
@@ -399,7 +409,7 @@
     bar.id = 'lb-sticky';
     bar.setAttribute('role', 'complementary');
     bar.innerHTML =
-      '<span class="lbs-msg">\u26A1 <strong>Q3 2026 slots are limited</strong> \u2014 Book your free compliance assessment today</span>' +
+      '<span class="lbs-msg"><strong>Need a clear starting point?</strong> Request a free compliance assessment</span>' +
       '<a href="' + CONTACT_URL + '" class="lbs-btn" id="lb-s-cta">Book Free Assessment \u2192</a>' +
       '<button class="lbs-x" id="lb-s-x" aria-label="Dismiss">\xD7</button>';
     document.body.appendChild(bar);
@@ -515,15 +525,12 @@
   /* ── INIT ────────────────────────────────────────────────── */
   function init() {
     addNavPhone();
-    injectDesktopPanel();
     injectArticleCTA();
     injectServiceStrip();
     injectChecklistPromo();
     injectContactUrgency();
     initStickyBar();
-    initExitIntent();
     wireGATracking();
-    trackContactPageView();
   }
 
   if (document.readyState === 'loading') {

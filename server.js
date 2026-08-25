@@ -66,13 +66,13 @@ app.use((req, res, next) => {
   next();
 });
 
-// ── NON-WWW → WWW REDIRECT ────────────────────────────────────────────────
-// Canonical is https://www.pharpro.co/ — redirect bare domain to preserve
+// ── WWW → APEX REDIRECT ───────────────────────────────────────────────────
+// Canonical is https://pharpro.co/ — redirect www to preserve
 // link equity and avoid duplicate-content splits in Google Search Console.
 app.use((req, res, next) => {
   const host = req.headers.host || "";
-  if (host === "pharpro.co" || host.startsWith("pharpro.co:")) {
-    return res.redirect(301, `https://www.pharpro.co${req.url}`);
+  if (host === "www.pharpro.co" || host.startsWith("www.pharpro.co:")) {
+    return res.redirect(301, `https://pharpro.co${req.url}`);
   }
   next();
 });
@@ -99,7 +99,24 @@ app.get("/feed.xml", (req, res) => {
 
 // /services/digital is a legacy alias — 301 to the canonical DVS page
 app.get(["/services/digital", "/services/digital/"], (req, res) => {
-  res.redirect(301, "/services/dvs/");
+  const query = req.originalUrl.includes("?") ? req.originalUrl.slice(req.originalUrl.indexOf("?")) : "";
+  res.redirect(301, `/services/dvs/${query}`);
+});
+
+// Consolidate superseded and overlapping URLs so search equity is not split.
+const PERMANENT_REDIRECTS = new Map([
+  ["/insights/capa-management-pharmaceutical", "/insights/capa-management-pharma-guide/"],
+  ["/insights/inspection-readiness-guide", "/insights/pharmaceutical-inspection-readiness/"],
+  ["/insights/gmp-training-july-2026", "/insights/gmp-training-september-2026/"],
+  ["/insights/csv-training-august-2026", "/insights/csv-training-rescheduled-september-2026/"],
+  ["/insights/csv-training-pharma-june-2026", "/services/training/csv/"],
+  ["/register/gmp-training-july-2026", "/services/training/"],
+]);
+PERMANENT_REDIRECTS.forEach((target, source) => {
+  app.get([source, `${source}/`], (req, res) => {
+    const query = req.originalUrl.includes("?") ? req.originalUrl.slice(req.originalUrl.indexOf("?")) : "";
+    res.redirect(301, `${target}${query}`);
+  });
 });
 
 // Service pages (directory/index.html structure for GitHub Pages compatibility)
@@ -211,6 +228,10 @@ const INSIGHT_SLUGS = [
   "supplier-qualification-gmp",
   "thermal-mapping-pharmaceutical-warehouses",
   "validation-master-plan-guide",
+  "thermal-mapping-cold-room-guide",
+  "eu-gmp-annex-15-qualification-validation",
+  "hvac-validation-pharmaceutical",
+  "data-integrity-gmp-requirements",
 ];
 INSIGHT_SLUGS.forEach((slug) => {
   app.get([`/insights/${slug}`, `/insights/${slug}/`], (req, res) => {
@@ -394,7 +415,7 @@ app.post("/api/contact", async (req, res) => {
 // ── HOMEPAGE FALLBACK ─────────────────────────────────────────────────────
 app.get("/{*path}", (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
 
 app.listen(PORT, "0.0.0.0", () => {

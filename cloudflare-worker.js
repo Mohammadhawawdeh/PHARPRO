@@ -1,23 +1,39 @@
 /**
- * PHARPRO Contact Form — Cloudflare Worker (Resend edition)
- *
- * HOW TO DEPLOY:
- * 1. Sign up free at https://resend.com — takes 30 seconds
- * 2. Go to API Keys → Create API Key → copy it
- * 3. In Cloudflare Worker Settings → Variables and Secrets, add:
- *    - RESEND_API_KEY  → your Resend API key
- *    - RECIPIENT_EMAIL → info@pharpro.co  (already set)
- * 4. Paste this entire file into the Worker editor → Deploy
- *
- * Free tier: 3,000 emails/month, 100/day — more than enough.
+ * PHARPRO production edge worker.
+ * Keeps the Cloudflare deployment aligned with the site's SEO routing while
+ * retaining the optional Resend contact endpoint.
  */
 
+const CANONICAL_HOST = "pharpro.co";
 const ALLOWED_ORIGINS = ["https://pharpro.co", "https://www.pharpro.co"];
+const PERMANENT_REDIRECTS = new Map([
+  ["/services/digital", "/services/dvs/"],
+  ["/insights/capa-management-pharmaceutical", "/insights/capa-management-pharma-guide/"],
+  ["/insights/inspection-readiness-guide", "/insights/pharmaceutical-inspection-readiness/"],
+  ["/insights/gmp-training-july-2026", "/insights/gmp-training-september-2026/"],
+  ["/insights/csv-training-august-2026", "/insights/csv-training-rescheduled-september-2026/"],
+  ["/insights/csv-training-pharma-june-2026", "/services/training/csv/"],
+  ["/register/gmp-training-july-2026", "/services/training/"],
+]);
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const origin = request.headers.get("Origin") || "";
+
+    if (url.hostname === `www.${CANONICAL_HOST}`) {
+      url.protocol = "https:";
+      url.hostname = CANONICAL_HOST;
+      return Response.redirect(url.toString(), 301);
+    }
+
+    const routePath = url.pathname === "/" ? "/" : url.pathname.replace(/\/+$/, "");
+    const redirectTarget = PERMANENT_REDIRECTS.get(routePath);
+    if (redirectTarget) {
+      const destination = new URL(redirectTarget, `https://${CANONICAL_HOST}`);
+      destination.search = url.search;
+      return Response.redirect(destination.toString(), 301);
+    }
 
     if (request.method === "OPTIONS") {
       return corsResponse(null, 204, origin);
@@ -27,9 +43,33 @@ export default {
       return handleContact(request, env, origin);
     }
 
-    return new Response("Not found", { status: 404 });
+    const response = await env.ASSETS.fetch(request);
+    return withSiteHeaders(response, url.pathname);
   }
 };
+
+function withSiteHeaders(response, pathname) {
+  const headers = new Headers(response.headers);
+  headers.set("X-Content-Type-Options", "nosniff");
+  headers.set("X-Frame-Options", "DENY");
+  headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+
+  const contentType = headers.get("Content-Type") || "";
+  if (/\.(?:css|js|png|jpe?g|webp|svg|gif|ico|woff2?)$/i.test(pathname)) {
+    headers.set("Cache-Control", "public, max-age=604800");
+  } else if (pathname === "/sitemap.xml" || pathname === "/feed.xml") {
+    headers.set("Cache-Control", "public, max-age=3600");
+  } else if (contentType.includes("text/html")) {
+    headers.set("Cache-Control", "no-cache, must-revalidate");
+  }
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
 
 async function handleContact(request, env, origin) {
   let body;
@@ -118,14 +158,14 @@ async function handleContact(request, env, origin) {
   }
 
   return corsResponse(
-    JSON.stringify({ ok: true, message: "Message received. We will be in touch within 24 hours." }),
+    JSON.stringify({ ok: true, message: "Message received. We will be in touch within one business day." }),
     200,
     origin
   );
 }
 
 function corsResponse(body, status, requestOrigin) {
-  const origin = ALLOWED_ORIGINS.includes(requestOrigin) ? requestOrigin : ALLOWED_ORIGINS[1];
+  const origin = ALLOWED_ORIGINS.includes(requestOrigin) ? requestOrigin : ALLOWED_ORIGINS[0];
   const headers = {
     "Access-Control-Allow-Origin": origin,
     "Access-Control-Allow-Methods": "POST, OPTIONS",

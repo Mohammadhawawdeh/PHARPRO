@@ -1,0 +1,15 @@
+.git/
+node_modules/
+**/.DS_Store
+cloudflare-worker.js
+server.js
+wrangler.jsonc
+package.json
+package-lock.json
+tools/
+SEO_QUERY_MAP.csv
+google-ads-gmp-july-2026.html
+replit.md
+.replit
+videos/
+Videos/
