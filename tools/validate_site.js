@@ -52,7 +52,9 @@ const redirectSources = new Set([
   '/insights/gmp-training-july-2026/',
   '/insights/csv-training-august-2026/',
   '/insights/csv-training-pharma-june-2026/',
-  '/register/gmp-training-july-2026/'
+  '/register/gmp-training-july-2026/',
+  '/insights/pharpro-dvs-saves-528-hours-ai-validation/',
+  '/insights/pharpro-dvs-demo-booking/'
 ]);
 
 const indexableUrls = new Set();

@@ -67,10 +67,10 @@
       "dateModified": "2026-07-19",
       "author": {
         "@type": "Person",
-        "@id": "https://pharpro.co/#author-mawawdeh",
+        "@id": "https://pharpro.co/about/mohammad-awawdeh/#person",
         "name": "Mohammad Awawdeh",
         "jobTitle": "Pharmaceutical Compliance Consultant",
-        "url": "https://www.linkedin.com/in/mohammadhawawdeh/",
+        "url": "https://pharpro.co/about/mohammad-awawdeh/",
         "worksFor": {
           "@id": "https://pharpro.co/#organization"
         }
@@ -994,12 +994,12 @@
     if (bar && TRANSLATIONS.urgency[currentLang]) bar.innerHTML = TRANSLATIONS.urgency[currentLang];
   }
 
-  // GA4 — track WhatsApp registration clicks as leads
+  // GA4 — track channel clicks as micro-conversions
   document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
     link.addEventListener('click', () => {
       if (window.gtag) {
-        gtag('event', 'generate_lead', {
-          event_category: 'lead',
+        gtag('event', 'whatsapp_click', {
+          event_category: 'engagement',
           event_label: 'gmp_training_sep_2026_whatsapp',
           method: 'whatsapp'
         });
@@ -1009,8 +1009,8 @@
   document.querySelectorAll('a[href*="mailto:info@pharpro"]').forEach(link => {
     link.addEventListener('click', () => {
       if (window.gtag) {
-        gtag('event', 'generate_lead', {
-          event_category: 'lead',
+        gtag('event', 'email_click', {
+          event_category: 'engagement',
           event_label: 'gmp_training_sep_2026_email',
           method: 'email'
         });

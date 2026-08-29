@@ -1,5 +1,7 @@
 URL,Primary intent,Cluster,Funnel,Geography
 "/","pharmaceutical consulting MENA","brand","commercial","MENA"
+"/about/","PHARPRO pharmaceutical consulting company","brand","trust","MENA"
+"/about/mohammad-awawdeh/","Mohammad Awawdeh pharmaceutical consultant","brand","trust","MENA"
 "/services/csv/","pharmaceutical CSV validation services","csv","commercial","MENA"
 "/services/qa/","pharmaceutical QA consulting","qa","commercial","MENA"
 "/services/cqv/","pharmaceutical CQV and thermal mapping","cqv","commercial","MENA"

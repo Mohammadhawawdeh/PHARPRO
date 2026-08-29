@@ -59,9 +59,10 @@
       "dateModified": "2026-07-30",
       "author": {
         "@type": "Person",
+        "@id": "https://pharpro.co/about/mohammad-awawdeh/#person",
         "name": "Mohammad Awawdeh",
         "jobTitle": "Pharmaceutical Compliance Consultant",
-        "url": "https://www.linkedin.com/in/mohammadhawawdeh/",
+        "url": "https://pharpro.co/about/mohammad-awawdeh/",
         "worksFor": {
           "@id": "https://pharpro.co/#organization"
         }
@@ -612,7 +613,7 @@
     } catch { btn.textContent = 'Try again — network error'; btn.disabled = false; }
   });
 
-  document.querySelectorAll('a[href*="wa.me"]').forEach(link => { link.addEventListener('click', () => { if (window.gtag) gtag('event', 'generate_lead', { event_category: 'lead', event_label: 'csv_training_sep_2026_whatsapp', method: 'whatsapp' }); }); });
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => { link.addEventListener('click', () => { if (window.gtag) gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: 'csv_training_sep_2026_whatsapp', method: 'whatsapp' }); }); });
 </script>
 </body>
 </html>

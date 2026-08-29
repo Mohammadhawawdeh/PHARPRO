@@ -14,6 +14,8 @@ const PERMANENT_REDIRECTS = new Map([
   ["/insights/csv-training-august-2026", "/insights/csv-training-rescheduled-september-2026/"],
   ["/insights/csv-training-pharma-june-2026", "/services/training/csv/"],
   ["/register/gmp-training-july-2026", "/services/training/"],
+  ["/insights/pharpro-dvs-saves-528-hours-ai-validation", "/services/dvs/pricing-roi/"],
+  ["/insights/pharpro-dvs-demo-booking", "/services/dvs/#dvs-demo"],
 ]);
 
 export default {
@@ -85,13 +87,26 @@ async function handleContact(request, env, origin) {
     return corsResponse(JSON.stringify({ ok: true }), 200, origin);
   }
 
-  if (!name || !email || !message) {
+  const rawName = String(name || "").trim();
+  const rawCompany = String(company || "").trim();
+  const rawEmail = String(email || "").trim();
+  const rawService = String(service || "").trim();
+  const rawMessage = String(message || "").trim();
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rawEmail);
+
+  if (!rawName || !validEmail || !rawMessage || rawName.length > 120 || rawCompany.length > 160 || rawEmail.length > 254 || rawService.length > 160 || rawMessage.length > 5000) {
     return corsResponse(
-      JSON.stringify({ ok: false, error: "Missing required fields." }),
+      JSON.stringify({ ok: false, error: "Please check the required fields and their length." }),
       400,
       origin
     );
   }
+
+  const safeName = escapeHtml(rawName);
+  const safeCompany = escapeHtml(rawCompany);
+  const safeEmail = escapeHtml(rawEmail);
+  const safeService = escapeHtml(rawService);
+  const safeMessage = escapeHtml(rawMessage);
 
   const recipientEmail = env.RECIPIENT_EMAIL || "info@pharpro.co";
   const resendApiKey   = env.RESEND_API_KEY;
@@ -111,16 +126,16 @@ async function handleContact(request, env, origin) {
       </div>
       <div style="background:#F5EEE8; padding: 32px; border-radius: 0 0 8px 8px; border: 1px solid #E4D9D1;">
         <table style="width:100%; border-collapse:collapse;">
-          <tr><td style="padding:8px 0; color:#6B7A99; width:120px; font-size:14px;">Name</td><td style="padding:8px 0; font-weight:600;">${name}</td></tr>
-          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Company</td><td style="padding:8px 0;">${company || "—"}</td></tr>
-          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}" style="color:#B12C4B;">${email}</a></td></tr>
-          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Service</td><td style="padding:8px 0;">${service || "—"}</td></tr>
+          <tr><td style="padding:8px 0; color:#6B7A99; width:120px; font-size:14px;">Name</td><td style="padding:8px 0; font-weight:600;">${safeName}</td></tr>
+          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Company</td><td style="padding:8px 0;">${safeCompany || "—"}</td></tr>
+          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Email</td><td style="padding:8px 0;"><a href="mailto:${safeEmail}" style="color:#B12C4B;">${safeEmail}</a></td></tr>
+          <tr><td style="padding:8px 0; color:#6B7A99; font-size:14px;">Service</td><td style="padding:8px 0;">${safeService || "—"}</td></tr>
         </table>
         <hr style="border:none; border-top:1px solid #E4D9D1; margin:24px 0;" />
         <p style="color:#6B7A99; font-size:14px; margin:0 0 8px;">Message</p>
-        <p style="white-space:pre-wrap; margin:0; line-height:1.7;">${message}</p>
+        <p style="white-space:pre-wrap; margin:0; line-height:1.7;">${safeMessage}</p>
         <hr style="border:none; border-top:1px solid #E4D9D1; margin:24px 0;" />
-        <p style="color:#6B7A99; font-size:12px; margin:0;">Submitted via the contact form at pharpro.co. Reply directly to this email to respond to ${name}.</p>
+        <p style="color:#6B7A99; font-size:12px; margin:0;">Submitted via the contact form at pharpro.co. Reply directly to this email to respond to ${safeName}.</p>
       </div>
     </div>
   `;
@@ -135,8 +150,8 @@ async function handleContact(request, env, origin) {
       body: JSON.stringify({
         from:     "PHARPRO Website <onboarding@resend.dev>",
         to:       [recipientEmail],
-        reply_to: email,
-        subject:  `New enquiry from ${name}${company ? ` — ${company}` : ""}`,
+        reply_to: rawEmail,
+        subject:  `New enquiry from ${headerText(rawName)}${rawCompany ? ` — ${headerText(rawCompany)}` : ""}`,
         html:     emailHtml
       })
     });
@@ -146,14 +161,16 @@ async function handleContact(request, env, origin) {
       console.error("Resend error:", sendResult.status, errText);
       return corsResponse(
         JSON.stringify({ ok: false, error: "Email delivery failed. Please contact us directly." }),
-        500
+        500,
+        origin
       );
     }
   } catch (err) {
     console.error("Fetch error:", err);
     return corsResponse(
       JSON.stringify({ ok: false, error: "Unexpected error. Please contact us directly." }),
-      500
+      500,
+      origin
     );
   }
 
@@ -162,6 +179,20 @@ async function handleContact(request, env, origin) {
     200,
     origin
   );
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;",
+  })[character]);
+}
+
+function headerText(value) {
+  return String(value).replace(/[\r\n]+/g, " ").slice(0, 160);
 }
 
 function corsResponse(body, status, requestOrigin) {

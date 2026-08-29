@@ -463,8 +463,8 @@ function renderResults() {
       risk_level: risk
     });
     if (risk === 'high' || risk === 'medium') {
-      gtag('event', 'generate_lead', {
-        event_category: 'lead',
+      gtag('event', 'high_intent_engagement', {
+        event_category: 'engagement',
         event_label: 'quiz_result_' + risk,
         method: 'quiz'
       });

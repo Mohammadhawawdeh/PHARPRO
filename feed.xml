@@ -6,7 +6,7 @@
     <link>https://pharpro.co/</link>
     <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2026 12:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 12:00:00 +0300</lastBuildDate>
     <managingEditor>info@pharpro.co (PHARPRO Consulting Team)</managingEditor>
     <webMaster>info@pharpro.co (PHARPRO)</webMaster>
     <image>
@@ -116,21 +116,6 @@
       </content:encoded>
     </item>
     <item>
-      <title>PHARPRO DVS Saves 528 Hours Per Validation Project with Regulated AI | PHARPRO</title>
-      <link>https://pharpro.co/insights/pharpro-dvs-saves-528-hours-ai-validation/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/pharpro-dvs-saves-528-hours-ai-validation/</guid>
-      <pubDate>Wed, 30 Jul 2026 09:00:00 +0300</pubDate>
-      <dc:creator>Mohammad Awawdeh</dc:creator>
-      <category>DVS Software</category>
-      <description>Detailed time-savings analysis: PHARPRO DVS cuts IQ/OQ/PQ protocol drafting, URS writing, RTM population, and audit-trail setup from weeks to hours — saving an average of 528 hours per validation project. FDA 21 CFR Part 11 and EU GMP Annex 11 compliant. Book a free 30-minute demo.</description>
-      <content:encoded>
-        &lt;p&gt;&lt;strong&gt;PHARPRO DVS Saves 528 Hours Per Validation Project&lt;/strong&gt;&lt;/p&gt;
-        &lt;p&gt;A detailed breakdown of how PHARPRO DVS — AI-assisted validation lifecycle management software — reduces validation documentation time by an average of 528 hours per project. The savings come from AI-assisted IQ/OQ/PQ protocol drafting, automated URS generation, one-click Requirements Traceability Matrix (RTM) population, and built-in FDA 21 CFR Part 11 audit trail and e-signatures — replacing weeks of manual Word/Excel work.&lt;/p&gt;
-        &lt;p&gt;DVS is deployed same-day, web-based, and compliant with FDA 21 CFR Part 11 and EU GMP Annex 11. Book a free 30-minute demo via Calendly to see it live with your specific system type.&lt;/p&gt;
-        &lt;p&gt;Learn more: &lt;a href="https://pharpro.co/insights/pharpro-dvs-saves-528-hours-ai-validation/"&gt;https://pharpro.co/insights/pharpro-dvs-saves-528-hours-ai-validation/&lt;/a&gt;&lt;/p&gt;
-      </content:encoded>
-    </item>
-    <item>
       <title>Good Storage &amp; Distribution Practice (GSDP): JFDA Requirements &amp; Compliance Guide | PHARPRO</title>
       <link>https://pharpro.co/insights/gsdp-good-storage-distribution-practice/</link>
       <guid isPermaLink="true">https://pharpro.co/insights/gsdp-good-storage-distribution-practice/</guid>
@@ -161,20 +146,6 @@
       </content:encoded>
     </item>
     <item>
-      <title>Book a PHARPRO DVS Demo — See Pharmaceutical Validation Software in 30 Minutes</title>
-      <link>https://pharpro.co/insights/pharpro-dvs-demo-booking/</link>
-      <guid isPermaLink="true">https://pharpro.co/insights/pharpro-dvs-demo-booking/</guid>
-      <pubDate>Sat, 18 Jul 2026 09:00:00 +0300</pubDate>
-      <dc:creator>Mohammad Awawdeh</dc:creator>
-      <category>DVS Software</category>
-      <description>Book a free 30-minute PHARPRO DVS demo. See AI-assisted pharmaceutical validation software build IQ/OQ/PQ protocols, URS documents, automated RTM, and audit trails in real time for your specific system type. FDA 21 CFR Part 11 and EU GMP Annex 11 compliant. Pick your slot and book now via Calendly.</description>
-      <content:encoded>
-        &lt;p&gt;&lt;strong&gt;PHARPRO DVS&lt;/strong&gt; is AI-assisted validation lifecycle management software providing 30+ document builders covering URS through VSR, automated Requirements Traceability Matrix (RTM), FDA 21 CFR Part 11 e-signatures, audit trail, and EU GMP Annex 11 compliance — all in a single web-based system deployable the same day.&lt;/p&gt;
-        &lt;p&gt;The free 30-minute demo covers: a live walkthrough for your specific use case (LIMS, ERP, SCADA, etc.), AI-assisted document generation for IQ/OQ/PQ and URS, the automated RTM, e-signature and audit trail features, and a Q&amp;amp;A session.&lt;/p&gt;
-        &lt;p&gt;&lt;a href="https://pharpro.co/insights/pharpro-dvs-demo-booking/"&gt;Book your free 30-minute demo →&lt;/a&gt;&lt;/p&gt;
-      </content:encoded>
-    </item>
-    <item>
       <title>Software &amp; CSV Gap Assessment for Pharma — Find Every Compliance Gap Before Auditors Do | PHARPRO</title>
       <link>https://pharpro.co/insights/software-csv-gap-assessment/</link>
       <guid isPermaLink="true">https://pharpro.co/insights/software-csv-gap-assessment/</guid>
@@ -195,9 +166,9 @@
       <pubDate>Wed, 11 Jun 2026 09:00:00 +0300</pubDate>
       <dc:creator>Mohammad Awawdeh</dc:creator>
       <category>Company News</category>
-      <description>PHARPRO June 2026 highlights: AI-powered DVS-PQR Module reduces Product Quality Review time by 91%, utility and software validation completed per GAMP 5 Second Edition and EU GMP Annex 11, thermal mapping qualification training launched in Pakistan, and 12+ pharmaceutical clients served this month.</description>
+      <description>PHARPRO June 2026 highlights: DVS-PQR workflow launched, validation work completed, and thermal mapping qualification training expanded to Pakistan.</description>
       <content:encoded>
-        &lt;p&gt;&lt;strong&gt;PHARPRO June 2026&lt;/strong&gt; — Four major milestones: (1) Full utility and software validation project completed per &lt;strong&gt;ISPE GAMP 5 Second Edition, C&amp;amp;Q, and EU GMP Annex 11&lt;/strong&gt;. (2) Thermal Mapping Qualification training initiated for a pharmaceutical client in &lt;strong&gt;Pakistan&lt;/strong&gt;, including equipment and instrumentation consultation. (3) &lt;strong&gt;PHARPRO DVS-PQR Module&lt;/strong&gt; launched — AI-powered Product Quality Review lifecycle software reducing PQR time by &lt;strong&gt;91%&lt;/strong&gt;. (4) Over &lt;strong&gt;12 pharmaceutical clients&lt;/strong&gt; served across CSV, QA, CQV, training, and DVS onboarding.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;PHARPRO June 2026&lt;/strong&gt; — Validation work completed, thermal mapping qualification training expanded to Pakistan, and the AI-assisted PHARPRO DVS-PQR workflow launched for controlled Product Quality Reviews.&lt;/p&gt;
         &lt;p&gt;&lt;a href="https://pharpro.co/insights/pharpro-latest-news-june-2026/"&gt;Read the full update →&lt;/a&gt;&lt;/p&gt;
         &lt;p&gt;Arabic version: &lt;a href="https://pharpro.co/insights/pharpro-latest-news-june-2026/ar/"&gt;اقرأ بالعربية →&lt;/a&gt;&lt;/p&gt;
       </content:encoded>
@@ -326,7 +297,7 @@
       <pubDate>Thu, 21 May 2026 09:00:00 +0300</pubDate>
       <dc:creator>PHARPRO Consulting Team</dc:creator>
       <category>Digital Validation</category>
-      <description>PHARPRO DVS is AI validation lifecycle software for pharmaceutical teams — 30 document builders from URS to VSR, built-in FDA 21 CFR Part 11 and EU GMP Annex 11 compliance, RTM, and same-day deployment.</description>
+      <description>PHARPRO DVS is AI-assisted validation lifecycle software for pharmaceutical teams, with 30 document builders from URS to VSR, requirements traceability, electronic-record controls and a web-based workflow.</description>
       <content:encoded>
         &lt;p&gt;&lt;strong&gt;AI-assisted validation software&lt;/strong&gt; is transforming how pharmaceutical teams produce and manage validation documentation. This article reviews how PHARPRO DVS works, what it covers across the full V-model lifecycle, and how it compares to traditional Word-and-spreadsheet approaches.&lt;/p&gt;
         &lt;p&gt;&lt;a href="https://pharpro.co/insights/ai-validation-lifecycle-software-pharma/"&gt;Read the full article →&lt;/a&gt;&lt;/p&gt;

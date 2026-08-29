@@ -111,6 +111,8 @@ const PERMANENT_REDIRECTS = new Map([
   ["/insights/csv-training-august-2026", "/insights/csv-training-rescheduled-september-2026/"],
   ["/insights/csv-training-pharma-june-2026", "/services/training/csv/"],
   ["/register/gmp-training-july-2026", "/services/training/"],
+  ["/insights/pharpro-dvs-saves-528-hours-ai-validation", "/services/dvs/pricing-roi/"],
+  ["/insights/pharpro-dvs-demo-booking", "/services/dvs/#dvs-demo"],
 ]);
 PERMANENT_REDIRECTS.forEach((target, source) => {
   app.get([source, `${source}/`], (req, res) => {

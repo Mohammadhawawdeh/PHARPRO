@@ -16,15 +16,13 @@
 
   var CONTACT_URL = '/contact/';
   var WA_URL      = 'https://wa.me/962798565807';
+  var IS_DVS_PAGE = /^\/services\/dvs(?:\/|$)/.test(window.location.pathname);
 
   /* ── GA4 HELPER ──────────────────────────────────────────── */
   function track(action, label) {
     try {
-      if (typeof window.pharproTrackLead === 'function') {
-        var method = action === 'whatsapp_click' ? 'whatsapp' :
-          action === 'phone_click' ? 'phone' :
-          action === 'email_click' ? 'email' : 'form';
-        window.pharproTrackLead(method, label || 'lead_boost');
+      if (typeof window.pharproTrack === 'function') {
+        window.pharproTrack(action, { placement: label || 'lead_boost' });
         return;
       }
       if (typeof gtag === 'function') {
@@ -293,6 +291,7 @@
 
   /* ── 4. SERVICE PAGE CTA STRIP ───────────────────────────── */
   function injectServiceStrip() {
+    if (IS_DVS_PAGE) return;
     var path = window.location.pathname;
     var isService = path.match(/^\/services\/[^/]+\/?$/) || path.match(/^\/services\/training\/[^/]+\/?$/);
     var isHub = (path === '/services/' || path === '/services');
@@ -399,6 +398,7 @@
 
   /* ── 7. STICKY BOTTOM BAR ────────────────────────────────── */
   function initStickyBar() {
+    if (IS_DVS_PAGE) return;
     /* Desktop already has persistent navigation CTAs. Keep the compact helper
        only on small screens to avoid competing overlays. */
     if (window.innerWidth >= 900) return;
@@ -433,12 +433,13 @@
 
     document.getElementById('lb-s-cta').addEventListener('click', function () {
       try { sessionStorage.setItem('lb_su', '1'); } catch (e) {}
-      track('generate_lead', 'sticky_bar');
+      track('cta_click', 'sticky_bar');
     });
   }
 
   /* ── 8. EXIT INTENT OVERLAY ──────────────────────────────── */
   function initExitIntent() {
+    if (IS_DVS_PAGE) return;
     if (document.getElementById('lb-ov') || document.getElementById('exit-intent')) return;
     try { if (sessionStorage.getItem('lb_ei')) return; } catch (e) {}
 
@@ -451,7 +452,7 @@
       '<button class="lb-ob-cls" id="lb-ov-cls" aria-label="Close">\xD7</button>' +
       '<div class="lb-ob-eye">Free Consultation</div>' +
       '<h3>Before you go \u2014 get a free compliance review</h3>' +
-      '<p>Our consultants identify your validation gaps at no charge.<br>Most clients uncover 3\u20135 priority issues in the first call.</p>' +
+      '<p>Use the initial conversation to clarify scope, risk and the most useful next step.</p>' +
       '<div class="lb-ob-btns">' +
       '<a href="' + CONTACT_URL + '" class="lb-ob-main" id="lb-ov-cta">Book Free Assessment \u2192</a>' +
       '<a href="' + WA_URL + '" target="_blank" rel="noopener" class="lb-ob-wa" id="lb-ov-wa">\uD83D\uDCAC WhatsApp Us Now</a>' +
@@ -481,7 +482,7 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideOv(); });
 
     document.getElementById('lb-ov-cta').addEventListener('click', function () {
-      track('generate_lead', 'exit_intent_cta');
+      track('cta_click', 'exit_intent_cta');
     });
     document.getElementById('lb-ov-wa').addEventListener('click', function () {
       track('whatsapp_click', 'exit_intent_wa');
@@ -506,22 +507,6 @@
     }
   }
 
-  /* ── 10. CONTACT PAGE: fire generate_lead on page view ───── */
-  function trackContactPageView() {
-    var p = window.location.pathname;
-    if (p === '/contact/' || p === '/contact') {
-      try {
-        if (typeof gtag === 'function') {
-          gtag('event', 'generate_lead', {
-            event_category: 'lead',
-            event_label: 'contact_page_view',
-            method: 'page_view',
-          });
-        }
-      } catch (e) {}
-    }
-  }
-
   /* ── INIT ────────────────────────────────────────────────── */
   function init() {
     addNavPhone();
@@ -530,7 +515,6 @@
     injectChecklistPromo();
     injectContactUrgency();
     initStickyBar();
-    wireGATracking();
   }
 
   if (document.readyState === 'loading') {
