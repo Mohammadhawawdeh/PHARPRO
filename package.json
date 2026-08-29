@@ -4,7 +4,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node tools/validate_site.js"
+    "test": "node tools/validate_site.js && node tools/validate_scaleforward_release.js",
+    "test:site": "node tools/validate_site.js",
+    "test:release": "node tools/validate_scaleforward_release.js",
+    "stage:deploy": "npx wrangler deploy --config wrangler.staging.jsonc",
+    "production:deploy": "npx wrangler deploy --config wrangler.jsonc"
   },
   "keywords": [],
   "author": "",

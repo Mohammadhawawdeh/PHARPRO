@@ -62,7 +62,7 @@ META = {
     ),
     "services/dvs/index.html": (
         "Pharmaceutical Validation Software | PHARPRO DVS",
-        "PHARPRO DVS centralizes URS, risk assessment, IQ/OQ/PQ, RTM, approvals and audit trails in an AI-assisted pharmaceutical validation lifecycle platform.",
+        "PHARPRO DVS connects URS, IQ/OQ/PQ, RTM, approvals and audit trails in one pharmaceutical validation workflow with built-in drafting intelligence.",
     ),
     "services/dvs/compare/index.html": (
         "PHARPRO DVS vs Validation & QMS Platforms",
