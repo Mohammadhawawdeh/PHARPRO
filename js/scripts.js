@@ -118,9 +118,9 @@ const translations = {
 
     /* Hero */
     hero_pill:      "Founder-led delivery across seven PHARPRO markets",
-    hero_h1:        'Pharmaceutical compliance work you can defend <span class="accent">in the audit room.</span>',
-    hero_sub:       "Work directly with an experienced pharmaceutical consultant—not a faceless agency. I help regulated teams turn CSV, QA, CQV and GMP requirements into clear, practical and inspection-ready outcomes across Jordan, the UAE, Saudi Arabia, Egypt and beyond.",
-    hero_btn1:      "Get Free Assessment",
+    hero_h1:        'Pharmaceutical compliance you can defend <span class="accent">in the audit room.</span>',
+    hero_sub:       "Work directly with an experienced pharmaceutical consultant across CSV, QA, CQV and GMP—from clear requirements to practical, inspection-ready outcomes throughout Jordan, the UAE, Saudi Arabia, Egypt and beyond.",
+    hero_btn1:      "Book Free Assessment",
     hero_btn2:      "Explore Services",
     hero_badge:     "Inspection-Ready Approach",
     hero_card_h3:   "Built for regulated operations",
@@ -365,9 +365,9 @@ const translations = {
 
     /* Hero */
     hero_pill:     "موثوق من فرق دوائية في أكثر من 7 دول",
-    hero_h1:       'عمل امتثال دوائي يمكنك الدفاع عنه <span class="accent">أمام فريق التفتيش.</span>',
-    hero_sub:      "تواصل مباشرةً مع استشاري دوائي خبير، وليس مع وكالة مجهولة الواجهة. أساعد الفرق الخاضعة للتنظيم على تحويل متطلبات CSV والجودة وCQV وGMP إلى نتائج واضحة وعملية وجاهزة للتفتيش في الأردن والإمارات والسعودية ومصر وخارجها.",
-    hero_btn1:     "احصل على تقييم مجاني",
+    hero_h1:       'امتثال دوائي يمكنك الدفاع عنه <span class="accent">أمام فريق التفتيش.</span>',
+    hero_sub:      "اعمل مباشرةً مع استشاري دوائي خبير في CSV والجودة وCQV وGMP، من المتطلبات الواضحة إلى نتائج عملية وجاهزة للتفتيش في الأردن والإمارات والسعودية ومصر وخارجها.",
+    hero_btn1:     "احجز تقييماً مجانياً",
     hero_btn2:     "استعرض الخدمات",
     hero_badge:    "نهج جاهز للتفتيش",
     hero_card_h3:  "مصمم للعمليات الخاضعة للتنظيم",
