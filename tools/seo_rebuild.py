@@ -180,10 +180,6 @@ META = {
         "Book a Pharmaceutical Validation Software Demo | PHARPRO",
         "Book a focused PHARPRO DVS demonstration and see how your team can manage URS, risks, IQ/OQ/PQ, RTM, approvals and audit trails in one workflow.",
     ),
-    "insights/pharpro-dvs-saves-528-hours-ai-validation/index.html": (
-        "How PHARPRO DVS Saves 528 Validation Hours",
-        "See the assumptions and lifecycle breakdown behind PHARPRO DVS time savings for requirements, risk assessment, IQ/OQ/PQ, RTM and reporting.",
-    ),
     "insights/risk-assessment-computerised-systems/index.html": (
         "CSV Risk Assessment for Computerized Systems | PHARPRO",
         "Apply GAMP 5 quality-risk principles to GxP computerized systems, from system impact and functional risk to controls, testing and traceability.",
@@ -264,7 +260,7 @@ CLUSTERS = {
         "links": [
             ("Validation software buyer’s guide", "/insights/pharmaceutical-validation-software/"),
             ("AI validation lifecycle software", "/insights/ai-validation-lifecycle-software-pharma/"),
-            ("DVS time-savings analysis", "/insights/pharpro-dvs-saves-528-hours-ai-validation/"),
+            ("DVS pricing and ROI model", "/services/dvs/pricing-roi/"),
             ("Book a focused DVS demo", "/insights/pharpro-dvs-demo-booking/"),
         ],
     },
@@ -304,7 +300,6 @@ SLUG_CLUSTER = {
     **{s: "dvs" for s in [
         "ai-validation-lifecycle-software-pharma", "digitalization-digital-validation-software-pharma",
         "pharmaceutical-validation-software", "pharpro-dvs-demo-booking",
-        "pharpro-dvs-saves-528-hours-ai-validation",
     ]},
     **{s: "training" for s in [
         "csv-training-rescheduled-september-2026", "gmp-training-september-2026",

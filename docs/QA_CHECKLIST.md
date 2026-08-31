@@ -1,4 +1,4 @@
-# PHARPRO ScaleForward QA Checklist
+# PHARPRO Verified Evidence QA Checklist
 
 Record tester, date, environment URL, browser version and result for every manual item. Use synthetic B2B data only.
 
@@ -20,6 +20,9 @@ Record tester, date, environment URL, browser version and result for every manua
 - [ ] English/Arabic hreflang is reciprocal.
 - [ ] SoftwareApplication and FAQ JSON-LD parse without errors.
 - [ ] No artificial scarcity, live-user counters or unsupported fixed savings claims appear.
+- [ ] Homepage, About and `/projects/` show 12 completed engagements, 2 active projects and 7 PHARPRO markets as of August 2026.
+- [ ] Founder employment experience in Saudi Arabia is not represented as a PHARPRO client engagement.
+- [ ] Priority pages describe PHARPRO as founder-led and do not imply an undisclosed technical team.
 - [ ] No client logo, quote or measurable outcome appears without written approval.
 - [ ] Founder name, role, portrait and contact details are correct.
 
@@ -66,6 +69,7 @@ Verify no horizontal scrolling, clipped text, overlapping consent/WhatsApp/stick
 - [ ] Consent decline prevents GA4 loading; acceptance enables it.
 - [ ] Web3Forms allowed domains include only production and approved staging hosts.
 - [ ] Forms warn users not to submit patient, confidential or regulated production data.
+- [ ] Every Web3Forms page links to `/privacy/` adjacent to its form.
 - [ ] Cloudflare/CRM/Calendly secrets are absent from HTML, JavaScript, git diff and logs.
 
 ## Release acceptance

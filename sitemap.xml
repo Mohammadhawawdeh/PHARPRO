@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pharpro.co/about/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://pharpro.co/about/mohammad-awawdeh/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/projects/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pharpro.co/contact/</loc>
@@ -42,7 +47,7 @@
   </url>
   <url>
     <loc>https://pharpro.co/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -182,7 +187,7 @@
   </url>
   <url>
     <loc>https://pharpro.co/insights/replace-word-excel-validation/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -242,7 +247,7 @@
   </url>
   <url>
     <loc>https://pharpro.co/resources/dvs-vendor-checklist/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -262,17 +267,17 @@
   </url>
   <url>
     <loc>https://pharpro.co/services/dvs/compare/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://pharpro.co/services/dvs/pricing-roi/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://pharpro.co/services/dvs/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <priority>0.95</priority>
   </url>
   <url>

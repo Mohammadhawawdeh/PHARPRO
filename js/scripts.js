@@ -117,7 +117,7 @@ const translations = {
     nav_cta:        "Free Assessment",
 
     /* Hero */
-    hero_pill:      "Trusted by pharma teams in 7+ countries",
+    hero_pill:      "Founder-led delivery across seven PHARPRO markets",
     hero_h1:        'Pharma Compliance Consulting, Built on Integrity — <span class="accent">Inspection-Ready.</span>',
     hero_sub:       "Pharmaceutical CSV, QA, CQV, and GMP consulting services across the Middle East and beyond — honest findings, clear documentation, inspection-ready outcomes. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5. Serving regulated operations in Jordan, UAE, KSA, Egypt, and globally.",
     hero_btn1:      "Get Free Assessment",
@@ -132,10 +132,10 @@ const translations = {
     hero_card_cta:  "Request a Proposal",
 
     /* Stats */
-    stat1_label: "Years Experience",
-    stat2_label: "Projects Completed",
-    stat3_label: "Active Clients",
-    stat4_label: "Countries Served",
+    stat1_label: "Years in Pharmaceutical Validation",
+    stat2_label: "Completed Engagements",
+    stat3_label: "Active Projects · Aug 2026",
+    stat4_label: "PHARPRO Markets Reached",
 
     /* Services */
     svc_eyebrow: "Services",
@@ -238,19 +238,10 @@ const translations = {
     step4_h4: "Inspection-Ready Output",
     step4_p:  "Deliverables that are audit-defensible, complete, and immediately usable in your quality system.",
 
-    /* Testimonials */
-    testi_eyebrow: "Client Feedback",
-    testi_h2:   "Trusted by regulated operations",
-    testi_body: "How pharmaceutical manufacturers describe working with PHARPRO.",
-    testi1_p:    '"PHARPRO supported us with strong technical understanding and practical execution. Their work added real clarity to our validation and compliance activities."',
-    testi1_name: "Axantia Group",
-    testi1_role: "Quality &amp; Validation · Jordan",
-    testi2_p:    '"Professional, responsive, and perfectly aligned with the demands of our regulated environment. PHARPRO delivered without ambiguity."',
-    testi2_name: "Dar Al Dawa",
-    testi2_role: "Quality Assurance · Jordan",
-    testi3_p:    '"PHARPRO helped us approach validation and quality in a more structured, inspection-focused way. Their risk-based methodology was exactly right."',
-    testi3_name: "Al Hayat Pharmaceuticals",
-    testi3_role: "CSV &amp; Compliance · Jordan",
+    /* Client evidence */
+    testi_eyebrow: "Verified Delivery Record",
+    testi_h2:   "Review dated project scopes",
+    testi_body: "Client logos, quotations, and outcome metrics are published only with confirmed reuse permission.",
 
     /* FAQ */
     faq_eyebrow: "FAQ",
@@ -343,7 +334,7 @@ const translations = {
     news_h2:         "June 2026 Update",
     news_badge:      "New",
     news_feat_title: "DVS-PQR Module Launched for Controlled Product Quality Reviews",
-    news_feat_desc:  "PHARPRO June 2026: utility &amp; software validation completed per GAMP 5 2nd Edition &amp; EU GMP Annex 11, thermal mapping qualification training launched in Pakistan, DVS-PQR module released, and 12+ pharmaceutical clients served this month.",
+    news_feat_desc:  "PHARPRO June 2026: a utility and software validation engagement was completed, thermal mapping qualification training launched in Pakistan, and the DVS-PQR module was released.",
     news_feat_cta:   "Read the full update →",
     news_all:        "View all insights →",
 
@@ -385,10 +376,10 @@ const translations = {
     hero_card_cta: "طلب اقتراح",
 
     /* Stats */
-    stat1_label: "سنوات خبرة",
-    stat2_label: "مشروع منجز",
-    stat3_label: "عميل نشط",
-    stat4_label: "دول خدمناها",
+    stat1_label: "سنوات في التحقق الدوائي",
+    stat2_label: "مهمة مكتملة",
+    stat3_label: "مشروعان نشطان · أغسطس 2026",
+    stat4_label: "أسواق وصلت إليها PHARPRO",
 
     /* Services */
     svc_eyebrow: "الخدمات",
@@ -491,19 +482,10 @@ const translations = {
     step4_h4: "مخرجات جاهزة للتفتيش",
     step4_p:  "مستندات يمكن الدفاع عنها في التدقيق وكاملة وقابلة للاستخدام فوراً في نظام الجودة الخاص بك.",
 
-    /* Testimonials */
-    testi_eyebrow: "آراء العملاء",
-    testi_h2:   "موثوق من العمليات الخاضعة للتنظيم",
-    testi_body: "كيف يصف مصنعو الأدوية التعامل مع PHARPRO.",
-    testi1_p:    '"دعمنا PHARPRO بفهم تقني قوي وتنفيذ عملي. أضاف عملهم وضوحاً حقيقياً لأنشطة التحقق والامتثال لدينا."',
-    testi1_name: "مجموعة أكسانتيا",
-    testi1_role: "الجودة والتحقق · الأردن",
-    testi2_p:    '"محترفون ومستجيبون ومتوافقون تماماً مع متطلبات بيئتنا الخاضعة للتنظيم. قدّم PHARPRO العمل بلا غموض."',
-    testi2_name: "دار الدواء",
-    testi2_role: "ضمان الجودة · الأردن",
-    testi3_p:    '"ساعدنا PHARPRO على التعامل مع التحقق والجودة بطريقة أكثر تنظيماً وتركيزاً على التفتيش. منهجيتهم القائمة على المخاطر كانت صحيحة تماماً."',
-    testi3_name: "الحياة للأدوية",
-    testi3_role: "CSV والامتثال · الأردن",
+    /* أدلة العملاء */
+    testi_eyebrow: "سجل تسليم موثق",
+    testi_h2:   "راجع نطاقات المشاريع المؤرخة",
+    testi_body: "لا تُنشر شعارات العملاء أو الاقتباسات أو مؤشرات النتائج إلا بعد تأكيد إذن إعادة الاستخدام.",
 
     /* FAQ */
     faq_eyebrow: "الأسئلة الشائعة",
@@ -596,7 +578,7 @@ const translations = {
     news_h2:         "تحديثات يونيو 2026",
     news_badge:      "جديد",
     news_feat_title: "إطلاق وحدة DVS-PQR لمراجعات جودة المنتج المنضبطة",
-    news_feat_desc:  "تحديثات PHARPRO يونيو 2026: إتمام التحقق من المرافق والبرمجيات وفق GAMP 5 الإصدار الثاني وEU GMP Annex 11، إطلاق تدريب الخرائط الحرارية في باكستان، وإطلاق وحدة DVS-PQR، وخدمة أكثر من 12 عميلاً دوائياً هذا الشهر.",
+    news_feat_desc:  "تحديثات PHARPRO يونيو 2026: إتمام مهمة للتحقق من المرافق والبرمجيات، وإطلاق تدريب تأهيل الخرائط الحرارية في باكستان، وإصدار وحدة DVS-PQR.",
     news_feat_cta:   "اقرأ التحديث الكامل ←",
     news_all:        "جميع المقالات ←",
 

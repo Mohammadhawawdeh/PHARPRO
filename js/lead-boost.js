@@ -347,7 +347,7 @@
       '<div class="lb-cl-inner">',
       '  <div class="lb-cl-eye">Free Download</div>',
       '  <div class="lb-cl-title">GMP Compliance Checklist</div>',
-      '  <div class="lb-cl-sub">A practical audit-readiness checklist used by PHARPRO consultants across the MENA region. Free PDF — no email required.</div>',
+      '  <div class="lb-cl-sub">A practical audit-readiness checklist created by PHARPRO founder Mohammad Awawdeh for pharmaceutical audit readiness. Free PDF — no email required.</div>',
       '  <a class="lb-cl-btn" href="/resources/compliance-checklist/" id="lb-cl-btn">Download Free Checklist &rarr;</a>',
       '  <div class="lb-cl-note">Also available: Inspection Readiness Quiz &rarr; <a href="/resources/inspection-readiness-quiz/" style="color:rgba(255,255,255,.4);text-decoration:underline;">take it free</a></div>',
       '</div>'

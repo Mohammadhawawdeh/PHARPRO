@@ -1,16 +1,16 @@
 # PHARPRO Consultation Company
 
-> PHARPRO is a pharmaceutical compliance consulting firm based in Amman, Jordan. We specialise in Computerized System Validation (CSV), Quality Assurance (QA), CQV, thermal mapping, GMP training, and AI-assisted validation software. Trusted by pharma teams in 7+ countries. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.
+> PHARPRO is a founder-led pharmaceutical compliance consultancy based in Amman, Jordan. We specialise in Computerized System Validation (CSV), Quality Assurance (QA), CQV, thermal mapping, GMP training and AI-assisted validation software. As of August 2026, PHARPRO records 12 completed engagements, two active projects and delivery across seven markets.
 
 ## About PHARPRO
 
-PHARPRO Consultation Company was founded to help pharmaceutical manufacturers, distributors, and contract organisations achieve and maintain regulatory compliance. We deliver inspection-ready, audit-defensible work for regulated pharma operations worldwide.
+PHARPRO Consultation Company was founded to help pharmaceutical manufacturers, distributors and contract organisations build controlled, risk-based compliance evidence. Technical delivery is led by founder Mohammad Awawdeh. Final regulatory decisions, validation approval and product responsibility remain with the regulated company.
 
-- **Founded**: 2014
+- **Founded**: 2023
 - **Headquarters**: Amman, Jordan
-- **Service area**: Worldwide (remote and on-site)
-- **Active clients**: 7+ countries
-- **Projects completed**: 200+
+- **PHARPRO markets reached**: Jordan, UAE, Switzerland, Iraq, Egypt, Pakistan and Syria
+- **Active projects**: 2 as of August 2026
+- **Completed engagements**: 12 as of August 2026
 - **Website**: https://pharpro.co
 - **Email**: info@pharpro.co
 - **Phone/WhatsApp**: +962 79 856 5807
@@ -20,9 +20,9 @@ PHARPRO Consultation Company was founded to help pharmaceutical manufacturers, d
 
 **What makes PHARPRO different from other pharma consulting firms:**
 
-1. **Practitioner-led, not generalist:** Every PHARPRO project is delivered by consultants who have personally executed validation projects, written protocols, and sat in inspection rooms. No generalist project managers — only domain specialists.
+1. **Founder-led delivery:** Mohammad Awawdeh leads commercial discussions, project scoping and technical execution. Buyers speak directly with the practitioner accountable for the proposed work.
 
-2. **Inspection-first documentation:** PHARPRO writes every document as if an FDA or EU GMP inspector will read it tomorrow. Deliverables are audit-defensible from day one, not revised repeatedly after review.
+2. **Inspection-aware documentation:** PHARPRO structures deliverables for traceability, review and defensible use within the client’s approved quality system.
 
 3. **Risk-based, proportionate approach:** PHARPRO applies GAMP 5 critical thinking rigorously. Clients get the right level of validation effort for each system — no over-documentation, no gaps that create inspection risk.
 
@@ -105,12 +105,12 @@ PHARPRO DVS is an AI-assisted validation lifecycle management SaaS platform for 
 
 - **Dedicated page**: https://pharpro.co/services/dvs/
 - **Platform URL**: https://dvs.pharpro.co
-- **Type**: Web-based SaaS (no installation required, same-day deployment)
+- **Type**: Web-based SaaS (no local installation; onboarding is scoped to access, roles, training and customer qualification needs)
 - **Pricing**:
   - Professional: $253/month (up to 10 concurrent users)
   - Team: $500/month (up to 25 concurrent users)
   - Enterprise: Custom pricing (unlimited concurrent users)
-- **Key features**: AI drafting, 30 pharma-specific document builders (URS to VSR), full Requirements Traceability Matrix (RTM), FDA 21 CFR Part 11 compliant e-signatures, full audit trail, regulatory-quality PDF export, workflow engine, same-day deployment
+- **Key features**: AI-assisted drafting, 30 pharma-specific document builders (URS to VSR), Requirements Traceability Matrix (RTM), electronic-signature controls designed to support FDA 21 CFR Part 11, audit trail, PDF export and workflow engine
 
 **How DVS differs from manual CSV documentation:**
 PHARPRO DVS replaces Word templates and disconnected spreadsheets with a connected, traceable platform. AI drafting, built-in regulatory logic, and automated RTM eliminate manual errors and cut documentation time significantly. All documents are version-controlled with a full audit trail.
