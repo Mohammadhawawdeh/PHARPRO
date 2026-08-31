@@ -118,8 +118,8 @@ const translations = {
 
     /* Hero */
     hero_pill:      "Founder-led delivery across seven PHARPRO markets",
-    hero_h1:        'Pharma Compliance Consulting, Built on Integrity — <span class="accent">Inspection-Ready.</span>',
-    hero_sub:       "Pharmaceutical CSV, QA, CQV, and GMP consulting services across the Middle East and beyond — honest findings, clear documentation, inspection-ready outcomes. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5. Serving regulated operations in Jordan, UAE, KSA, Egypt, and globally.",
+    hero_h1:        'Pharmaceutical compliance work you can defend <span class="accent">in the audit room.</span>',
+    hero_sub:       "Work directly with an experienced pharmaceutical consultant—not a faceless agency. I help regulated teams turn CSV, QA, CQV and GMP requirements into clear, practical and inspection-ready outcomes across Jordan, the UAE, Saudi Arabia, Egypt and beyond.",
     hero_btn1:      "Get Free Assessment",
     hero_btn2:      "Explore Services",
     hero_badge:     "Inspection-Ready Approach",
@@ -130,6 +130,9 @@ const translations = {
     hero_check3:    "CQV, Thermal Mapping &amp; Training",
     hero_check4:    "Connected Digital Validation (DVS)",
     hero_card_cta:  "Request a Proposal",
+    founder_card_kicker: "Your first call is with the person responsible for delivery",
+    founder_card_role: "Founder &amp; Managing Director · Pharmaceutical Compliance Consultant",
+    founder_card_quote: "“I’ll tell you clearly what matters, what does not, and what your team needs to do next.”",
 
     /* Stats */
     stat1_label: "Years in Pharmaceutical Validation",
@@ -362,8 +365,8 @@ const translations = {
 
     /* Hero */
     hero_pill:     "موثوق من فرق دوائية في أكثر من 7 دول",
-    hero_h1:       'استشارات الامتثال الدوائي بنزاهة وشفافية — <span class="accent">جاهزون للتفتيش.</span>',
-    hero_sub:      "استشارات CSV والجودة وCQV والامتثال الدوائي — نتائج صادقة، توثيق واضح، ونتائج جاهزة للتفتيش. متوافقون مع FDA 21 CFR Part 11 وEU GMP Annex 11 وGAMP 5. نخدم العمليات المُنظَّمة في أكثر من 7 دول.",
+    hero_h1:       'عمل امتثال دوائي يمكنك الدفاع عنه <span class="accent">أمام فريق التفتيش.</span>',
+    hero_sub:      "تواصل مباشرةً مع استشاري دوائي خبير، وليس مع وكالة مجهولة الواجهة. أساعد الفرق الخاضعة للتنظيم على تحويل متطلبات CSV والجودة وCQV وGMP إلى نتائج واضحة وعملية وجاهزة للتفتيش في الأردن والإمارات والسعودية ومصر وخارجها.",
     hero_btn1:     "احصل على تقييم مجاني",
     hero_btn2:     "استعرض الخدمات",
     hero_badge:    "نهج جاهز للتفتيش",
@@ -374,6 +377,9 @@ const translations = {
     hero_check3:   "CQV ورسم الخرائط الحرارية والتدريب",
     hero_check4:   "التحقق الرقمي المترابط (DVS)",
     hero_card_cta: "طلب اقتراح",
+    founder_card_kicker: "مكالمتك الأولى مع الشخص المسؤول عن التنفيذ",
+    founder_card_role: "المؤسس والمدير العام · استشاري امتثال دوائي",
+    founder_card_quote: "«سأوضح لك ما هو مهم، وما هو غير ضروري، وما الذي يحتاج فريقك إلى فعله تالياً.»",
 
     /* Stats */
     stat1_label: "سنوات في التحقق الدوائي",
