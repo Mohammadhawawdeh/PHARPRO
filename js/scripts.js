@@ -118,8 +118,8 @@ const translations = {
 
     /* Hero */
     hero_pill:      "Founder-led delivery across seven PHARPRO markets",
-    hero_h1:        'Pharmaceutical compliance you can defend <span class="accent">in the audit room.</span>',
-    hero_sub:       "Work directly with an experienced pharmaceutical consultant across CSV, QA, CQV and GMP—from clear requirements to practical, inspection-ready outcomes throughout Jordan, the UAE, Saudi Arabia, Egypt and beyond.",
+    hero_h1:        'Validation transformation—from strategy to <span class="accent">approved evidence.</span>',
+    hero_sub:       "PHARPRO combines founder-led consulting, turnkey validation execution and PHARPRO DVS to help regulated teams move from compliance gaps to controlled, inspection-ready outcomes.",
     hero_btn1:      "Book Free Assessment",
     hero_btn2:      "Explore Services",
     hero_badge:     "Inspection-Ready Approach",
@@ -365,8 +365,8 @@ const translations = {
 
     /* Hero */
     hero_pill:     "موثوق من فرق دوائية في أكثر من 7 دول",
-    hero_h1:       'امتثال دوائي يمكنك الدفاع عنه <span class="accent">أمام فريق التفتيش.</span>',
-    hero_sub:      "اعمل مباشرةً مع استشاري دوائي خبير في CSV والجودة وCQV وGMP، من المتطلبات الواضحة إلى نتائج عملية وجاهزة للتفتيش في الأردن والإمارات والسعودية ومصر وخارجها.",
+    hero_h1:       'تحول متكامل في التحقق—من الاستراتيجية إلى <span class="accent">أدلة معتمدة.</span>',
+    hero_sub:      "تجمع PHARPRO بين الاستشارات بقيادة المؤسس، والتنفيذ المتكامل لمشاريع التحقق، ومنصة PHARPRO DVS لنقل الفرق المنظمة من فجوات الامتثال إلى نتائج مضبوطة وجاهزة للتفتيش.",
     hero_btn1:     "احجز تقييماً مجانياً",
     hero_btn2:     "استعرض الخدمات",
     hero_badge:    "نهج جاهز للتفتيش",
