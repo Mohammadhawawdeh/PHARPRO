@@ -624,22 +624,23 @@
     /* ── NAVBAR ───────────────────────────────────────────── */
     .nav {
       position: sticky; top: 0; z-index: 900;
-      background: rgba(245,238,232,0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(35,58,94,0.08);
+      background: #233A5E;
+      border-bottom: 3px solid #B12C4B;
+      box-shadow: 0 6px 22px rgba(12,26,47,.18);
+      direction: ltr;
+      text-align: left;
     }
     .nav-inner {
       height: 64px; display: flex;
-      align-items: center; justify-content: space-between; gap: 20px;
+      align-items: center; justify-content: flex-start; gap: 20px;
     }
 
     /* Logo  -  image file */
     .logo { display: flex; align-items: center; }
     .logo img, .logo svg { height: 46px; width: auto; display: block; }
 
-    .nav-links { display: flex; align-items: center; gap: 24px; }
-    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--navy); opacity: 0.65; transition: opacity var(--t); }
+    .nav-links { display: flex; align-items: center; gap: 20px; margin-left: 22px; text-align: left; }
+    .nav-links a { font-size: 0.86rem; font-weight: 650; color: #fff; opacity: 0.86; transition: opacity var(--t); }
     .nav-links a:hover { opacity: 1; }
     .nav-dropdown{position:relative;display:flex;align-items:center}
     .nav-dropdown>a{display:flex;align-items:center;gap:3px}
@@ -653,11 +654,11 @@
     .nav-dropdown-menu a:hover{opacity:1;background:rgba(35,58,94,0.05)}
     body.rtl .nav-dropdown-menu{left:auto;right:50%;transform:translateX(50%)}
     .nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
-    .nav-cta { display: flex; align-items: center; gap: 10px; }
-    .hamburger { display: none; padding: 6px; color: var(--navy); }
-    .mob-nav { display: none; padding: 12px 0 16px; border-top: 1px solid rgba(35,58,94,0.08); }
+    .nav-cta { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+    .hamburger { display: none; padding: 6px; color: #fff; }
+    .mob-nav { display: none; padding: 12px 0 16px; border-top: 1px solid rgba(255,255,255,.14); text-align:left; direction:ltr; }
     .mob-nav.open { display: flex; flex-direction: column; gap: 2px; }
-    .mob-nav a { display: block; padding: 10px 0; font-size: 0.95rem; font-weight: 500; color: var(--navy); }
+    .mob-nav a { display: block; padding: 10px 0; color:#fff; font-size: 0.95rem; font-weight: 500; color: var(--navy); }
     .mob-nav .btn { margin-top: 8px; width: fit-content; }
     .mob-nav .lang-toggle {
       display: inline-flex; align-items: center; justify-content: flex-start;
@@ -1696,7 +1697,7 @@
 .nav-inner { direction: ltr !important; }
 </style>
   <link rel="stylesheet" href="/css/seo-enhancements.css?v=1" />
-  <script src="/js/analytics.js"></script>
+  <script src="/js/analytics.js?v=20260901-5"></script>
   <style id="human-brand-refresh">
     .human-eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;color:#f2d9df;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.human-eyebrow::before{content:"";width:28px;height:1px;background:#d58ca0}
     .founder-hero-card{overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:20px;background:#fff;color:#1c2330;box-shadow:0 24px 70px rgba(5,14,28,.28)}.founder-photo-wrap{position:relative;aspect-ratio:16/10;overflow:hidden;background:#e9e1dc}.founder-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:saturate(.88) contrast(1.02)}
@@ -1759,6 +1760,7 @@
         </div>
         <a href="/services/training/" data-i18n="nav_training">Training</a>
         <a href="/services/dvs/" data-i18n="nav_dvs">DVS Software</a>
+        <a href="/case-studies/">Case Studies</a>
         <a href="#process" data-i18n="nav_process">How We Work</a>
         <div class="nav-dropdown">
           <a href="/insights/" data-i18n="nav_insights">Insights <svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
