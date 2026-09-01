@@ -93,7 +93,7 @@
       dvs:'PHARPRO DVS', cases:'دراسات الحالة', insights:'المقالات', resources:'الموارد', checklist:'قائمة فحص الامتثال', vendor:'تقييم أنظمة DVS', quiz:'اختبار الجاهزية', about:'عن PHARPRO', contact:'تقييم مجاني', menu:'فتح القائمة', lang:'English', langUrl:'/services/dvs/'
     } : {
       services:'Services', all:'All services', csv:'CSV validation', cqv:'CQV & thermal mapping', qa:'QA & gap assessment', training:'Training', supplier:'Supplier qualification',
-      dvs:'PHARPRO DVS', cases:'Case studies', insights:'Insights', resources:'Resources', checklist:'Compliance checklist', vendor:'DVS vendor checklist', quiz:'Readiness quiz', about:'About', contact:'Free assessment', menu:'Open menu', lang:'عربي', langUrl:'/services/dvs/ar/'
+      dvs:'PHARPRO DVS', cases:'Case studies', insights:'Insights', resources:'Resources', checklist:'Compliance checklist', vendor:'DVS vendor checklist', quiz:'Readiness quiz', about:'About', contact:'Free assessment', menu:'Open menu', lang:'عربي', langUrl:'/ar/'
     };
     function active(prefix) { return path.indexOf(prefix) === 0 ? ' phx-active' : ''; }
     var style = document.createElement('style');
