@@ -6,7 +6,7 @@
     <link>https://pharpro.co/</link>
     <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Aug 2026 12:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 09:00:00 +0300</lastBuildDate>
     <managingEditor>info@pharpro.co (Mohammad Awawdeh)</managingEditor>
     <webMaster>info@pharpro.co (PHARPRO)</webMaster>
     <image>
@@ -19,6 +19,9 @@
     <atom:link href="https://pharpro.co/feed.xml" rel="self" type="application/rss+xml" />
     <copyright>Copyright 2026 PHARPRO Consultation Company</copyright>
     <category>Pharmaceutical Compliance</category>
+    <item><title>Pharmaceutical Thermal Mapping Services: Warehouses, Cold Rooms and Controlled Areas</title><link>https://pharpro.co/insights/pharmaceutical-thermal-mapping-services/</link><guid isPermaLink="true">https://pharpro.co/insights/pharmaceutical-thermal-mapping-services/</guid><pubDate>Tue, 01 Sep 2026 09:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Thermal Mapping · CQV</category><description>PHARPRO thermal mapping services for pharmaceutical warehouses, cold rooms, freezers, stability chambers and temperature-controlled areas across MENA.</description></item>
+    <item><title>Turnkey Pharmaceutical Validation Projects: From Strategy to Approved Handover</title><link>https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/</link><guid isPermaLink="true">https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/</guid><pubDate>Tue, 01 Sep 2026 09:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Turnkey Validation · Project Delivery</category><description>PHARPRO turnkey validation projects covering VMP, CQV, CSV, utilities, equipment, process, cleaning, protocols, execution and approved handover.</description></item>
+    <item><title>Environmental Monitoring Testing for Pharmaceutical Cleanrooms and Controlled Areas</title><link>https://pharpro.co/insights/environmental-monitoring-testing-pharma/</link><guid isPermaLink="true">https://pharpro.co/insights/environmental-monitoring-testing-pharma/</guid><pubDate>Tue, 01 Sep 2026 09:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Environmental Monitoring · Cleanrooms</category><description>PHARPRO environmental monitoring testing and program support for pharmaceutical cleanrooms: viable and non-viable monitoring, trending and investigation.</description></item>
     <item>
       <title>Cold Room Thermal Mapping for Pharmaceuticals: A Practical Guide</title>
       <link>https://pharpro.co/insights/thermal-mapping-cold-room-guide/</link>
