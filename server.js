@@ -234,6 +234,7 @@ const INSIGHT_SLUGS = [
   "eu-gmp-annex-15-qualification-validation",
   "hvac-validation-pharmaceutical",
   "data-integrity-gmp-requirements",
+  "environmental-monitoring-testing-pharma",
 ];
 INSIGHT_SLUGS.forEach((slug) => {
   app.get([`/insights/${slug}`, `/insights/${slug}/`], (req, res) => {
