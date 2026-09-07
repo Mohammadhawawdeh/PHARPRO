@@ -36,5 +36,6 @@
   </main>
   <footer class="footer"><div class="wrap">© 2026 PHARPRO Consultation Company · <a href="/privacy/">Privacy notice</a></div></footer>
   <script>(function(){var ids=['projects','hours','reduction','rate','annualcost'];function n(id){return Math.max(0,Number(document.getElementById(id).value)||0)}function draw(){var h=n('projects')*n('hours')*(n('reduction')/100),v=h*n('rate'),net=v-n('annualcost');document.getElementById('savedHours').textContent=Math.round(h).toLocaleString();document.getElementById('labourValue').textContent=v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});document.getElementById('netValue').textContent=net.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0})}ids.forEach(function(id){document.getElementById(id).addEventListener('input',draw)});draw()})();</script>
+<script src="/js/lead-boost.js?v=4" defer></script>
 </body>
 </html>
