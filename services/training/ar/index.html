@@ -932,23 +932,23 @@ async function submitTrainForm(e) {
   e.preventDefault();
   var btn = document.getElementById('train-reg-btn');
   var msg = document.getElementById('train-reg-msg');
-  btn.textContent = 'Submitting…'; btn.disabled = true;
+  btn.textContent = 'جارٍ الإرسال…'; btn.disabled = true;
   try {
     var fd = new FormData(e.target);
     var course = e.target.querySelector('[name="course"]').value;
-    fd.set('subject', '[PHARPRO] GMP Training Registration  -  ' + (course || 'enquiry'));
+    fd.set('subject', '[PHARPRO] GMP Training Registration (Arabic)  -  ' + (course || 'enquiry'));
     var res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
     var data = await res.json();
     if (data.success) {
       msg.style.display = 'block'; msg.style.background = 'rgba(34,197,94,.15)'; msg.style.color = '#dcfce7'; msg.style.border = '1px solid rgba(34,197,94,.25)';
-      msg.textContent = '✓ Registration received! We will confirm your seat by WhatsApp or email within one business day.';
+      msg.textContent = '✓ تم استلام التسجيل! سنؤكد مقعدك عبر واتساب أو البريد الإلكتروني خلال يوم عمل واحد.';
       e.target.reset();
     } else { throw new Error('Failed'); }
   } catch(err) {
     msg.style.display = 'block'; msg.style.background = 'rgba(239,68,68,.12)'; msg.style.color = '#fecaca';
-    msg.textContent = 'Something went wrong. Please email info@pharpro.co or register via WhatsApp.';
+    msg.textContent = 'حدث خطأ ما. يرجى مراسلتنا عبر info@pharpro.co أو التسجيل عبر واتساب.';
   }
-  btn.textContent = 'Reserve My Seat →'; btn.disabled = false;
+  btn.textContent = 'احجز مقعدي ←'; btn.disabled = false;
 }
 
 // Hamburger menu toggle
