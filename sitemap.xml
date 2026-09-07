@@ -6,6 +6,11 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://pharpro.co/about/ar/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://pharpro.co/about/mohammad-awawdeh/</loc>
     <lastmod>2026-08-30</lastmod>
     <priority>0.70</priority>
@@ -14,6 +19,11 @@
     <loc>https://pharpro.co/projects/</loc>
     <lastmod>2026-08-30</lastmod>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/projects/ar/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://pharpro.co/contact/</loc>
