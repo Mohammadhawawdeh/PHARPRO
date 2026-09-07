@@ -162,6 +162,10 @@ GEO_PAGES.forEach((geo) => {
     res.setHeader("Cache-Control", "no-cache, must-revalidate");
     res.sendFile(path.join(__dirname, "geo", geo, "index.html"));
   });
+  app.get([`/geo/${geo}/ar`, `/geo/${geo}/ar/`], (req, res) => {
+    res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    res.sendFile(path.join(__dirname, "geo", geo, "ar", "index.html"));
+  });
 });
 
 // Resources
@@ -201,6 +205,10 @@ TRAINING_SUB_PAGES.forEach((sub) => {
 app.get(["/insights", "/insights/"], (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
   res.sendFile(path.join(__dirname, "insights", "index.html"));
+});
+app.get(["/insights/ar", "/insights/ar/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "insights", "ar", "index.html"));
 });
 
 // Insights article pages
@@ -280,6 +288,30 @@ app.get(["/services/dvs/ar", "/services/dvs/ar/"], (req, res) => {
 app.get(["/services/dvs/compare", "/services/dvs/compare/"], (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
   res.sendFile(path.join(__dirname, "services", "dvs", "compare", "index.html"));
+});
+app.get(["/services/dvs/compare/ar", "/services/dvs/compare/ar/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "dvs", "compare", "ar", "index.html"));
+});
+
+// Services — DVS pricing/ROI page
+app.get(["/services/dvs/pricing-roi", "/services/dvs/pricing-roi/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "dvs", "pricing-roi", "index.html"));
+});
+app.get(["/services/dvs/pricing-roi/ar", "/services/dvs/pricing-roi/ar/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "dvs", "pricing-roi", "ar", "index.html"));
+});
+
+// Services — DVS trust center page
+app.get(["/services/dvs/trust", "/services/dvs/trust/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "dvs", "trust", "index.html"));
+});
+app.get(["/services/dvs/trust/ar", "/services/dvs/trust/ar/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "services", "dvs", "trust", "ar", "index.html"));
 });
 
 // Resources — inspection readiness quiz
