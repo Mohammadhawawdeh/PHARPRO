@@ -276,6 +276,11 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://pharpro.co/resources/dvs-vendor-checklist/ar/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
     <loc>https://pharpro.co/resources/dvs-vendor-checklist/</loc>
     <lastmod>2026-08-30</lastmod>
     <priority>0.80</priority>
@@ -376,6 +381,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://pharpro.co/services/21-cfr-part-11-consulting/ar/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://pharpro.co/services/21-cfr-part-11-consulting/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -399,5 +409,6 @@
   <url><loc>https://pharpro.co/case-studies/oracle-netsuite-csv-iraq/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pharpro.co/case-studies/sobi-hcp-travel-study/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pharpro.co/case-studies/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pharpro.co/case-studies/ar/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://pharpro.co/ar/</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
 </urlset>
