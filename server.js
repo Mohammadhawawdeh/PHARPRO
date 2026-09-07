@@ -151,6 +151,11 @@ app.get(["/contact", "/contact/"], (req, res) => {
   res.sendFile(path.join(__dirname, "contact", "index.html"));
 });
 
+app.get(["/contact/ar", "/contact/ar/"], (req, res) => {
+  res.setHeader("Cache-Control", "no-cache, must-revalidate");
+  res.sendFile(path.join(__dirname, "contact", "ar", "index.html"));
+});
+
 // Geo landing pages
 const GEO_PAGES = ["egypt", "jordan", "ksa", "uae"];
 app.get(["/geo", "/geo/"], (req, res) => {
