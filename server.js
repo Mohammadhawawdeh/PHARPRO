@@ -130,6 +130,15 @@ SERVICE_PAGES.forEach((svc) => {
   });
 });
 
+// Service pages — Arabic
+const SERVICE_PAGES_AR = ["csv", "qa", "cqv", "training"];
+SERVICE_PAGES_AR.forEach((svc) => {
+  app.get([`/services/${svc}/ar`, `/services/${svc}/ar/`], (req, res) => {
+    res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    res.sendFile(path.join(__dirname, "services", svc, "ar", "index.html"));
+  });
+});
+
 // Services hub
 app.get(["/services", "/services/"], (req, res) => {
   res.setHeader("Cache-Control", "no-cache, must-revalidate");
