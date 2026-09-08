@@ -6,7 +6,7 @@
     <link>https://pharpro.co/</link>
     <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Sep 2026 10:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 10:00:00 +0300</lastBuildDate>
     <managingEditor>info@pharpro.co (Mohammad Awawdeh)</managingEditor>
     <webMaster>info@pharpro.co (PHARPRO)</webMaster>
     <image>
@@ -19,6 +19,7 @@
     <atom:link href="https://pharpro.co/feed.xml" rel="self" type="application/rss+xml" />
     <copyright>Copyright 2026 PHARPRO Consultation Company</copyright>
     <category>Pharmaceutical Compliance</category>
+    <item><title>Replace Word &amp; Excel Validation Workflows</title><link>https://pharpro.co/insights/replace-word-excel-validation/</link><guid isPermaLink="true">https://pharpro.co/insights/replace-word-excel-validation/</guid><pubDate>Tue, 08 Sep 2026 10:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Digital Validation · Migration</category><description>A risk-based guide to replacing Word and Excel validation workflows with controlled records, requirements traceability, review and electronic approvals.</description></item>
     <item><title>Validation 4.0: A Practical Roadmap for Pharmaceutical Companies</title><link>https://pharpro.co/insights/validation-4-0-pharmaceutical-roadmap/</link><guid isPermaLink="true">https://pharpro.co/insights/validation-4-0-pharmaceutical-roadmap/</guid><pubDate>Tue, 01 Sep 2026 10:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Validation 4.0 · Digital Transformation</category><description>A practical Validation 4.0 roadmap connecting risk-based validation, digital workflows, data integrity, automation and human quality oversight.</description></item>
     <item><title>Digital Validation Implementation: Moving from Word and Excel to Controlled Workflows</title><link>https://pharpro.co/insights/digital-validation-implementation-pharma/</link><guid isPermaLink="true">https://pharpro.co/insights/digital-validation-implementation-pharma/</guid><pubDate>Tue, 01 Sep 2026 10:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Digital Validation · Implementation</category><description>How pharmaceutical companies can implement digital validation workflows for URS, risk assessment, IQ/OQ/PQ, RTM, review and electronic approval.</description></item>
     <item><title>PHARPRO DVS: A Connected Validation Lifecycle Platform for Pharma</title><link>https://pharpro.co/insights/pharpro-dvs-validation-lifecycle-platform/</link><guid isPermaLink="true">https://pharpro.co/insights/pharpro-dvs-validation-lifecycle-platform/</guid><pubDate>Tue, 01 Sep 2026 10:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>PHARPRO DVS · Product Guide</category><description>Explore PHARPRO DVS for connected URS, risk assessment, IQ/OQ/PQ, RTM, audit trails, controlled review and AI-assisted validation drafting.</description></item>
