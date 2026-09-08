@@ -82,7 +82,7 @@
   </url>
   <url>
     <loc>https://pharpro.co/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -435,5 +435,5 @@
   <url><loc>https://pharpro.co/case-studies/sobi-hcp-travel-study/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pharpro.co/case-studies/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://pharpro.co/case-studies/ar/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://pharpro.co/ar/</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://pharpro.co/ar/</loc><lastmod>2026-09-08</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
 </urlset>
