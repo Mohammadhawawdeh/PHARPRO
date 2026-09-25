@@ -8,7 +8,7 @@
     "test:site": "node tools/validate_site.js",
     "test:release": "node tools/validate_evidence_release.js",
     "stage:deploy": "npx wrangler deploy --config wrangler.staging.jsonc",
-    "production:deploy": "npx wrangler deploy --config wrangler.jsonc"
+    "production:deploy": "npx wrangler deploy --config wrangler.jsonc && node tools/indexnow_submit.js"
   },
   "keywords": [],
   "author": "",
