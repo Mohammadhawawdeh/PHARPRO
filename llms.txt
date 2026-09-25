@@ -174,50 +174,63 @@ No — PHARPRO DVS is a standalone SaaS platform that pharmaceutical teams subsc
 PHARPRO publishes practical pharmaceutical compliance articles at https://pharpro.co/insights covering regulatory frameworks, CSV best practices, and GMP guidance.
 
 ### Current Articles
-- **GMP Training — 1 & 2 July 2026: 12 Modules, 16 Hours, Certificate of Completion** — https://pharpro.co/insights/gmp-training-july-2026/
-  Two-day comprehensive Good Manufacturing Practice training covering regulatory frameworks, pharmaceutical quality systems, GMP documentation, data integrity, deviation management, CAPA, validation lifecycle, and GMP inspection readiness. Online & in-person. English & Arabic. Certificate of Completion issued to all participants. Limited seats.
-- **GAMP 5 Second Edition: Key Changes for Your CSV Programme** — https://pharpro.co/insights/gamp5-second-edition-csv-changes/
-  Risk categories, critical thinking, and lifecycle documentation changes in ISPE GAMP 5 Second Edition.
-- **EU GMP Annex 11: A Practical Compliance Checklist for 2025** — https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/
-  Supplier assessment, validation, data integrity, and audit trail requirements.
-- **FDA 21 CFR Part 11: Data Integrity Requirements Explained** — https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity/
-  Electronic records, audit trails, electronic signatures, and common compliance gaps.
-- **IQ OQ PQ: The Complete Guide to Pharmaceutical Qualification** — https://pharpro.co/insights/iq-oq-pq-guide/
-  Installation, Operational, and Performance Qualification explained — protocols, acceptance criteria, and regulatory expectations.
-- **GAMP 5 Risk Categories Explained: Category 1–5 Guide** — https://pharpro.co/insights/gamp5-risk-categories-explained/
-  How to classify computerised systems under GAMP 5 risk categories and what validation effort each category requires.
-- **GMP Gap Assessment Guide: How to Identify Compliance Gaps** — https://pharpro.co/insights/gmp-gap-assessment-guide/
-  Step-by-step guide to conducting a GMP gap assessment — scope, methodology, findings classification, and CAPA prioritisation.
-- **Data Integrity in Pharmaceutical Manufacturing: ALCOA+ Guide** — https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/
-  ALCOA+ principles, common data integrity failures, and how to build a compliant data governance framework.
-- **How to Write a User Requirements Specification (URS) for a Computerised System** — https://pharpro.co/insights/how-to-write-urs-computerised-system/
-  Practical guide to writing a URS aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.
-- **Cleaning Validation MACO and Acceptance Criteria Explained** — https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/
-  How to calculate MACO, select cleaning limits, and document cleaning validation in line with EU GMP Annex 15.
-- **21 CFR Part 11 Audit Trail Requirements: What You Need to Know** — https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/
-  FDA's audit trail requirements under 21 CFR Part 11 — what must be captured, reviewed, and retained.
-- **Thermal Mapping of Pharmaceutical Warehouses: A Complete Guide** — https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/
-  How to plan, execute, and document a thermal mapping study for pharmaceutical storage and cold chain environments.
-- **CAPA Management in Pharmaceutical QA: A Step-by-Step Guide** — https://pharpro.co/insights/capa-management-pharma-guide/
-  How to build an effective CAPA system — root cause analysis, corrective actions, effectiveness checks, and FDA/EU GMP expectations.
-- **FDA Warning Letter Response: A Practical Recovery Plan** — https://pharpro.co/insights/fda-warning-letter-response/
-  How to structure your FDA Warning Letter response, address observations correctly, and restore regulatory standing.
-- **Supplier Qualification in GMP: Vendor Audit Checklist** — https://pharpro.co/insights/supplier-qualification-gmp/
-  Risk-based supplier qualification guide — audit checklist, quality agreements, and ongoing monitoring requirements.
-- **CSV for SaaS and Cloud Applications in Pharma** — https://pharpro.co/insights/csv-saas-cloud-pharma/
-  How to validate SaaS and cloud-hosted GxP systems — GAMP 5 classification, vendor qualification, and change management.
-- **Pharmaceutical Inspection Readiness: A 7-Step Guide** — https://pharpro.co/insights/pharmaceutical-inspection-readiness/
-  How to prepare your pharmaceutical site for an FDA, EU GMP, or national authority inspection.
-- **Validation Master Plan: What It Is and How to Write One** — https://pharpro.co/insights/validation-master-plan-guide/
-  Purpose, structure, and content of a Validation Master Plan aligned with FDA and EU GMP expectations.
-- **Risk Assessment for Computerised Systems: A Practical Guide** — https://pharpro.co/insights/risk-assessment-computerised-systems/
-  How to conduct a risk assessment for computerised systems under GAMP 5 — methodology, tools, and documentation.
-- **GMP Training Records: Regulatory Requirements and Best Practices** — https://pharpro.co/insights/gmp-training-records-compliance/
-  What GMP training records must contain, how long to retain them, and what inspectors check during audits.
-- **AI in Pharmaceutical Validation: How DVS Transforms the Lifecycle** — https://pharpro.co/insights/ai-validation-lifecycle-software-pharma/
-  How AI-assisted validation software accelerates documentation, maintains compliance, and reduces validation burden.
+- [GAMP 5 Second Edition: Key Changes for Your CSV Programme](https://pharpro.co/insights/gamp5-second-edition-csv-changes/): Risk categories, critical thinking, and lifecycle documentation changes in ISPE GAMP 5 Second Edition.
+- [EU GMP Annex 11: A Practical Compliance Checklist](https://pharpro.co/insights/eu-gmp-annex-11-compliance-checklist/): Supplier assessment, validation, data integrity, and audit trail requirements.
+- [EU GMP Annex 15: Qualification and Validation](https://pharpro.co/insights/eu-gmp-annex-15-qualification-validation/): A lifecycle guide to URS, DQ, FAT/SAT, IQ/OQ/PQ, deviations, release, continued verification and risk-based requalification.
+- [FDA 21 CFR Part 11: Data Integrity Requirements Explained](https://pharpro.co/insights/fda-21-cfr-part-11-data-integrity/): Electronic records, audit trails, electronic signatures, and common compliance gaps.
+- [GMP Data Integrity Requirements for Pharma](https://pharpro.co/insights/data-integrity-gmp-requirements/): GMP data-integrity requirements for governance, ALCOA+, audit trails, access, review, backup, investigations and sustainable remediation.
+- [21 CFR Part 11 Audit Trail Requirements](https://pharpro.co/insights/21-cfr-part-11-audit-trail-requirements/): FDA's audit trail requirements under 21 CFR Part 11 - what must be captured, reviewed, and retained.
+- [IQ OQ PQ: The Complete Guide to Pharmaceutical Qualification](https://pharpro.co/insights/iq-oq-pq-guide/): Installation, Operational, and Performance Qualification explained - protocols, acceptance criteria, and regulatory expectations.
+- [GAMP 5 Risk Categories Explained: Category 1-5 Guide](https://pharpro.co/insights/gamp5-risk-categories-explained/): How to classify computerised systems under GAMP 5 risk categories and what validation effort each category requires.
+- [How to Write a User Requirements Specification (URS)](https://pharpro.co/insights/how-to-write-urs-computerised-system/): Practical guide to writing a URS aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.
+- [Risk Assessment for Computerised Systems](https://pharpro.co/insights/risk-assessment-computerised-systems/): How to conduct a risk assessment for computerised systems under GAMP 5 - methodology, tools, and documentation.
+- [Validation Master Plan: What It Is and How to Write One](https://pharpro.co/insights/validation-master-plan-guide/): Purpose, structure, and content of a Validation Master Plan aligned with FDA and EU GMP expectations.
+- [CSV for SaaS and Cloud Applications in Pharma](https://pharpro.co/insights/csv-saas-cloud-pharma/): How to validate SaaS and cloud-hosted GxP systems - GAMP 5 classification, vendor qualification, and change management.
+- [Replace Word & Excel Validation Workflows](https://pharpro.co/insights/replace-word-excel-validation/): A risk-based guide to replacing Word and Excel validation workflows with controlled records, requirements traceability, review and electronic approvals.
+- [Digital Validation Implementation for Pharma](https://pharpro.co/insights/digital-validation-implementation-pharma/): How pharmaceutical companies can implement digital validation workflows for URS, risk assessment, IQ/OQ/PQ, RTM, review and electronic approval.
+- [Digital Validation Software for Pharma](https://pharpro.co/insights/digitalization-digital-validation-software-pharma/): A practical guide to replacing disconnected Word and Excel validation with controlled digital workflows for URS, IQ/OQ/PQ, RTM and approvals.
+- [Pharmaceutical Validation Software Buyer's Guide](https://pharpro.co/insights/pharmaceutical-validation-software/): Evaluate pharmaceutical validation software for lifecycle coverage, traceability, approvals, audit trails, electronic signatures and implementation fit.
+- [PHARPRO DVS Validation Lifecycle Platform](https://pharpro.co/insights/pharpro-dvs-validation-lifecycle-platform/): Explore PHARPRO DVS for connected URS, risk assessment, IQ/OQ/PQ, RTM, audit trails, controlled review and AI-assisted validation drafting.
+- [AI Validation Lifecycle Software for Pharma](https://pharpro.co/insights/ai-validation-lifecycle-software-pharma/): How AI-assisted pharmaceutical validation software can control requirements, risks, IQ/OQ/PQ, traceability, approvals and audit trails across the lifecycle.
+- [AI in Pharmaceutical Validation: Governance Guide](https://pharpro.co/insights/ai-in-pharmaceutical-validation-governance/): A governance guide for using AI in pharmaceutical validation while maintaining human approval, traceability, data integrity and risk-based oversight.
+- [AI in Pharma: Regulated Use Cases and Controls](https://pharpro.co/insights/ai-in-pharma-regulated-use-cases/): Practical AI use cases in pharma across validation, quality, manufacturing and knowledge work, with governance and human oversight controls.
+- [Validation 4.0 Roadmap for Pharma](https://pharpro.co/insights/validation-4-0-pharmaceutical-roadmap/): A practical Validation 4.0 roadmap connecting risk-based validation, digital workflows, data integrity, automation and human quality oversight.
+- [GMP Gap Assessment Guide](https://pharpro.co/insights/gmp-gap-assessment-guide/): Step-by-step guide to conducting a GMP gap assessment - scope, methodology, findings classification, and CAPA prioritisation.
+- [Data Integrity in Pharmaceutical Manufacturing: ALCOA+ Guide](https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/): ALCOA+ principles, common data integrity failures, and how to build a compliant data governance framework.
+- [CAPA Management in Pharmaceutical QA](https://pharpro.co/insights/capa-management-pharma-guide/): How to build an effective CAPA system - root cause analysis, corrective actions, effectiveness checks, and FDA/EU GMP expectations.
+- [FDA Warning Letter Response: A Practical Recovery Plan](https://pharpro.co/insights/fda-warning-letter-response/): How to structure your FDA Warning Letter response, address observations correctly, and restore regulatory standing.
+- [Supplier Qualification in GMP: Vendor Audit Checklist](https://pharpro.co/insights/supplier-qualification-gmp/): Risk-based supplier qualification guide - audit checklist, quality agreements, and ongoing monitoring requirements.
+- [Pharmaceutical Inspection Readiness: A 7-Step Guide](https://pharpro.co/insights/pharmaceutical-inspection-readiness/): How to prepare your pharmaceutical site for an FDA, EU GMP, or national authority inspection.
+- [GMP Training Records: Regulatory Requirements and Best Practices](https://pharpro.co/insights/gmp-training-records-compliance/): What GMP training records must contain, how long to retain them, and what inspectors check during audits.
+- [Cleaning Validation MACO and Acceptance Criteria Explained](https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/): How to calculate MACO, select cleaning limits, and document cleaning validation in line with EU GMP Annex 15.
+- [Pharmaceutical HVAC Validation & Qualification](https://pharpro.co/insights/hvac-validation-pharmaceutical/): DQ/IQ/OQ/PQ, HEPA integrity, airflow, pressure, recovery and cleanroom classification.
+- [Purified Water & WFI System Validation](https://pharpro.co/insights/water-system-validation-pharmaceutical/): Purified Water and WFI system validation - DQ/IQ/OQ/PQ, the three-phase sampling plan and ongoing monitoring.
+- [Thermal Mapping of Pharmaceutical Warehouses](https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/): How to plan, execute, and document a thermal mapping study for pharmaceutical storage and cold chain environments.
+- [Cold Room Thermal Mapping Guide for Pharma](https://pharpro.co/insights/thermal-mapping-cold-room-guide/): Risk-based logger placement, loaded and empty studies, door-opening tests, alarms and defensible reports.
+- [Pharmaceutical Thermal Mapping Services](https://pharpro.co/insights/pharmaceutical-thermal-mapping-services/): PHARPRO thermal mapping services for warehouses, cold rooms, freezers, stability chambers and controlled areas across MENA.
+- [Environmental Monitoring Testing for Pharma](https://pharpro.co/insights/environmental-monitoring-testing-pharma/): Cleanroom environmental monitoring - air change rate, non-viable particles, temperature, humidity, mapping and differential pressure testing.
+- [Good Storage & Distribution Practice Guide](https://pharpro.co/insights/gsdp-good-storage-distribution-practice/): Pharmaceutical storage, distribution, temperature control, warehouse qualification, documentation and inspection readiness.
+- [Turnkey Pharmaceutical Validation Projects](https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/): VMP, CQV, CSV, utilities, equipment, process, cleaning, protocols, execution and approved handover.
+- [Clean Room Air Balance Completed in Damascus, Syria](https://pharpro.co/insights/clean-room-air-balance-damascus-syria/): PHARPRO completed clean room air balance execution, testing and documentation at a client site in Damascus, Syria.
+- [Drug Registration Services in Jordan & MENA](https://pharpro.co/insights/drug-registration-jordan-mena-partnership/): Partner services supporting pharmaceutical registration, dossier preparation, submissions, deficiency responses and lifecycle maintenance in MENA.
+- [Pharmaceutical Marketing Services in Jordan](https://pharpro.co/insights/medicine-marketing-jordan-partnership/): Partner services supporting compliant pharmaceutical market entry, brand positioning, HCP engagement and commercial execution in Jordan.
+- [PHARPRO June 2026 Company Update](https://pharpro.co/insights/pharpro-latest-news-june-2026/): DVS-PQR launch, GAMP 5 validation work, thermal-mapping training in Pakistan and regional client activity.
+- [GMP Training - 7-8 October 2026](https://pharpro.co/insights/gmp-training-september-2026/): Two-day GMP training covering quality systems, data integrity, qualification, validation, deviations, CAPA and inspection readiness. Online and in Amman.
+- [CSV Training - 27-28 October 2026](https://pharpro.co/insights/csv-training-rescheduled-september-2026/): Two-day CSV training covering GAMP 5, risk assessment, URS, IQ/OQ/PQ, ALCOA+, FDA Part 11 and EU GMP Annex 11. Online and in Amman.
+
+Full, always-current article index: https://pharpro.co/insights/
 
 ## Free Resources
 
-- **50-Point Pharma Compliance Checklist** — https://pharpro.co/resources/compliance-checklist/
-  Free download: 50 pre-inspection questions covering CSV, QA, data integrity, training, and CAPA. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ICH Q10.
+- [Free pharmaceutical compliance resources hub](https://pharpro.co/resources/): Directory of all free PHARPRO downloadable resources.
+- [50-Point Pharma Compliance Checklist](https://pharpro.co/resources/compliance-checklist/): Free download: 50 pre-inspection questions covering CSV, QA, data integrity, training, and CAPA. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ICH Q10.
+- [Validation Software Vendor Checklist](https://pharpro.co/resources/dvs-vendor-checklist/): 40 evaluation questions across six decision areas for comparing digital validation platforms.
+- [Inspection Readiness Quiz](https://pharpro.co/resources/inspection-readiness-quiz/): 10 yes/no questions with an instant risk score across GMP, data, training and quality systems.
+
+## Arabic (العربية)
+
+PHARPRO's full service catalogue, key insight articles, case studies and contact form are also available in Arabic, with reciprocal hreflang tags on every English/Arabic page pair.
+
+- [Arabic homepage](https://pharpro.co/ar/)
+- [Arabic Insights hub](https://pharpro.co/insights/ar/)
+- [Arabic contact / free assessment](https://pharpro.co/contact/ar/)
