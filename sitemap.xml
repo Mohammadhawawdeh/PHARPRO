@@ -146,6 +146,11 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://pharpro.co/insights/data-integrity-gmp-requirements/ar/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://pharpro.co/insights/data-integrity-pharmaceutical-manufacturing/</loc>
     <lastmod>2026-08-25</lastmod>
     <priority>0.75</priority>
@@ -178,6 +183,11 @@
   <url>
     <loc>https://pharpro.co/insights/eu-gmp-annex-15-qualification-validation/</loc>
     <lastmod>2026-08-25</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/eu-gmp-annex-15-qualification-validation/ar/</loc>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
@@ -266,14 +276,29 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://pharpro.co/insights/hvac-validation-pharmaceutical/ar/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://pharpro.co/insights/water-system-validation-pharmaceutical/</loc>
     <lastmod>2026-09-22</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/water-system-validation-pharmaceutical/ar/</loc>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://pharpro.co/insights/clean-room-air-balance-damascus-syria/</loc>
     <lastmod>2026-09-22</lastmod>
     <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/clean-room-air-balance-damascus-syria/ar/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://pharpro.co/insights/</loc>
@@ -368,6 +393,11 @@
   <url>
     <loc>https://pharpro.co/insights/thermal-mapping-cold-room-guide/</loc>
     <lastmod>2026-08-25</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/thermal-mapping-cold-room-guide/ar/</loc>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
@@ -540,7 +570,8 @@
   <url><loc>https://pharpro.co/insights/pharmaceutical-thermal-mapping-services/ar/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/ar/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://pharpro.co/insights/environmental-monitoring-testing-pharma/</loc><lastmod>2026-09-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pharpro.co/insights/environmental-monitoring-testing-pharma/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pharpro.co/insights/environmental-monitoring-testing-pharma/ar/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://pharpro.co/insights/validation-4-0-pharmaceutical-roadmap/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pharpro.co/insights/validation-4-0-pharmaceutical-roadmap/ar/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://pharpro.co/insights/digital-validation-implementation-pharma/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
