@@ -58,6 +58,19 @@ function withSiteHeaders(response, pathname) {
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+  headers.set("Content-Security-Policy", [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com",
+    "font-src 'self' https://fonts.gstatic.com",
+    "img-src 'self' data: https:",
+    "connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://*.google-analytics.com",
+    "frame-src https://assets.calendly.com https://calendly.com https://www.youtube.com",
+    "form-action 'self' https://api.web3forms.com",
+    "frame-ancestors 'none'",
+    "base-uri 'self'",
+    "object-src 'none'",
+  ].join("; "));
 
   const contentType = headers.get("Content-Type") || "";
   if (/\.(?:css|js|png|jpe?g|webp|svg|gif|ico|woff2?)$/i.test(pathname)) {
