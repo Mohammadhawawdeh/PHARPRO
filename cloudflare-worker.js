@@ -8,6 +8,7 @@ const CANONICAL_HOST = "pharpro.co";
 const ALLOWED_ORIGINS = ["https://pharpro.co", "https://www.pharpro.co"];
 const PERMANENT_REDIRECTS = new Map([
   ["/services/digital", "/services/dvs/"],
+  ["/dvs", "/services/dvs/"],
   ["/insights/capa-management-pharmaceutical", "/insights/capa-management-pharma-guide/"],
   ["/insights/inspection-readiness-guide", "/insights/pharmaceutical-inspection-readiness/"],
   ["/insights/gmp-training-july-2026", "/insights/gmp-training-september-2026/"],
@@ -56,6 +57,7 @@ function withSiteHeaders(response, pathname) {
   headers.set("X-Frame-Options", "DENY");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+  headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
 
   const contentType = headers.get("Content-Type") || "";
   if (/\.(?:css|js|png|jpe?g|webp|svg|gif|ico|woff2?)$/i.test(pathname)) {

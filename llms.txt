@@ -54,7 +54,7 @@ PHARPRO Consultation Company was founded to help pharmaceutical manufacturers, d
 ### Computerized System Validation (CSV)
 Full-lifecycle CSV for pharmaceutical software, manufacturing systems, and laboratory instruments. Covers IQ, OQ, PQ, risk classification, URS, and audit trail review. Aligned with FDA 21 CFR Part 11, EU GMP Annex 11, and ISPE GAMP 5.
 
-**Service page**: https://pharpro.co/services/csv/
+**Service page**: [CSV Validation Consulting](https://pharpro.co/services/csv/)
 
 **Typical clients**: Pharmaceutical manufacturers, biotech companies, contract manufacturing organisations (CMOs), pharmaceutical distributors.
 
@@ -63,7 +63,7 @@ Full-lifecycle CSV for pharmaceutical software, manufacturing systems, and labor
 ### Quality Assurance & Gap Assessment
 QA programme reviews, gap assessments against regulatory expectations, SOP development, CAPA management, and data integrity audits. Prepares clients for regulatory inspections.
 
-**Service page**: https://pharpro.co/services/qa/
+**Service page**: [QA & Gap Assessment](https://pharpro.co/services/qa/)
 
 **Typical clients**: Companies preparing for FDA, EU GMP, WHO, or national authority inspections. Companies with recent observations or Warning Letters.
 
@@ -72,7 +72,7 @@ QA programme reviews, gap assessments against regulatory expectations, SOP devel
 ### CQV & Thermal Mapping
 Commissioning, Qualification, and Validation (CQV) for pharmaceutical equipment and utilities. Thermal mapping of cold chain storage areas, warehouses, and temperature-controlled environments. IQ OQ PQ protocol execution and reporting.
 
-**Service page**: https://pharpro.co/services/cqv/
+**Service page**: [CQV & Thermal Mapping](https://pharpro.co/services/cqv/)
 
 **Typical clients**: Pharmaceutical warehouses, cold chain distributors, manufacturers qualifying new equipment or facilities.
 
@@ -81,12 +81,12 @@ Commissioning, Qualification, and Validation (CQV) for pharmaceutical equipment 
 ### GMP Training
 Good Manufacturing Practice (GMP) training programmes customised for pharmaceutical teams. Covers data integrity, cleaning validation, equipment qualification, and regulatory frameworks.
 
-**Service page**: https://pharpro.co/services/training/
+**Service page**: [GMP Training](https://pharpro.co/services/training/)
 
 **Individual courses:**
-- **Cleaning Validation Training**: MACO calculations, acceptance criteria, EU GMP Annex 15, sampling, protocol writing → https://pharpro.co/services/training/cleaning-validation/
-- **CSV Validation Training**: GAMP 5, IQ/OQ/PQ, FDA 21 CFR Part 11, EU GMP Annex 11, URS → https://pharpro.co/services/training/csv/
-- **Compressed Air Testing Training**: ISO 8573, EU GMP Annex 1, purity testing, qualification → https://pharpro.co/services/training/compressed-air-testing/
+- [Cleaning Validation Training](https://pharpro.co/services/training/cleaning-validation/): MACO calculations, acceptance criteria, EU GMP Annex 15, sampling, protocol writing
+- [CSV Validation Training](https://pharpro.co/services/training/csv/): GAMP 5, IQ/OQ/PQ, FDA 21 CFR Part 11, EU GMP Annex 11, URS
+- [Compressed Air Testing Training](https://pharpro.co/services/training/compressed-air-testing/): ISO 8573, EU GMP Annex 1, purity testing, qualification
 
 **Delivery formats**: Online (live instructor-led) and on-site at client facility. English and Arabic.
 
@@ -97,13 +97,17 @@ Compliance-first digital transformation for regulated pharmaceutical operations.
 - **Software implementation support**: vendor qualification, URS development, and validation oversight for new digital systems.
 - **PHARPRO DVS**: an AI-assisted validation lifecycle management platform (see below).
 
-**Service page**: https://pharpro.co/services/digital/
+**Service page**: [PHARPRO DVS](https://pharpro.co/services/dvs/)
 
 ## PHARPRO DVS — Digital Validation Software
 
 PHARPRO DVS is an AI-assisted validation lifecycle management SaaS platform for pharmaceutical and life sciences teams. It enables teams to create, manage, and approve validation documentation from concept phase through retirement.
 
-- **Dedicated page**: https://pharpro.co/services/dvs/
+- [Dedicated page](https://pharpro.co/services/dvs/)
+- [Pricing & ROI](https://pharpro.co/services/dvs/pricing-roi/): plan comparison and cost-savings breakdown
+- [Compare to Word/Excel](https://pharpro.co/services/dvs/compare/)
+- [Trust & security](https://pharpro.co/services/dvs/trust/): vendor qualification, audit trail and hosting details
+- [Pilot programme](https://pharpro.co/services/dvs/pilot/)
 - **Platform URL**: https://dvs.pharpro.co
 - **Type**: Web-based SaaS (no local installation; onboarding is scoped to access, roles, training and customer qualification needs)
 - **Pricing**:
@@ -161,6 +165,20 @@ FDA 21 CFR Part 11, EU GMP Annex 11, ISPE GAMP 5 (Second Edition), ICH Q10, and 
 
 **Is PHARPRO DVS the same as the consulting services?**
 No — PHARPRO DVS is a standalone SaaS platform that pharmaceutical teams subscribe to independently. The consulting services are project-based engagements. Clients can use DVS alone, consulting alone, or both together.
+
+## Case Studies
+
+- [Case studies hub](https://pharpro.co/case-studies/)
+- [Oracle NetSuite CSV — Iraq](https://pharpro.co/case-studies/oracle-netsuite-csv-iraq/)
+- [Dar Al Dawa — BMS validation](https://pharpro.co/case-studies/dar-al-dawa-bms-validation/)
+- [Al Hayat — CSV qualification assessment](https://pharpro.co/case-studies/al-hayat-csv-qualification-assessment/)
+- [Advanced Pharma — MDI facility](https://pharpro.co/case-studies/advanced-pharma-mdi-facility/)
+- [Pharma International — CSV programme](https://pharpro.co/case-studies/pharma-international-csv-program/)
+- [Sobi — HCP travel study](https://pharpro.co/case-studies/sobi-hcp-travel-study/)
+
+## About the Founder
+
+- [Mohammad Awawdeh — Founder & Managing Director](https://pharpro.co/about/mohammad-awawdeh/)
 
 ## Contact
 
