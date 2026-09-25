@@ -162,7 +162,12 @@
   </url>
   <url>
     <loc>https://pharpro.co/insights/gamp5-second-edition-csv-changes/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharpro.co/insights/gamp5-second-edition-csv-changes/ar/</loc>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
