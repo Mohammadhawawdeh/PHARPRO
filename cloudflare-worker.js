@@ -47,9 +47,45 @@ export default {
     }
 
     const response = await env.ASSETS.fetch(request);
+
+    // Legacy URLs (old /Services/*.html site, *.html article URLs, mixed-case
+    // paths) would otherwise return 404. Send them to the live clean URL.
+    if (response.status === 404 && (request.method === "GET" || request.method === "HEAD")) {
+      const legacyTarget = await findLegacyTarget(url, env);
+      if (legacyTarget) {
+        return Response.redirect(legacyTarget, 301);
+      }
+    }
+
     return withSiteHeaders(response, url.pathname);
   }
 };
+
+async function findLegacyTarget(url, env) {
+  const original = url.pathname;
+  const candidates = [];
+  const lower = original.toLowerCase();
+  const stripHtml = (p) => p.replace(/(?:\/index)?\.html?$/i, "/");
+
+  if (/\.html?$/i.test(original)) {
+    candidates.push(stripHtml(lower));
+    candidates.push(stripHtml(original));
+  }
+  if (lower !== original) {
+    candidates.push(lower.endsWith("/") || /\.[a-z0-9]+$/.test(lower) ? lower : `${lower}/`);
+  }
+
+  for (const candidate of [...new Set(candidates)]) {
+    if (!candidate || candidate === original) continue;
+    const probe = new URL(candidate, `https://${CANONICAL_HOST}`);
+    const probeResponse = await env.ASSETS.fetch(new Request(probe.toString(), { method: "HEAD" }));
+    if (probeResponse.ok) {
+      probe.search = url.search;
+      return probe.toString();
+    }
+  }
+  return null;
+}
 
 function withSiteHeaders(response, pathname) {
   const headers = new Headers(response.headers);

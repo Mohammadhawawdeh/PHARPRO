@@ -189,7 +189,7 @@ No — PHARPRO DVS is a standalone SaaS platform that pharmaceutical teams subsc
 
 ## Compliance Insights
 
-PHARPRO publishes practical pharmaceutical compliance articles at https://pharpro.co/insights covering regulatory frameworks, CSV best practices, and GMP guidance.
+PHARPRO publishes practical pharmaceutical compliance articles at https://pharpro.co/insights/ covering regulatory frameworks, CSV best practices, and GMP guidance.
 
 ### Current Articles
 - [GAMP 5 Second Edition: Key Changes for Your CSV Programme](https://pharpro.co/insights/gamp5-second-edition-csv-changes/): Risk categories, critical thinking, and lifecycle documentation changes in ISPE GAMP 5 Second Edition.
