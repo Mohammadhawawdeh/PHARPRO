@@ -6,7 +6,7 @@
     <link>https://pharpro.co/</link>
     <description>Pharmaceutical compliance, CSV, QA, and GMP training insights from PHARPRO — Jordan's specialist pharma consulting firm.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Oct 2026 09:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 09:00:00 +0300</lastBuildDate>
     <managingEditor>info@pharpro.co (Mohammad Awawdeh)</managingEditor>
     <webMaster>info@pharpro.co (PHARPRO)</webMaster>
     <image>
@@ -19,6 +19,7 @@
     <atom:link href="https://pharpro.co/feed.xml" rel="self" type="application/rss+xml" />
     <copyright>Copyright 2026 PHARPRO Consultation Company</copyright>
     <category>Pharmaceutical Compliance</category>
+    <item><title>Deviation Management in Pharmaceutical Manufacturing: Classification, Investigation and CAPA Linkage</title><link>https://pharpro.co/insights/deviation-management-pharmaceutical-manufacturing/</link><guid isPermaLink="true">https://pharpro.co/insights/deviation-management-pharmaceutical-manufacturing/</guid><pubDate>Tue, 27 Oct 2026 09:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Quality Assurance &amp; Inspection Readiness · Deviation Management</category><description>A practical guide to deviation management in pharmaceutical manufacturing - classification, containment, root cause investigation, CAPA linkage and closing with evidence.</description></item>
     <item><title>GMP Change Control Management: Classifying, Assessing and Closing Changes</title><link>https://pharpro.co/insights/change-control-management-gmp-pharma/</link><guid isPermaLink="true">https://pharpro.co/insights/change-control-management-gmp-pharma/</guid><pubDate>Tue, 13 Oct 2026 09:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Quality Assurance &amp; Inspection Readiness · Change Control</category><description>A practical GMP change control guide covering classification, risk-based impact assessment, cross-functional review, implementation and effectiveness checks.</description></item>
     <item><title>LIMS Validation: Computerized System Validation for Laboratory Information Management Systems</title><link>https://pharpro.co/insights/lims-validation-pharmaceutical/</link><guid isPermaLink="true">https://pharpro.co/insights/lims-validation-pharmaceutical/</guid><pubDate>Tue, 06 Oct 2026 09:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Computerized System Validation · LIMS</category><description>A risk-based guide to LIMS validation in pharma - GAMP 5 categorisation, lab-specific URS scope, instrument interface qualification and audit trail data integrity.</description></item>
     <item><title>Data Migration Strategy for Legacy-to-Digital Validation Records</title><link>https://pharpro.co/insights/data-migration-legacy-digital-validation/</link><guid isPermaLink="true">https://pharpro.co/insights/data-migration-legacy-digital-validation/</guid><pubDate>Tue, 30 Sep 2026 09:00:00 +0300</pubDate><dc:creator>Mohammad Awawdeh</dc:creator><category>Digital Validation · Data Migration</category><description>A risk-based data migration strategy for moving legacy CSV records - URS, risk assessments, IQ/OQ/PQ and RTMs - into a digital validation platform without breaking traceability.</description></item>
