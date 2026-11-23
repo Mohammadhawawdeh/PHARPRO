@@ -257,6 +257,7 @@ const INSIGHT_SLUGS = [
   "hvac-validation-pharmaceutical",
   "data-integrity-gmp-requirements",
   "environmental-monitoring-testing-pharma",
+  "cleanroom-classification-iso-14644",
 ];
 INSIGHT_SLUGS.forEach((slug) => {
   app.get([`/insights/${slug}`, `/insights/${slug}/`], (req, res) => {
