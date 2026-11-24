@@ -259,6 +259,7 @@ const INSIGHT_SLUGS = [
   "environmental-monitoring-testing-pharma",
   "cleanroom-classification-iso-14644",
   "air-balance-air-change-project-damascus-syria",
+  "gsdp-project-nuclear-pharma-warehouse-amman-jordan",
 ];
 INSIGHT_SLUGS.forEach((slug) => {
   app.get([`/insights/${slug}`, `/insights/${slug}/`], (req, res) => {
