@@ -230,6 +230,7 @@ PHARPRO publishes practical pharmaceutical compliance articles at https://pharpr
 - [Environmental Monitoring Testing for Pharma](https://pharpro.co/insights/environmental-monitoring-testing-pharma/): Cleanroom environmental monitoring - air change rate, non-viable particles, temperature, humidity, mapping and differential pressure testing.
 - [Good Storage & Distribution Practice Guide](https://pharpro.co/insights/gsdp-good-storage-distribution-practice/): Pharmaceutical storage, distribution, temperature control, warehouse qualification, documentation and inspection readiness.
 - [Turnkey Pharmaceutical Validation Projects](https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/): VMP, CQV, CSV, utilities, equipment, process, cleaning, protocols, execution and approved handover.
+- [Air Balance and Air Change Project Completed in Damascus, Syria](https://pharpro.co/insights/air-balance-air-change-project-damascus-syria/): PHARPRO announcement of another completed air balance and air change rate project at a pharmaceutical client site in Damascus.
 - [Clean Room Air Balance Completed in Damascus, Syria](https://pharpro.co/insights/clean-room-air-balance-damascus-syria/): PHARPRO completed clean room air balance execution, testing and documentation at a client site in Damascus, Syria.
 - [Drug Registration Services in Jordan & MENA](https://pharpro.co/insights/drug-registration-jordan-mena-partnership/): Partner services supporting pharmaceutical registration, dossier preparation, submissions, deficiency responses and lifecycle maintenance in MENA.
 - [Pharmaceutical Marketing Services in Jordan](https://pharpro.co/insights/medicine-marketing-jordan-partnership/): Partner services supporting compliant pharmaceutical market entry, brand positioning, HCP engagement and commercial execution in Jordan.
@@ -262,6 +263,7 @@ PHARPRO's full service catalogue, key insight articles, case studies and contact
 - [برنامج تحقق دوائي بالذكاء الاصطناعي](https://pharpro.co/insights/ai-validation-lifecycle-software-pharma/ar/)
 - [إدارة CAPA في ضمان الجودة الدوائي: دليل خطوة بخطوة](https://pharpro.co/insights/capa-management-pharma-guide/ar/)
 - [معايير قبول التحقق من التنظيف: شرح MACO وحدود الانتقال](https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/ar/)
+- [إتمام مشروع موازنة الهواء ومعدلات التغيّر في دمشق](https://pharpro.co/insights/air-balance-air-change-project-damascus-syria/ar/)
 - [إتمام موازنة هواء الغرف النظيفة في دمشق](https://pharpro.co/insights/clean-room-air-balance-damascus-syria/ar/)
 - [التحقق من أنظمة SaaS السحابية دوائياً](https://pharpro.co/insights/csv-saas-cloud-pharma/ar/)
 - [تدريب التحقق من CSV - تأجّل إلى 27 و28 أكتوبر](https://pharpro.co/insights/csv-training-rescheduled-september-2026/ar/)
