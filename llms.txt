@@ -222,6 +222,7 @@ PHARPRO publishes practical pharmaceutical compliance articles at https://pharpr
 - [GMP Training Records: Regulatory Requirements and Best Practices](https://pharpro.co/insights/gmp-training-records-compliance/): What GMP training records must contain, how long to retain them, and what inspectors check during audits.
 - [Cleaning Validation MACO and Acceptance Criteria Explained](https://pharpro.co/insights/cleaning-validation-maco-acceptance-criteria/): How to calculate MACO, select cleaning limits, and document cleaning validation in line with EU GMP Annex 15.
 - [Pharmaceutical HVAC Validation & Qualification](https://pharpro.co/insights/hvac-validation-pharmaceutical/): DQ/IQ/OQ/PQ, HEPA integrity, airflow, pressure, recovery and cleanroom classification.
+- [Cleanroom Classification to ISO 14644-1](https://pharpro.co/insights/cleanroom-classification-iso-14644/): Occupancy states, EU GMP Annex 1 grades, sampling locations, sample volume and requalification intervals.
 - [Purified Water & WFI System Validation](https://pharpro.co/insights/water-system-validation-pharmaceutical/): Purified Water and WFI system validation - DQ/IQ/OQ/PQ, the three-phase sampling plan and ongoing monitoring.
 - [Thermal Mapping of Pharmaceutical Warehouses](https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/): How to plan, execute, and document a thermal mapping study for pharmaceutical storage and cold chain environments.
 - [Cold Room Thermal Mapping Guide for Pharma](https://pharpro.co/insights/thermal-mapping-cold-room-guide/): Risk-based logger placement, loaded and empty studies, door-opening tests, alarms and defensible reports.
@@ -282,6 +283,7 @@ PHARPRO's full service catalogue, key insight articles, case studies and contact
 - [GSDP: ممارسات التخزين والتوزيع الجيدة](https://pharpro.co/insights/gsdp-good-storage-distribution-practice/ar/)
 - [كيفية كتابة مواصفات متطلبات المستخدم (URS) لنظام حاسوبي](https://pharpro.co/insights/how-to-write-urs-computerised-system/ar/)
 - [تحقق HVAC وتأهيل الغرف النظيفة الدوائية](https://pharpro.co/insights/hvac-validation-pharmaceutical/ar/)
+- [تصنيف الغرف النظيفة وفق ISO 14644-1](https://pharpro.co/insights/cleanroom-classification-iso-14644/ar/)
 - [شرح IQ OQ PQ: ما الذي تتطلبه كل مرحلة تأهيل](https://pharpro.co/insights/iq-oq-pq-guide/ar/)
 - [شراكة تسويق الأدوية في الأردن](https://pharpro.co/insights/medicine-marketing-jordan-partnership/ar/)
 - [الاستعداد للتفتيش الدوائي: دليل تحضير الموقع من 7 خطوات](https://pharpro.co/insights/pharmaceutical-inspection-readiness/ar/)
