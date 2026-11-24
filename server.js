@@ -258,6 +258,7 @@ const INSIGHT_SLUGS = [
   "data-integrity-gmp-requirements",
   "environmental-monitoring-testing-pharma",
   "cleanroom-classification-iso-14644",
+  "air-balance-air-change-project-damascus-syria",
 ];
 INSIGHT_SLUGS.forEach((slug) => {
   app.get([`/insights/${slug}`, `/insights/${slug}/`], (req, res) => {
