@@ -98,11 +98,11 @@ function withSiteHeaders(response, pathname) {
   headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
   headers.set("Content-Security-Policy", [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com",
+    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://static.cloudflareinsights.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com https://static.cloudflareinsights.com",
     "font-src 'self' https://fonts.gstatic.com",
     "img-src 'self' data: https:",
-    "connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://*.google-analytics.com",
+    "connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://*.google-analytics.com https://cloudflareinsights.com",
     "frame-src https://assets.calendly.com https://calendly.com https://www.youtube.com",
     "form-action 'self' https://api.web3forms.com",
     "frame-ancestors 'none'",
