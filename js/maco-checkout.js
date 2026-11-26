@@ -4,10 +4,7 @@
  * buy buttons fall back to the contact form so a buyer can still order. */
 (function () {
   "use strict";
-  // Polar checkout link (store still in test mode on 2026-11-26). Paste it into
-  // CHECKOUT_URL once Polar approves the store for live payments:
-  // https://buy.polar.sh/polar_cl_s1MDPViHlUOedaLQGutEFX7aooZDfZt04DHAV1fFLcR
-  var CHECKOUT_URL = "";
+  var CHECKOUT_URL = "https://buy.polar.sh/polar_cl_s1MDPViHlUOedaLQGutEFX7aooZDfZt04DHAV1fFLcR";
   var ar = document.documentElement.lang === "ar";
   var fallback = (ar ? "/contact/ar/" : "/contact/") + "?service=qa";
   var buttons = document.querySelectorAll("[data-buy]");
