@@ -1,6 +1,6 @@
 /* PHARPRO MACO calculator checkout.
- * Set CHECKOUT_URL to the Lemon Squeezy checkout link for the product
- * (Lemon Squeezy → Products → Share → copy checkout link). While it is empty,
+ * Set CHECKOUT_URL to the Polar checkout link for the product
+ * (Polar → Products → the product → Checkout link → copy). While it is empty,
  * buy buttons fall back to the contact form so a buyer can still order. */
 (function () {
   "use strict";
@@ -8,7 +8,7 @@
   var ar = document.documentElement.lang === "ar";
   var fallback = (ar ? "/contact/ar/" : "/contact/") + "?service=qa";
   var buttons = document.querySelectorAll("[data-buy]");
-  var live = /^https:\/\/[a-z0-9-]+\.lemonsqueezy\.com\//i.test(CHECKOUT_URL);
+  var live = /^https:\/\/([a-z0-9-]+\.)?polar\.sh\//i.test(CHECKOUT_URL);
 
   for (var i = 0; i < buttons.length; i++) {
     var b = buttons[i];
