@@ -17,6 +17,8 @@ const PERMANENT_REDIRECTS = new Map([
   ["/register/gmp-training-july-2026", "/services/training/"],
   ["/insights/pharpro-dvs-saves-528-hours-ai-validation", "/services/dvs/pricing-roi/"],
   ["/insights/pharpro-dvs-demo-booking", "/services/dvs/#dvs-demo"],
+  ["/insights/pharmaceutical-thermal-mapping-services", "/services/temperature-mapping/"],
+  ["/insights/pharmaceutical-thermal-mapping-services/ar", "/services/temperature-mapping/ar/"],
 ]);
 
 export default {

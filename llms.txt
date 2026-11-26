@@ -226,7 +226,7 @@ PHARPRO publishes practical pharmaceutical compliance articles at https://pharpr
 - [Purified Water & WFI System Validation](https://pharpro.co/insights/water-system-validation-pharmaceutical/): Purified Water and WFI system validation - DQ/IQ/OQ/PQ, the three-phase sampling plan and ongoing monitoring.
 - [Thermal Mapping of Pharmaceutical Warehouses](https://pharpro.co/insights/thermal-mapping-pharmaceutical-warehouses/): How to plan, execute, and document a thermal mapping study for pharmaceutical storage and cold chain environments.
 - [Cold Room Thermal Mapping Guide for Pharma](https://pharpro.co/insights/thermal-mapping-cold-room-guide/): Risk-based logger placement, loaded and empty studies, door-opening tests, alarms and defensible reports.
-- [Pharmaceutical Thermal Mapping Services](https://pharpro.co/insights/pharmaceutical-thermal-mapping-services/): PHARPRO thermal mapping services for warehouses, cold rooms, freezers, stability chambers and controlled areas across MENA.
+- [Pharmaceutical Thermal Mapping Services](https://pharpro.co/services/temperature-mapping/): PHARPRO thermal mapping services for warehouses, cold rooms, freezers, stability chambers and controlled areas across MENA.
 - [Environmental Monitoring Testing for Pharma](https://pharpro.co/insights/environmental-monitoring-testing-pharma/): Cleanroom environmental monitoring - air change rate, non-viable particles, temperature, humidity, mapping and differential pressure testing.
 - [Good Storage & Distribution Practice Guide](https://pharpro.co/insights/gsdp-good-storage-distribution-practice/): Pharmaceutical storage, distribution, temperature control, warehouse qualification, documentation and inspection readiness.
 - [Turnkey Pharmaceutical Validation Projects](https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/): VMP, CQV, CSV, utilities, equipment, process, cleaning, protocols, execution and approved handover.
@@ -291,7 +291,7 @@ PHARPRO's full service catalogue, key insight articles, case studies and contact
 - [شرح IQ OQ PQ: ما الذي تتطلبه كل مرحلة تأهيل](https://pharpro.co/insights/iq-oq-pq-guide/ar/)
 - [شراكة تسويق الأدوية في الأردن](https://pharpro.co/insights/medicine-marketing-jordan-partnership/ar/)
 - [الاستعداد للتفتيش الدوائي: دليل تحضير الموقع من 7 خطوات](https://pharpro.co/insights/pharmaceutical-inspection-readiness/ar/)
-- [خدمات رسم الخرائط الحرارية الدوائية](https://pharpro.co/insights/pharmaceutical-thermal-mapping-services/ar/)
+- [خدمات رسم الخرائط الحرارية الدوائية](https://pharpro.co/services/temperature-mapping/ar/)
 - [دليل شراء برامج التحقق الدوائي](https://pharpro.co/insights/pharmaceutical-validation-software/ar/)
 - [PHARPRO DVS: منصة دورة حياة التحقق](https://pharpro.co/insights/pharpro-dvs-validation-lifecycle-platform/ar/)
 - [تحديثات شركة PHARPRO — يونيو 2026](https://pharpro.co/insights/pharpro-latest-news-june-2026/ar/)
