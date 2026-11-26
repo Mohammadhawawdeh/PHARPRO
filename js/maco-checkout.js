@@ -4,7 +4,7 @@
  * buy buttons fall back to the contact form so a buyer can still order. */
 (function () {
   "use strict";
-  var CHECKOUT_URL = "";
+  var CHECKOUT_URL = "https://buy.polar.sh/polar_cl_s1MDPViHlUOedaLQGutEFX7aooZDfZt04DHAV1fFLcR";
   var ar = document.documentElement.lang === "ar";
   var fallback = (ar ? "/contact/ar/" : "/contact/") + "?service=qa";
   var buttons = document.querySelectorAll("[data-buy]");
