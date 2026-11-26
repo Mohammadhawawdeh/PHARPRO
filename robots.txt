@@ -3,5 +3,6 @@ Allow: /
 Disallow: /api/
 Disallow: /.git/
 Disallow: /thank-you/
+Disallow: /cdn-cgi/
 
 Sitemap: https://pharpro.co/sitemap.xml
