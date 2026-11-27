@@ -382,12 +382,12 @@
   </url>
   <url>
     <loc>https://pharpro.co/insights/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pharpro.co/insights/ar/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
@@ -672,6 +672,8 @@
   <url><loc>https://pharpro.co/services/water-system-validation/ar/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://pharpro.co/resources/maco-calculator/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pharpro.co/resources/maco-calculator/ar/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pharpro.co/products/</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pharpro.co/products/ar/</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pharpro.co/insights/turnkey-pharmaceutical-validation-projects/ar/</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://pharpro.co/insights/environmental-monitoring-testing-pharma/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
